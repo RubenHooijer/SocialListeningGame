@@ -1,6 +1,8 @@
 ﻿using Dialogue;
 using EasyAttributes;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.Localization;
 
 public class DialogueScreen : AbstractScreen<DialogueScreen> {
 
@@ -10,6 +12,7 @@ public class DialogueScreen : AbstractScreen<DialogueScreen> {
 
     public void Setup(DialogueGraph dialogueGraph) {
         dialogueGraph.Restart();
+
         this.dialogueGraph = dialogueGraph;
     }
 
@@ -19,6 +22,13 @@ public class DialogueScreen : AbstractScreen<DialogueScreen> {
 
     protected override void OnHide() {
         gameObject.SetActive(false);
+    }
+
+    [Button]
+    private void LoadInDialogue() {
+        testDialogue.Restart();
+        
+        ((Chat)testDialogue.current).answers[0].GetLocalizedString().Completed += x => Debug.Log($"DialogueTable has loaded in");
     }
 
     [Button]
@@ -48,10 +58,27 @@ public class DialogueScreen : AbstractScreen<DialogueScreen> {
         ShowChat(testDialogue.current);
     }
 
-    private void ShowChat(Chat chat) {
-        Debug.Log($"<b>{chat.character.name}</b>:{chat.text}");
+    private void ShowChat(IChat chat) {
+        if (chat is Chat speechChat) {
+            ShowSpeechChat(speechChat);
+        } else if (chat is PictureChat pictureChat) {
+            ShowPictureChat(pictureChat);
+        }
+    }
+
+    private void ShowSpeechChat(Chat chat) {
+        Debug.Log($"<b>{chat.character.name}</b>:{chat.text.GetLocalizedString().Result}");
+
         for (int i = 0; i < chat.answers.Count; i++) {
-            Debug.Log($"<b>(A{i})</b>:<color=cyan>{chat.answers[i]}</color>");
+            Debug.Log($"<b>(A{i})</b>:<color=cyan>{chat.answers[i].GetLocalizedString().Result}</color>");
+        }
+    }
+
+    private void ShowPictureChat(PictureChat pictureChat) {
+        Debug.Log($"<b>{pictureChat.character.name}</b>:{pictureChat.text.GetLocalizedString().Result}");
+
+        for (int i = 0; i < pictureChat.answers.Length; i++) {
+            Debug.Log($"<b>(A{i})</b>:<color=cyan>{pictureChat.answers[i].LoadAssetAsync().Result.name}</color>");
         }
     }
 

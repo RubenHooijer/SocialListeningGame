@@ -21,7 +21,6 @@ namespace Dialogue {
             } else {
                 NodeEditorGUILayout.PortField(GUIContent.none, target.GetInputPort("input"));
             }
-            GUILayout.Space(-30);
 
             NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("text"), GUIContent.none);
             NodeEditorGUILayout.DynamicPortList("answers", typeof(DialogueBaseNode), serializedObject, NodePort.IO.Output, Node.ConnectionType.Override);

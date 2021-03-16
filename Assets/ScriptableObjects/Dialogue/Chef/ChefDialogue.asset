@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
-  m_Name: StartConversation
+  m_Name: 0
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -648, y: -328}
+  position: {x: -888, y: -200}
   ports:
     keys:
     - answers
@@ -22,12 +22,13 @@ MonoBehaviour:
     - answers 0
     - answers 1
     - answers 2
+    - answers 3
     values:
     - _fieldName: answers
       _node: {fileID: -7175700932894257736}
-      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
-        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
-        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -53,8 +54,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: answers 0
       _node: {fileID: -7175700932894257736}
-      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
         node: {fileID: 6601829844034346858}
@@ -65,8 +66,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: answers 1
       _node: {fileID: -7175700932894257736}
-      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
         node: {fileID: -4754477470314574670}
@@ -77,8 +78,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: answers 2
       _node: {fileID: -7175700932894257736}
-      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
         node: {fileID: -5498605277372318169}
@@ -87,14 +88,53 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
+    - _fieldName: answers 3
+      _node: {fileID: -7175700932894257736}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4920740888054804945}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 8c829fd54589f5749ab1e0c65461414c, type: 2}
-  text: 
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 53931609526272
+      m_Key: 
+    m_FallbackState: 0
   answers:
-  - Dag chef, u weet vast wel waar de luistermutant is.
-  - Zitten er echte bonen in deze machine, of oploskoffie?
-  - Hoe moet dat hek open?
+  - m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 1365471236096
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 1365471236097
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 1365471236098
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 1365471236099
+      m_Key: 
+    m_FallbackState: 0
 --- !u!114 &-5498605277372318169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,7 +145,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
-  m_Name: Chat
+  m_Name: 8
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -104, y: 232}
@@ -116,12 +156,13 @@ MonoBehaviour:
     - output
     - answers 0
     - answers 1
+    - answers 2
     values:
     - _fieldName: answers
       _node: {fileID: -5498605277372318169}
-      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
-        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
-        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -150,8 +191,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: answers 0
       _node: {fileID: -5498605277372318169}
-      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 1
       _connectionType: 0
@@ -159,9 +200,21 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: answers 1
       _node: {fileID: -5498605277372318169}
-      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: -5498605277372318169}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4920740888054804945}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -169,12 +222,81 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 8c829fd54589f5749ab1e0c65461414c, type: 2}
-  text: ah, je wilt door het hek? Dan ben je bij mij aan het goede adres. Voor het
-    hek staat Ms Blue, de cipier. Zij opent het hek voor je als je dit formuliertje
-    invult en meeneemt. Ik zal even uitleggen hoe het werkt...
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 9332337774592
+      m_Key: 
+    m_FallbackState: 0
   answers:
-  - Sorry, ik onderbreek je even. Ik heb een pen bij me, waar kan ik tekenen?
-  - Prima, ik vul het zo in. Is daarmee dan alles geregeld?
+  - m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 9332337774593
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 9332337774594
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 9332337774595
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &-4920740888054804945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8033ebb924d43464ab3c372c8457585f, type: 3}
+  m_Name: Exit
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -552, y: 584}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -4920740888054804945}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp-firstpass, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 3
+        node: {fileID: -7175700932894257736}
+        reroutePoints: []
+      - fieldName: answers 2
+        node: {fileID: -5498605277372318169}
+        reroutePoints: []
+      - fieldName: answers 3
+        node: {fileID: 6601829844034346858}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -4920740888054804945}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp-firstpass, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  trigger: []
 --- !u!114 &-4754477470314574670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +307,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
-  m_Name: Chat
+  m_Name: 7
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -104, y: -216}
@@ -200,9 +322,9 @@ MonoBehaviour:
     values:
     - _fieldName: answers
       _node: {fileID: -4754477470314574670}
-      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
-        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
-        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -231,17 +353,20 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: answers 0
       _node: {fileID: -4754477470314574670}
-      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4132809376197369011}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
     - _fieldName: answers 1
       _node: {fileID: -4754477470314574670}
-      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 1
       _connectionType: 0
@@ -249,8 +374,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: answers 2
       _node: {fileID: -4754477470314574670}
-      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 1
       _connectionType: 0
@@ -259,15 +384,32 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 8c829fd54589f5749ab1e0c65461414c, type: 2}
-  text: Echte bonen! Jij bent zeker ook een coffee-lover. Wist je trouwens, als je
-    echt lekkere koffie wilt, dan kies je eerst espresso, dan een capuccino, dan
-    stroomt die toch niet over.
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 7238092427264
+      m_Key: 
+    m_FallbackState: 0
   answers:
-  - Goede tip! En wist jij trouwens dat je een banaan eigenlijk niet bij het steeltje
-    moet openmaken? Apen die pellen hem vanaf de andere kant.
-  - Uh, waar is de luistermutant?
-  - OK, dat zal ik zo meteen eens gaan proberen. Maar weet je ook hoe ik dat hek
-    open moet maken?
+  - m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 53931672440853
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 7238142758913
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 7238142758914
+      m_Key: 
+    m_FallbackState: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +427,117 @@ MonoBehaviour:
   - {fileID: 6601829844034346858}
   - {fileID: -4754477470314574670}
   - {fileID: -5498605277372318169}
-  current: {fileID: 6601829844034346858}
+  - {fileID: -4920740888054804945}
+  - {fileID: 4132809376197369011}
+--- !u!114 &4132809376197369011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62eedd14ce0924b42a300148f512054d, type: 3}
+  m_Name: 20
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 312, y: -120}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    values:
+    - _fieldName: answers
+      _node: {fileID: 4132809376197369011}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedTexture[], Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 4132809376197369011}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp-firstpass, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: -4754477470314574670}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 4132809376197369011}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp-firstpass, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 4132809376197369011}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedTexture, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 4132809376197369011}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedTexture, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: 4132809376197369011}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedTexture, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 8c829fd54589f5749ab1e0c65461414c, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 53931672440872
+      m_Key: 
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:f515e1cadba60734799394fde1a93225
+    m_TableEntryReference:
+      m_KeyId: 11164028928
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:f515e1cadba60734799394fde1a93225
+    m_TableEntryReference:
+      m_KeyId: 1116644151296
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:f515e1cadba60734799394fde1a93225
+    m_TableEntryReference:
+      m_KeyId: 1139494719488
+      m_Key: 
+    m_FallbackState: 0
 --- !u!114 &6601829844034346858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,7 +548,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
-  m_Name: Chat
+  m_Name: 1
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -104, y: -600}
@@ -307,12 +559,14 @@ MonoBehaviour:
     - output
     - answers 0
     - answers 1
+    - answers 2
+    - answers 3
     values:
     - _fieldName: answers
       _node: {fileID: 6601829844034346858}
-      _typeQualifiedName: System.Collections.Generic.List`1[[System.String, mscorlib,
-        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib,
-        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -341,8 +595,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: answers 0
       _node: {fileID: 6601829844034346858}
-      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 1
       _connectionType: 0
@@ -350,9 +604,30 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: answers 1
       _node: {fileID: 6601829844034346858}
-      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: 6601829844034346858}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 3
+      _node: {fileID: 6601829844034346858}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4920740888054804945}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -360,11 +635,35 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 8c829fd54589f5749ab1e0c65461414c, type: 2}
-  text: 'Haha, die luistermutant woont bij mijn schoonmoeder in de flat! Wie niet
-    luisteren wil moet maar voelen
-
-'
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 1365471236100
+      m_Key: 
+    m_FallbackState: 0
   answers:
-  - ' Weet je wat ik altijd zeg als ze niet willen luisteren?'
-  - Haha,  nou, zolang je schoonmoeder niet bij je op de koffie komt is alles goed,
-    toch? Met jou kan ik praten - wij snappen elkaar.
+  - m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 1365471236101
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 1365471236102
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 1365471236103
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:0658fedcfbc0d8e41a97dbcdd3e89a9a
+    m_TableEntryReference:
+      m_KeyId: 1365471236104
+      m_Key: 
+    m_FallbackState: 0

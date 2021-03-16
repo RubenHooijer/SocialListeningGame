@@ -1,19 +1,16 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Localization;
 using XNode;
 
 namespace Dialogue {
     [NodeTint("#5C7C6A")]
-    public class Chat : DialogueBaseNode {
+    public class Chat : DialogueBaseNode, IChat {
 
         public CharacterInfo character;
-        [TextArea(6, 6)] public string text;
-        [Output(dynamicPortList = true)][TextArea(3, 3)] public List<string> answers = new List<string>();
-
-        [System.Serializable] public class Answer {
-            public string text;
-            public AudioClip voiceClip;
-        }
+        public LocalizedString text;
+        [Output(dynamicPortList = true)]public List<LocalizedString> answers = new List<LocalizedString>();
 
         public void AnswerQuestion(int index) {
             NodePort port = null;
