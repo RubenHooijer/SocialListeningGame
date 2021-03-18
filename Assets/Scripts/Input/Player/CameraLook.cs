@@ -11,7 +11,8 @@ public class CameraLook : MonoBehaviour
 
     private PlayerInput playerInput;
 
-    [SerializeField] private float lookSpeedX, lookSpeedY = 1;
+    [SerializeField] private float lookSpeedX = 1, lookSpeedY = 1;
+    [SerializeField] private Vector2 YClampValues = new Vector2(-0.25f, 0.75f);
 
     private void Awake()
     {
@@ -31,8 +32,16 @@ public class CameraLook : MonoBehaviour
 
     void Update()
     {
+        //Get Input
         Vector2 delta = playerInput.PlayerMain.Look.ReadValue<Vector2>();
+
+        //X Axis
         cinemachine.m_XAxis.Value = delta.x * lookSpeedX * Time.deltaTime;
-        cinemachine.m_YAxis.Value = delta.y * lookSpeedY * Time.deltaTime;
+
+        //Y Axis
+        float UnclampedY = cinemachine.GetRig(1).GetCinemachineComponent<CinemachineComposer>().m_ScreenY + delta.y * lookSpeedY * Time.deltaTime;
+        float ClampedY = Mathf.Clamp(UnclampedY, YClampValues.x, YClampValues.y);
+        cinemachine.GetRig(1).GetCinemachineComponent<CinemachineComposer>().m_ScreenY = ClampedY;
+        
     }
 }

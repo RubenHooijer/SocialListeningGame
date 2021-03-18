@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     private PlayerInput playerInput;
 
     private CharacterController controller;
+
+    private Transform cameraMain;
     private Vector3 playerVelocity;
     //private bool groundedPlayer;
 
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour
     {
         playerInput = new PlayerInput();
         controller = GetComponent<CharacterController>();
+        cameraMain = Camera.main.transform;
     }
 
     private void OnEnable()
@@ -47,7 +50,8 @@ public class PlayerController : MonoBehaviour
         */
 
         Vector2 movementInput = playerInput.PlayerMain.Move.ReadValue<Vector2>();
-        Vector3 move = new Vector3(movementInput.x, 0f, movementInput.y);
+        Vector3 move = (cameraMain.forward * movementInput.y + cameraMain.right * movementInput.x);
+        move.y = 0;
         controller.Move(move * Time.deltaTime * playerSpeed);
 
         if (move != Vector3.zero)
