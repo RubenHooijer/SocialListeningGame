@@ -40,7 +40,11 @@ namespace UnityEditor.Localization.Samples.Google
             googleSheets.SpreadSheetId = googleExtension.SpreadsheetId;
 
             // Now update the collection. We can pass in an optional ProgressBarReporter so that we can updates in the Editor.
-            googleSheets.PullIntoStringTableCollection(googleExtension.SheetId, googleExtension.TargetCollection as StringTableCollection, googleExtension.Columns, reporter: new ProgressBarReporter());
+            googleSheets.PullIntoStringTableCollection(googleExtension.SheetId, 
+                googleExtension.TargetCollection as StringTableCollection, 
+                googleExtension.Columns, 
+                true,
+                new ProgressBarReporter());
         }
     }
 }

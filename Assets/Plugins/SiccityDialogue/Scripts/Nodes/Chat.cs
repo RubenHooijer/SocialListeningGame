@@ -13,6 +13,7 @@ namespace Dialogue {
         public LocalizedString text;
         [Output(dynamicPortList = true)]public List<LocalizedString> answers = new List<LocalizedString>();
 
+        int IChat.AnswerCount => answers.Count;
         TableReference ILoadableTableReference.TableReference => text.TableReference;
 
         public void AnswerQuestion(int index) {

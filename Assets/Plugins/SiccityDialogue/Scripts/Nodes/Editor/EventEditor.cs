@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Dialogue;
 using UnityEditor;
 using UnityEngine;
 using XNodeEditor;

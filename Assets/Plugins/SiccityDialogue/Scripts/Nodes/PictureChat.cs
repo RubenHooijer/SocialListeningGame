@@ -3,13 +3,14 @@ using UnityEngine.Localization.Tables;
 using XNode;
 
 namespace Dialogue {
-    [NodeTint("#4d8565")]
+    [NodeTint("#7C5C7B")]
     public class PictureChat : DialogueBaseNode, IChat, ILoadableTableReference {
 
         public CharacterInfo character;
         public LocalizedString text;
         [Output(dynamicPortList = true)] public LocalizedTexture2D[] answers;
 
+        int IChat.AnswerCount => answers.Length;
         TableReference ILoadableTableReference.TableReference => answers[0].TableReference;
 
         public void AnswerQuestion(int index) {
@@ -31,11 +32,5 @@ namespace Dialogue {
         public override void Trigger() {
             (graph as DialogueGraph).current = this;
         }
-    }
-
-    public interface IChat {
-
-        public void AnswerQuestion(int index);
-
     }
 }
