@@ -14,7 +14,12 @@ namespace Dialogue {
         }
 
         public IChat AnswerQuestion(int i) {
+            if (current == null) { return null; }
+            IChat previousChat = current;
+
             current.AnswerQuestion(i);
+            current = current != previousChat ? current : null;
+
             return current;
         }
     }

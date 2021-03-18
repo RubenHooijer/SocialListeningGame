@@ -1,16 +1,16 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
-using UnityEngine.Localization;
+﻿using UnityEngine.Localization;
+using UnityEngine.Localization.Tables;
 using XNode;
 
 namespace Dialogue {
     [NodeTint("#4d8565")]
-    public class PictureChat : DialogueBaseNode, IChat {
+    public class PictureChat : DialogueBaseNode, IChat, ILoadableTableReference {
 
         public CharacterInfo character;
         public LocalizedString text;
-        [Output(dynamicPortList = true)] public LocalizedTexture[] answers;
+        [Output(dynamicPortList = true)] public LocalizedTexture2D[] answers;
+
+        TableReference ILoadableTableReference.TableReference => answers[0].TableReference;
 
         public void AnswerQuestion(int index) {
             NodePort port = null;

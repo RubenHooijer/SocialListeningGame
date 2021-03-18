@@ -2,15 +2,18 @@
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.Localization.Tables;
 using XNode;
 
 namespace Dialogue {
     [NodeTint("#5C7C6A")]
-    public class Chat : DialogueBaseNode, IChat {
+    public class Chat : DialogueBaseNode, IChat, ILoadableTableReference {
 
         public CharacterInfo character;
         public LocalizedString text;
         [Output(dynamicPortList = true)]public List<LocalizedString> answers = new List<LocalizedString>();
+
+        TableReference ILoadableTableReference.TableReference => text.TableReference;
 
         public void AnswerQuestion(int index) {
             NodePort port = null;
