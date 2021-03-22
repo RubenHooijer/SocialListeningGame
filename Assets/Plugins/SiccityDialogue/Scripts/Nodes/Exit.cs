@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 
 namespace Dialogue {
-    [NodeTint("#FC0352")]
+
+    [NodeTint("#FC0352")][CreateNodeMenu("Exit", order =0)]
     public class Exit : DialogueBaseNode {
 
         public override void Trigger() {
@@ -24,4 +25,5 @@ namespace Dialogue {
         }
 
     }
+
 }

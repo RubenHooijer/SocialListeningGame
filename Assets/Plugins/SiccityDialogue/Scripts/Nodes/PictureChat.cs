@@ -3,7 +3,8 @@ using UnityEngine.Localization.Tables;
 using XNode;
 
 namespace Dialogue {
-    [NodeTint("#7C5C7B")]
+
+    [NodeTint("#7C5C7B")][CreateNodeMenu("Picture Chat", order =2)]
     public class PictureChat : DialogueBaseNode, IChat, ILoadableTableReference {
 
         public CharacterInfo character;
@@ -32,5 +33,7 @@ namespace Dialogue {
         public override void Trigger() {
             (graph as DialogueGraph).current = this;
         }
+
     }
+
 }

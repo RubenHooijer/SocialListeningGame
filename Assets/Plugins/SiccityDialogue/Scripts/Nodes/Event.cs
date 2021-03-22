@@ -1,17 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using XNode;
+﻿using UnityEngine.Events;
+
 namespace Dialogue {
-	[NodeTint("#737C58")]
+
+	[NodeTint("#737C58")][CreateNodeMenu("Event", order =3)]
 	public class Event : DialogueBaseNode {
 
-		public SerializableEvent[] trigger; // Could use UnityEvent here, but UnityEvent has a bug that prevents it from serializing correctly on custom EditorWindows. So i implemented my own.
+		public UnityEvent trigger; // If this ever fails go back to implementation below
 
 		public override void Trigger() {
-			for (int i = 0; i < trigger.Length; i++) {
-				trigger[i].Invoke();
-			}
+			trigger.Invoke();
 		}
+
+		//public SerializableEvent[] trigger;
+
+		//public override void Trigger() {
+		//	for (int i = 0; i < trigger.Length; i++) {
+		//		trigger[i].Invoke();
+		//	}
+		//}
+
 	}
+
 }

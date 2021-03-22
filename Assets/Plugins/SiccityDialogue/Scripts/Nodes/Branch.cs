@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using UnityEngine;
-using UnityEngine.Events;
 using XNode;
 
 namespace Dialogue {
-    [NodeTint("#5C6384")]
+    [NodeTint("#5C6384")][CreateNodeMenu("Branch", order =4)]
     public class Branch : DialogueBaseNode {
 
         public Condition[] conditions;
@@ -41,4 +35,5 @@ namespace Dialogue {
 
     [Serializable]
     public class Condition : SerializableCallback<bool> { }
+
 }

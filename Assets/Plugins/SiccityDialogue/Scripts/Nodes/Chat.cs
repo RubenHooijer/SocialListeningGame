@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Tables;
 using XNode;
 
 namespace Dialogue {
-    [NodeTint("#5C7C6A")]
+
+    [NodeTint("#5C7C6A")][CreateNodeMenu("Text Chat", order =1)]
     public class Chat : DialogueBaseNode, IChat, ILoadableTableReference {
 
         public CharacterInfo character;
@@ -35,5 +34,7 @@ namespace Dialogue {
         public override void Trigger() {
             (graph as DialogueGraph).current = this;
         }
+
     }
+
 }

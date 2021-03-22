@@ -17,5 +17,6 @@ namespace Dialogue {
             current.AnswerQuestion(i);
             return current;
         }
+
     }
 }

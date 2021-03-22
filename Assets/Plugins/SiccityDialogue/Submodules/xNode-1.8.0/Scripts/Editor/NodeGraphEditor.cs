@@ -98,7 +98,7 @@ namespace XNodeEditor {
 
             // If dragging the noodle, draw solid, slightly transparent
             if (input == null) {
-                Color a = GetTypeColor(output.ValueType);
+                Color a = GetPortColor(output);
                 grad.SetKeys(
                     new GradientColorKey[] { new GradientColorKey(a, 0f) },
                     new GradientAlphaKey[] { new GradientAlphaKey(0.6f, 0f) }
@@ -106,8 +106,8 @@ namespace XNodeEditor {
             }
             // If normal, draw gradient fading from one input color to the other
             else {
-                Color a = GetTypeColor(output.ValueType);
-                Color b = GetTypeColor(input.ValueType);
+                Color a = GetPortColor(output);
+                Color b = GetPortColor(input);
                 // If any port is hovered, tint white
                 if (window.hoveredPort == output || window.hoveredPort == input) {
                     a = Color.Lerp(a, Color.white, 0.8f);

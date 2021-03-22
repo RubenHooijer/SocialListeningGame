@@ -252,8 +252,7 @@ namespace XNodeEditor {
 
                             // Double click to center node
                             if (isDoubleClick) {
-                                Vector2 nodeDimension = nodeSizes.ContainsKey(hoveredNode) ? nodeSizes[hoveredNode] / 2 : Vector2.zero;
-                                panOffset = -hoveredNode.position - nodeDimension;
+                                RenameSelectedNode();
                             }
                         }
 
@@ -402,6 +401,13 @@ namespace XNodeEditor {
                     RenamePopup.Show(Selection.activeObject);
                 }
             }
+        }
+
+        /// <summary> Puts node in center of editor and zooms in </summary>
+        public void FocusNode(XNode.Node node) {
+            Vector2 nodeDimension = nodeSizes.ContainsKey(node) ? nodeSizes[node] / 2 : Vector2.zero;
+            panOffset = -node.position - nodeDimension;
+            zoom = 1.5f;
         }
 
         /// <summary> Draw this node on top of other nodes by placing it last in the graph.nodes list </summary>
