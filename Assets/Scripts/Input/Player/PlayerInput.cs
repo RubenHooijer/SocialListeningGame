@@ -20,10 +20,10 @@ public class @PlayerInput : IInputActionCollection, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Move"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""8c16c46e-64d9-4ce3-8360-265c39bbf7b2"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": ""NormalizeVector2"",
                     ""interactions"": """"
                 },
                 {
@@ -31,6 +31,14 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""type"": ""Value"",
                     ""id"": ""07518be4-b82b-4f32-8e5c-02a140921d7f"",
                     ""expectedControlType"": ""Vector2"",
+                    ""processors"": ""NormalizeVector2"",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""0457e74f-7206-47a0-8679-0ca698272df4"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -112,6 +120,28 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8810a257-63ec-425f-b504-7e13b7ed41e3"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8d4d5b6d-9d36-48e6-9540-fddc6e33d5a8"",
+                    ""path"": ""<Touchscreen>/primaryTouch/press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -122,6 +152,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_PlayerMain = asset.FindActionMap("PlayerMain", throwIfNotFound: true);
         m_PlayerMain_Move = m_PlayerMain.FindAction("Move", throwIfNotFound: true);
         m_PlayerMain_Look = m_PlayerMain.FindAction("Look", throwIfNotFound: true);
+        m_PlayerMain_Interact = m_PlayerMain.FindAction("Interact", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -173,12 +204,14 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private IPlayerMainActions m_PlayerMainActionsCallbackInterface;
     private readonly InputAction m_PlayerMain_Move;
     private readonly InputAction m_PlayerMain_Look;
+    private readonly InputAction m_PlayerMain_Interact;
     public struct PlayerMainActions
     {
         private @PlayerInput m_Wrapper;
         public PlayerMainActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_PlayerMain_Move;
         public InputAction @Look => m_Wrapper.m_PlayerMain_Look;
+        public InputAction @Interact => m_Wrapper.m_PlayerMain_Interact;
         public InputActionMap Get() { return m_Wrapper.m_PlayerMain; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -194,6 +227,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Look.started -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnLook;
                 @Look.performed -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnLook;
                 @Look.canceled -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnLook;
+                @Interact.started -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnInteract;
             }
             m_Wrapper.m_PlayerMainActionsCallbackInterface = instance;
             if (instance != null)
@@ -204,6 +240,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Look.started += instance.OnLook;
                 @Look.performed += instance.OnLook;
                 @Look.canceled += instance.OnLook;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
             }
         }
     }
@@ -212,5 +251,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
 }

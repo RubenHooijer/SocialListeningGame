@@ -33,4 +33,9 @@ public class InputManager : MonoBehaviour
     {
         return playerInput.PlayerMain.Look.ReadValue<Vector2>();
     }
+
+    public bool GetInteract()
+    {
+        return playerInput.PlayerMain.Interact.triggered;
+    }
 }

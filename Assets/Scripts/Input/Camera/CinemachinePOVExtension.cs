@@ -27,6 +27,11 @@ public class CinemachinePOVExtension : CinemachineExtension
     {
         if(vcam.Follow)
         {
+            //Make Unity not generate red errors when not playing game.
+            if(!Application.isPlaying)
+            {
+                return;
+            }
             if(stage == CinemachineCore.Stage.Aim)
             {
                 //Set starting rotation
