@@ -5,8 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     #region Components & Variables
-    private PlayerInput playerInput;
-
+    private InputManager inputManager;
     private CharacterController controller;
 
     private Transform cameraMain;
@@ -23,19 +22,13 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        playerInput = new PlayerInput();
         controller = GetComponent<CharacterController>();
         cameraMain = Camera.main.transform;
     }
 
-    private void OnEnable()
+    private void Start()
     {
-        playerInput.Enable();
-    }
-
-    private void OnDisable()
-    {
-        playerInput.Disable();
+        inputManager = InputManager.Instance;
     }
 
     void Update()
@@ -49,7 +42,7 @@ public class PlayerController : MonoBehaviour
         }
         */
 
-        Vector2 movementInput = playerInput.PlayerMain.Move.ReadValue<Vector2>();
+        Vector2 movementInput = inputManager.GetMovement();
         Vector3 move = (cameraMain.forward * movementInput.y + cameraMain.right * movementInput.x);
         move.y = 0;
         controller.Move(move * Time.deltaTime * playerSpeed);
