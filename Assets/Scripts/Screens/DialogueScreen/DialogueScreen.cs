@@ -39,11 +39,6 @@ public class DialogueScreen : AbstractScreen<DialogueScreen> {
         gameObject.SetActive(false);
     }
 
-    [EasyAttributes.Button]
-    private void Answer0() {
-        OnAnswerClicked(0);
-    }
-
     private void OnAnswerClicked(int answerIndex) {
         Debug.Log($"You answered with {answerIndex}");
         dialogueGraph.AnswerQuestion(answerIndex);
