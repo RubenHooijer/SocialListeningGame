@@ -13,25 +13,25 @@ namespace Oasez.Extensions.Generics.Singleton
         {
             get
             {
-                if (_instance == null)
+                if (instance == null)
                 {
-                    _instance = FindObjectOfType<T>();
-                    if (_instance == null)
+                    instance = FindObjectOfType<T>();
+                    if (instance == null)
                     {
                         GameObject obj = new GameObject(typeof(T).ToString() + " - Singleton");
-                        _instance = obj.AddComponent<T>();
+                        instance = obj.AddComponent<T>();
                     }
                 }
-                return _instance;
+                return instance;
             }
         }
-        private static T _instance;
+        private static T instance;
 
         protected virtual void Awake()
         {
-            if (_instance == null)
+            if (instance == null)
             {
-                _instance = this as T;
+                instance = this as T;
                 DontDestroyOnLoad(gameObject);
             } else
             {

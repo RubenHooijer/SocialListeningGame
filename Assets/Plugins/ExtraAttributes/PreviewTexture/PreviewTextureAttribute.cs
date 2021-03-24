@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Networking;
 #if UNITY_EDITOR
 using UnityEditor;
 using System.IO;
@@ -7,7 +8,7 @@ public class PreviewTextureAttribute : PropertyAttribute
 {
     public Rect lastPosition = new Rect (0, 0, 0, 0);
     public long expire = 6000000000; // 10min
-    public WWW www;
+    public UnityWebRequest www;
     public Texture2D cached;
 
     public PreviewTextureAttribute ()
@@ -112,27 +113,29 @@ public class PreviewTextureDrawer : PropertyDrawer
 
     Texture2D GetTextureFromWWW(Rect position, SerializedProperty property)
     {
-        if (previewTextureAttribute.www == null)
-        {
-            previewTextureAttribute.www = new WWW(property.stringValue);
-        }
-        else if (!previewTextureAttribute.www.isDone)
-        {
-            previewTextureAttribute.lastPosition = new Rect(position.x, position.y + 16, position.width, 16);
-            EditorGUI.ProgressBar(previewTextureAttribute.lastPosition, previewTextureAttribute.www.progress, "Downloading... " + (previewTextureAttribute.www.progress * 100) + "%");
-        }
-        else if (previewTextureAttribute.www.isDone)
-        {
-
-            if (previewTextureAttribute.www.error != null)
-                return null;
-
-            int hash = property.stringValue.GetHashCode();
-            long expire = (System.DateTime.Now.Ticks + previewTextureAttribute.expire);
-            File.WriteAllBytes(string.Format("Temp/{0}_{1}_{2}_{3}", hash, expire, previewTextureAttribute.www.texture.width, previewTextureAttribute.www.texture.height), previewTextureAttribute.www.bytes);
-            return previewTextureAttribute.www.texture;
-        }
+        Debug.Log($"Feature is not working right now :)");
         return null;
+        //if (previewTextureAttribute.www == null)
+        //{
+        //    previewTextureAttribute.www = new UnityWebRequest(property.stringValue);
+        //}
+        //else if (!previewTextureAttribute.www.isDone)
+        //{
+        //    previewTextureAttribute.lastPosition = new Rect(position.x, position.y + 16, position.width, 16);
+        //    EditorGUI.ProgressBar(previewTextureAttribute.lastPosition, previewTextureAttribute.www.downloadProgress, "Downloading... " + (previewTextureAttribute.www.downloadProgress * 100) + "%");
+        //}
+        //else if (previewTextureAttribute.www.isDone)
+        //{
+
+        //    if (previewTextureAttribute.www.error != null)
+        //        return null;
+
+        //    int hash = property.stringValue.GetHashCode();
+        //    long expire = (System.DateTime.Now.Ticks + previewTextureAttribute.expire);
+        //    File.WriteAllBytes(string.Format("Temp/{0}_{1}_{2}_{3}", hash, expire, previewTextureAttribute.www.texture.width, previewTextureAttribute.www.texture.height), previewTextureAttribute.www.bytes);
+        //    return previewTextureAttribute.www.texture;
+        //}
+        //return null;
     }
 
     Texture2D GetTextureFromCached(string path)
