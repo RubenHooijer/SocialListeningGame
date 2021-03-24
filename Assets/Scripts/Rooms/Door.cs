@@ -28,7 +28,7 @@ public class Door : MonoBehaviour
                 return;
             }
 
-            roomManager.SpawnRoom(room.GetEndPoint());
+            roomManager.SpawnRoom(room.GetEndPoint(), room.transform.position);
 
             //Make sure we dont spawn multiple rooms on top of each other
             Opened = true;

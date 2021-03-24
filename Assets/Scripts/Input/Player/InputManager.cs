@@ -36,6 +36,7 @@ public class InputManager : MonoBehaviour
 
     public bool GetInteract()
     {
+        Debug.Log(playerInput.PlayerMain.Interact.triggered);
         return playerInput.PlayerMain.Interact.triggered;
     }
 }

@@ -26,7 +26,7 @@ public class RoomManager : MonoBehaviour
         }
     }
 
-    public void SpawnRoom(Vector3 currentRoomEndPoint)
+    public void SpawnRoom(Vector3 currentRoomEndPoint, Vector3 currentRoomPosition)
     {
         //Get random room and script attached to it
         GameObject room = Rooms[Random.Range(0, Rooms.Count)];
@@ -35,7 +35,7 @@ public class RoomManager : MonoBehaviour
         GameObject instantiatedRoom = Instantiate(room, new Vector3(0,100,0), Quaternion.identity);
         Room roomScript = instantiatedRoom.GetComponent<Room>();
 
-        Vector3 roomPosition = new Vector3(0, 0, roomScript.GetFloorCenter().y + (roomScript.GetSize().z / 2)) + currentRoomEndPoint;
+        Vector3 roomPosition = new Vector3(0, 0, roomScript.GetFloorCenter().y + (roomScript.GetSize().z / 2)) + currentRoomEndPoint + currentRoomPosition;
         Debug.Log(roomPosition);
         instantiatedRoom.transform.position = roomPosition;
     }
