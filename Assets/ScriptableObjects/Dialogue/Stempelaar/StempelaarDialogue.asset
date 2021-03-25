@@ -1,0 +1,2844 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9073251090903437755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 6
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 616, y: 440}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    values:
+    - _fieldName: answers
+      _node: {fileID: -9073251090903437755}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: -9073251090903437755}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 1
+        node: {fileID: 3061166385916789709}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: 3519072231189228298}
+        reroutePoints: []
+      - fieldName: answers 2
+        node: {fileID: -964068940712146665}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: 1513869977616323277}
+        reroutePoints: []
+      - fieldName: answers 0
+        node: {fileID: -4336670392291496149}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: -4782879368953243160}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -9073251090903437755}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -9073251090903437755}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -6504859373851793593}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: -9073251090903437755}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 1974931543919420372}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: -9073251090903437755}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 1345758806496332108}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 6
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096149
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096150
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096151
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &-9016386407105299327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 19
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2552, y: 488}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    values:
+    - _fieldName: answers
+      _node: {fileID: -9016386407105299327}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: -9016386407105299327}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 1974931543919420372}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -9016386407105299327}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -9016386407105299327}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 7316365203006655831}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: -9016386407105299327}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 19
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096187
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096188
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &-8513070749084439588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 14
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1496, y: 760}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    values:
+    - _fieldName: answers
+      _node: {fileID: -8513070749084439588}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: -8513070749084439588}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 1
+        node: {fileID: 1345758806496332108}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -8513070749084439588}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -8513070749084439588}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4851032528590811337}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: -8513070749084439588}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 1974931543919420372}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 14
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096175
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096176
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &-7954276942097621948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 16
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2264, y: 88}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    values:
+    - _fieldName: answers
+      _node: {fileID: -7954276942097621948}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: -7954276942097621948}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 7207465322910307529}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -7954276942097621948}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -7954276942097621948}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -6966953958148232958}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: -7954276942097621948}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -6504859373851793593}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: -7954276942097621948}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 16
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096179
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096180
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096181
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &-6966953958148232958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62eedd14ce0924b42a300148f512054d, type: 3}
+  m_Name: 18
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2584, y: -344}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    values:
+    - _fieldName: answers
+      _node: {fileID: -6966953958148232958}
+      _typeQualifiedName: LocalizedTexture2D[], Assembly-CSharp-firstpass, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: -6966953958148232958}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: -7954276942097621948}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: 7207465322910307529}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -6966953958148232958}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -6966953958148232958}
+      _typeQualifiedName: LocalizedTexture2D, Assembly-CSharp-firstpass, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 1747332791556646347}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: -6966953958148232958}
+      _typeQualifiedName: LocalizedTexture2D, Assembly-CSharp-firstpass, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4397356681048199759}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: -6966953958148232958}
+      _typeQualifiedName: LocalizedTexture2D, Assembly-CSharp-firstpass, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 2289739310245344647}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 18
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:f515e1cadba60734799394fde1a93225
+    m_TableEntryReference:
+      m_KeyId: 3522402141966336
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:f515e1cadba60734799394fde1a93225
+    m_TableEntryReference:
+      m_KeyId: 3522619071369216
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:f515e1cadba60734799394fde1a93225
+    m_TableEntryReference:
+      m_KeyId: 3522401235996672
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &-6504859373851793593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -232, y: -280}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    values:
+    - _fieldName: answers
+      _node: {fileID: -6504859373851793593}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: -6504859373851793593}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: -2646909533757717201}
+        reroutePoints: []
+      - fieldName: answers 0
+        node: {fileID: -9073251090903437755}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: -7954276942097621948}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: 1747332791556646347}
+        reroutePoints: []
+      - fieldName: answers 0
+        node: {fileID: 2289739310245344647}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -6504859373851793593}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -6504859373851793593}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -3519908679996298570}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: -6504859373851793593}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 3519072231189228298}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: -6504859373851793593}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 1
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096129
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096130
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096131
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &-4782879368953243160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 11
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1224, y: -232}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    values:
+    - _fieldName: answers
+      _node: {fileID: -4782879368953243160}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: -4782879368953243160}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 2
+        node: {fileID: 3519072231189228298}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: -3519908679996298570}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: -964068940712146665}
+        reroutePoints: []
+      - fieldName: answers 2
+        node: {fileID: 1513869977616323277}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: 516091425767308759}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -4782879368953243160}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -4782879368953243160}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 7207465322910307529}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: -4782879368953243160}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -9073251090903437755}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 11
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096166
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096167
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &-4397356681048199759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62eedd14ce0924b42a300148f512054d, type: 3}
+  m_Name: 21
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3080, y: -344}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    values:
+    - _fieldName: answers
+      _node: {fileID: -4397356681048199759}
+      _typeQualifiedName: LocalizedTexture2D[], Assembly-CSharp-firstpass, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: -4397356681048199759}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 1747332791556646347}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: -6966953958148232958}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -4397356681048199759}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -4397356681048199759}
+      _typeQualifiedName: LocalizedTexture2D, Assembly-CSharp-firstpass, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 1360628312327434638}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: -4397356681048199759}
+      _typeQualifiedName: LocalizedTexture2D, Assembly-CSharp-firstpass, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 1360628312327434638}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: -4397356681048199759}
+      _typeQualifiedName: LocalizedTexture2D, Assembly-CSharp-firstpass, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 2289739310245344647}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 21
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:f515e1cadba60734799394fde1a93225
+    m_TableEntryReference:
+      m_KeyId: 3523258153275392
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:f515e1cadba60734799394fde1a93225
+    m_TableEntryReference:
+      m_KeyId: 3522620581318656
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:f515e1cadba60734799394fde1a93225
+    m_TableEntryReference:
+      m_KeyId: 3522616852582400
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &-4336670392291496149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 9
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 184, y: 616}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    values:
+    - _fieldName: answers
+      _node: {fileID: -4336670392291496149}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: -4336670392291496149}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 3519072231189228298}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -4336670392291496149}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -4336670392291496149}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -9073251090903437755}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: -4336670392291496149}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4851032528590811337}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 9
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096160
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096161
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &-3519908679996298570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 4
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 248, y: -280}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    values:
+    - _fieldName: answers
+      _node: {fileID: -3519908679996298570}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: -3519908679996298570}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: -6504859373851793593}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -3519908679996298570}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -3519908679996298570}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 2384143717385596780}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: -3519908679996298570}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4782879368953243160}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: -3519908679996298570}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 4
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096141
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096142
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096143
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &-2646909533757717201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 0
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -728, y: 152}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    - answers 3
+    values:
+    - _fieldName: answers
+      _node: {fileID: -2646909533757717201}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: -2646909533757717201}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -2646909533757717201}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -2646909533757717201}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -6504859373851793593}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: -2646909533757717201}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 3061166385916789709}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: -2646909533757717201}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 3519072231189228298}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 3
+      _node: {fileID: -2646909533757717201}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 0
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 158614786048
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288671764480
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 158618980352
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 158618980353
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &-964068940712146665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 5
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 216, y: 120}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    values:
+    - _fieldName: answers
+      _node: {fileID: -964068940712146665}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: -964068940712146665}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 2
+        node: {fileID: 3061166385916789709}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -964068940712146665}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: -964068940712146665}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 1513869977616323277}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: -964068940712146665}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4782879368953243160}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: -964068940712146665}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -9073251090903437755}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 5
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096145
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096146
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096147
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a171cd762148104283954f9fc937950, type: 3}
+  m_Name: StempelaarDialogue
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -2646909533757717201}
+  - {fileID: -6504859373851793593}
+  - {fileID: 3061166385916789709}
+  - {fileID: 3519072231189228298}
+  - {fileID: -3519908679996298570}
+  - {fileID: -964068940712146665}
+  - {fileID: -9073251090903437755}
+  - {fileID: 2384143717385596780}
+  - {fileID: 1513869977616323277}
+  - {fileID: -4336670392291496149}
+  - {fileID: 4851032528590811337}
+  - {fileID: -4782879368953243160}
+  - {fileID: 1345758806496332108}
+  - {fileID: 516091425767308759}
+  - {fileID: -8513070749084439588}
+  - {fileID: 7207465322910307529}
+  - {fileID: -7954276942097621948}
+  - {fileID: 1974931543919420372}
+  - {fileID: -6966953958148232958}
+  - {fileID: -9016386407105299327}
+  - {fileID: 1747332791556646347}
+  - {fileID: -4397356681048199759}
+  - {fileID: 7316365203006655831}
+  - {fileID: 2289739310245344647}
+  - {fileID: 1360628312327434638}
+  - {fileID: 2775328181016865124}
+--- !u!114 &516091425767308759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 13
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1672, y: -744}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    values:
+    - _fieldName: answers
+      _node: {fileID: 516091425767308759}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 516091425767308759}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 4851032528590811337}
+        reroutePoints: []
+      - fieldName: answers 0
+        node: {fileID: 7316365203006655831}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 516091425767308759}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 516091425767308759}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 516091425767308759}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4782879368953243160}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 13
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096172
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096173
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &1345758806496332108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 12
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1000, y: 600}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    values:
+    - _fieldName: answers
+      _node: {fileID: 1345758806496332108}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 1345758806496332108}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 2
+        node: {fileID: -9073251090903437755}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 1345758806496332108}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 1345758806496332108}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 1974931543919420372}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 1345758806496332108}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -8513070749084439588}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 12
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096169
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096170
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &1360628312327434638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 24
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3608, y: -312}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    values:
+    - _fieldName: answers
+      _node: {fileID: 1360628312327434638}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 1360628312327434638}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: -4397356681048199759}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: -4397356681048199759}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 1360628312327434638}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096200
+      m_Key: 
+    m_FallbackState: 0
+  answers: []
+--- !u!114 &1513869977616323277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 8
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 712, y: -24}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    values:
+    - _fieldName: answers
+      _node: {fileID: 1513869977616323277}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 1513869977616323277}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 3061166385916789709}
+        reroutePoints: []
+      - fieldName: answers 0
+        node: {fileID: -964068940712146665}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 1513869977616323277}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 1513869977616323277}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4851032528590811337}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 1513869977616323277}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -9073251090903437755}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: 1513869977616323277}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4782879368953243160}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 8
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096156
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096157
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096158
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &1747332791556646347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 20
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2904, y: 72}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    values:
+    - _fieldName: answers
+      _node: {fileID: 1747332791556646347}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 1747332791556646347}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: -6966953958148232958}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 1747332791556646347}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 1747332791556646347}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4397356681048199759}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 1747332791556646347}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -6504859373851793593}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: 1747332791556646347}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 20
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096190
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096191
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096192
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &1974931543919420372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 17
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2056, y: 520}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    values:
+    - _fieldName: answers
+      _node: {fileID: 1974931543919420372}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 1974931543919420372}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 1
+        node: {fileID: -9073251090903437755}
+        reroutePoints: []
+      - fieldName: answers 0
+        node: {fileID: 1345758806496332108}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: -8513070749084439588}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 1974931543919420372}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 1974931543919420372}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -9016386407105299327}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 1974931543919420372}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 17
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096183
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096184
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &2289739310245344647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 23
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3400, y: 104}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    values:
+    - _fieldName: answers
+      _node: {fileID: 2289739310245344647}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 2289739310245344647}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 2
+        node: {fileID: 7207465322910307529}
+        reroutePoints: []
+      - fieldName: answers 2
+        node: {fileID: -6966953958148232958}
+        reroutePoints: []
+      - fieldName: answers 2
+        node: {fileID: -4397356681048199759}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 2289739310245344647}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 2289739310245344647}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -6504859373851793593}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 2289739310245344647}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 23
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096198
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096199
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &2384143717385596780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 7
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 680, y: -456}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    values:
+    - _fieldName: answers
+      _node: {fileID: 2384143717385596780}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 2384143717385596780}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: -3519908679996298570}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 2384143717385596780}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 2384143717385596780}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4851032528590811337}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 2384143717385596780}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 7
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096153
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096154
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &2775328181016865124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7056d61579232648abdfda0445ae4da, type: 3}
+  m_Name: Exit
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4389.489, y: -210.27037}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 2775328181016865124}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 2775328181016865124}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+--- !u!114 &3061166385916789709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 2
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -248, y: 40}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    values:
+    - _fieldName: answers
+      _node: {fileID: 3061166385916789709}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 3061166385916789709}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 1
+        node: {fileID: -2646909533757717201}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 3061166385916789709}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 3061166385916789709}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 1513869977616323277}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 3061166385916789709}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -9073251090903437755}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: 3061166385916789709}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -964068940712146665}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 2
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096133
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096134
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096135
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &3519072231189228298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 3
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -248, y: 392}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    values:
+    - _fieldName: answers
+      _node: {fileID: 3519072231189228298}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 3519072231189228298}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 2
+        node: {fileID: -2646909533757717201}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: -6504859373851793593}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 3519072231189228298}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 3519072231189228298}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4336670392291496149}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 3519072231189228298}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -9073251090903437755}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: 3519072231189228298}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4782879368953243160}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 3
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096137
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096138
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096139
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &4851032528590811337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 10
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1208, y: -584}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    values:
+    - _fieldName: answers
+      _node: {fileID: 4851032528590811337}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 4851032528590811337}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: 2384143717385596780}
+        reroutePoints: []
+      - fieldName: answers 0
+        node: {fileID: 1513869977616323277}
+        reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: -4336670392291496149}
+        reroutePoints: []
+      - fieldName: answers 0
+        node: {fileID: -8513070749084439588}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 4851032528590811337}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 4851032528590811337}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 516091425767308759}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 4851032528590811337}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 10
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096163
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096164
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &7207465322910307529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62eedd14ce0924b42a300148f512054d, type: 3}
+  m_Name: 15
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2088, y: -344}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    - answers 2
+    values:
+    - _fieldName: answers
+      _node: {fileID: 7207465322910307529}
+      _typeQualifiedName: LocalizedTexture2D[], Assembly-CSharp-firstpass, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 7207465322910307529}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: -4782879368953243160}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 7207465322910307529}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 7207465322910307529}
+      _typeQualifiedName: LocalizedTexture2D, Assembly-CSharp-firstpass, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -7954276942097621948}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 7207465322910307529}
+      _typeQualifiedName: LocalizedTexture2D, Assembly-CSharp-firstpass, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -6966953958148232958}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 2
+      _node: {fileID: 7207465322910307529}
+      _typeQualifiedName: LocalizedTexture2D, Assembly-CSharp-firstpass, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 2289739310245344647}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 15
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:f515e1cadba60734799394fde1a93225
+    m_TableEntryReference:
+      m_KeyId: 3522397746335744
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:f515e1cadba60734799394fde1a93225
+    m_TableEntryReference:
+      m_KeyId: 3522616152133632
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:f515e1cadba60734799394fde1a93225
+    m_TableEntryReference:
+      m_KeyId: 3523259688390656
+      m_Key: 
+    m_FallbackState: 0
+--- !u!114 &7316365203006655831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: 22
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2952, y: 488}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    - answers 0
+    - answers 1
+    values:
+    - _fieldName: answers
+      _node: {fileID: 7316365203006655831}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UnityEngine.Localization.LocalizedString,
+        Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 7316365203006655831}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: answers 0
+        node: {fileID: -9016386407105299327}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 7316365203006655831}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: answers 0
+      _node: {fileID: 7316365203006655831}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 516091425767308759}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: answers 1
+      _node: {fileID: 7316365203006655831}
+      _typeQualifiedName: UnityEngine.Localization.LocalizedString, Unity.Localization,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 11400000, guid: 310d30148a5c28d408ff518d66deb933, type: 2}
+  text:
+    m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 22
+    m_FallbackState: 0
+  answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096195
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:8adc6ea1f805f1c4cab1dc1e7135c034
+    m_TableEntryReference:
+      m_KeyId: 288722096196
+      m_Key: 
+    m_FallbackState: 0
