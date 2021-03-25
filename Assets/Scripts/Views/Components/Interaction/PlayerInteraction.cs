@@ -53,7 +53,7 @@ public class PlayerInteraction : MonoBehaviour {
         GUIStyle style = new GUIStyle();
 
         Gizmos.color = Color.green;
-        Gizmos.DrawWireCube((transform.forward * forwardMultiplier) + boxOrigin + transform.position, boxSize);
+        Gizmos.DrawWireCube((transform.forward * forwardMultiplier) + boxOrigin + transform.position, boxSize * 2f);
         style.normal.textColor = Color.green;
         style.fontSize = 16;
         UnityEditor.Handles.Label((transform.forward * forwardMultiplier) + boxOrigin + transform.position, "Interactable cast", style);
