@@ -57,9 +57,9 @@ public class PlayerInteraction : MonoBehaviour {
         Gizmos.matrix = transform.localToWorldMatrix;
 
         Vector3 boxPosition = (transform.forward * forwardMultiplier) + boxOrigin + transform.position;
-        boxPosition = transform.InverseTransformPoint(boxPosition);
+        Vector3 inversedBoxPosition = transform.InverseTransformPoint(boxPosition);
 
-        Gizmos.DrawWireCube(boxPosition, boxSize * 2f);
+        Gizmos.DrawWireCube(inversedBoxPosition, boxSize * 2f);
         style.normal.textColor = Color.green;
         style.fontSize = 16;
         UnityEditor.Handles.Label(boxPosition, "Interactable cast", style);
