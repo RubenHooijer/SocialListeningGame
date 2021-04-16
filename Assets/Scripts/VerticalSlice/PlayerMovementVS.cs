@@ -62,6 +62,10 @@ public class PlayerMovementVS : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 270, 0);
         }
+        else if (translationX > 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 90, 0);
+        }
         else if (translationY < 0)
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
@@ -70,20 +74,22 @@ public class PlayerMovementVS : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-        else
-        {
-            transform.rotation = Quaternion.Euler(0, 90, 0);
-        }
 
         transform.position += new Vector3(translationX, 0, translationY) * speed * Time.deltaTime;
     }
 
     private void Jump()
     {
+        StartCoroutine(StartJump());
+    }
+
+    private IEnumerator StartJump()
+    {
         if(IsGrounded())
         {
             Debug.Log(IsGrounded());
-            animator.SetBool("Jumping", true);
+            animator.SetTrigger("Jump");
+            yield return new WaitForSeconds(0.25f);
             rigidbody.AddForce(new Vector3(0, jumpForce, 0));
         }
     }
