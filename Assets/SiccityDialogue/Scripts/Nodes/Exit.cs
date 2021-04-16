@@ -2,7 +2,7 @@
 
 namespace Dialogue {
 
-    [NodeTint("#FC0352")][CreateNodeMenu("Exit", order =0)]
+    [NodeTint("#FC0352")][CreateNodeMenu("Exit", order =0)][NodeWidth(100)]
     public class Exit : DialogueBaseNode {
 
         public override void Trigger() {

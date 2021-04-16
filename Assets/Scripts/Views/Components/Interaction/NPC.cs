@@ -1,11 +1,9 @@
-using EasyAttributes;
 using UnityEngine;
 
-public class TestInteractableNPC : MonoBehaviour {
+public class NPC : MonoBehaviour, IInteractable {
 
     [SerializeField] private CharacterType npc;
 
-    [Button]
     public void Interact() {
         DialogueScreen.Instance.Setup(npc.DialogueGraph);
         DialogueScreen.Instance.Show();

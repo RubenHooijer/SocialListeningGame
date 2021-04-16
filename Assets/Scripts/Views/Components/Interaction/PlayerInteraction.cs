@@ -31,7 +31,7 @@ public class PlayerInteraction : MonoBehaviour {
         Collider[] colliders = Physics.OverlapBox(
             (transform.forward * forwardMultiplier) + boxOrigin + transform.position, 
             boxSize, 
-            Quaternion.identity,
+            transform.rotation,
             interactableMask);
 
         if (colliders.Length < 1) {
@@ -53,10 +53,18 @@ public class PlayerInteraction : MonoBehaviour {
         GUIStyle style = new GUIStyle();
 
         Gizmos.color = Color.green;
-        Gizmos.DrawWireCube((transform.forward * forwardMultiplier) + boxOrigin + transform.position, boxSize);
+        Matrix4x4 prevMatrix = Gizmos.matrix;
+        Gizmos.matrix = transform.localToWorldMatrix;
+
+        Vector3 boxPosition = (transform.forward * forwardMultiplier) + boxOrigin + transform.position;
+        Vector3 inversedBoxPosition = transform.InverseTransformPoint(boxPosition);
+
+        Gizmos.DrawWireCube(inversedBoxPosition, boxSize * 2f);
         style.normal.textColor = Color.green;
         style.fontSize = 16;
-        UnityEditor.Handles.Label((transform.forward * forwardMultiplier) + boxOrigin + transform.position, "Interactable cast", style);
+        UnityEditor.Handles.Label(boxPosition, "Interactable cast", style);
+
+        Gizmos.matrix = prevMatrix;
 
     }
 #endif

@@ -13,7 +13,7 @@ namespace Dialogue {
             PictureChat node = target as PictureChat;
 
             EditorGUILayout.PropertyField(serializedObject.FindProperty("character"), GUIContent.none);
-            if (node.answers.Length == 0) {
+            if (node.answers == null || node.answers.Length <= 0) {
                 GUILayout.BeginHorizontal();
                 NodeEditorGUILayout.PortField(GUIContent.none, target.GetInputPort("input"), GUILayout.MinWidth(0));
                 NodeEditorGUILayout.PortField(GUIContent.none, target.GetOutputPort("output"), GUILayout.MinWidth(0));
