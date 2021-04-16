@@ -6,6 +6,7 @@ using UnityEngine;
 public class InputManager : GenericSingleton<InputManager, InputManager>
 {
     public readonly UnityEvent InteractPerformed = new UnityEvent();
+    public readonly UnityEvent JumpPerformed = new UnityEvent();
 
     private PlayerInput playerInput;
 
@@ -24,6 +25,8 @@ public class InputManager : GenericSingleton<InputManager, InputManager>
         playerInput = new PlayerInput();
 
         playerInput.PlayerMain.Interact.performed += OnInteractPerformed;
+        playerInput.PlayerMain.Jump.performed += OnJumpPerformed;
+
     }
 
     private void OnEnable()
@@ -38,6 +41,11 @@ public class InputManager : GenericSingleton<InputManager, InputManager>
 
     private void OnInteractPerformed(InputAction.CallbackContext obj) {
         InteractPerformed.Invoke();
+    }
+
+    private void OnJumpPerformed(InputAction.CallbackContext obj)
+    {
+        JumpPerformed.Invoke();
     }
 
 }
