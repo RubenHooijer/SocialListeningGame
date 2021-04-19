@@ -85,20 +85,31 @@ public class PlayerMovementVS : MonoBehaviour
 
     private IEnumerator StartJump()
     {
-        if(IsGrounded())
+        if(IsGrounded(0f))
         {
-            Debug.Log(IsGrounded());
             animator.SetTrigger("Jump");
             yield return new WaitForSeconds(0.25f);
             rigidbody.AddForce(new Vector3(0, jumpForce, 0));
+            yield return new WaitForSeconds(0.25f);
+            StartCoroutine(CheckGrounded());
         }
     }
 
-    private bool IsGrounded()
+    private bool IsGrounded(float extraHeight)
     {
-        bool hit = Physics.Raycast(collider.bounds.center, Vector2.down, collider.bounds.extents.y + groundCheckHeight, groundLayerMask);
-        Debug.Log(hit);
+        bool hit = Physics.Raycast(collider.bounds.center, Vector2.down, collider.bounds.extents.y + groundCheckHeight + extraHeight, groundLayerMask);
         return hit;
+    }
+
+    private IEnumerator CheckGrounded()
+    {
+        if(IsGrounded(0.6f))
+        {
+            animator.SetTrigger("Fall");
+            yield break;
+        }
+        yield return new WaitForEndOfFrame();
+        StartCoroutine(CheckGrounded());
     }
 
     public void StepEffect()
@@ -111,5 +122,11 @@ public class PlayerMovementVS : MonoBehaviour
         {
             Instantiate(stepEffect, transform.position + new Vector3(-0.4f, -0.03f, 0), Quaternion.identity);
         }
+    }
+
+    public void LandEffect()
+    {
+        GameObject stepEffectObject = Instantiate(stepEffect, transform.position + new Vector3(0, 0.1f, 0), Quaternion.identity);
+        stepEffectObject.transform.localScale = new Vector3(1,1,1);
     }
 }
