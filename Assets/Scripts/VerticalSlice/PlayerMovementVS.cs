@@ -103,7 +103,7 @@ public class PlayerMovementVS : MonoBehaviour
 
     private IEnumerator CheckGrounded()
     {
-        if(IsGrounded(0.6f))
+        if(IsGrounded(1.4f))
         {
             animator.SetTrigger("Fall");
             yield break;
