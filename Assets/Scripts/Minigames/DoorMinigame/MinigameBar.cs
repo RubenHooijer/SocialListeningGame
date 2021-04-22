@@ -12,12 +12,13 @@ public class MinigameBar : MonoBehaviour
     private Color baseColor;
 
     //Variables
-    [SerializeField] private float baseSpeed = 1f;
+    [SerializeField] private float baseSpeed = 0.5f;
 
     [SerializeField] private float doorOpenValue;
     [SerializeField] private float doorCurrentValue;
 
-    [SerializeField] private float ClickCooldown = 1;
+    [SerializeField] private float clickValue = 0.05f;
+    [SerializeField] private float doorClickValue = 0.1f;
 
     private bool canClick;
 
@@ -35,38 +36,31 @@ public class MinigameBar : MonoBehaviour
 
     private void Update()
     {
-        slider.value = Mathf.PingPong(Time.time * baseSpeed, 1);
-
-        //Reset slider
-        if(slider.value <= 0.01f)
+        if(slider.value > 0)
         {
-            canClick = true;
-            handleImage.color = new Color(baseColor.r, baseColor.g, baseColor.b, 1f);
+            slider.value -= Time.deltaTime * CalculateSpeed();
         }
+            
+    }
+
+    private float CalculateSpeed()
+    {
+        float speed = baseSpeed;
+
+        if(slider.value >= 0.5f)
+        {
+            speed = baseSpeed * 1.75f;
+        }
+        if (slider.value >= 0.75f)
+        {
+            speed = baseSpeed * 2.5f;
+        }
+
+        return speed;
     }
 
     private void AddToValue()
     {
-        if(!canClick)
-        {
-            return;
-        }
-
-        canClick = false;
-
-        //Grey out slider
-        handleImage.color = new Color(baseColor.r, baseColor.g, baseColor.b, 0.4f);
-
-        //Add value depending on bar value.
-        float value = 0.5f;
-        if(slider.value > 0.5f)
-        {
-            value = 1;
-        }
-        if(slider.value > 0.75f)
-        {
-            value = 2.5f;
-        }
-        doorCurrentValue += value;
+        slider.value += 0.05f;
     }
 }
