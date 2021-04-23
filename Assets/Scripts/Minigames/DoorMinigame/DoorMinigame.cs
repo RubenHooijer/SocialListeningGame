@@ -11,16 +11,21 @@ public class DoorMinigame : AbstractScreen<DoorMinigame>
 
     private GameObject minigameBar;
 
+    private FadeScript fadeScript;
+
+    [SerializeField] private float fadeTime = 3;
+
+    [SerializeField] private Transform newPosition;
+
     private void Start()
     {
         inputManager = InputManager.Instance;
+        fadeScript = FadeScript.Instance;
         Initialize();
     }
     
     private void Initialize()
     {
-        minigameBar = GetComponentInChildren<Slider>().gameObject;
-        minigameBar.SetActive(false);
         NearDoor = true;
         inputManager.InteractPerformed.AddListener(StartMinigame);
     }
@@ -39,8 +44,30 @@ public class DoorMinigame : AbstractScreen<DoorMinigame>
     {
         if (NearDoor)
         {
-            minigameBar.SetActive(true);
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).gameObject.SetActive(true);
+            }
             inputManager.InteractPerformed.RemoveListener(StartMinigame);
         }
+    }
+
+    public IEnumerator OpenDoor()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(false);
+        }
+        fadeScript.gameObject.SetActive(true);
+        fadeScript.Fade(1, fadeTime);
+
+        yield return new WaitForSeconds(fadeTime);
+
+        //Tp player
+        PlayerMovementVS.Instance.transform.position = newPosition.position;
+
+        BalanceMinigame.Instance.gameObject.SetActive(true);
+
+        inputManager.DisableInput();
     }
 }

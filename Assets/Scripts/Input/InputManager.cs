@@ -31,10 +31,20 @@ public class InputManager : GenericSingleton<InputManager, InputManager>
 
     private void OnEnable()
     {
-        playerInput.Enable();
+        EnableInput();
     }
 
     private void OnDisable()
+    {
+        DisableInput();
+    }
+
+    public void EnableInput()
+    {
+        playerInput.Enable();
+    }
+
+    public void DisableInput()
     {
         playerInput.Disable();
     }

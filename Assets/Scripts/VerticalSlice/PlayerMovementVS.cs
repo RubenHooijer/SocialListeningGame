@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovementVS : MonoBehaviour
 {
+    public static PlayerMovementVS Instance;
+
     [SerializeField] private LayerMask groundLayerMask;
 
     [SerializeField] private float speed, stepTime, groundCheckHeight, jumpForce;
@@ -20,8 +22,10 @@ public class PlayerMovementVS : MonoBehaviour
 
     private Collider collider;
 
+
     private void Awake()
     {
+        Instance = this;
         animator = GetComponent<Animator>();
         collider = GetComponent<Collider>();
         rigidbody = GetComponent<Rigidbody>();
@@ -30,7 +34,7 @@ public class PlayerMovementVS : MonoBehaviour
     private void Start()
     {
         inputManager = InputManager.Instance;
-        inputManager.JumpPerformed.AddListener(Jump);
+        //inputManager.JumpPerformed.AddListener(Jump);
         canWalkDepth = false;
     }
 

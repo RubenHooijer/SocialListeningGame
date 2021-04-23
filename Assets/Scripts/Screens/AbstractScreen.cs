@@ -21,6 +21,7 @@ public abstract class AbstractScreen<T> : MonoBehaviour where T : Component {
             _instance = this as T;
             gameObject.SetActive(false);
         } else {
+            Debug.Log(_instance, _instance.gameObject);
             Destroy(gameObject);
         }
     }
