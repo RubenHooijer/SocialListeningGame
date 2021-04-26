@@ -49,6 +49,14 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Balance"",
+                    ""type"": ""Button"",
+                    ""id"": ""8e83708a-080d-44d2-829d-672ae8535bed"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -161,6 +169,50 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d15c8aae-b53b-4495-8e4a-c74d928fb4b4"",
+                    ""path"": ""<Sensor>"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Balance"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""KL"",
+                    ""id"": ""d2e54512-fc9e-4f2b-bfc9-e4ea0badd2d9"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Balance"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""dcb57da9-0b75-47c1-ae4c-d2eda01f99fb"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Balance"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""07ca7402-ab89-47e1-8550-1c9c1dd6f2f1"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Balance"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -173,6 +225,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_PlayerMain_Look = m_PlayerMain.FindAction("Look", throwIfNotFound: true);
         m_PlayerMain_Interact = m_PlayerMain.FindAction("Interact", throwIfNotFound: true);
         m_PlayerMain_Jump = m_PlayerMain.FindAction("Jump", throwIfNotFound: true);
+        m_PlayerMain_Balance = m_PlayerMain.FindAction("Balance", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -226,6 +279,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerMain_Look;
     private readonly InputAction m_PlayerMain_Interact;
     private readonly InputAction m_PlayerMain_Jump;
+    private readonly InputAction m_PlayerMain_Balance;
     public struct PlayerMainActions
     {
         private @PlayerInput m_Wrapper;
@@ -234,6 +288,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         public InputAction @Look => m_Wrapper.m_PlayerMain_Look;
         public InputAction @Interact => m_Wrapper.m_PlayerMain_Interact;
         public InputAction @Jump => m_Wrapper.m_PlayerMain_Jump;
+        public InputAction @Balance => m_Wrapper.m_PlayerMain_Balance;
         public InputActionMap Get() { return m_Wrapper.m_PlayerMain; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -255,6 +310,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Jump.started -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnJump;
+                @Balance.started -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnBalance;
+                @Balance.performed -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnBalance;
+                @Balance.canceled -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnBalance;
             }
             m_Wrapper.m_PlayerMainActionsCallbackInterface = instance;
             if (instance != null)
@@ -271,6 +329,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @Balance.started += instance.OnBalance;
+                @Balance.performed += instance.OnBalance;
+                @Balance.canceled += instance.OnBalance;
             }
         }
     }
@@ -281,5 +342,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnBalance(InputAction.CallbackContext context);
     }
 }

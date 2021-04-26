@@ -58,4 +58,9 @@ public class InputManager : GenericSingleton<InputManager, InputManager>
         JumpPerformed.Invoke();
     }
 
+    private Vector2 GetGyro()
+    {
+        return Vector2.zero;
+    }
+
 }
