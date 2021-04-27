@@ -10,6 +10,8 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
 
     [SerializeField] private float fadeTime = 3;
 
+    public float BalanceSpeed;
+
     private void OnEnable()
     {
         fadeScript = FadeScript.Instance;

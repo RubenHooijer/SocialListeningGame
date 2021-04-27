@@ -8,9 +8,15 @@ public class BalancePlatform : MonoBehaviour
 
     private InputManager inputManager;
 
+    private BalanceMinigame balanceMinigame;
+
+    [SerializeField] private bool canTilt; //TODO: Remove serializefield
+
     private void Start()
     {
         inputManager = InputManager.Instance;
+        playerAnimator = PlayerMovementVS.Instance.transform.GetComponent<Animator>();
+        balanceMinigame = BalanceMinigame.Instance;
     }
 
     public void Fall()
@@ -20,6 +26,19 @@ public class BalancePlatform : MonoBehaviour
 
     public void StartTilt()
     {
+        canTilt = true;
+    }
 
+    public void StopTilt()
+    {
+        canTilt = false;
+    }
+
+    private void Update()
+    {
+        if(canTilt)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z - (inputManager.GetGyro() * Time.deltaTime * balanceMinigame.BalanceSpeed));
+        }
     }
 }

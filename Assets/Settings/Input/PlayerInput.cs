@@ -52,9 +52,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""Balance"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""8e83708a-080d-44d2-829d-672ae8535bed"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -173,7 +173,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d15c8aae-b53b-4495-8e4a-c74d928fb4b4"",
-                    ""path"": ""<Sensor>"",
+                    ""path"": ""<Gyroscope>/angularVelocity/z"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

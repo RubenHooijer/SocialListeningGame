@@ -18,4 +18,12 @@ public class PlatformTiltTrigger : MonoBehaviour
             platform.StartTilt();
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            platform.StopTilt();
+        }
+    }
 }

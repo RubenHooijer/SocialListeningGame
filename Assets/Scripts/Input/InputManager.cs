@@ -58,9 +58,11 @@ public class InputManager : GenericSingleton<InputManager, InputManager>
         JumpPerformed.Invoke();
     }
 
-    private Vector2 GetGyro()
+    public float GetGyro()
     {
-        return Vector2.zero;
+        float value = playerInput.PlayerMain.Balance.ReadValue<float>();
+        Debug.Log(value);
+        return value;
     }
 
 }
