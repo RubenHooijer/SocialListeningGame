@@ -36,9 +36,9 @@ public class BalancePlatform : MonoBehaviour
 
     private void Update()
     {
-        if(canTilt)
+        if (canTilt)
         {
-            transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z - (inputManager.GetGyro() * Time.deltaTime * balanceMinigame.BalanceSpeed));
+            transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z + (inputManager.GetGyro() * Time.deltaTime * balanceMinigame.BalanceSpeed));
         }
     }
 }

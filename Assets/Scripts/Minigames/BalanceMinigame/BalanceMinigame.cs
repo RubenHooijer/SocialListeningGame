@@ -10,15 +10,38 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
 
     [SerializeField] private float fadeTime = 3;
 
+    private bool canJump;
+
     public float BalanceSpeed;
 
-    private void OnEnable()
+    [SerializeField] private GameObject jumpUI;
+
+    private void Awake()
+    {
+        InitializeMinigame();
+    }
+
+    public void InitializeMinigame()
     {
         fadeScript = FadeScript.Instance;
+
+        Debug.Log(fadeScript);
 
         inputManager = InputManager.Instance;
         inputManager.EnableInput();
 
         fadeScript.Fade(0, fadeTime);
+    }
+
+    public void EnableJumpUI()
+    {
+        canJump = true;
+        jumpUI.SetActive(true);
+    }
+
+    public void DisableJumpUI()
+    {
+        canJump = false;
+        jumpUI.SetActive(false);
     }
 }

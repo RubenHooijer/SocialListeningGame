@@ -67,7 +67,7 @@ public class DoorMinigame : AbstractScreen<DoorMinigame>
         PlayerMovementVS.Instance.transform.position = newPosition.position;
 
         BalanceMinigame.Instance.gameObject.SetActive(true);
-
+        BalanceMinigame.Instance.InitializeMinigame();
         inputManager.DisableInput();
     }
 }

@@ -52,7 +52,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""Balance"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Value"",
                     ""id"": ""8e83708a-080d-44d2-829d-672ae8535bed"",
                     ""expectedControlType"": """",
                     ""processors"": """",

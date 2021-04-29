@@ -34,6 +34,7 @@ public class PlayerMovementVS : MonoBehaviour
     private void Start()
     {
         inputManager = InputManager.Instance;
+        inputManager.enabled = true;
         //inputManager.JumpPerformed.AddListener(Jump);
         canWalkDepth = false;
     }
