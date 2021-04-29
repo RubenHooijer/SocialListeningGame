@@ -38,7 +38,7 @@ public class BalancePlatform : MonoBehaviour
     {
         if (canTilt)
         {
-            transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z + (inputManager.GetGyro() * Time.deltaTime * balanceMinigame.BalanceSpeed));
+            transform.localRotation = Quaternion.Euler(transform.rotation.eulerAngles.x + (inputManager.GetGyro() * Time.deltaTime * balanceMinigame.BalanceSpeed), 180, 0);
         }
     }
 }
