@@ -23,7 +23,7 @@ public class JumpTrigger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            balanceMinigame.EnableJumpUI();
+            balanceMinigame.DisableJumpUI();
         }
     }
 }

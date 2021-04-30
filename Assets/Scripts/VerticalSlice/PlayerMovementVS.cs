@@ -22,6 +22,14 @@ public class PlayerMovementVS : MonoBehaviour
 
     private Collider collider;
 
+    [Header("Jump Parameters")]
+
+    private float tParam;
+
+    [SerializeField] private float jumpSpeed;
+
+    [SerializeField] private Vector2 bezierOffsetPlayer, bezierOffsetPlatform;
+
 
     private void Awake()
     {
@@ -83,22 +91,46 @@ public class PlayerMovementVS : MonoBehaviour
         transform.position += new Vector3(translationX, 0, translationY) * speed * Time.deltaTime;
     }
 
-    private void Jump()
+    public void Jump(Vector2 landPosition)
     {
-        StartCoroutine(StartJump());
+        StartCoroutine(StartJump(landPosition));
     }
 
-    private IEnumerator StartJump()
+    private IEnumerator StartJump(Vector2 landPosition)
     {
         if(IsGrounded(0f))
         {
+            tParam = 0;
             animator.SetTrigger("Jump");
             yield return new WaitForSeconds(0.25f);
-            rigidbody.AddForce(new Vector3(0, jumpForce, 0));
+
+            //Use Bezier curve to jump to position.
+            Vector2 p0 = transform.localPosition;
+            Vector2 p1 = p0 + bezierOffsetPlayer;
+            Vector2 p3 = landPosition;
+            Vector2 p2 = p3 + bezierOffsetPlatform;
+
+            Vector2 newPosition;
+
+            while(tParam < 1)
+            {
+                tParam += Time.deltaTime * jumpSpeed;
+
+                newPosition = Mathf.Pow(1 - tParam, 3) * p0 +
+                    3 * Mathf.Pow(1 - tParam, 2) * tParam * p1 +
+                    3 * (1 - tParam) * Mathf.Pow(tParam, 2) * p2 +
+                    Mathf.Pow(tParam, 3) * p3;
+
+                transform.localPosition = newPosition;
+
+                yield return new WaitForEndOfFrame();
+            }
+
             yield return new WaitForSeconds(0.25f);
             StartCoroutine(CheckGrounded());
         }
     }
+
 
     private bool IsGrounded(float extraHeight)
     {

@@ -5,18 +5,26 @@ using UnityEngine;
 public class BalancePlatform : MonoBehaviour
 {
     [SerializeField] private Animator playerAnimator;
+    [SerializeField] private Rigidbody playerRigidbody;
+
+    private PlayerMovementVS playerMovement;
 
     private InputManager inputManager;
 
     private BalanceMinigame balanceMinigame;
 
-    [SerializeField] private bool canTilt; //TODO: Remove serializefield
+    private bool canTilt;
 
     private void Start()
     {
         inputManager = InputManager.Instance;
-        playerAnimator = PlayerMovementVS.Instance.transform.GetComponent<Animator>();
+        playerMovement = PlayerMovementVS.Instance;
+
+        playerAnimator = playerMovement.transform.GetComponent<Animator>();
+        playerRigidbody = playerMovement.transform.GetComponent<Rigidbody>();
+
         balanceMinigame = BalanceMinigame.Instance;
+        canTilt = false;
     }
 
     public void Fall()
@@ -39,6 +47,14 @@ public class BalancePlatform : MonoBehaviour
         if (canTilt)
         {
             transform.localRotation = Quaternion.Euler(transform.rotation.eulerAngles.x + (inputManager.GetGyro() * Time.deltaTime * balanceMinigame.BalanceSpeed), 180, 0);
+
+            //calculate angle in - and + degrees;
+            float angle = transform.localEulerAngles.x;
+            angle = (angle > 180) ? angle - 360 : angle;
+
+            Vector3 force = transform.forward * angle * balanceMinigame.PlayerBalanceMoveSpeed * Time.deltaTime;
+            Debug.Log(angle);
+            playerRigidbody.AddForce(force);
         }
     }
 }

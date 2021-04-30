@@ -8,15 +8,25 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
 
     private FadeScript fadeScript;
 
+    private PlayerMovementVS playerMovement;
+
     [SerializeField] private float fadeTime = 3;
 
     private bool canJump;
 
     public float BalanceSpeed;
 
+    public float PlayerBalanceMoveSpeed;
+
     [SerializeField] private GameObject jumpUI;
 
-    private void Awake()
+    [SerializeField] private List<Transform> balancePlatforms;
+
+    [SerializeField] private Vector2 balancePlatformLandOffset;
+
+    private int currentPlatform;
+
+    private void Start()
     {
         InitializeMinigame();
     }
@@ -25,12 +35,18 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
     {
         fadeScript = FadeScript.Instance;
 
+        playerMovement = PlayerMovementVS.Instance;
+
         Debug.Log(fadeScript);
 
         inputManager = InputManager.Instance;
         inputManager.EnableInput();
 
+        inputManager.JumpPerformed.AddListener(JumpToPlatform);
+
         fadeScript.Fade(0, fadeTime);
+
+        currentPlatform = 0;
     }
 
     public void EnableJumpUI()
@@ -43,5 +59,15 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
     {
         canJump = false;
         jumpUI.SetActive(false);
+    }
+
+    private void JumpToPlatform()
+    {
+        if (canJump)
+        {
+            canJump = false;
+            playerMovement.Jump((Vector2)balancePlatforms[currentPlatform].position + balancePlatformLandOffset);
+            currentPlatform++;
+        }
     }
 }

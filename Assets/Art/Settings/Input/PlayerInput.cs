@@ -172,6 +172,17 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""7583ec4b-bba7-4cef-9e10-829364f17e4b"",
+                    ""path"": ""<Touchscreen>/primaryTouch/press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""d15c8aae-b53b-4495-8e4a-c74d928fb4b4"",
                     ""path"": ""<Gyroscope>/angularVelocity/z"",
                     ""interactions"": """",
