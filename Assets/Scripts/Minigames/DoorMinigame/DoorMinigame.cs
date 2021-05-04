@@ -15,7 +15,7 @@ public class DoorMinigame : AbstractScreen<DoorMinigame>
 
     [SerializeField] private float fadeTime = 3;
 
-    [SerializeField] private Transform newPosition;
+    [SerializeField] private Animator doorAnimator;
 
     private void Start()
     {
@@ -58,16 +58,14 @@ public class DoorMinigame : AbstractScreen<DoorMinigame>
         {
             transform.GetChild(i).gameObject.SetActive(false);
         }
+
+        doorAnimator.SetTrigger("Open");
+        yield return new WaitForSeconds(2.5f);
+
         fadeScript.gameObject.SetActive(true);
         fadeScript.Fade(1, fadeTime);
 
         yield return new WaitForSeconds(fadeTime);
-
-        //Tp player
-        PlayerMovementVS.Instance.transform.position = newPosition.position;
-
-        BalanceMinigame.Instance.gameObject.SetActive(true);
-        BalanceMinigame.Instance.InitializeMinigame();
-        inputManager.DisableInput();
+        LoadScene(1);
     }
 }

@@ -20,6 +20,8 @@ public class PlayerMovementVS : MonoBehaviour
 
     public bool canWalkDepth;
 
+    public bool canWalk;
+
     private Collider collider;
 
     [Header("Jump Parameters")]
@@ -43,13 +45,17 @@ public class PlayerMovementVS : MonoBehaviour
     {
         inputManager = InputManager.Instance;
         inputManager.enabled = true;
+        canWalk = true;
         //inputManager.JumpPerformed.AddListener(Jump);
         canWalkDepth = false;
     }
 
     private void Update()
     {
-        Movement();
+        if(canWalk)
+        {
+            Movement();
+        }
     }
 
     private void Movement()

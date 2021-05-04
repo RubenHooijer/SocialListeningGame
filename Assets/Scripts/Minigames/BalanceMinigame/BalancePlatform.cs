@@ -29,11 +29,14 @@ public class BalancePlatform : MonoBehaviour
 
     public void Fall()
     {
-        playerAnimator.SetTrigger("FallDown");
+        balanceMinigame.PlayerBalanceMoveSpeed = 0;
+        playerAnimator.SetBool("FallDown", true);
+
     }
 
     public void StartTilt()
     {
+        playerMovement.canWalk = false;
         canTilt = true;
     }
 
@@ -53,8 +56,15 @@ public class BalancePlatform : MonoBehaviour
             angle = (angle > 180) ? angle - 360 : angle;
 
             Vector3 force = transform.forward * angle * balanceMinigame.PlayerBalanceMoveSpeed * Time.deltaTime;
-            Debug.Log(angle);
             playerRigidbody.AddForce(force);
+            if (force.x < 0)
+            {
+                playerRigidbody.transform.rotation = Quaternion.Euler(0, 270, 0);
+            }
+            else if (force.x > 0)
+            {
+                playerRigidbody.transform.rotation = Quaternion.Euler(0, 90, 0);
+            }
         }
     }
 }

@@ -15,6 +15,7 @@ public class PlatformFallTrigger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            Debug.Log("asdasd");
             platform.Fall();
         }
     }
