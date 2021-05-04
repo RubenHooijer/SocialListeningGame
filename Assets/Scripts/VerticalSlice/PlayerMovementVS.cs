@@ -104,8 +104,8 @@ public class PlayerMovementVS : MonoBehaviour
 
     private IEnumerator StartJump(Vector2 landPosition)
     {
-        if(IsGrounded(0f))
-        {
+        //if(IsGrounded(0f))
+        //{
             tParam = 0;
             animator.SetTrigger("Jump");
             yield return new WaitForSeconds(0.25f);
@@ -134,7 +134,7 @@ public class PlayerMovementVS : MonoBehaviour
 
             yield return new WaitForSeconds(0.25f);
             StartCoroutine(CheckGrounded());
-        }
+       // }
     }
 
 
@@ -171,5 +171,10 @@ public class PlayerMovementVS : MonoBehaviour
     {
         GameObject stepEffectObject = Instantiate(stepEffect, transform.position + new Vector3(0, 0.1f, 0), Quaternion.identity);
         stepEffectObject.transform.localScale = new Vector3(1,1,1);
+    }
+
+    public void EnableInput()
+    {
+        inputManager.EnableInput();
     }
 }

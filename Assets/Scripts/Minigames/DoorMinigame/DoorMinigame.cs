@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DoorMinigame : AbstractScreen<DoorMinigame>
 {
@@ -17,9 +18,15 @@ public class DoorMinigame : AbstractScreen<DoorMinigame>
 
     [SerializeField] private Animator doorAnimator;
 
+    protected override void Awake()
+    {
+        base.Awake();
+        inputManager = InputManager.Instance;
+        inputManager.DisableInput();
+    }
+
     private void Start()
     {
-        inputManager = InputManager.Instance;
         fadeScript = FadeScript.Instance;
         Initialize();
     }
@@ -66,6 +73,6 @@ public class DoorMinigame : AbstractScreen<DoorMinigame>
         fadeScript.Fade(1, fadeTime);
 
         yield return new WaitForSeconds(fadeTime);
-        LoadScene(1);
+        LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

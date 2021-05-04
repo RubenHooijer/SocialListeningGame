@@ -66,6 +66,11 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
         if (canJump)
         {
             canJump = false;
+            if(currentPlatform >= balancePlatforms.Count)
+            {
+                return;
+            }
+            Debug.Log((Vector2)balancePlatforms[currentPlatform].position);
             playerMovement.Jump((Vector2)balancePlatforms[currentPlatform].position + balancePlatformLandOffset);
             currentPlatform++;
         }
