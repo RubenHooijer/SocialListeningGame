@@ -27,14 +27,27 @@ public class InputManager : GenericSingleton<InputManager, InputManager>
         playerInput.PlayerMain.Interact.performed += OnInteractPerformed;
         playerInput.PlayerMain.Jump.performed += OnJumpPerformed;
 
+#if !UNITY_EDITOR
+        InputSystem.EnableDevice(UnityEngine.InputSystem.Gyroscope.current);
+#endif
     }
 
     private void OnEnable()
     {
-        playerInput.Enable();
+        EnableInput();
     }
 
     private void OnDisable()
+    {
+        DisableInput();
+    }
+
+    public void EnableInput()
+    {
+        playerInput.Enable();
+    }
+
+    public void DisableInput()
     {
         playerInput.Disable();
     }
@@ -46,6 +59,12 @@ public class InputManager : GenericSingleton<InputManager, InputManager>
     private void OnJumpPerformed(InputAction.CallbackContext obj)
     {
         JumpPerformed.Invoke();
+    }
+
+    public float GetGyro()
+    {
+        float value = playerInput.PlayerMain.Balance.ReadValue<float>();
+        return value;
     }
 
 }

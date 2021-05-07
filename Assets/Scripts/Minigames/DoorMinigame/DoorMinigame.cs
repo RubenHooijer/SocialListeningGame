@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DoorMinigame : AbstractScreen<DoorMinigame>
 {
@@ -11,16 +12,27 @@ public class DoorMinigame : AbstractScreen<DoorMinigame>
 
     private GameObject minigameBar;
 
+    private FadeScript fadeScript;
+
+    [SerializeField] private float fadeTime = 3;
+
+    [SerializeField] private Animator doorAnimator;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        inputManager = InputManager.Instance;
+        inputManager.DisableInput();
+    }
+
     private void Start()
     {
-        inputManager = InputManager.Instance;
+        fadeScript = FadeScript.Instance;
         Initialize();
     }
     
     private void Initialize()
     {
-        minigameBar = GetComponentInChildren<Slider>().gameObject;
-        minigameBar.SetActive(false);
         NearDoor = true;
         inputManager.InteractPerformed.AddListener(StartMinigame);
     }
@@ -39,8 +51,28 @@ public class DoorMinigame : AbstractScreen<DoorMinigame>
     {
         if (NearDoor)
         {
-            minigameBar.SetActive(true);
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).gameObject.SetActive(true);
+            }
             inputManager.InteractPerformed.RemoveListener(StartMinigame);
         }
+    }
+
+    public IEnumerator OpenDoor()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(false);
+        }
+
+        doorAnimator.SetTrigger("Open");
+        yield return new WaitForSeconds(2.5f);
+
+        fadeScript.gameObject.SetActive(true);
+        fadeScript.Fade(1, fadeTime);
+
+        yield return new WaitForSeconds(fadeTime);
+        LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
