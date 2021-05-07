@@ -2,20 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Eustachius : MonoBehaviour
+public class Eustachius : PlayerMovementVS
 {
-    private Animator animator;
-    
-    void Awake()
+    public static Eustachius Instance;
+
+    private void Awake()
     {
-        animator = GetComponent<Animator>();
+        base.Awake();
+        Instance = this;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void StandUp()
     {
-        if(other.tag == "Player")
-        {
-            animator.SetBool("StandUp", true);
-        }
+        animator.SetBool("StandUp", true);
     }
 }

@@ -12,7 +12,7 @@ public class PlayerMovementVS : MonoBehaviour
 
     [SerializeField] private GameObject stepEffect;
 
-    [SerializeField] private Animator animator;
+    [SerializeField] protected Animator animator;
 
     private Rigidbody rigidbody;
 
@@ -32,8 +32,13 @@ public class PlayerMovementVS : MonoBehaviour
 
     [SerializeField] private Vector2 bezierOffsetPlayer, bezierOffsetPlatform;
 
+    public bool canJump;
 
-    private void Awake()
+    private float translationX;
+
+    private bool walkingToEustachius;
+
+    protected virtual void Awake()
     {
         Instance = this;
         animator = GetComponent<Animator>();
@@ -60,7 +65,10 @@ public class PlayerMovementVS : MonoBehaviour
 
     private void Movement()
     {
-        float translationX = inputManager.GetMovement().x;
+        if(!walkingToEustachius)
+        {
+            translationX = inputManager.GetMovement().x;
+        }
         float translationY = inputManager.GetMovement().y;
 
         if(!canWalkDepth)
@@ -132,7 +140,6 @@ public class PlayerMovementVS : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
 
-            yield return new WaitForSeconds(0.25f);
             StartCoroutine(CheckGrounded());
        // }
     }
@@ -176,5 +183,27 @@ public class PlayerMovementVS : MonoBehaviour
     public void EnableInput()
     {
         inputManager.EnableInput();
+    }
+
+    public IEnumerator WalkRight()
+    {
+        walkingToEustachius = true;
+        float distanceTraveled = 0;
+        Vector2 startPosition = transform.localPosition;
+        while(distanceTraveled < 3.3f)
+        {
+            distanceTraveled = Vector2.Distance(startPosition, transform.localPosition);
+            translationX = 1;
+            yield return new WaitForEndOfFrame();
+        }
+        walkingToEustachius = false;
+
+        //Jump to next platform
+        BalanceMinigame balanceMinigame = BalanceMinigame.Instance;
+        Jump((Vector2)balanceMinigame.balancePlatforms[balanceMinigame.currentPlatform].position + balanceMinigame.balancePlatformLandOffset);
+        if(Instance == Eustachius.Instance)
+        {
+            balanceMinigame.currentPlatform++;
+        }
     }
 }
