@@ -42,6 +42,8 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
         playerMovement = PlayerMovementVS.Instance;
         eustachius = Eustachius.Instance;
 
+        eustachius.canWalk = true;
+
         inputManager = InputManager.Instance;
         inputManager.EnableInput();
 
