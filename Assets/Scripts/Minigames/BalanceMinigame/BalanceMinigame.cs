@@ -78,16 +78,4 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
             //eustachius.StartCoroutine(eustachius.WalkRight());
         }
     }
-
-    public IEnumerator NextPlatform()
-    {
-        if(!movingToNextPlatform)
-        {
-            Debug.Log("in");
-            movingToNextPlatform = true;
-            currentPlatform++;
-        }
-        yield return new WaitForSeconds(1f);
-        movingToNextPlatform = false;
-    }
 }
