@@ -16,4 +16,12 @@ public class Eustachius : PlayerMovementVS
     {
         animator.SetBool("StandUp", true);
     }
+
+    protected override IEnumerator StartJump(Vector2 landPosition)
+    {
+        StartCoroutine(base.StartJump(landPosition));
+        yield return new WaitForSeconds(2.5f);
+        Debug.Log("walk");
+        StartCoroutine(WalkRight());
+    }
 }

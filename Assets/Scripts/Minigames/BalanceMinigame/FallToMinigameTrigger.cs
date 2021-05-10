@@ -7,6 +7,9 @@ public class FallToMinigameTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        BalanceMinigame.Instance.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if(other.tag == "Player")
+        {
+            BalanceMinigame.Instance.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }

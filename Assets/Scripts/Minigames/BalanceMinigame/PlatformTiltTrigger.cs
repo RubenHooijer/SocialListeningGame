@@ -16,6 +16,7 @@ public class PlatformTiltTrigger : MonoBehaviour
         if(other.tag == "Player")
         {
             platform.StartTilt();
+            BalanceMinigame.Instance.playerMovement.StartBalanceAnimation();
         }
     }
 
@@ -24,6 +25,7 @@ public class PlatformTiltTrigger : MonoBehaviour
         if (other.tag == "Player")
         {
             platform.StopTilt();
+            BalanceMinigame.Instance.playerMovement.StopBalanceAnimation();
         }
     }
 }
