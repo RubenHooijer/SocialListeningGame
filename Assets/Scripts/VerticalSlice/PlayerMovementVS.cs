@@ -38,6 +38,8 @@ public class PlayerMovementVS : MonoBehaviour
 
     private bool walkingToEustachius;
 
+    private bool jumping;
+
     protected virtual void Awake()
     {
         Instance = this;
@@ -110,13 +112,18 @@ public class PlayerMovementVS : MonoBehaviour
         StartCoroutine(StartJump(landPosition));
     }
 
-    private IEnumerator StartJump(Vector2 landPosition)
+    protected virtual IEnumerator StartJump(Vector2 landPosition)
     {
-        //if(IsGrounded(0f))
-        //{
+        if (jumping)
+        {
+            yield break;
+        }
+        jumping = true;
         tParam = 0;
         animator.SetTrigger("Jump");
         yield return new WaitForSeconds(0.25f);
+
+        Debug.Log("jump" + gameObject.name);
 
         //Use Bezier curve to jump to position.
         Vector2 p0 = transform.localPosition;
@@ -140,8 +147,9 @@ public class PlayerMovementVS : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
+        jumping = false;
+
         StartCoroutine(CheckGrounded());
-        // }
     }
 
 
@@ -200,11 +208,15 @@ public class PlayerMovementVS : MonoBehaviour
 
         //Jump to next platform
         BalanceMinigame balanceMinigame = BalanceMinigame.Instance;
-        Jump((Vector2)balanceMinigame.balancePlatforms[balanceMinigame.currentPlatform].position + balanceMinigame.balancePlatformLandOffset);
-        if (Instance == Eustachius.Instance)
+
+        if(gameObject.name != "Eustachius")
         {
-            balanceMinigame.currentPlatform++;
+            Jump((Vector2)balanceMinigame.balancePlatforms[balanceMinigame.currentPlatform].position + balanceMinigame.balancePlatformLandOffset);
         }
+
+        yield return new WaitForSeconds(2.5f);
+
+        balanceMinigame.StartCoroutine(balanceMinigame.NextPlatform());
     }
 
     public void DisableCollider()
@@ -212,4 +224,13 @@ public class PlayerMovementVS : MonoBehaviour
         collider.enabled = false;
     }
 
+    public void StartBalanceAnimation()
+    {
+        animator.SetBool("Balance", true);
+    }
+
+    public void StopBalanceAnimation()
+    {
+        animator.SetBool("Balance", false);
+    }
 }
