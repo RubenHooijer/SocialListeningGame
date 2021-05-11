@@ -11,9 +11,9 @@ public class WalkerComponent : MonoBehaviour {
 	[SerializeField] private BGCurve path;
 	[SerializeField] private float speed = 5f;
 
-	[Header("References")]
-	[SerializeField] private Animator animator;
-	[SerializeField, AnimatorParam("animator", AnimatorControllerParameterType.Bool)] private string walkBool;
+	//[Header("References")]
+	//[SerializeField] private Animator animator;
+	//[SerializeField, AnimatorParam("animator", AnimatorControllerParameterType.Bool)] private string walkBool;
 
 	private BGCcTrs pathTRS = null;
 
