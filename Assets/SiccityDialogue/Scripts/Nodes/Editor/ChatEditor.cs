@@ -23,7 +23,14 @@ namespace Dialogue {
             }
 
             NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("text"), GUIContent.none);
-            NodeEditorGUILayout.DynamicPortList("answers", typeof(DialogueBaseNode), serializedObject, NodePort.IO.Output, Node.ConnectionType.Override);
+            NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("audio"), GUIContent.none);
+            if (node.answers.Count <= 0) {
+                if(GUILayout.Button("Add answers")) {
+                    node.answers.Add(default);
+                }
+            } else {
+                NodeEditorGUILayout.DynamicPortList("answers", typeof(DialogueBaseNode), serializedObject, NodePort.IO.Output, Node.ConnectionType.Override);
+            }
 
             serializedObject.ApplyModifiedProperties();
         }
@@ -33,15 +40,13 @@ namespace Dialogue {
         }
 
         public override Color GetTint() {
-            return base.GetTint();
-            //CHARACTER SPECIFIC COLORS
-            //Chat node = target as Chat;
-            //if (node.character == null) return base.GetTint();
-            //else {
-            //    Color col = node.character.color;
-            //    col.a = 1;
-            //    return col;
-            //}
+            Chat node = target as Chat;
+            if (node.character == null) return base.GetTint();
+            else {
+                Color col = node.character.color;
+                col.a = 1;
+                return col;
+            }
         }
     }
 }
