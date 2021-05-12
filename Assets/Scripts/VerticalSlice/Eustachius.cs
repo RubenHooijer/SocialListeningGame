@@ -16,7 +16,12 @@ public class Eustachius : PlayerMovementVS
     protected override void Start()
     {
         base.Start();
-        canWalk = false;
+
+        canWalk = true;
+        if (DoorMinigame.Instance != null)
+        {
+            canWalk = false;
+        }
     }
 
     public void StandUp()

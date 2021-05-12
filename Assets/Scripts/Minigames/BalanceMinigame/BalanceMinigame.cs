@@ -49,8 +49,6 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
 
         inputManager.JumpPerformed.AddListener(JumpToPlatform);
 
-        fadeScript.Fade(0, fadeTime);
-
         currentPlatform = 0;
     }
 
