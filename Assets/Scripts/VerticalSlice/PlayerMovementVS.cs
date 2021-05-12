@@ -148,6 +148,9 @@ public class PlayerMovementVS : MonoBehaviour
 
             transform.localPosition = newPosition;
 
+            //Make sure no falling happens when jumping
+            animator.SetBool("FallDown", false);
+            
             yield return new WaitForEndOfFrame();
         }
 
