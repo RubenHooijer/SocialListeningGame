@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Settings/Input/PlayerInput.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Art/Settings/Input/PlayerInput.inputactions'
 
 using System;
 using System.Collections;
@@ -47,6 +47,14 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""type"": ""Button"",
                     ""id"": ""13855127-346d-4846-9286-193754873910"",
                     ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Balance"",
+                    ""type"": ""Value"",
+                    ""id"": ""8e83708a-080d-44d2-829d-672ae8535bed"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -119,6 +127,39 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""LR"",
+                    ""id"": ""79606cd2-1bbb-4bf2-a549-aeec8a8d30d9"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""9d60afb0-4508-4499-b386-6d70ed4ef5f3"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""19f82c12-ebdd-49bd-b8e5-42249990218b"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""f8777a35-1f1d-4d10-9164-629bfca0c4db"",
                     ""path"": ""<Gamepad>/rightStick"",
@@ -161,6 +202,61 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7583ec4b-bba7-4cef-9e10-829364f17e4b"",
+                    ""path"": ""<Touchscreen>/primaryTouch/press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d15c8aae-b53b-4495-8e4a-c74d928fb4b4"",
+                    ""path"": ""<Gyroscope>/angularVelocity/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Balance"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""KL"",
+                    ""id"": ""d2e54512-fc9e-4f2b-bfc9-e4ea0badd2d9"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Balance"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""dcb57da9-0b75-47c1-ae4c-d2eda01f99fb"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Balance"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""07ca7402-ab89-47e1-8550-1c9c1dd6f2f1"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Balance"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -173,6 +269,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_PlayerMain_Look = m_PlayerMain.FindAction("Look", throwIfNotFound: true);
         m_PlayerMain_Interact = m_PlayerMain.FindAction("Interact", throwIfNotFound: true);
         m_PlayerMain_Jump = m_PlayerMain.FindAction("Jump", throwIfNotFound: true);
+        m_PlayerMain_Balance = m_PlayerMain.FindAction("Balance", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -226,6 +323,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerMain_Look;
     private readonly InputAction m_PlayerMain_Interact;
     private readonly InputAction m_PlayerMain_Jump;
+    private readonly InputAction m_PlayerMain_Balance;
     public struct PlayerMainActions
     {
         private @PlayerInput m_Wrapper;
@@ -234,6 +332,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         public InputAction @Look => m_Wrapper.m_PlayerMain_Look;
         public InputAction @Interact => m_Wrapper.m_PlayerMain_Interact;
         public InputAction @Jump => m_Wrapper.m_PlayerMain_Jump;
+        public InputAction @Balance => m_Wrapper.m_PlayerMain_Balance;
         public InputActionMap Get() { return m_Wrapper.m_PlayerMain; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -255,6 +354,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Jump.started -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnJump;
+                @Balance.started -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnBalance;
+                @Balance.performed -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnBalance;
+                @Balance.canceled -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnBalance;
             }
             m_Wrapper.m_PlayerMainActionsCallbackInterface = instance;
             if (instance != null)
@@ -271,6 +373,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @Balance.started += instance.OnBalance;
+                @Balance.performed += instance.OnBalance;
+                @Balance.canceled += instance.OnBalance;
             }
         }
     }
@@ -281,5 +386,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnBalance(InputAction.CallbackContext context);
     }
 }

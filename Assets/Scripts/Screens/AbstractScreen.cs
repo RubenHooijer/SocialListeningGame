@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public abstract class AbstractScreen<T> : MonoBehaviour where T : Component {
 
@@ -21,8 +22,13 @@ public abstract class AbstractScreen<T> : MonoBehaviour where T : Component {
             _instance = this as T;
             gameObject.SetActive(false);
         } else {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
+    }
+
+    public void LoadScene(int scene)
+    {
+        SceneManager.LoadScene(scene);
     }
 
     public void Show() {

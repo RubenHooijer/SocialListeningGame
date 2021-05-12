@@ -1,4 +1,5 @@
 ﻿using Dialogue;
+using NaughtyAttributes;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -8,109 +9,144 @@ using UnityEngine.UI;
 public class DialogueScreen : AbstractScreen<DialogueScreen> {
 
     [Header("References")]
+    [SerializeField] private GameObject speechGameObject;
     [SerializeField] private TextMeshProUGUI speechTextField;
-    [SerializeField] private GameObject textAnswersParent;
-    [SerializeField] private TextAnswerItem textAnswerTemplate;
-    [SerializeField] private GameObject pictureAnswersParent;
-    [SerializeField] private PictureAnswerItem pictureAnswerTemplate;
+    [SerializeField] private GameObject answersParent;
+    [SerializeField] private AnswerItem answerTemplate;
     [SerializeField] private Button skipSpeechButton;
 
-    private ItemContainer<TextAnswerItem, (LocalizedString, int)> textAnswerContainer;
-    private ItemContainer<PictureAnswerItem, (LocalizedTexture2D, int)> pictureAnswerContainer;
+    private ItemContainer<AnswerItem, (string, int)> answerContainer;
     private DialogueGraph dialogueGraph;
-
-    protected override void Awake() {
-        base.Awake();
-        textAnswerContainer = new ItemContainer<TextAnswerItem, (LocalizedString, int)>(textAnswerTemplate);
-        pictureAnswerContainer = new ItemContainer<PictureAnswerItem, (LocalizedTexture2D, int)>(pictureAnswerTemplate);
-    }
 
     public void Setup(DialogueGraph dialogueGraph) {
         dialogueGraph.Restart();
         this.dialogueGraph = dialogueGraph;
     }
 
+    [Button]
+    public void NextDialogue() {
+        dialogueGraph.Next();
+        IChat chat = (IChat)dialogueGraph.current;
+        ShowSpeech(dialogueGraph.current as IChat);
+    }
+
+    [Button]
+    public void StartDialogie() {
+        ShowSpeech(dialogueGraph.current as IChat);
+    }
+
+    protected override void Awake() {
+        base.Awake();
+        answerContainer = new ItemContainer<AnswerItem, (string, int)>(answerTemplate);
+        speechGameObject.SetActive(false);
+        answersParent.SetActive(false);
+    }
+
     protected override void OnShow() {
         gameObject.SetActive(true);
-        ShowChat(dialogueGraph.current);
+        skipSpeechButton.onClick.AddListener(NextDialogue);
     }
 
     protected override void OnHide() {
         gameObject.SetActive(false);
     }
 
+    private void ShowAnswers(IChat chat) {
+        List<(string, int)> textIndexPairs = new List<(string, int)>();
+        for (int i = 0; i < chat.Answers.Count; i++) {
+            textIndexPairs.Add((chat.Answers[i].Text, i));
+        }
+
+        answersParent.SetActive(true);
+        answerContainer.UpdateContainer(textIndexPairs);
+
+        answerContainer.Items.ForEach(x => {
+            x.ButtonClickedEvent.RemoveListener(OnAnswerClicked);
+            x.ButtonClickedEvent.AddListener(OnAnswerClicked);
+        });
+    }
+
+    private void ShowSpeech(IChat chat) {
+        speechGameObject.SetActive(true);
+        speechTextField.text = chat.Text;
+
+        if (chat.AnswerCount > 0) {
+            ShowAnswers(chat);
+        }
+    }
+
     private void OnAnswerClicked(int answerIndex) {
         Debug.Log($"You answered with {answerIndex}");
         dialogueGraph.AnswerQuestion(answerIndex);
-        ShowChat(dialogueGraph.current);
+        //ShowChat(dialogueGraph.current);
     }
 
-    private void ShowChat(IChat chat) {
-        ResetOptions();
-        
-        if (chat == null) {
-            Debug.Log($"<color=orange>You have reached an end of the dialogue</color>");
-            Hide();
-        } else if (chat.AnswerCount <= 0) {
-            ShowSpeechOnly((Chat)chat);
-        } else if (chat is Chat speechChat) {
-            ShowTextChat(speechChat);
-        } else if (chat is PictureChat pictureChat) {
-            ShowPictureChat(pictureChat);
-        } else {
-            Debug.LogWarning($"Chat node couldn't be identified");
-            Hide();
-        }
-    }
+    //private void ShowChat(IChat chat) {
+    //    ResetOptions();
 
-    private void ShowSpeechOnly(Chat chat) {
-        speechTextField.text = chat.text.GetLocalizedString().Result;
+    //    if (chat == null) {
+    //        Debug.Log($"<color=orange>You have reached an end of the dialogue</color>");
+    //        Hide();
+    //    } else if (chat.AnswerCount <= 0) {
+    //        ShowSpeechOnly((Chat)chat);
+    //    } else if (chat is Chat speechChat) {
+    //        ShowTextChat(speechChat);
+    //    } else if (chat is PictureChat pictureChat) {
+    //        ShowPictureChat(pictureChat);
+    //    } else {
+    //        Debug.LogWarning($"Chat node couldn't be identified");
+    //        Hide();
+    //    }
+    //}
 
-        skipSpeechButton.gameObject.SetActive(true);
-        skipSpeechButton.onClick.RemoveAllListeners();
-        skipSpeechButton.onClick.AddListener(() => OnAnswerClicked(0));
-    }
+    //private void ShowSpeechOnly(Chat chat) {
+    //    speechTextField.text = chat.text.GetLocalizedString().Result;
 
-    private void ShowTextChat(Chat chat) {
-        List<(LocalizedString, int)> textIndexPairs = new List<(LocalizedString, int)>();
-        for (int i = 0; i < chat.answers.Count; i++) {
-            textIndexPairs.Add((chat.answers[i], i));
-        }
+    //    skipSpeechButton.gameObject.SetActive(true);
+    //    skipSpeechButton.onClick.RemoveAllListeners();
+    //    skipSpeechButton.onClick.AddListener(() => OnAnswerClicked(0));
+    //}
 
-        speechTextField.text = chat.text.GetLocalizedString().Result;
+    //private void ShowTextChat(Chat chat) {
+    //    List<(LocalizedString, int)> textIndexPairs = new List<(LocalizedString, int)>();
+    //    for (int i = 0; i < chat.answers.Count; i++) {
+    //        textIndexPairs.Add((chat.answers[i], i));
+    //    }
 
-        textAnswersParent.SetActive(true);
-        textAnswerContainer.UpdateContainer(textIndexPairs);
+    //    speechTextField.text = chat.text.GetLocalizedString().Result;
 
-        textAnswerContainer.Items.ForEach(x => {
-            x.ButtonClickedEvent.RemoveListener(OnAnswerClicked);
-            x.ButtonClickedEvent.AddListener(OnAnswerClicked);
-            }
-        );
-    }
+    //    textAnswersParent.SetActive(true);
+    //    textAnswerContainer.UpdateContainer(textIndexPairs);
 
-    private void ShowPictureChat(PictureChat pictureChat) {
-        List<(LocalizedTexture2D, int)> textureIndexPairs = new List<(LocalizedTexture2D, int)>();
-        for (int i = 0; i < pictureChat.answers.Length; i++) {
-            textureIndexPairs.Add((pictureChat.answers[i], i));
-        }
+    //    textAnswerContainer.Items.ForEach(x => {
+    //        x.ButtonClickedEvent.RemoveListener(OnAnswerClicked);
+    //        x.ButtonClickedEvent.AddListener(OnAnswerClicked);
+    //        }
+    //    );
+    //}
 
-        speechTextField.text = pictureChat.text.GetLocalizedString().Result;
+    //private void ShowPictureChat(PictureChat pictureChat) {
+    //    List<(LocalizedTexture2D, int)> textureIndexPairs = new List<(LocalizedTexture2D, int)>();
+    //    for (int i = 0; i < pictureChat.answers.Length; i++) {
+    //        textureIndexPairs.Add((pictureChat.answers[i], i));
+    //    }
 
-        pictureAnswersParent.SetActive(true);
-        pictureAnswerContainer.UpdateContainer(textureIndexPairs);
+    //    speechTextField.text = pictureChat.text.GetLocalizedString().Result;
 
-        pictureAnswerContainer.Items.ForEach(x => {
-            x.ButtonClickedEvent.RemoveListener(OnAnswerClicked);
-            x.ButtonClickedEvent.AddListener(OnAnswerClicked);
-        }
-        );
-    }
+    //    pictureAnswersParent.SetActive(true);
+    //    pictureAnswerContainer.UpdateContainer(textureIndexPairs);
 
-    private void ResetOptions() {
-        textAnswersParent.SetActive(false);
-        pictureAnswersParent.SetActive(false);
-        skipSpeechButton.gameObject.SetActive(false);
-    }
+    //    pictureAnswerContainer.Items.ForEach(x => {
+    //        x.ButtonClickedEvent.RemoveListener(OnAnswerClicked);
+    //        x.ButtonClickedEvent.AddListener(OnAnswerClicked);
+    //    }
+    //    );
+    //}
+
+    //private void ResetOptions() {
+    //    textAnswersParent.SetActive(false);
+    //    pictureAnswersParent.SetActive(false);
+    //    skipSpeechButton.gameObject.SetActive(false);
+    //}
 
 }
