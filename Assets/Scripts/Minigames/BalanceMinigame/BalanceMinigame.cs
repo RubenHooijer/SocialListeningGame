@@ -8,7 +8,7 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
 
     private FadeScript fadeScript;
 
-    private PlayerMovementVS playerMovement;
+    public PlayerMovementVS playerMovement;
     private Eustachius eustachius;
 
 
@@ -28,6 +28,8 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
 
     public int currentPlatform;
 
+    private bool movingToNextPlatform;
+
     private void Start()
     {
         InitializeMinigame();
@@ -40,14 +42,12 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
         playerMovement = PlayerMovementVS.Instance;
         eustachius = Eustachius.Instance;
 
-        Debug.Log(fadeScript);
+        eustachius.canWalk = true;
 
         inputManager = InputManager.Instance;
         inputManager.EnableInput();
 
         inputManager.JumpPerformed.AddListener(JumpToPlatform);
-
-        fadeScript.Fade(0, fadeTime);
 
         currentPlatform = 0;
     }
@@ -75,7 +75,7 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
             }
             eustachius.Jump((Vector2)balancePlatforms[currentPlatform].position + balancePlatformLandOffset);
             playerMovement.StartCoroutine(playerMovement.WalkRight());
-            eustachius.StartCoroutine(eustachius.WalkRight());
+            //eustachius.StartCoroutine(eustachius.WalkRight());
         }
     }
 }

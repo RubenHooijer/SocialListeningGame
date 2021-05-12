@@ -18,6 +18,8 @@ public class DoorMinigame : AbstractScreen<DoorMinigame>
 
     [SerializeField] private Animator doorAnimator;
 
+    public Transform DoorPushSpot;
+
     protected override void Awake()
     {
         base.Awake();
@@ -47,16 +49,13 @@ public class DoorMinigame : AbstractScreen<DoorMinigame>
         base.OnHide();
     }
 
-    private void StartMinigame()
+    public void StartMinigame()
     {
-        if (NearDoor)
+        for (int i = 0; i < transform.childCount; i++)
         {
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                transform.GetChild(i).gameObject.SetActive(true);
-            }
-            inputManager.InteractPerformed.RemoveListener(StartMinigame);
+            transform.GetChild(i).gameObject.SetActive(true);
         }
+        inputManager.InteractPerformed.RemoveListener(StartMinigame);
     }
 
     public IEnumerator OpenDoor()
@@ -67,6 +66,10 @@ public class DoorMinigame : AbstractScreen<DoorMinigame>
         }
 
         doorAnimator.SetTrigger("Open");
+
+        Eustachius.Instance.animator.SetBool("Pushing", false);
+        Eustachius.Instance.playerMovement.animator.SetBool("Pushing", false);
+
         yield return new WaitForSeconds(2.5f);
 
         fadeScript.gameObject.SetActive(true);

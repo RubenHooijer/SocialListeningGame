@@ -8,7 +8,6 @@ public class DoorMinigameDoor : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            DoorMinigame.Instance.gameObject.SetActive(true);
             DoorMinigame.Instance.NearDoor = true;
         }
     }
