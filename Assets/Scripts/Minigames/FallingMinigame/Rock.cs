@@ -16,10 +16,9 @@ public class Rock : MonoBehaviour
     private IEnumerator PlayerDead()
     {
         //Particle Effect
-        yield return new WaitForSeconds(1.5f);
 
-        FadeScript.Instance.Fade(1,3);
-        yield return new WaitForSeconds(3);
+        FadeScript.Instance.Fade(1,1);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
