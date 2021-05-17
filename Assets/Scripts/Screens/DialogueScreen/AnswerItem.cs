@@ -3,27 +3,31 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class AnswerItem : ContainerItem<(string, int)> {
+public class AnswerItem : MonoBehaviour {
 
-    public readonly UnityEvent<int> ButtonClickedEvent = new UnityEvent<int>();
+    public readonly UnityEvent<int> OnButtonClickedEvent = new UnityEvent<int>();
 
     [Header("References")]
     [SerializeField] private TextMeshProUGUI answerTextField;
     [SerializeField] private Button button;
 
-    protected override void OnSetup((string, int) textIndexPair) {
-        answerTextField.SetText(textIndexPair.Item1);
-    
-        button.onClick.RemoveListener(OnButtonClicked);
+    private (string Text, int Index) textWithIndex;
+
+    public void Setup((string Text, int Index) textWithIndex) {
+        this.textWithIndex = textWithIndex;
+        answerTextField.SetText(textWithIndex.Text);
+    }
+
+    private void Awake() {
         button.onClick.AddListener(OnButtonClicked);
     }
 
-    protected override void OnDispose() {
-        button.onClick.RemoveListener(OnButtonClicked);
+    private void LateUpdate() {
+        transform.position = Camera.main.WorldToScreenPoint(DialogueTransformComponent.Transform.position);
     }
 
     private void OnButtonClicked() {
-        ButtonClickedEvent.Invoke(Data.Item2);
+        OnButtonClickedEvent.Invoke(textWithIndex.Index);
     }
 
 }
