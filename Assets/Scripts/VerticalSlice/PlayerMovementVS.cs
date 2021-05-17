@@ -22,7 +22,7 @@ public class PlayerMovementVS : MonoBehaviour
 
     public bool canWalk;
 
-    private Collider collider;
+    [SerializeField] private Collider collider;
 
     [Header("Jump Parameters")]
 
@@ -37,6 +37,8 @@ public class PlayerMovementVS : MonoBehaviour
     private float translationX;
 
     private bool walkingToEustachius;
+
+    private bool jumping;
 
     protected virtual void Awake()
     {
@@ -57,7 +59,7 @@ public class PlayerMovementVS : MonoBehaviour
 
     private void Update()
     {
-        if(canWalk)
+        if (canWalk)
         {
             Movement();
         }
@@ -65,13 +67,13 @@ public class PlayerMovementVS : MonoBehaviour
 
     private void Movement()
     {
-        if(!walkingToEustachius)
+        if (!walkingToEustachius)
         {
             translationX = inputManager.GetMovement().x;
         }
         float translationY = inputManager.GetMovement().y;
 
-        if(!canWalkDepth)
+        if (!canWalkDepth)
         {
             translationY = 0;
         }
@@ -85,7 +87,7 @@ public class PlayerMovementVS : MonoBehaviour
             animator.SetBool("Walking", false);
         }
 
-        if(translationX < 0)
+        if (translationX < 0)
         {
             transform.rotation = Quaternion.Euler(0, 270, 0);
         }
@@ -110,38 +112,44 @@ public class PlayerMovementVS : MonoBehaviour
         StartCoroutine(StartJump(landPosition));
     }
 
-    private IEnumerator StartJump(Vector2 landPosition)
+    protected virtual IEnumerator StartJump(Vector2 landPosition)
     {
-        //if(IsGrounded(0f))
-        //{
-            tParam = 0;
-            animator.SetTrigger("Jump");
-            yield return new WaitForSeconds(0.25f);
+        if (jumping)
+        {
+            yield break;
+        }
+        jumping = true;
+        tParam = 0;
+        animator.SetTrigger("Jump");
+        yield return new WaitForSeconds(0.25f);
 
-            //Use Bezier curve to jump to position.
-            Vector2 p0 = transform.localPosition;
-            Vector2 p1 = p0 + bezierOffsetPlayer;
-            Vector2 p3 = landPosition;
-            Vector2 p2 = p3 + bezierOffsetPlatform;
+        Debug.Log("jump" + gameObject.name);
 
-            Vector2 newPosition;
+        //Use Bezier curve to jump to position.
+        Vector2 p0 = transform.localPosition;
+        Vector2 p1 = p0 + bezierOffsetPlayer;
+        Vector2 p3 = landPosition;
+        Vector2 p2 = p3 + bezierOffsetPlatform;
 
-            while(tParam < 1)
-            {
-                tParam += Time.deltaTime * jumpSpeed;
+        Vector2 newPosition;
 
-                newPosition = Mathf.Pow(1 - tParam, 3) * p0 +
-                    3 * Mathf.Pow(1 - tParam, 2) * tParam * p1 +
-                    3 * (1 - tParam) * Mathf.Pow(tParam, 2) * p2 +
-                    Mathf.Pow(tParam, 3) * p3;
+        while (tParam < 1)
+        {
+            tParam += Time.deltaTime * jumpSpeed;
 
-                transform.localPosition = newPosition;
+            newPosition = Mathf.Pow(1 - tParam, 3) * p0 +
+                3 * Mathf.Pow(1 - tParam, 2) * tParam * p1 +
+                3 * (1 - tParam) * Mathf.Pow(tParam, 2) * p2 +
+                Mathf.Pow(tParam, 3) * p3;
 
-                yield return new WaitForEndOfFrame();
-            }
+            transform.localPosition = newPosition;
 
-            StartCoroutine(CheckGrounded());
-       // }
+            yield return new WaitForEndOfFrame();
+        }
+
+        jumping = false;
+
+        StartCoroutine(CheckGrounded());
     }
 
 
@@ -153,7 +161,7 @@ public class PlayerMovementVS : MonoBehaviour
 
     private IEnumerator CheckGrounded()
     {
-        if(IsGrounded(1.4f))
+        if (IsGrounded(1.4f))
         {
             animator.SetTrigger("Fall");
             yield break;
@@ -164,7 +172,7 @@ public class PlayerMovementVS : MonoBehaviour
 
     public void StepEffect()
     {
-        if(transform.rotation.eulerAngles.y == 90)
+        if (transform.rotation.eulerAngles.y == 90)
         {
             Instantiate(stepEffect, transform.position + new Vector3(0.4f, -0.03f, 0), Quaternion.identity);
         }
@@ -177,7 +185,7 @@ public class PlayerMovementVS : MonoBehaviour
     public void LandEffect()
     {
         GameObject stepEffectObject = Instantiate(stepEffect, transform.position + new Vector3(0, 0.1f, 0), Quaternion.identity);
-        stepEffectObject.transform.localScale = new Vector3(1,1,1);
+        stepEffectObject.transform.localScale = new Vector3(1, 1, 1);
     }
 
     public void EnableInput()
@@ -190,7 +198,7 @@ public class PlayerMovementVS : MonoBehaviour
         walkingToEustachius = true;
         float distanceTraveled = 0;
         Vector2 startPosition = transform.localPosition;
-        while(distanceTraveled < 3.3f)
+        while (distanceTraveled < 3.3f)
         {
             distanceTraveled = Vector2.Distance(startPosition, transform.localPosition);
             translationX = 1;
@@ -200,10 +208,29 @@ public class PlayerMovementVS : MonoBehaviour
 
         //Jump to next platform
         BalanceMinigame balanceMinigame = BalanceMinigame.Instance;
-        Jump((Vector2)balanceMinigame.balancePlatforms[balanceMinigame.currentPlatform].position + balanceMinigame.balancePlatformLandOffset);
-        if(Instance == Eustachius.Instance)
+
+        if(gameObject.name != "Eustachius")
         {
-            balanceMinigame.currentPlatform++;
+            Jump((Vector2)balanceMinigame.balancePlatforms[balanceMinigame.currentPlatform].position + balanceMinigame.balancePlatformLandOffset);
         }
+
+        yield return new WaitForSeconds(2.5f);
+
+        balanceMinigame.StartCoroutine(balanceMinigame.NextPlatform());
+    }
+
+    public void DisableCollider()
+    {
+        collider.enabled = false;
+    }
+
+    public void StartBalanceAnimation()
+    {
+        animator.SetBool("Balance", true);
+    }
+
+    public void StopBalanceAnimation()
+    {
+        animator.SetBool("Balance", false);
     }
 }

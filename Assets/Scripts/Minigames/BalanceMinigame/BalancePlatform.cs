@@ -6,8 +6,11 @@ public class BalancePlatform : MonoBehaviour
 {
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private Rigidbody playerRigidbody;
+    [SerializeField] private Rigidbody eustachiusRigidbody;
+
 
     private PlayerMovementVS playerMovement;
+    private Eustachius eustachius;
 
     private InputManager inputManager;
 
@@ -19,9 +22,11 @@ public class BalancePlatform : MonoBehaviour
     {
         inputManager = InputManager.Instance;
         playerMovement = PlayerMovementVS.Instance;
+        eustachius = Eustachius.Instance;
 
-        playerAnimator = playerMovement.transform.GetComponent<Animator>();
-        playerRigidbody = playerMovement.transform.GetComponent<Rigidbody>();
+        playerAnimator = playerMovement.GetComponent<Animator>();
+        playerRigidbody = playerMovement.GetComponent<Rigidbody>();
+        eustachiusRigidbody = eustachius.GetComponent<Rigidbody>();
 
         balanceMinigame = BalanceMinigame.Instance;
         canTilt = false;
@@ -38,6 +43,7 @@ public class BalancePlatform : MonoBehaviour
     public void StartTilt()
     {
         playerMovement.canWalk = false;
+        eustachius.canWalk = false;
         canTilt = true;
     }
 
@@ -57,14 +63,20 @@ public class BalancePlatform : MonoBehaviour
             angle = (angle > 180) ? angle - 360 : angle;
 
             Vector3 force = transform.forward * angle * balanceMinigame.PlayerBalanceMoveSpeed * Time.deltaTime;
+
             playerRigidbody.AddForce(force);
+            eustachiusRigidbody.AddForce(force);
+
             if (force.x < 0)
             {
                 playerRigidbody.transform.rotation = Quaternion.Euler(0, 270, 0);
+                eustachiusRigidbody.transform.rotation = Quaternion.Euler(0, 270, 0);
+
             }
             else if (force.x > 0)
             {
                 playerRigidbody.transform.rotation = Quaternion.Euler(0, 90, 0);
+                eustachiusRigidbody.transform.rotation = Quaternion.Euler(0, 90, 0);
             }
         }
     }
