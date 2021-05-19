@@ -16,7 +16,6 @@ public class RevealCarving : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("hoi");
         RevealSpotlight.enabled = true;
         RevealEmission.enabled = true;
     }
