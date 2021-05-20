@@ -12,9 +12,11 @@ namespace Dialogue {
 
         [HideIf("notWaitingForTime")][AllowNesting] public float Time = 1f;
         [HideIf("notWaitingForPathEnd")][AllowNesting] public string PathGuid;
+        [HideIf("notWaitingForEventRaise")][AllowNesting] public VoidEventChannelSO trigger;
 
         private bool notWaitingForTime => waitFor != WaitFor.Time;
         private bool notWaitingForPathEnd => waitFor != WaitFor.PathEnd;
+        private bool notWaitingForEventRaise => waitFor != WaitFor.EventRaise;
 
         public override void Trigger() {
             (graph as DialogueGraph).current = this;
@@ -32,8 +34,9 @@ namespace Dialogue {
 
     public enum WaitFor {
 
-        Time    = 0,
-        PathEnd = 1,
+        Time        = 0,
+        PathEnd     = 1,
+        EventRaise  = 2,
 
     }
 

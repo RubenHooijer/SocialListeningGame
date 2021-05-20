@@ -8,7 +8,6 @@ using UnityEngine;
 public class MoverComponent : MonoBehaviour {
 
 	[Header("Settings")]
-	[SerializeField] private BGCurve path;
 	[SerializeField] private float speed = 5f;
 
 	//[Header("References")]

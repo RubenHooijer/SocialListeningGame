@@ -10,6 +10,7 @@ namespace Dialogue {
 
     public interface IChat : IDialogueNode {
 
+        public CharacterType Character { get; }
         public int AnswerCount { get; }
         public List<Answer> Answers { get; }
 

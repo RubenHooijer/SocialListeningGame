@@ -3,10 +3,10 @@ using XNode;
 
 namespace Dialogue {
 
-    [NodeTint("#4F0349")][CreateNodeMenu("Answer", order =0)][NodeWidth(250)]
+    [NodeTint("#7a168a")][CreateNodeMenu("Answer", order =0)][NodeWidth(450)]
     public class Answer : DialogueBaseNode, IAnswer {
 
-        public string Text => choice.GetLocalizedString().Result;
+        public string Text => choice.GetLocalizedString();
         public bool IsHidden => (HideIfVisited && IsVisited) || (HideIfSpecificNodeIsVisited && IsSpecificNodeVisited);
         public bool IsVisited { get => isVisited; set => isVisited = value; }
         public bool HideIfVisited => hideIfVisited;
@@ -19,10 +19,6 @@ namespace Dialogue {
         public Answer specificNode;
 
         private bool isVisited;
-
-        private void Awake() {
-            isVisited = false;
-        }
 
         public override void Trigger() {
             isVisited = true;
