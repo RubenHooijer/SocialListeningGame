@@ -43,6 +43,14 @@ public class RotationCylinder : MonoBehaviour
             Cylinders[cylinder].Cylinder.Rotate(rotation / (60 * lerpDuration), 0,0);
             yield return new WaitForSeconds(lerpDuration / (60 * lerpDuration));
         }
+
+        //Calculate current rotation
+        Cylinders[cylinder].CurrentRotation += rotation;
+        if (Cylinders[cylinder].CurrentRotation >= 180 || Cylinders[cylinder].CurrentRotation <= -180)
+        {
+            Cylinders[cylinder].CurrentRotation = 0;
+        }
+
         yield return new WaitForSeconds(0.1f);
         CheckCorrectRotations();
     }
@@ -51,26 +59,16 @@ public class RotationCylinder : MonoBehaviour
     {
         int correctRotations = 0;
 
-        float angle = Cylinders[0].Cylinder.localEulerAngles.x;
-        //angle = (angle > 180) ? angle - 360 : angle;
-        //angle = Mathf.Round(angle);
-        Debug.Log(angle + ",  " + Cylinders[0].Cylinder.name);
+        Debug.Log(Cylinders[0].CurrentRotation);
 
         for (int i = 0; i < Cylinders.Count; i++)
         {
-            //Calculate angle in correct way
-            //float angle = Cylinders[i].Cylinder.localEulerAngles.x;
-            //angle = (angle > 180) ? angle - 360 : angle;
-            //angle = Mathf.Round(angle);
-
-            //Debug.Log(angle);
-
-            if(angle == Cylinders[i].Rotation || angle == (Cylinders[i].Rotation - 180))
+            if(Cylinders[i].CurrentRotation == Cylinders[i].CorrectRotation || Cylinders[i].CurrentRotation == (Cylinders[i].CorrectRotation - 180))
             {
                 correctRotations++;
             }
         }
-        //Debug.Log(correctRotations);
+        Debug.Log(correctRotations);
         if(correctRotations > 4)
         {
             FinishMinigame();
@@ -94,5 +92,6 @@ public class RotationCylinder : MonoBehaviour
 public class CylinderWithRotation
 {
     public Transform Cylinder;
-    public float Rotation;
+    public float CorrectRotation;
+    public float CurrentRotation = 0;
 }

@@ -76,7 +76,6 @@ public class PlayerMovementVS : MonoBehaviour
         if (!walkingToEustachius)
         {
             translationX = inputManager.GetMovement().x;
-            Debug.Log(translationX);
         }
         float translationY = inputManager.GetMovement().y;
 
