@@ -86,7 +86,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: StandStill/Talk
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6550263072082985070}
   m_Solo: 0
@@ -187,7 +190,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: JumpLanden
+    m_ConditionEvent: Jump/Landen
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1641724570257387709}
@@ -238,7 +241,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Walking
+    m_ConditionEvent: Walking/Walking
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8927758720389676464}
@@ -416,7 +419,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: WalkHappy
+    m_ConditionEvent: Walking/WalkHappy
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 198054413028535831}
@@ -642,7 +645,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: StandStillNegative
+    m_ConditionEvent: StandStill/Negative
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1289484513157520373}
@@ -813,13 +816,13 @@ AnimatorStateMachine:
     m_Position: {x: -1070, y: 50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6447938662969800302}
-    m_Position: {x: -850, y: -30, z: 0}
+    m_Position: {x: -880, y: -110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -179753263926187128}
     m_Position: {x: -1060, y: -30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3753580078245460782}
-    m_Position: {x: -1070, y: 190, z: 0}
+    m_Position: {x: -1100, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4453582049178540033}
     m_Position: {x: -850, y: 190, z: 0}
@@ -861,13 +864,13 @@ AnimatorStateMachine:
     m_Position: {x: -850, y: 320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 9186230341711968924}
-    m_Position: {x: 530, y: -30, z: 0}
+    m_Position: {x: 530, y: -40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -9042769902006984697}
     m_Position: {x: 910, y: 520, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2847928447233492679}
-    m_Position: {x: -860, y: 50, z: 0}
+    m_Position: {x: -600, y: -100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5367814499184441343}
     m_Position: {x: 530, y: -120, z: 0}
@@ -894,7 +897,7 @@ AnimatorStateMachine:
     m_Position: {x: 700, y: 440, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3306714254475134318}
-    m_Position: {x: -930, y: -130, z: 0}
+    m_Position: {x: -1000, y: -210, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7370024532469812405}
     m_Position: {x: -1320, y: 50, z: 0}
@@ -1071,7 +1074,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Idle
+    m_ConditionEvent: WalkBalance
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 491470729152275899}
@@ -1350,7 +1353,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: SitForwardToBackwards
+    m_ConditionEvent: Sit/ForwardToBackwards
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2847928447233492679}
@@ -1559,8 +1562,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -5795922791691232032, guid: 715c4ef96ebd6d643996fd5be6081e3e,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 75d44619990eb4d429be975ca603686c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1575,13 +1577,13 @@ AnimatorController:
   m_Name: MC 3.0
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Idle
+  - m_Name: StandStill/Idle
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Walking
+  - m_Name: Walking/Walking
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1599,7 +1601,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Shout
+  - m_Name: StandStill/Shout
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1611,19 +1613,19 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Walk
+  - m_Name: Walking/Walk
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: WalkAngry
+  - m_Name: Walking/WalkAngry
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: WalkHappy
+  - m_Name: Walking/WalkHappy
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1635,37 +1637,43 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: SitBackWardsTalk
+  - m_Name: Sit/BackWardsTalk
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: SitBackWardsIDL
+  - m_Name: Sit/BackWardsIDL
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: SitBackToForward
+  - m_Name: Sit/BackToForward
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: SitForwardIDL
+  - m_Name: Sit/ForwardIDL
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: SitForwardTalk
+  - m_Name: Sit/ForwardTalk
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: SitForwardTalkNegative
+  - m_Name: Sit/ForwardTalkNegative
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: Sit/ForwardToBackwards
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1683,43 +1691,37 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: StandStillTalk
+  - m_Name: StandStill/Talk
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: StandStillTalk2
+  - m_Name: StandStill/Talk2
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: StandStillNegative
+  - m_Name: StandStill/Negative
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: JumpPlayer
+  - m_Name: Jump/Player
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: JumpEustachius
+  - m_Name: Jump/Eustachius
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: LookWall
-    m_Type: 9
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: SitForwardToBackwards
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1737,7 +1739,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: JumpLanden
+  - m_Name: Jump/Landen
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1894,7 +1896,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: StandStillTalk2
+    m_ConditionEvent: StandStill/Talk2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4095228109621518394}
@@ -1992,7 +1994,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: SitBackWardsIDL
+    m_ConditionEvent: Sit/BackWardsIDL
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6447938662969800302}
@@ -2061,7 +2063,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Walk
+    m_ConditionEvent: Walking/Walk
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4869326553155033281}
@@ -2318,7 +2320,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: SitForwardTalk
+    m_ConditionEvent: Sit/ForwardTalk
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -179753263926187128}
@@ -2343,7 +2345,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Idle
+    m_ConditionEvent: StandStill/Idle
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8331296281297907433}
@@ -2368,7 +2370,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: JumpEustachius
+    m_ConditionEvent: Jump/Eustachius
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 9186230341711968924}
@@ -2619,7 +2621,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: SitBackWardsIDL
+    m_ConditionEvent: Sit/BackWardsIDL
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3753580078245460782}
@@ -2694,7 +2696,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: SitBackToForward
+    m_ConditionEvent: Sit/BackToForward
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6902620307812170462}
@@ -2939,7 +2941,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: SitForwardTalkNegative
+    m_ConditionEvent: Sit/ForwardTalkNegative
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7317947962039878565}
@@ -3061,7 +3063,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: WalkAngry
+    m_ConditionEvent: Walking/WalkAngry
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2973556757646710131}
@@ -3086,7 +3088,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: SitForwardTalk
+    m_ConditionEvent: Sit/ForwardTalk
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4453582049178540033}
@@ -3164,7 +3166,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: JumpPlayer
+    m_ConditionEvent: Jump/Player
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5367814499184441343}
@@ -3263,7 +3265,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Shout
+    m_ConditionEvent: StandStill/Shout
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6050938809168459148}
