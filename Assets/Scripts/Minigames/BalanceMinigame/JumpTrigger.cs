@@ -19,7 +19,6 @@ public class JumpTrigger : MonoBehaviour
     {
         if(other.tag == "Eustachius")
         {
-            eustachius.canJump = true;
             balanceMinigame.EnableJumpUI();
         }
     }

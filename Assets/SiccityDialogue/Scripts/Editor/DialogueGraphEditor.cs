@@ -1,4 +1,5 @@
 ﻿using Dialogue;
+using System.Linq;
 using UnityEngine;
 using XNode;
 using XNodeEditor;
@@ -9,8 +10,18 @@ namespace DialogueEditor {
 	public class DialogueGraphEditor : NodeGraphEditor {
 
 		public override void OnGUI() {
-			if (!Application.isPlaying) { return; }
+			GUILayout.BeginHorizontal();
+			GUILayout.FlexibleSpace();
+			GUI.color = Color.cyan;
+			if (GUILayout.Button("Select Startnode")) {
+				Node startNode = ((DialogueGraph)NodeEditorWindow.current.graph).nodes.Find(x => x is StartStop startStop && startStop.function == StartStop.StartStopEnum.Start);
 
+				NodeEditorWindow.current.FocusNode(startNode);
+				NodeEditorWindow.current.SelectNode(startNode, false);
+			}
+			GUILayout.EndHorizontal();
+
+			if (!Application.isPlaying) { return; }
 			GUILayout.BeginHorizontal();
 			GUILayout.FlexibleSpace();
 			GUI.color = Color.yellow;
