@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 using XNode;
 
 namespace Dialogue {
@@ -10,8 +9,13 @@ namespace Dialogue {
         public DialogueBaseNode current;
 
         public void Restart() {
+            nodes.ForEach(x => {
+                if (x is Answer answer) {
+                    answer.IsVisited = false;
+                }
+            });
             //Find the first DialogueNode without any inputs. This is the starting node.
-            current = nodes.Find(x => x.Inputs.All(y => !y.IsConnected)) as DialogueBaseNode;
+            current = nodes.Find(x => x is StartStop startStop && startStop.function == StartStop.StartStopEnum.Start) as DialogueBaseNode;
         }
 
         public bool AnswerQuestion(int i) {

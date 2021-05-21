@@ -8,7 +8,8 @@ namespace Dialogue {
 	public class CharacterType : ScriptableObject {
 
 		public string Name;
-		public Color Color;
+		public Color NodeColor;
+		public Color DialogueColor;
 		public Sprite Icon;
 
 	}

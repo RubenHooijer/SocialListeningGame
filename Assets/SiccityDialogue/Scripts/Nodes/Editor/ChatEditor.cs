@@ -42,7 +42,7 @@ namespace Dialogue {
             Chat node = target as Chat;
             if (node.character == null) return base.GetTint();
             else {
-                Color col = node.character.Color;
+                Color col = node.character.NodeColor;
                 col.a = 1;
                 return col;
             }

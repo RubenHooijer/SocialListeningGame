@@ -1,14 +1,16 @@
 ﻿using System.Collections.Generic;
 using UnityEngine.Localization;
+using UnityEngine.Localization.Tables;
 using XNode;
 
 namespace Dialogue {
 
     [NodeTint("#5C7C6A")]
     [CreateNodeMenu("Chat", order = 1)]
+    [NodeWidth(400)]
     public class Chat : DialogueBaseNode, IChat {
 
-        public string Text => text.GetLocalizedString().Result;
+        public string Text => text.GetLocalizedString();
         public int AnswerCount => answers.Count;
         public List<Answer> Answers {
             get {
@@ -21,6 +23,7 @@ namespace Dialogue {
                 return availableAnswers;
             }
         }
+        public CharacterType Character => character;
 
         public CharacterType character;
         public LocalizedString text;
