@@ -9,15 +9,20 @@ public class MaterialLerp : MonoBehaviour
     private float lerp;
     private float t = 0.0f;
     public float speed;
+    public GameObject particles;
 
-    // Start is called before the first frame update
     void Start()
     {
 
         Oorwurm = Oorwurm.GetComponent<Renderer>();
         showTeeth = false;
+        particles.SetActive(false);
     }
 
+    public void smokeExplosion()
+    {
+        particles.SetActive(true);
+    }
     public void StartMat()
     {
         showTeeth = true;
