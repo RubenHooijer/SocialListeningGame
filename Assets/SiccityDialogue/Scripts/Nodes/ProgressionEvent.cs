@@ -1,4 +1,6 @@
-﻿namespace Dialogue {
+﻿using XNode;
+
+namespace Dialogue {
 
     [NodeTint("#737C58")][CreateNodeMenu("Progression Event", order = 6)]
 	public class ProgressionEvent : DialogueBaseNode {
@@ -21,6 +23,16 @@
 					break;
 				default:
 					break;
+			}
+
+			Next();
+		}
+
+		public void Next() {
+			NodePort port = GetOutputPort("output");
+			for (int i = 0; i < port.ConnectionCount; i++) {
+				NodePort connection = port.GetConnection(i);
+				(connection.node as DialogueBaseNode).Trigger();
 			}
 		}
 
