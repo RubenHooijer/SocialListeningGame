@@ -1,15 +1,10 @@
-﻿using UnityEngine.Events;
+﻿using NaughtyAttributes;
+using UnityEngine.Events;
 
 namespace Dialogue {
 
 	[NodeTint("#737C58")][CreateNodeMenu("Event", order =3)]
 	public class Event : DialogueBaseNode {
-
-		//public UnityEvent trigger; // If this ever fails go back to implementation below
-
-		//public override void Trigger() {
-		//	trigger.Invoke();
-		//}
 
 		public SerializableEvent[] trigger;
 

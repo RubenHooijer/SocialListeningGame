@@ -26,6 +26,7 @@ namespace Dialogue {
         }
 
         private Animator GetAnimatorWithEvent() {
+            if (trigger == null) { return null; }
             PlayAnimationEventListener[] animationListeners = FindObjectsOfType<PlayAnimationEventListener>();
             return animationListeners.First(x => x.EventChannel == trigger).Animator;
         }

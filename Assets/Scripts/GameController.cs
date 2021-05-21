@@ -1,8 +1,10 @@
 using BansheeGz.BGSpline.Components;
 using Dialogue;
 using NaughtyAttributes;
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -19,7 +21,6 @@ public class GameController : MonoBehaviour {
     }
 
     private void OnDialogueSkipButtonClicked() {
-        Debug.Log(startingDialogue.current.GetType());
         ((Chat)startingDialogue.current).AnswerQuestion(0);
         DialogueScreen.Instance.Hide();
         HandleCurrentNode();
@@ -29,6 +30,13 @@ public class GameController : MonoBehaviour {
         Debug.Log($"You answered with {index}");
         ((Chat)startingDialogue.current).AnswerQuestion(index);
         DialogueScreen.Instance.Hide();
+        HandleCurrentNode();
+    }
+
+    private void OnWaitNodeEventTriggered() {
+        Wait waitNode = ((Wait)startingDialogue.current);
+        waitNode.trigger.OnEventRaised -= OnWaitNodeEventTriggered;
+        waitNode.Next();
         HandleCurrentNode();
     }
 
@@ -51,6 +59,15 @@ public class GameController : MonoBehaviour {
             case PlayAnimationEvent playAnimationNode:
                 ProcessPlayAnimationNode(playAnimationNode);
                 break;
+            case InvokeEvent invokeEventNode:
+                ProcessInvokeEventNode(invokeEventNode);
+                break;
+            case StartStop startStopNode:
+                ProcessStartStopNode(startStopNode);
+                break;
+            case LoadScene loadSceneNode:
+                ProcessLoadSceneNode(loadSceneNode);
+                break;
             default:
                 Debug.LogWarning($"<color=orange>{current.GetType()} type was not defined.</color>");
                 break;
@@ -66,23 +83,25 @@ public class GameController : MonoBehaviour {
         Debug.Log("Wait");
         switch (waitNode.waitFor) {
             case WaitFor.Time:
-                CoroutineHelper.Instance.StartCoroutine(() => {
+                CoroutineHelper.Delay(waitNode.Time, () => {
                     waitNode.Next();
                     HandleCurrentNode();
-                }, waitNode.Time);
+                });
                 break;
             case WaitFor.PathEnd:
                 PathView pathView = PathView.GetView(waitNode.PathGuid);
 
-                CoroutineHelper.Instance.StartCoroutine(() => {
+                CoroutineHelper.Delay(() => pathView.Trs.DistanceRatio >= 1, () => {
                     waitNode.Next();
                     HandleCurrentNode();
-                }, () => pathView.Trs.DistanceRatio >= 1);
+                });
+                break;
+            case WaitFor.EventRaise:
+                waitNode.trigger.OnEventRaised += OnWaitNodeEventTriggered;
                 break;
             default:
                 break;
         }
-
     }
 
     private void ProcessFollowPathNode(FollowPath followPathNode) {
@@ -100,8 +119,8 @@ public class GameController : MonoBehaviour {
         Debug.Log("Pause path");
         CharacterView characterView = CharacterView.GetView(pauseCharacter.character);
         characterView.EnableMovement(pauseCharacter.pause);
-
         pauseCharacter.Next();
+
         HandleCurrentNode();
     }
 
@@ -111,6 +130,27 @@ public class GameController : MonoBehaviour {
         playAnimationNode.Next();
 
         HandleCurrentNode();
+    }
+
+    private void ProcessInvokeEventNode(InvokeEvent invokeEventNode) {
+        Debug.Log("Invoked event");
+        invokeEventNode.trigger.Raise();
+        invokeEventNode.Next();
+
+        HandleCurrentNode();
+    }
+
+    private void ProcessStartStopNode(StartStop startStopNode) {
+        Debug.Log("Start stop");
+        if (startStopNode.function == StartStop.StartStopEnum.Start) {
+            startStopNode.Next();
+            HandleCurrentNode();
+        }
+    }
+
+    private void ProcessLoadSceneNode(LoadScene loadSceneNode) {
+        Debug.Log("Load scene");
+        SceneManager.LoadScene(loadSceneNode.nextScene);
     }
 
 }
