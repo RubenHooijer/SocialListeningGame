@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameInitializer : MonoBehaviour {
 
     [SerializeField, SceneName] private string[] startingScenes;
+    [SerializeField] private GameController gameController;
 
     private void Awake() {
         StartCoroutine(SceneLoadingRoutine());
@@ -16,6 +17,7 @@ public class GameInitializer : MonoBehaviour {
         }
 
         SceneManager.UnloadSceneAsync("Loader");
+        Instantiate(gameController);
     }
 
 }

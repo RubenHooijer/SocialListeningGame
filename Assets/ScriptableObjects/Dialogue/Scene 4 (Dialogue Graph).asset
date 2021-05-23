@@ -220,7 +220,10 @@ MonoBehaviour:
       _node: {fileID: -8867389586895485064}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 6400054390362102457}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -228,7 +231,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 1958ab5f733d0d6418b67d0a0d58e655, type: 2}
-  animationTrigger: 0
+  animationTrigger: 1744665739
 --- !u!114 &-8700290407806430944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,7 +278,10 @@ MonoBehaviour:
       _node: {fileID: -8700290407806430944}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: -1558597836870551924}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -3574,6 +3580,9 @@ MonoBehaviour:
       - fieldName: output
         node: {fileID: 8302252342638681765}
         reroutePoints: []
+      - fieldName: output
+        node: {fileID: -8700290407806430944}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -4703,7 +4712,7 @@ MonoBehaviour:
   - {fileID: 8276596711121014925}
   - {fileID: 6400054390362102457}
   - {fileID: -8867389586895485064}
-  current: {fileID: -8525836860278924161}
+  current: {fileID: -8700290407806430944}
 --- !u!114 &167549278740289401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5187,7 +5196,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:5ea9c28dff66716429ca71cd023be6d1
     m_TableEntryReference:
-      m_KeyId: 70883044331529
+      m_KeyId: 70883044331534
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -7159,7 +7168,10 @@ MonoBehaviour:
       _node: {fileID: 6400054390362102457}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: output
+        node: {fileID: -8867389586895485064}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
