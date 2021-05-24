@@ -1,14 +1,13 @@
-﻿using UnityEngine;
-using UnityEngine.Localization;
-
+﻿using UnityEngine.Localization;
 using XNode;
 
 namespace Dialogue {
 
-    [NodeTint("#4F0349")][CreateNodeMenu("Answer", order =0)][NodeWidth(250)]
+    [NodeTint("#7a168a")][CreateNodeMenu("Answer", order =0)][NodeWidth(450)]
     public class Answer : DialogueBaseNode, IAnswer {
 
-        public string Text => choice.GetLocalizedString().Result;
+        public string Text => choice.GetLocalizedString();
+        public bool IsHidden => (HideIfVisited && IsVisited) || (HideIfSpecificNodeIsVisited && IsSpecificNodeVisited);
         public bool IsVisited { get => isVisited; set => isVisited = value; }
         public bool HideIfVisited => hideIfVisited;
         public bool HideIfSpecificNodeIsVisited => hideIfSpecificNodeIsVisited;
@@ -22,12 +21,8 @@ namespace Dialogue {
         private bool isVisited;
 
         public override void Trigger() {
-            (graph as DialogueGraph).current = this;
-        }
-
-        public void GetNext() {
+            isVisited = true;
             NodePort port = GetOutputPort("output");
-            if (port == null) return;
             for (int i = 0; i < port.ConnectionCount; i++) {
                 NodePort connection = port.GetConnection(i);
                 (connection.node as DialogueBaseNode).Trigger();
