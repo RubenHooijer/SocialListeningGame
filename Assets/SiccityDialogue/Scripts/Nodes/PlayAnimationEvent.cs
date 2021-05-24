@@ -25,11 +25,6 @@ namespace Dialogue {
             }
         }
 
-        [Button]
-        private void SetTriggerToNull() {
-            trigger = null;
-        }
-
         private Animator GetAnimatorWithEvent() {
             if (trigger == null) { return null; }
             PlayAnimationEventListener[] animationListeners = FindObjectsOfType<PlayAnimationEventListener>();
