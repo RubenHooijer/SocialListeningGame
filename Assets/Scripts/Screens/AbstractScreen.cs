@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public abstract class AbstractScreen<T> : MonoBehaviour where T : Component {
 
@@ -17,12 +18,17 @@ public abstract class AbstractScreen<T> : MonoBehaviour where T : Component {
     private static T _instance;
 
     protected virtual void Awake() {
-        if (_instance == null) {
+        if (_instance == null || _instance == this) {
             _instance = this as T;
             gameObject.SetActive(false);
         } else {
             Destroy(gameObject);
         }
+    }
+
+    public void LoadScene(int scene)
+    {
+        SceneManager.LoadScene(scene);
     }
 
     public void Show() {

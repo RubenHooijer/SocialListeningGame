@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class PlayerMovementVS : MonoBehaviour
 {
+    public static PlayerMovementVS Instance;
+
     [SerializeField] private LayerMask groundLayerMask;
 
     [SerializeField] private float speed, stepTime, groundCheckHeight, jumpForce;
 
     [SerializeField] private GameObject stepEffect;
 
-    [SerializeField] private Animator animator;
+    [SerializeField] protected Animator animator;
 
     private Rigidbody rigidbody;
 
@@ -18,10 +20,29 @@ public class PlayerMovementVS : MonoBehaviour
 
     public bool canWalkDepth;
 
-    private Collider collider;
+    public bool canWalk;
 
-    private void Awake()
+    [SerializeField] private Collider collider;
+
+    [Header("Jump Parameters")]
+
+    private float tParam;
+
+    [SerializeField] private float jumpSpeed;
+
+    [SerializeField] private Vector2 bezierOffsetPlayer, bezierOffsetPlatform;
+
+    public bool canJump;
+
+    private float translationX;
+
+    private bool walkingToEustachius;
+
+    private bool jumping;
+
+    protected virtual void Awake()
     {
+        Instance = this;
         animator = GetComponent<Animator>();
         collider = GetComponent<Collider>();
         rigidbody = GetComponent<Rigidbody>();
@@ -30,21 +51,29 @@ public class PlayerMovementVS : MonoBehaviour
     private void Start()
     {
         inputManager = InputManager.Instance;
-        inputManager.JumpPerformed.AddListener(Jump);
+        inputManager.enabled = true;
+        canWalk = true;
+        //inputManager.JumpPerformed.AddListener(Jump);
         canWalkDepth = false;
     }
 
     private void Update()
     {
-        Movement();
+        if (canWalk)
+        {
+            Movement();
+        }
     }
 
     private void Movement()
     {
-        float translationX = inputManager.GetMovement().x;
+        if (!walkingToEustachius)
+        {
+            translationX = inputManager.GetMovement().x;
+        }
         float translationY = inputManager.GetMovement().y;
 
-        if(!canWalkDepth)
+        if (!canWalkDepth)
         {
             translationY = 0;
         }
@@ -58,7 +87,7 @@ public class PlayerMovementVS : MonoBehaviour
             animator.SetBool("Walking", false);
         }
 
-        if(translationX < 0)
+        if (translationX < 0)
         {
             transform.rotation = Quaternion.Euler(0, 270, 0);
         }
@@ -78,22 +107,51 @@ public class PlayerMovementVS : MonoBehaviour
         transform.position += new Vector3(translationX, 0, translationY) * speed * Time.deltaTime;
     }
 
-    private void Jump()
+    public void Jump(Vector2 landPosition)
     {
-        StartCoroutine(StartJump());
+        StartCoroutine(StartJump(landPosition));
     }
 
-    private IEnumerator StartJump()
+    protected virtual IEnumerator StartJump(Vector2 landPosition)
     {
-        if(IsGrounded(0f))
+        if (jumping)
         {
-            animator.SetTrigger("Jump");
-            yield return new WaitForSeconds(0.25f);
-            rigidbody.AddForce(new Vector3(0, jumpForce, 0));
-            yield return new WaitForSeconds(0.25f);
-            StartCoroutine(CheckGrounded());
+            yield break;
         }
+        jumping = true;
+        tParam = 0;
+        animator.SetTrigger("Jump");
+        yield return new WaitForSeconds(0.25f);
+
+        Debug.Log("jump" + gameObject.name);
+
+        //Use Bezier curve to jump to position.
+        Vector2 p0 = transform.localPosition;
+        Vector2 p1 = p0 + bezierOffsetPlayer;
+        Vector2 p3 = landPosition;
+        Vector2 p2 = p3 + bezierOffsetPlatform;
+
+        Vector2 newPosition;
+
+        while (tParam < 1)
+        {
+            tParam += Time.deltaTime * jumpSpeed;
+
+            newPosition = Mathf.Pow(1 - tParam, 3) * p0 +
+                3 * Mathf.Pow(1 - tParam, 2) * tParam * p1 +
+                3 * (1 - tParam) * Mathf.Pow(tParam, 2) * p2 +
+                Mathf.Pow(tParam, 3) * p3;
+
+            transform.localPosition = newPosition;
+
+            yield return new WaitForEndOfFrame();
+        }
+
+        jumping = false;
+
+        StartCoroutine(CheckGrounded());
     }
+
 
     private bool IsGrounded(float extraHeight)
     {
@@ -103,7 +161,7 @@ public class PlayerMovementVS : MonoBehaviour
 
     private IEnumerator CheckGrounded()
     {
-        if(IsGrounded(1.4f))
+        if (IsGrounded(1.4f))
         {
             animator.SetTrigger("Fall");
             yield break;
@@ -114,7 +172,7 @@ public class PlayerMovementVS : MonoBehaviour
 
     public void StepEffect()
     {
-        if(transform.rotation.eulerAngles.y == 90)
+        if (transform.rotation.eulerAngles.y == 90)
         {
             Instantiate(stepEffect, transform.position + new Vector3(0.4f, -0.03f, 0), Quaternion.identity);
         }
@@ -127,6 +185,52 @@ public class PlayerMovementVS : MonoBehaviour
     public void LandEffect()
     {
         GameObject stepEffectObject = Instantiate(stepEffect, transform.position + new Vector3(0, 0.1f, 0), Quaternion.identity);
-        stepEffectObject.transform.localScale = new Vector3(1,1,1);
+        stepEffectObject.transform.localScale = new Vector3(1, 1, 1);
+    }
+
+    public void EnableInput()
+    {
+        inputManager.EnableInput();
+    }
+
+    public IEnumerator WalkRight()
+    {
+        walkingToEustachius = true;
+        float distanceTraveled = 0;
+        Vector2 startPosition = transform.localPosition;
+        while (distanceTraveled < 3.3f)
+        {
+            distanceTraveled = Vector2.Distance(startPosition, transform.localPosition);
+            translationX = 1;
+            yield return new WaitForEndOfFrame();
+        }
+        walkingToEustachius = false;
+
+        //Jump to next platform
+        BalanceMinigame balanceMinigame = BalanceMinigame.Instance;
+
+        if(gameObject.name != "Eustachius")
+        {
+            Jump((Vector2)balanceMinigame.balancePlatforms[balanceMinigame.currentPlatform].position + balanceMinigame.balancePlatformLandOffset);
+        }
+
+        yield return new WaitForSeconds(2.5f);
+
+        balanceMinigame.StartCoroutine(balanceMinigame.NextPlatform());
+    }
+
+    public void DisableCollider()
+    {
+        collider.enabled = false;
+    }
+
+    public void StartBalanceAnimation()
+    {
+        animator.SetBool("Balance", true);
+    }
+
+    public void StopBalanceAnimation()
+    {
+        animator.SetBool("Balance", false);
     }
 }
