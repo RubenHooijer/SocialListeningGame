@@ -1,47 +1,53 @@
-using BansheeGz.BGSpline.Components;
 using Dialogue;
-using NaughtyAttributes;
-using System;
-using System.Collections;
+using Oasez.Extensions.Generics.Singleton;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameController : MonoBehaviour {
+public class GameController : GenericSingleton<GameController, GameController> {
 
-    [SerializeField] private DialogueGraph startingDialogue;
+    private SceneInformation currentSceneInformation;
+    private DialogueGraph currentGraph;
 
-    [Button]
-    public void StartScene() {
-        startingDialogue.Restart();
+    public void SetNewGraph(SceneInformation sceneInformation) {
+        currentSceneInformation = sceneInformation;
+        currentGraph = sceneInformation.sceneGraph;
 
-        DialogueScreen.Instance.OnSkipButtonClicked.AddListener(OnDialogueSkipButtonClicked);
-        DialogueScreen.Instance.OnAnswerButtonClicked.AddListener(OnDialogueAnswerButtonClicked);
-
+        currentGraph.Restart();
         HandleCurrentNode();
     }
 
+    private void OnEnable() {
+        DialogueScreen.Instance.OnSkipButtonClicked.AddListener(OnDialogueSkipButtonClicked);
+        DialogueScreen.Instance.OnAnswerButtonClicked.AddListener(OnDialogueAnswerButtonClicked);
+    }
+
+    private void OnDisable() {
+        DialogueScreen.Instance.OnSkipButtonClicked.RemoveListener(OnDialogueSkipButtonClicked);
+        DialogueScreen.Instance.OnAnswerButtonClicked.RemoveListener(OnDialogueAnswerButtonClicked);
+    }
+
     private void OnDialogueSkipButtonClicked() {
-        ((Chat)startingDialogue.current).AnswerQuestion(0);
+        ((Chat)currentGraph.current).AnswerQuestion(0);
         DialogueScreen.Instance.Hide();
         HandleCurrentNode();
     }
 
     private void OnDialogueAnswerButtonClicked(int index) {
         Debug.Log($"You answered with {index}");
-        ((Chat)startingDialogue.current).AnswerQuestion(index);
+        ((Chat)currentGraph.current).AnswerQuestion(index);
         DialogueScreen.Instance.Hide();
         HandleCurrentNode();
     }
 
     private void OnWaitNodeEventTriggered() {
-        Wait waitNode = ((Wait)startingDialogue.current);
+        Wait waitNode = ((Wait)currentGraph.current);
         waitNode.trigger.OnEventRaised -= OnWaitNodeEventTriggered;
         waitNode.Next();
         HandleCurrentNode();
     }
 
     private void HandleCurrentNode() {
-        DialogueBaseNode current = startingDialogue.current;
+        DialogueBaseNode current = currentGraph.current;
 
         switch (current) {
             case Chat chat:
@@ -150,7 +156,8 @@ public class GameController : MonoBehaviour {
 
     private void ProcessLoadSceneNode(LoadScene loadSceneNode) {
         Debug.Log("Load scene");
-        SceneManager.LoadScene(loadSceneNode.nextScene);
+        SceneManager.UnloadSceneAsync(currentSceneInformation.currentScene);
+        SceneManager.LoadSceneAsync(loadSceneNode.nextScene, LoadSceneMode.Additive);
     }
 
 }

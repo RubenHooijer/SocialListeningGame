@@ -142,7 +142,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: f1e850f753cf12645a92b09087acc16a, type: 2}
-  animationTrigger: 1744665739
+  animationTrigger: 409112111
 --- !u!114 &-8765078680287850723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,7 +444,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
-  animationTrigger: 1744665739
+  animationTrigger: 409112111
 --- !u!114 &-8442725948526241085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,49 +728,6 @@ MonoBehaviour:
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 7e26449f9494b9044bb86170a3774fd1, type: 2}
   pause: 0
---- !u!114 &-7352627460673676189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3e209afd9016d34eb4abfdf08fd444e, type: 3}
-  m_Name: Start Stop
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 13656, y: 392}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: -7352627460673676189}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: -7352627460673676189}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 2194178257974363324}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  function: 0
 --- !u!114 &-6409601012930891605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -930,7 +887,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: f1e850f753cf12645a92b09087acc16a, type: 2}
-  animationTrigger: 2081823275
+  animationTrigger: 1423206613
 --- !u!114 &-5425071622758372454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1137,7 +1094,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
-  animationTrigger: 2081823275
+  animationTrigger: 1423206613
 --- !u!114 &-4953995488822490651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1184,7 +1141,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
-  animationTrigger: 0
+  animationTrigger: 409112111
 --- !u!114 &-4879128907164269241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1415,7 +1372,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
-  animationTrigger: 2081823275
+  animationTrigger: 1423206613
 --- !u!114 &-4097021865537667266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2569,7 +2526,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a171cd762148104283954f9fc937950, type: 3}
-  m_Name: Scene 1 (Dialogue graph)
+  m_Name: Beginning_DialogueGraph
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -6409601012930891605}
@@ -2678,7 +2635,7 @@ MonoBehaviour:
   - {fileID: -5734194726467249230}
   - {fileID: -5224841625978396052}
   - {fileID: 1178662707485047465}
-  - {fileID: -7352627460673676189}
+  - {fileID: 72392310833289225}
   current: {fileID: 4787466284223165442}
 --- !u!114 &33942789384675195
 MonoBehaviour:
@@ -2742,6 +2699,52 @@ MonoBehaviour:
   hideIfVisited: 1
   hideIfSpecificNodeIsVisited: 0
   specificNode: {fileID: 0}
+--- !u!114 &72392310833289225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddce0b082d90aa340af92aea326e21e1, type: 3}
+  m_Name: Load Scene
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 16664, y: 248}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 72392310833289225}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 2027966608754752015}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 72392310833289225}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 1438846244044340919}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  nextScene: 2_BalanceFail
 --- !u!114 &79568132891561716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3130,7 +3133,7 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  function: 1
+  function: 0
 --- !u!114 &1215978685387898941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3266,7 +3269,7 @@ MonoBehaviour:
   m_Name: Start Stop
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 16776, y: 360}
+  position: {x: 17016, y: 376}
   ports:
     keys:
     - input
@@ -3278,7 +3281,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 2027966608754752015}
+        node: {fileID: 72392310833289225}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -3342,7 +3345,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
-  animationTrigger: 0
+  animationTrigger: 1423206613
 --- !u!114 &1559080373161840682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3448,7 +3451,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
-  animationTrigger: 1744665739
+  animationTrigger: 409112111
 --- !u!114 &1933440030755843813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3542,7 +3545,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 1438846244044340919}
+        node: {fileID: 72392310833289225}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3588,9 +3591,6 @@ MonoBehaviour:
       connections:
       - fieldName: output
         node: {fileID: 6484061056310659629}
-        reroutePoints: []
-      - fieldName: output
-        node: {fileID: -7352627460673676189}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -3922,7 +3922,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
-  animationTrigger: 0
+  animationTrigger: 409112111
 --- !u!114 &3183189902253983330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4339,7 +4339,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
-  animationTrigger: 2081823275
+  animationTrigger: 1423206613
 --- !u!114 &4369212421899025239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5022,7 +5022,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
-  animationTrigger: 1744665739
+  animationTrigger: 409112111
 --- !u!114 &5250343581215363745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5135,7 +5135,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
-  animationTrigger: 0
+  animationTrigger: 1535456264
 --- !u!114 &5306092675374566131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5363,7 +5363,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
-  animationTrigger: 0
+  animationTrigger: 409112111
 --- !u!114 &6318967755583093569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5508,7 +5508,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
-  animationTrigger: 1744665739
+  animationTrigger: 409112111
 --- !u!114 &7159113218458226287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5736,7 +5736,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
-  animationTrigger: 0
+  animationTrigger: 1423206613
 --- !u!114 &7856343911138577922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6040,7 +6040,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
-  animationTrigger: 2081823275
+  animationTrigger: 1535456264
 --- !u!114 &8462981395458121753
 MonoBehaviour:
   m_ObjectHideFlags: 0

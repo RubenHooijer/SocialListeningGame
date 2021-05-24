@@ -10,6 +10,7 @@ public abstract class AbstractScreen<T> : MonoBehaviour where T : Component {
                 if (_instance == null) {
                     GameObject obj = new GameObject(typeof(T).ToString() + " - Singleton");
                     _instance = obj.AddComponent<T>();
+                    Debug.Log($"created a new screen instance of {typeof(T)}");
                 }
             }
             return _instance;
