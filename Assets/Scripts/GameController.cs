@@ -157,7 +157,12 @@ public class GameController : GenericSingleton<GameController, GameController> {
     private void ProcessLoadSceneNode(LoadScene loadSceneNode) {
         Debug.Log("Load scene");
         SceneManager.UnloadSceneAsync(currentSceneInformation.currentScene);
+        SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadSceneAsync(loadSceneNode.nextScene, LoadSceneMode.Additive);
     }
 
+    private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode) {
+        SceneManager.SetActiveScene(scene);
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 }
