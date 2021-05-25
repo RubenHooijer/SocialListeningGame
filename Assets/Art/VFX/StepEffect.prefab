@@ -4777,6 +4777,7 @@ GameObject:
   - component: {fileID: 1637942635852764575}
   - component: {fileID: 1637942635866963559}
   - component: {fileID: 1637942635866782555}
+  - component: {fileID: 3832348247267664990}
   m_Layer: 0
   m_Name: StepEffect
   m_TagString: Untagged
@@ -9542,3 +9543,28 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &3832348247267664990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637942635853053121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/footsteps/footsteps_dirt
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: volume1
+    Value: 0.575
+  OverrideAttenuation: 0
+  OverrideMinDistance: 6.65
+  OverrideMaxDistance: 100

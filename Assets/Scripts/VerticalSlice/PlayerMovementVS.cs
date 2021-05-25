@@ -6,13 +6,15 @@ public class PlayerMovementVS : MonoBehaviour
 {
     public static PlayerMovementVS Instance;
 
+    private BalanceMinigame balanceMinigame;
+
     [SerializeField] private LayerMask groundLayerMask;
 
     [SerializeField] private float speed, stepTime, groundCheckHeight, jumpForce;
 
     [SerializeField] private GameObject stepEffect;
 
-    [SerializeField] protected Animator animator;
+    [HideInInspector] public Animator animator;
 
     private Rigidbody rigidbody;
 
@@ -44,15 +46,19 @@ public class PlayerMovementVS : MonoBehaviour
     {
         Instance = this;
         animator = GetComponent<Animator>();
-        collider = GetComponent<Collider>();
+        //collider = GetComponent<Collider>();
         rigidbody = GetComponent<Rigidbody>();
+        canWalk = true;
     }
 
-    private void Start()
+    protected virtual void Start()
     {
+        if(BalanceMinigame.Instance != null)
+        {
+            balanceMinigame = BalanceMinigame.Instance;
+        }
         inputManager = InputManager.Instance;
         inputManager.enabled = true;
-        canWalk = true;
         //inputManager.JumpPerformed.AddListener(Jump);
         canWalkDepth = false;
     }
@@ -123,8 +129,6 @@ public class PlayerMovementVS : MonoBehaviour
         animator.SetTrigger("Jump");
         yield return new WaitForSeconds(0.25f);
 
-        Debug.Log("jump" + gameObject.name);
-
         //Use Bezier curve to jump to position.
         Vector2 p0 = transform.localPosition;
         Vector2 p1 = p0 + bezierOffsetPlayer;
@@ -144,6 +148,9 @@ public class PlayerMovementVS : MonoBehaviour
 
             transform.localPosition = newPosition;
 
+            //Make sure no falling happens when jumping
+            animator.SetBool("FallDown", false);
+            
             yield return new WaitForEndOfFrame();
         }
 
@@ -164,6 +171,8 @@ public class PlayerMovementVS : MonoBehaviour
         if (IsGrounded(1.4f))
         {
             animator.SetTrigger("Fall");
+            animator.SetBool("Balance", true);
+
             yield break;
         }
         yield return new WaitForEndOfFrame();
@@ -197,13 +206,24 @@ public class PlayerMovementVS : MonoBehaviour
     {
         walkingToEustachius = true;
         float distanceTraveled = 0;
+        if(BalanceMinigame.Instance.currentPlatform > 0)
+        {
+            distanceTraveled = 2;
+        }
         Vector2 startPosition = transform.localPosition;
         while (distanceTraveled < 3.3f)
         {
+            canWalk = true;
             distanceTraveled = Vector2.Distance(startPosition, transform.localPosition);
             translationX = 1;
+            if(gameObject.name == "Eustachius")
+            {
+                transform.rotation = Quaternion.Euler(0, 90, 0);
+                translationX = 0.6f;
+            }
             yield return new WaitForEndOfFrame();
         }
+        canWalk = false;
         walkingToEustachius = false;
 
         //Jump to next platform
@@ -212,11 +232,8 @@ public class PlayerMovementVS : MonoBehaviour
         if(gameObject.name != "Eustachius")
         {
             Jump((Vector2)balanceMinigame.balancePlatforms[balanceMinigame.currentPlatform].position + balanceMinigame.balancePlatformLandOffset);
+            BalanceMinigame.Instance.currentPlatform++;
         }
-
-        yield return new WaitForSeconds(2.5f);
-
-        balanceMinigame.StartCoroutine(balanceMinigame.NextPlatform());
     }
 
     public void DisableCollider()
@@ -232,5 +249,25 @@ public class PlayerMovementVS : MonoBehaviour
     public void StopBalanceAnimation()
     {
         animator.SetBool("Balance", false);
+    }
+
+    public IEnumerator MoveToDoor()
+    {
+        Vector2 doorPosition = DoorMinigame.Instance.DoorPushSpot.position;
+        while(Vector2.Distance(transform.position, doorPosition) > 0.5f)
+        {
+            walkingToEustachius = true;
+            inputManager.DisableInput();
+            translationX = 1;
+            yield return new WaitForEndOfFrame();
+        }
+        walkingToEustachius = false;
+        canWalk = false;
+        animator.SetBool("Walking", false);
+        animator.SetBool("Pushing", true);
+        inputManager.EnableInput();
+
+        DoorMinigame.Instance.gameObject.SetActive(true);
+        DoorMinigame.Instance.StartMinigame();
     }
 }

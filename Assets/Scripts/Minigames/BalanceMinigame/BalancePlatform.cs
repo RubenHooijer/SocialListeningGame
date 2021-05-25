@@ -5,6 +5,7 @@ using UnityEngine;
 public class BalancePlatform : MonoBehaviour
 {
     [SerializeField] private Animator playerAnimator;
+    [SerializeField] private Animator eustachiusAnimator;
     [SerializeField] private Rigidbody playerRigidbody;
     [SerializeField] private Rigidbody eustachiusRigidbody;
 
@@ -25,6 +26,7 @@ public class BalancePlatform : MonoBehaviour
         eustachius = Eustachius.Instance;
 
         playerAnimator = playerMovement.GetComponent<Animator>();
+        eustachiusAnimator = eustachius.GetComponent<Animator>();
         playerRigidbody = playerMovement.GetComponent<Rigidbody>();
         eustachiusRigidbody = eustachius.GetComponent<Rigidbody>();
 
@@ -32,11 +34,18 @@ public class BalancePlatform : MonoBehaviour
         canTilt = false;
     }
 
-    public void Fall()
+    public void Fall(int player)
     {
         inputManager.DisableInput();
         balanceMinigame.PlayerBalanceMoveSpeed = 0;
-        playerAnimator.SetBool("FallDown", true);
+        if(player == 0)
+        {
+            playerAnimator.SetBool("FallDown", true);
+        }
+        else
+        {
+            eustachiusAnimator.SetBool("FallDown", true);
+        }
 
     }
 
