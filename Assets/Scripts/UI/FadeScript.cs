@@ -16,6 +16,7 @@ public class FadeScript : MonoBehaviour
     {
         Instance = this;
         fadeImage = GetComponent<Image>();
+        Fade(0, time);
     }
 
     /// <summary>

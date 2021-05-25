@@ -7,7 +7,7 @@ public class FallToMinigameTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "Player" || other.tag == "Eustachius")
         {
             BalanceMinigame.Instance.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }

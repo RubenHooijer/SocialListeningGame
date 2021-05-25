@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class FadeScreen : AbstractScreen<FadeScreen> {
 
+    [SerializeField] private VoidEventChannelSO FadeToCompleted;
+    [SerializeField] private VoidEventChannelSO FadeFromCompleted;
     [SerializeField] private Image fadeImage;
 
     public void InstantToBlack() => FadeToBlack(0, null);
@@ -12,6 +14,8 @@ public class FadeScreen : AbstractScreen<FadeScreen> {
     public void FadeFromBlack() => FadeFromBlack(3, null);
 
     public void FadeToBlack(float time = 1, Action onDone = null) {
+        onDone += FadeToCompleted.Raise;
+
         fadeImage.color = Color.black;
         fadeImage.DOKill();
         fadeImage.DOFade(1, time).From(0)
@@ -19,6 +23,8 @@ public class FadeScreen : AbstractScreen<FadeScreen> {
     }
 
     public void FadeFromBlack(float time = 1, Action onDone = null) {
+        onDone += FadeFromCompleted.Raise;
+
         fadeImage.color = Color.black;
         fadeImage.DOKill();
         fadeImage.DOFade(0, time).From(1)
