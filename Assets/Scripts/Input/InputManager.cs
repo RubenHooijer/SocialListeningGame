@@ -29,6 +29,7 @@ public class InputManager : GenericSingleton<InputManager, InputManager>
 
 #if !UNITY_EDITOR
         InputSystem.EnableDevice(UnityEngine.InputSystem.Gyroscope.current);
+        InputSystem.EnableDevice(UnityEngine.InputSystem.Accelerometer.current);
 #endif
     }
 
