@@ -140,6 +140,8 @@ MonoBehaviour:
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 7e26449f9494b9044bb86170a3774fd1, type: 2}
   pathGuid: 23a08a6a-d396-44a8-912b-5b6064c02b90
+  useCharacterSpeed: 0
+  speed: 3
 --- !u!114 &-7132567479281211083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +189,8 @@ MonoBehaviour:
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 7e26449f9494b9044bb86170a3774fd1, type: 2}
   pathGuid: a6e836c6-1e61-4014-8e05-42c4c9c12566
+  useCharacterSpeed: 1
+  speed: 1
 --- !u!114 &-7072447507569768544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +204,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1272, y: -24}
+  position: {x: 1256, y: 56}
   ports:
     keys:
     - answers
@@ -392,6 +396,8 @@ MonoBehaviour:
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 7e26449f9494b9044bb86170a3774fd1, type: 2}
   pathGuid: 02047618-2d96-4382-a10e-5d94f57c8f30
+  useCharacterSpeed: 1
+  speed: 1.5
 --- !u!114 &-6123655756153762062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -976,7 +982,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3272, y: 264}
+  position: {x: 2536, y: 264}
   ports:
     keys:
     - input
@@ -988,7 +994,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 1629010296563826725}
+        node: {fileID: 5363345097391125785}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1059,6 +1065,8 @@ MonoBehaviour:
   output: {fileID: 0}
   character: {fileID: 11400000, guid: bd5d826dd37a3604d9072bd438718d6b, type: 2}
   pathGuid: 2c2965a6-1654-435a-b2ff-157053f9c94a
+  useCharacterSpeed: 1
+  speed: 1
 --- !u!114 &-3305411118304763357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1072,7 +1080,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2584, y: 248}
+  position: {x: 3032, y: 248}
   ports:
     keys:
     - answers
@@ -1095,7 +1103,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 5363345097391125785}
+        node: {fileID: -2596671251585615373}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1120,7 +1128,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:09cb638a551382d45801313e6619d71a
     m_TableEntryReference:
-      m_KeyId: 70882993999872
+      m_KeyId: 158614786048
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -1185,7 +1193,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3544, y: 248}
+  position: {x: 2728, y: 376}
   ports:
     keys:
     - input
@@ -1209,7 +1217,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 8760931709200816781}
+        node: {fileID: -3305411118304763357}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1527,6 +1535,8 @@ MonoBehaviour:
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 7e26449f9494b9044bb86170a3774fd1, type: 2}
   pathGuid: a6e836c6-1e61-4014-8e05-42c4c9c12566
+  useCharacterSpeed: 1
+  speed: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1596,7 +1606,7 @@ MonoBehaviour:
   - {fileID: 3749380951348282344}
   - {fileID: -813637320640835575}
   - {fileID: 2216392394604289842}
-  current: {fileID: -5116883872964700067}
+  current: {fileID: 8760931709200816781}
 --- !u!114 &222937763542616830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1732,7 +1742,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2920, y: 248}
+  position: {x: 3416, y: 232}
   ports:
     keys:
     - answers
@@ -1767,7 +1777,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -3860234664650348936}
+        node: {fileID: 8760931709200816781}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1780,7 +1790,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:09cb638a551382d45801313e6619d71a
     m_TableEntryReference:
-      m_KeyId: 70882993999872
+      m_KeyId: 158614786048
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -2466,7 +2476,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -3305411118304763357}
+        node: {fileID: -3860234664650348936}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -2604,7 +2614,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4616, y: 248}
+  position: {x: 4648, y: 248}
   ports:
     keys:
     - input
@@ -2847,6 +2857,8 @@ MonoBehaviour:
   output: {fileID: 0}
   character: {fileID: 11400000, guid: bd5d826dd37a3604d9072bd438718d6b, type: 2}
   pathGuid: 2c2965a6-1654-435a-b2ff-157053f9c94a
+  useCharacterSpeed: 1
+  speed: 1
 --- !u!114 &7469131698385724963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2949,7 +2961,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -2596671251585615373}
+        node: {fileID: 1629010296563826725}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
