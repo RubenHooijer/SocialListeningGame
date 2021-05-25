@@ -16,7 +16,12 @@ public class CharacterView : MonoBehaviour {
     }
 
     public void FollowPath(PathView pathView) {
+        FollowPath(pathView, mover.Speed);
+    }
+
+    public void FollowPath(PathView pathView, float speed = 1) {
         mover.SetPath(pathView.Path);
+        mover.SetSpeed(speed);
         mover.EnableMovement(true);
     }
 

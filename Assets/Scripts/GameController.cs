@@ -115,7 +115,11 @@ public class GameController : GenericSingleton<GameController, GameController> {
         CharacterView characterView = CharacterView.GetView(followPathNode.character);
         PathView pathView = PathView.GetView(followPathNode.pathGuid);
 
-        characterView.FollowPath(pathView);
+        if (followPathNode.useCharacterSpeed) {
+            characterView.FollowPath(pathView);
+        } else {
+            characterView.FollowPath(pathView, followPathNode.speed);
+        }
 
         followPathNode.Next();
         HandleCurrentNode();
