@@ -42,12 +42,12 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
         playerMovement = PlayerMovementVS.Instance;
         eustachius = Eustachius.Instance;
 
+        eustachius.canWalk = true;
+
         inputManager = InputManager.Instance;
         inputManager.EnableInput();
 
         inputManager.JumpPerformed.AddListener(JumpToPlatform);
-
-        fadeScript.Fade(0, fadeTime);
 
         currentPlatform = 0;
     }
@@ -77,17 +77,5 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
             playerMovement.StartCoroutine(playerMovement.WalkRight());
             //eustachius.StartCoroutine(eustachius.WalkRight());
         }
-    }
-
-    public IEnumerator NextPlatform()
-    {
-        if(!movingToNextPlatform)
-        {
-            Debug.Log("in");
-            movingToNextPlatform = true;
-            currentPlatform++;
-        }
-        yield return new WaitForSeconds(1f);
-        movingToNextPlatform = false;
     }
 }

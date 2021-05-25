@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerReturn" id="{c9f22ec0-204f-4c34-a863-dfab3b76d0f5}">
+		<property name="overridingInputFormat">
+			<value>2</value>
+		</property>
+		<property name="name">
+			<value>Reverb</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{15142a18-0f74-4bf3-bbf2-006be7d0c5ed}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{32dd67a9-e4e9-4627-b774-2b4fb42a1737}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{86d4b218-a982-4d27-8ec9-d4f249c32617}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{15142a18-0f74-4bf3-bbf2-006be7d0c5ed}">
+		<relationship name="effects">
+			<destination>{97511bb5-7156-4d69-bb60-a1e696e75564}</destination>
+			<destination>{70665d24-7978-4a36-a03f-3904c025fa35}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{32dd67a9-e4e9-4627-b774-2b4fb42a1737}" />
+	<object class="SFXReverbEffect" id="{97511bb5-7156-4d69-bb60-a1e696e75564}">
+		<property name="earlyDelay">
+			<value>15</value>
+		</property>
+		<property name="lateDelay">
+			<value>22</value>
+		</property>
+		<property name="HFDecayRatio">
+			<value>100</value>
+		</property>
+		<property name="highCut">
+			<value>20000</value>
+		</property>
+		<property name="earlyLateMix">
+			<value>63</value>
+		</property>
+		<property name="wetLevel">
+			<value>0</value>
+		</property>
+		<property name="dryLevel">
+			<value>-80</value>
+		</property>
+		<relationship name="automators">
+			<destination>{99a66c56-cb12-4004-9b7c-4f78956f52ff}</destination>
+			<destination>{c8431078-abf8-4588-bda6-38e543325114}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusFader" id="{70665d24-7978-4a36-a03f-3904c025fa35}" />
+	<object class="Automator" id="{99a66c56-cb12-4004-9b7c-4f78956f52ff}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>decayTime</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{81778c80-725a-4b9b-8095-1f4e1b7a129f}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{c8431078-abf8-4588-bda6-38e543325114}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>HFDecayRatio</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{558cfd70-fdd6-467a-ae81-d215ff93269e}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationCurve" id="{81778c80-725a-4b9b-8095-1f4e1b7a129f}">
+		<relationship name="parameter">
+			<destination>{1b3860a3-93e2-48ff-a977-cb2913b2942e}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{ea6669fc-de36-47f6-b3e3-f1368a968106}</destination>
+			<destination>{449f18ac-7296-4805-a733-c1cb07ee5e1d}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationCurve" id="{558cfd70-fdd6-467a-ae81-d215ff93269e}">
+		<relationship name="parameter">
+			<destination>{1b3860a3-93e2-48ff-a977-cb2913b2942e}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{1924362a-94d3-4c38-8181-e5155dd5b0b7}</destination>
+			<destination>{a2b7e437-7e59-4beb-81ec-bea01a595f51}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationPoint" id="{ea6669fc-de36-47f6-b3e3-f1368a968106}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>100</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{449f18ac-7296-4805-a733-c1cb07ee5e1d}">
+		<property name="position">
+			<value>1</value>
+		</property>
+		<property name="value">
+			<value>4600</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{1924362a-94d3-4c38-8181-e5155dd5b0b7}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>55</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{a2b7e437-7e59-4beb-81ec-bea01a595f51}">
+		<property name="position">
+			<value>0.60000000000000009</value>
+		</property>
+		<property name="value">
+			<value>100</value>
+		</property>
+	</object>
+</objects>
