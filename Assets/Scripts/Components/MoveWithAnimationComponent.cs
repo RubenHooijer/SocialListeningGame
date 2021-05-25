@@ -21,12 +21,18 @@ public class MoveWithAnimationComponent : MonoBehaviour {
 
     public void StartMoving() {
         CoroutineHelper.Delay(moveDelay, FollowPath);
-        CoroutineHelper.Delay(() => pathView.Trs.DistanceRatio >= 1, OnPathEnd.Invoke);
+        CoroutineHelper.Delay(() => pathView.Trs.DistanceRatio >= 1, PathEnd);
     }
 
     private void FollowPath() {
+        animator.Play(movingAnimation);
         mover.SetPath(pathView.Path);
         mover.EnableMovement(true);
+    }
+
+    private void PathEnd() {
+        animator.Play(haltAnimation);
+        OnPathEnd?.Invoke();
     }
 
 }
