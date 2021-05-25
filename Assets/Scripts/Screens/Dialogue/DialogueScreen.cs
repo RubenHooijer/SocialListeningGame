@@ -37,6 +37,7 @@ public class DialogueScreen : AbstractScreen<DialogueScreen> {
 
     public void ShowSpeech(IChat chat) {
         Show();
+        skipSpeechButton.gameObject.SetActive(false);
 
         speechGameObject.SetActive(true);
         speechTextField.text = string.Empty;
