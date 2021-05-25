@@ -1,4 +1,5 @@
-﻿using XNode;
+﻿using NaughtyAttributes;
+using XNode;
 
 namespace Dialogue {
     [NodeTint("#786649")]
@@ -8,6 +9,8 @@ namespace Dialogue {
 
         public CharacterType character;
         public string pathGuid;
+        public bool useCharacterSpeed = true;
+        [HideIf("useCharacterSpeed")] [AllowNesting] public float speed = 1;
 
         public override void Trigger() {
             (graph as DialogueGraph).current = this;
