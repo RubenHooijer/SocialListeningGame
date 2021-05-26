@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class MoverComponent : MonoBehaviour {
 
+	public float Speed => speed;
+
 	[Header("Settings")]
 	[SerializeField] private float speed = 5f;
 

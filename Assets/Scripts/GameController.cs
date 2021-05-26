@@ -82,7 +82,16 @@ public class GameController : GenericSingleton<GameController, GameController> {
 
     private void ProcessChatNode(Chat chatNode) {
         Debug.Log("Chat");
-        DialogueScreen.Instance.ShowSpeech(chatNode);
+        chatNode.text.GetLocalizedStringAsync().Completed += x => OnDialogueLoaded(x, chatNode);
+        //DialogueScreen.Instance.ShowSpeech(chatNode);
+    }
+
+    private void OnDialogueLoaded(UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<string> obj, Chat chat) {
+        if (obj.IsDone) {
+            DialogueScreen.Instance.ShowSpeech(chat);
+        } else {
+            Debug.Log("String was not done loading");
+        }
     }
 
     private void ProcessWaitNode(Wait waitNode) {
@@ -115,7 +124,11 @@ public class GameController : GenericSingleton<GameController, GameController> {
         CharacterView characterView = CharacterView.GetView(followPathNode.character);
         PathView pathView = PathView.GetView(followPathNode.pathGuid);
 
-        characterView.FollowPath(pathView);
+        if (followPathNode.useCharacterSpeed) {
+            characterView.FollowPath(pathView);
+        } else {
+            characterView.FollowPath(pathView, followPathNode.speed);
+        }
 
         followPathNode.Next();
         HandleCurrentNode();
