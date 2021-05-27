@@ -9,18 +9,22 @@ public class DissolveSequence : MonoBehaviour
     public GameObject pants;
     public GameObject sweater;
     public GameObject godRays;
+    public GameObject orb;
 
     private void Start()
     {
+        orb.SetActive(false);
         FirefliesParticle.Pause(true);
         spotLight.enabled = false;
         pants.SetActive(false);
         sweater.SetActive(false);
         godRays.SetActive(false);
+
     }
     public void startFireflies()
     {
         FirefliesParticle.Play(true);
+        orb.SetActive(true);
     }
 
     public void focusLight()
