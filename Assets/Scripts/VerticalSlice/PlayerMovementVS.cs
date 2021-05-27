@@ -251,23 +251,23 @@ public class PlayerMovementVS : MonoBehaviour
         animator.SetBool("Balance", false);
     }
 
-    public IEnumerator MoveToDoor()
-    {
-        Vector2 doorPosition = DoorMinigame.Instance.DoorPushSpot.position;
-        while(Vector2.Distance(transform.position, doorPosition) > 0.5f)
-        {
-            walkingToEustachius = true;
-            inputManager.DisableInput();
-            translationX = 1;
-            yield return new WaitForEndOfFrame();
-        }
-        walkingToEustachius = false;
-        canWalk = false;
-        animator.SetBool("Walking", false);
-        animator.SetBool("Pushing", true);
-        inputManager.EnableInput();
+    //public IEnumerator MoveToDoor()
+    //{
+    //    Vector2 doorPosition = DoorMinigame.Instance.DoorPushSpot.position;
+    //    while(Vector2.Distance(transform.position, doorPosition) > 0.5f)
+    //    {
+    //        walkingToEustachius = true;
+    //        inputManager.DisableInput();
+    //        translationX = 1;
+    //        yield return new WaitForEndOfFrame();
+    //    }
+    //    walkingToEustachius = false;
+    //    canWalk = false;
+    //    animator.SetBool("Walking", false);
+    //    animator.SetBool("Pushing", true);
+    //    inputManager.EnableInput();
 
-        DoorMinigame.Instance.gameObject.SetActive(true);
-        DoorMinigame.Instance.StartMinigame();
-    }
+    //    DoorMinigame.Instance.gameObject.SetActive(true);
+    //    DoorMinigame.Instance.StartMinigame();
+    //}
 }

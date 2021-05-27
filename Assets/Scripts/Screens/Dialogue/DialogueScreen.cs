@@ -37,8 +37,9 @@ public class DialogueScreen : AbstractScreen<DialogueScreen> {
 
     public void ShowSpeech(IChat chat) {
         Show();
-        skipSpeechButton.gameObject.SetActive(false);
 
+        skipSpeechButton.gameObject.SetActive(false);
+        
         speechGameObject.SetActive(true);
         speechTextField.text = string.Empty;
         StartCoroutine(
@@ -54,8 +55,6 @@ public class DialogueScreen : AbstractScreen<DialogueScreen> {
 
         characterIcon.sprite = chat.Character.Icon;
         characterNameTextField.text = chat.Character.Name;
-
-        
     }
 
     protected override void Awake() {

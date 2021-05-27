@@ -1,5 +1,6 @@
 using Dialogue;
 using Oasez.Extensions.Generics.Singleton;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -67,6 +68,9 @@ public class GameController : GenericSingleton<GameController, GameController> {
                 break;
             case InvokeEvent invokeEventNode:
                 ProcessInvokeEventNode(invokeEventNode);
+                break;
+            case StringEvent stringEventNode:
+                ProcessInvokeStringEventNode(stringEventNode);
                 break;
             case StartStop startStopNode:
                 ProcessStartStopNode(startStopNode);
@@ -155,6 +159,15 @@ public class GameController : GenericSingleton<GameController, GameController> {
         Debug.Log("Invoked event");
         invokeEventNode.trigger.Raise();
         invokeEventNode.Next();
+
+        HandleCurrentNode();
+    }
+
+
+    private void ProcessInvokeStringEventNode(StringEvent stringEventNode) {
+        Debug.Log("String event");
+        stringEventNode.trigger.Raise(stringEventNode.data);
+        stringEventNode.Next();
 
         HandleCurrentNode();
     }

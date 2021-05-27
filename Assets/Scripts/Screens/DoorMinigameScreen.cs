@@ -31,10 +31,10 @@ public class DoorMinigameScreen : AbstractScreen<DoorMinigameScreen> {
     }
 
     protected override void OnHide() {
+        pushButton.OnClickDirect -= OnButtonClicked;
         animatedWidgets.Foreach(x => x.Hide());
 
         CoroutineHelper.Delay(2.5f, () => gameObject.SetActive(false));
-        pushButton.OnClickDirect -= OnButtonClicked;
     }
 
     private void OnButtonClicked() {

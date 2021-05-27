@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine.Localization;
-using UnityEngine.Localization.Tables;
 using XNode;
 
 namespace Dialogue {
