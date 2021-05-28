@@ -4,22 +4,25 @@ using XNode;
 
 namespace Dialogue {
     [NodeTint("#e30b00")]
-    [CreateNodeMenu("CameraNode", order = 0)]
+    [CreateNodeMenu("Camera", order = 0)]
     [NodeWidth(250)]
     public class Camera : DialogueBaseNode {
 
         public enum Action {
             LookAt = 0,
-            CameraOffset = 1,
+            TrackingOffset = 1,
+            PositionOffset = 2,
         }
 
         public Action action = Action.LookAt;
         [HideIf("notWaitingForLookAt")] [AllowNesting] public string lookAtGuid;
         [HideIf("notWaitingForCameraOffset")] [AllowNesting] public Vector3 offset;
-        [HideIf("notWaitingForCameraOffset")] [AllowNesting] public float duration = 1;
+        [HideIf("notWaitingForPositionOffset")] [AllowNesting] public float positionOffset;
+        [HideIf(EConditionOperator.And, "notWaitingForCameraOffset", "notWaitingForPositionOffset")] [AllowNesting] public float duration = 1;
 
         private bool notWaitingForLookAt => action != Action.LookAt;
-        private bool notWaitingForCameraOffset => action != Action.CameraOffset;
+        private bool notWaitingForCameraOffset => action != Action.TrackingOffset;
+        private bool notWaitingForPositionOffset => action != Action.PositionOffset;
 
         public override void Trigger() {
             (graph as DialogueGraph).current = this;

@@ -184,19 +184,24 @@ public class GameController : GenericSingleton<GameController, GameController> {
         Debug.Log("Camera");
         CinemachineBrain cinemachineBrain = UnityEngine.Camera.main.GetComponent<CinemachineBrain>(); 
         ICinemachineCamera cinemachineCamera = cinemachineBrain.ActiveVirtualCamera;
+        CinemachineVirtualCamera virtualCamera = cinemachineCamera.VirtualCameraGameObject.GetComponent<CinemachineVirtualCamera>();
 
         switch (cameraNode.action) {
             case Dialogue.Camera.Action.LookAt:
                 cinemachineCamera.LookAt = StaticView.GetView(cameraNode.lookAtGuid).transform;
-                
                 break;
-            case Dialogue.Camera.Action.CameraOffset:
-                CinemachineVirtualCamera virtualCamera = cinemachineCamera.VirtualCameraGameObject.GetComponent<CinemachineVirtualCamera>();
+            case Dialogue.Camera.Action.TrackingOffset:
                 CinemachineComposer cinemachineComposer = virtualCamera.GetCinemachineComponent<CinemachineComposer>();
-
                 DOTween.To(() => cinemachineComposer.m_TrackedObjectOffset,
                     x => cinemachineComposer.m_TrackedObjectOffset = x,
                     cameraNode.offset,
+                    cameraNode.duration);
+                break;
+            case Dialogue.Camera.Action.PositionOffset:
+                CinemachineTrackedDolly cinemachineTrackDolly = virtualCamera.GetCinemachineComponent<CinemachineTrackedDolly>();
+                DOTween.To(() => cinemachineTrackDolly.m_AutoDolly.m_PositionOffset,
+                    x => cinemachineTrackDolly.m_AutoDolly.m_PositionOffset = x,
+                    cameraNode.positionOffset,
                     cameraNode.duration);
                 break;
         }
