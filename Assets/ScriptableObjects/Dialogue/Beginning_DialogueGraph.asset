@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15736, y: 184}
+  position: {x: 21064, y: 616}
   ports:
     keys:
     - input
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 14504, y: 584}
+  position: {x: 17416, y: 680}
   ports:
     keys:
     - input
@@ -123,7 +123,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -2121533668887232800}
+        node: {fileID: 6230543657939747235}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -349,6 +349,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers:
   - {fileID: -592919858278177659}
   - {fileID: 3183189902253983330}
@@ -366,7 +367,7 @@ MonoBehaviour:
   m_Name: Pause Character
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4696, y: -24}
+  position: {x: 4456, y: -360}
   ports:
     keys:
     - input
@@ -514,6 +515,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &-8205099335459472797
 MonoBehaviour:
@@ -635,6 +637,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &-7370774481955540774
 MonoBehaviour:
@@ -649,7 +652,7 @@ MonoBehaviour:
   m_Name: Pause Character
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1464, y: 24}
+  position: {x: 1432, y: 56}
   ports:
     keys:
     - input
@@ -696,7 +699,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -616, y: -184}
+  position: {x: -536, y: 8}
   ports:
     keys:
     - answers
@@ -748,6 +751,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &-6409601012930891605
 MonoBehaviour:
@@ -844,7 +848,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 7856343911138577922}
+        node: {fileID: -3080336951740374774}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -861,6 +865,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &-5734194726467249230
 MonoBehaviour:
@@ -875,7 +880,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 14856, y: -296}
+  position: {x: 19112, y: 536}
   ports:
     keys:
     - input
@@ -908,50 +913,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: f1e850f753cf12645a92b09087acc16a, type: 2}
-  animationTrigger: 1423206613
---- !u!114 &-5425071622758372454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdb04462412d7c946a5d072ca6cce8bb, type: 3}
-  m_Name: Wait
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -552, y: 8}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: -5425071622758372454}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: -5425071622758372454}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  waitFor: 0
-  Time: 4
-  PathGuid: 
-  trigger: {fileID: 0}
+  animationTrigger: -16205478
 --- !u!114 &-5290647770963493967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1059,10 +1021,61 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers:
   - {fileID: 343208816981867303}
   - {fileID: 535897729917252230}
   - {fileID: 5620359703532808946}
+--- !u!114 &-5250352447141252606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951bd691349e4da4594ddb09d58c4931, type: 3}
+  m_Name: Camera
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 6216, y: 216}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -5250352447141252606}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 1796787207660852137}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -5250352447141252606}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4231323298358042850}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  action: 2
+  lookAtGuid: 
+  offset: {x: 0, y: 0, z: 0}
+  positionOffset: 0
+  duration: 2
 --- !u!114 &-5224841625978396052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1076,7 +1089,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15352, y: -120}
+  position: {x: 19896, y: 584}
   ports:
     keys:
     - input
@@ -1109,7 +1122,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
-  animationTrigger: 1423206613
+  animationTrigger: -16205478
 --- !u!114 &-4953995488822490651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1195,6 +1208,9 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
+        node: {fileID: 4431848486446033591}
+        reroutePoints: []
+      - fieldName: output
         node: {fileID: 3592875411297687182}
         reroutePoints: []
       _direction: 0
@@ -1245,6 +1261,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers:
   - {fileID: -3910492328024198212}
   - {fileID: 7003688302062479219}
@@ -1261,7 +1278,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4376, y: -40}
+  position: {x: 4088, y: 152}
   ports:
     keys:
     - input
@@ -1273,7 +1290,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 3144153512470635265}
+        node: {fileID: 9154033383114327420}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1297,6 +1314,56 @@ MonoBehaviour:
   Time: 4
   PathGuid: 3b048643-4525-456f-9f33-88c45be83294
   trigger: {fileID: 0}
+--- !u!114 &-4854571405764134262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951bd691349e4da4594ddb09d58c4931, type: 3}
+  m_Name: Camera
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3400, y: 152}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -4854571405764134262}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 6152105819406144446}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -4854571405764134262}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 9154033383114327420}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  action: 2
+  lookAtGuid: 
+  offset: {x: 0, y: 0, z: 0}
+  positionOffset: 0.36
+  duration: 3
 --- !u!114 &-4465584370000125861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1310,7 +1377,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 5864, y: 8}
+  position: {x: 5624, y: -328}
   ports:
     keys:
     - answers
@@ -1362,6 +1429,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &-4341728306128531504
 MonoBehaviour:
@@ -1431,6 +1499,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &-4297563735384546148
 MonoBehaviour:
@@ -1548,7 +1617,7 @@ MonoBehaviour:
   m_Name: Pause Character
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1592, y: -40.000004}
+  position: {x: -1720, y: 8}
   ports:
     keys:
     - input
@@ -1683,10 +1752,64 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers:
   - {fileID: 1433001067981590424}
   - {fileID: 1559080373161840682}
   - {fileID: 343208816981867303}
+--- !u!114 &-3080336951740374774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951bd691349e4da4594ddb09d58c4931, type: 3}
+  m_Name: Camera
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 15784, y: 264}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -3080336951740374774}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -6267549194619237338}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 1215978685387898941}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -3080336951740374774}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 7856343911138577922}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  action: 1
+  lookAtGuid: 
+  offset: {x: 1.7, y: 4.8, z: 5.2}
+  positionOffset: 0
+  duration: 3
 --- !u!114 &-2650569851275417611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1700,7 +1823,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1176, y: 8}
+  position: {x: 1016, y: 24}
   ports:
     keys:
     - input
@@ -1733,7 +1856,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   waitFor: 0
-  Time: 2
+  Time: 1
   PathGuid: 
   trigger: {fileID: 0}
 --- !u!114 &-2380109259304703787
@@ -1801,6 +1924,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &-2236940015870972887
 MonoBehaviour:
@@ -1815,7 +1939,7 @@ MonoBehaviour:
   m_Name: MC at door
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15000, y: -104}
+  position: {x: 19544, y: 600}
   ports:
     keys:
     - input
@@ -1864,7 +1988,7 @@ MonoBehaviour:
   m_Name: Follow Path
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 14136, y: 376}
+  position: {x: 16680, y: 520}
   ports:
     keys:
     - input
@@ -1888,7 +2012,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -8915271485254755336}
+        node: {fileID: 6230543657939747235}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1913,7 +2037,7 @@ MonoBehaviour:
   m_Name: Pause Character
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2488, y: 40}
+  position: {x: 2392, y: 72}
   ports:
     keys:
     - input
@@ -2051,6 +2175,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers:
   - {fileID: 1933440030755843813}
   - {fileID: -1509090434624095962}
@@ -2124,7 +2249,7 @@ MonoBehaviour:
   m_Name: Invoke Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15432, y: 168}
+  position: {x: 20760, y: 600}
   ports:
     keys:
     - input
@@ -2157,6 +2282,56 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 7ed886931d58b194e9aa4f91242e837d, type: 2}
+--- !u!114 &-1038896377019343793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951bd691349e4da4594ddb09d58c4931, type: 3}
+  m_Name: Camera
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -2728, y: 40}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -1038896377019343793}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -566120528100609024}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -1038896377019343793}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4901265134015507971}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  action: 2
+  lookAtGuid: 
+  offset: {x: 0, y: 0, z: 0}
+  positionOffset: -0.3
+  duration: 2
 --- !u!114 &-1029693472646153456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2305,6 +2480,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers:
   - {fileID: 7290394632587176266}
   - {fileID: 5491918657069340131}
@@ -2365,6 +2541,56 @@ MonoBehaviour:
   hideIfVisited: 1
   hideIfSpecificNodeIsVisited: 0
   specificNode: {fileID: 0}
+--- !u!114 &-566120528100609024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951bd691349e4da4594ddb09d58c4931, type: 3}
+  m_Name: Camera
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -3048, y: -24}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -566120528100609024}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 5889213385210171580}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -566120528100609024}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -1038896377019343793}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  action: 1
+  lookAtGuid: 
+  offset: {x: -1.27, y: 5, z: 5.2}
+  positionOffset: 0
+  duration: 4
 --- !u!114 &-465477096124716840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2378,7 +2604,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1912.0001, y: -40.000004}
+  position: {x: -1992, y: 8}
   ports:
     keys:
     - input
@@ -2479,6 +2705,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &-33754892658201290
 MonoBehaviour:
@@ -2556,7 +2783,6 @@ MonoBehaviour:
   - {fileID: -465477096124716840}
   - {fileID: -3324256140999978238}
   - {fileID: 2785991655461677423}
-  - {fileID: -5425071622758372454}
   - {fileID: 4895673730322884133}
   - {fileID: -8205099335459472797}
   - {fileID: 4488901904657033558}
@@ -2621,7 +2847,6 @@ MonoBehaviour:
   - {fileID: 2215798871678666128}
   - {fileID: 4149225309482641164}
   - {fileID: -190488735431234883}
-  - {fileID: 4546631075370532211}
   - {fileID: 4787466284223165442}
   - {fileID: -1417298043808873247}
   - {fileID: -9082140333225379099}
@@ -2658,7 +2883,15 @@ MonoBehaviour:
   - {fileID: 4431848486446033591}
   - {fileID: 8011126388582017313}
   - {fileID: 3592875411297687182}
-  current: {fileID: -4945590643081273438}
+  - {fileID: -566120528100609024}
+  - {fileID: 9154033383114327420}
+  - {fileID: -3080336951740374774}
+  - {fileID: -1038896377019343793}
+  - {fileID: -4854571405764134262}
+  - {fileID: 6152105819406144446}
+  - {fileID: -5250352447141252606}
+  - {fileID: 6230543657939747235}
+  current: {fileID: 72392310833289225}
 --- !u!114 &33942789384675195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2734,7 +2967,7 @@ MonoBehaviour:
   m_Name: Load Scene
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 16664, y: 248}
+  position: {x: 21992, y: 680}
   ports:
     keys:
     - input
@@ -2780,7 +3013,7 @@ MonoBehaviour:
   m_Name: Follow Path
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15032, y: 456}
+  position: {x: 17944, y: 552}
   ports:
     keys:
     - input
@@ -2943,6 +3176,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &403314597258778789
 MonoBehaviour:
@@ -2957,7 +3191,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 14734.365, y: 385.3733}
+  position: {x: 17656, y: 488}
   ports:
     keys:
     - input
@@ -3062,7 +3296,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4936, y: -120}
+  position: {x: 4696, y: -456}
   ports:
     keys:
     - input
@@ -3161,6 +3395,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &1178662707485047465
 MonoBehaviour:
@@ -3175,7 +3410,7 @@ MonoBehaviour:
   m_Name: Start Stop
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -6936, y: -120}
+  position: {x: -7144, y: -120}
   ports:
     keys:
     - input
@@ -3253,7 +3488,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 7856343911138577922}
+        node: {fileID: -3080336951740374774}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3270,6 +3505,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &1433001067981590424
 MonoBehaviour:
@@ -3340,7 +3576,7 @@ MonoBehaviour:
   m_Name: Start Stop
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 17016, y: 376}
+  position: {x: 22408, y: 712}
   ports:
     keys:
     - input
@@ -3442,7 +3678,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 6392, y: 40}
+  position: {x: 5928, y: 88}
   ports:
     keys:
     - input
@@ -3466,7 +3702,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 4231323298358042850}
+        node: {fileID: -5250352447141252606}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3545,7 +3781,7 @@ MonoBehaviour:
   m_Name: Invoke Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 16360, y: 232}
+  position: {x: 21688, y: 664}
   ports:
     keys:
     - input
@@ -3591,7 +3827,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 13912, y: 168}
+  position: {x: 16760, y: 264}
   ports:
     keys:
     - answers
@@ -3643,6 +3879,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &2215798871678666128
 MonoBehaviour:
@@ -3745,6 +3982,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers:
   - {fileID: 33942789384675195}
   - {fileID: 3183189902253983330}
@@ -3850,6 +4088,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers:
   - {fileID: 33942789384675195}
   - {fileID: 7288318232741154848}
@@ -3867,7 +4106,7 @@ MonoBehaviour:
   m_Name: Invoke Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -936, y: 8}
+  position: {x: -840, y: 8}
   ports:
     keys:
     - input
@@ -3913,7 +4152,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2744, y: 40}
+  position: {x: 2680, y: 88}
   ports:
     keys:
     - input
@@ -3937,7 +4176,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -4879128907164269241}
+        node: {fileID: 6152105819406144446}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -4019,7 +4258,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -6344, y: -120}
+  position: {x: -6552, y: -120}
   ports:
     keys:
     - input
@@ -4068,7 +4307,7 @@ MonoBehaviour:
   m_Name: Invoke Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -5304, y: -120}
+  position: {x: -5656, y: -104}
   ports:
     keys:
     - input
@@ -4189,6 +4428,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers:
   - {fileID: 33942789384675195}
   - {fileID: 4149225309482641164}
@@ -4273,7 +4513,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 1796787207660852137}
+        node: {fileID: -5250352447141252606}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -4362,6 +4602,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &4349406787306448462
 MonoBehaviour:
@@ -4423,7 +4664,7 @@ MonoBehaviour:
   m_Name: Invoke Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -6616, y: -120}
+  position: {x: -6824, y: -120}
   ports:
     keys:
     - input
@@ -4469,7 +4710,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -4337.691, y: 197.75832}
+  position: {x: -4504, y: 184}
   ports:
     keys:
     - input
@@ -4491,7 +4732,10 @@ MonoBehaviour:
       _node: {fileID: 4431848486446033591}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: -4945590643081273438}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -4567,6 +4811,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &4488901904657033558
 MonoBehaviour:
@@ -4581,7 +4826,7 @@ MonoBehaviour:
   m_Name: Pause Character
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 840, y: 8}
+  position: {x: 760, y: 8}
   ports:
     keys:
     - input
@@ -4615,66 +4860,6 @@ MonoBehaviour:
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 7e26449f9494b9044bb86170a3774fd1, type: 2}
   pause: 1
---- !u!114 &4546631075370532211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
-  m_Name: Chat
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 14360, y: 120}
-  ports:
-    keys:
-    - answers
-    - input
-    - output
-    values:
-    - _fieldName: answers
-      _node: {fileID: 4546631075370532211}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Dialogue.Answer, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: input
-      _node: {fileID: 4546631075370532211}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 4546631075370532211}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  character: {fileID: 11400000, guid: bd5d826dd37a3604d9072bd438718d6b, type: 2}
-  text:
-    m_TableReference:
-      m_TableCollectionName: GUID:ac2fb83fce11b6a4ca8c5945300108d6
-    m_TableEntryReference:
-      m_KeyId: 362740131401736
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 1
-  answers: []
 --- !u!114 &4728817036192850186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4688,7 +4873,7 @@ MonoBehaviour:
   m_Name: Follow Path
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 6008, y: 168}
+  position: {x: 5480, y: 72}
   ports:
     keys:
     - input
@@ -4737,7 +4922,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15048, y: 152}
+  position: {x: 20376, y: 584}
   ports:
     keys:
     - answers
@@ -4789,6 +4974,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &4895673730322884133
 MonoBehaviour:
@@ -4803,7 +4989,7 @@ MonoBehaviour:
   m_Name: Hide Carving
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -232, y: 24}
+  position: {x: -184, y: 8}
   ports:
     keys:
     - input
@@ -4849,7 +5035,7 @@ MonoBehaviour:
   m_Name: Follow Path
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -2440, y: -24}
+  position: {x: -2440, y: 8}
   ports:
     keys:
     - input
@@ -4861,7 +5047,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 5889213385210171580}
+        node: {fileID: -1038896377019343793}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -4950,6 +5136,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &5089691283385829274
 MonoBehaviour:
@@ -4964,7 +5151,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 16040, y: 200}
+  position: {x: 21368, y: 632}
   ports:
     keys:
     - input
@@ -5013,7 +5200,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -3064, y: -24}
+  position: {x: -3640, y: -56}
   ports:
     keys:
     - input
@@ -5109,7 +5296,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2056, y: 24}
+  position: {x: 2040, y: 56}
   ports:
     keys:
     - answers
@@ -5161,6 +5348,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &5295428401310014428
 MonoBehaviour:
@@ -5175,7 +5363,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1720, y: 24}
+  position: {x: 1704, y: 72}
   ports:
     keys:
     - input
@@ -5274,6 +5462,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &5491918657069340131
 MonoBehaviour:
@@ -5403,7 +5592,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -2760, y: -24}
+  position: {x: -3352, y: -40}
   ports:
     keys:
     - input
@@ -5427,7 +5616,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 4901265134015507971}
+        node: {fileID: -566120528100609024}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -5437,6 +5626,105 @@ MonoBehaviour:
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
   animationTrigger: 409112111
+--- !u!114 &6152105819406144446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb04462412d7c946a5d072ca6cce8bb, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3016, y: 200}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 6152105819406144446}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 3144153512470635265}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 6152105819406144446}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4854571405764134262}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  waitFor: 0
+  Time: 1
+  PathGuid: 
+  trigger: {fileID: 0}
+--- !u!114 &6230543657939747235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951bd691349e4da4594ddb09d58c4931, type: 3}
+  m_Name: Camera
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 17144, y: 520}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 6230543657939747235}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -2121533668887232800}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 6230543657939747235}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -8915271485254755336}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  action: 1
+  lookAtGuid: 
+  offset: {x: 0.5, y: 4, z: 0}
+  positionOffset: 0
+  duration: 3
 --- !u!114 &6318967755583093569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5450,7 +5738,7 @@ MonoBehaviour:
   m_Name: Eustachius at door
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 14584, y: -232}
+  position: {x: 18840, y: 600}
   ports:
     keys:
     - input
@@ -5499,7 +5787,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 13544, y: 168}
+  position: {x: 16456, y: 264}
   ports:
     keys:
     - input
@@ -5548,7 +5836,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15512, y: 488}
+  position: {x: 18440, y: 584}
   ports:
     keys:
     - input
@@ -5706,6 +5994,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &7288318232741154848
 MonoBehaviour:
@@ -5832,7 +6121,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1384, y: -24}
+  position: {x: -1112, y: -8}
   ports:
     keys:
     - input
@@ -5879,7 +6168,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 13155.32, y: 166.11938}
+  position: {x: 16072, y: 264}
   ports:
     keys:
     - answers
@@ -5902,10 +6191,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -6267549194619237338}
-        reroutePoints: []
-      - fieldName: output
-        node: {fileID: 1215978685387898941}
+        node: {fileID: -3080336951740374774}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -5934,6 +6220,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &7862159103359961957
 MonoBehaviour:
@@ -6000,6 +6287,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &8011126388582017313
 MonoBehaviour:
@@ -6014,7 +6302,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -5736, y: -120}
+  position: {x: -5944, y: -120}
   ports:
     keys:
     - input
@@ -6115,6 +6403,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &8256822918383802950
 MonoBehaviour:
@@ -6185,7 +6474,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 5576, y: -120}
+  position: {x: 5336, y: -456}
   ports:
     keys:
     - input
@@ -6284,6 +6573,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &8491823553493898437
 MonoBehaviour:
@@ -6350,6 +6640,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &8858390362881707446
 MonoBehaviour:
@@ -6364,7 +6655,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -6008, y: -120}
+  position: {x: -6216, y: -120}
   ports:
     keys:
     - input
@@ -6398,6 +6689,56 @@ MonoBehaviour:
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
   animationTrigger: -445125191
+--- !u!114 &9154033383114327420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951bd691349e4da4594ddb09d58c4931, type: 3}
+  m_Name: Camera
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3736, y: 152}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 9154033383114327420}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -4854571405764134262}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 9154033383114327420}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4879128907164269241}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  action: 1
+  lookAtGuid: 
+  offset: {x: 0, y: 2.3, z: 0}
+  positionOffset: 0
+  duration: 2
 --- !u!114 &9208772744975534270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6411,7 +6752,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 5224, y: -120}
+  position: {x: 4984, y: -456}
   ports:
     keys:
     - answers
@@ -6463,4 +6804,5 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+  sound: 
   answers: []

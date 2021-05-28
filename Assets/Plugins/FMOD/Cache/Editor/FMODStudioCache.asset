@@ -15,13 +15,33 @@ MonoBehaviour:
   Path: Assets/FMOD/de luistermutant/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637575386309712956
+  lastModified: 637578146217788285
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1138
+    Value: 3276
   Exists: 1
---- !u!114 &-8556629727596521459
+--- !u!114 &-8665296244215270144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/enthousiast/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-8633855369815206368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -31,20 +51,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Water drips
+  m_Name: event:/enviroment/buiten enviroment
   m_EditorClassIdentifier: 
-  Path: event:/Water drips
-  guid: cc66f7057ff406448bfb242764c9098c
+  Path: event:/enviroment/buiten enviroment
+  guid: 4ae17f44825e604f832ee7b03e398642
   Banks:
-  - {fileID: -4969453627979636227}
-  IsStream: 0
+  - {fileID: 6958723077760628706}
+  IsStream: 1
   Is3D: 1
   IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 15800
---- !u!114 &-8284585150641252832
+  Parameters:
+  - {fileID: 1641660489542535329}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &-7885637554300300710
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,7 +75,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/footsteps_dirt/volume1
+  m_Name: parameter:/flock of birds outside/volume1
   m_EditorClassIdentifier: 
   Name: volume1
   Min: 0
@@ -64,28 +85,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-7976519594949182976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/de luistermutant/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 637570204519349381
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 906
-  Exists: 1
---- !u!114 &-7964906152242232456
+--- !u!114 &-7718348776059288236
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,66 +95,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt_speed
-  m_EditorClassIdentifier: 
-  Name: plateau_tilt_speed
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-7930007699366420413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Water drips/volume1
-  m_EditorClassIdentifier: 
-  Name: volume1
-  Min: 0
-  Max: 1
-  Default: 0.8
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-7454137061245787268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/voicelines.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/de luistermutant/Build/Desktop/voicelines.bank
-  Name: voicelines
-  StudioPath: bank:/voicelines
-  lastModified: 637570204519489004
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-7411130232765536802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Water drips/volume1
+  m_Name: parameter:/intro/volume1
   m_EditorClassIdentifier: 
   Name: volume1
   Min: 0
@@ -164,7 +105,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-7356189079930244946
+--- !u!114 &-7553348407655938509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,7 +115,67 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt
+  m_Name: parameter:/Balance game plateau/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-7501817484602968973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/narsistische stemmen in de hemel/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-7495903743283174367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/splash in het water/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-7448917406378180222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/balance game plateau/plateau_tilt
   m_EditorClassIdentifier: 
   Name: plateau_tilt
   Min: 0
@@ -183,7 +184,31 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 0
+  Exists: 1
+--- !u!114 &-7426821929899052715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/player/voice dialog/neutraal
+  m_EditorClassIdentifier: 
+  Path: event:/player/voice dialog/neutraal
+  guid: 2ce970d6f02d1d4aa14d4765b402fa26
+  Banks:
+  - {fileID: -3812982955444934748}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5010556798684212687}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4297
 --- !u!114 &-7196539780558368417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,68 +229,7 @@ MonoBehaviour:
     data1: 2500675142
     data2: 2589041116
   Exists: 1
---- !u!114 &-6948152239366637946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/cave size
-  m_EditorClassIdentifier: 
-  Name: cave size
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2500675142
-    data2: 2589041116
-  Exists: 1
---- !u!114 &-6806868547962381160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt_speed
-  m_EditorClassIdentifier: 
-  Name: plateau_tilt_speed
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-6609011246982106710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/de luistermutant/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 637570204519349381
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 906
-  Exists: 1
---- !u!114 &-6596439094131832485
+--- !u!114 &-7177116118244955227
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,186 +239,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/cave size
+  m_Name: event:/player/voice dialog/boos
   m_EditorClassIdentifier: 
-  Path: event:/cave size
-  guid: 18c306cf09430a4099952e0c8ab00e43
+  Path: event:/player/voice dialog/boos
+  guid: 74a110420694fe4ca729d8f385f45f18
   Banks:
-  - {fileID: -4918921761560487865}
+  - {fileID: -3812982955444934748}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-6290385233795805054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/volume1
-  m_EditorClassIdentifier: 
-  Name: volume1
-  Min: 0
-  Max: 1
-  Default: 0.8
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-6280534781837020646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Water drips/interval
-  m_EditorClassIdentifier: 
-  Name: interval
-  Min: 0
-  Max: 1
-  Default: 0.5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-5737490790844091933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Water drips/interval
-  m_EditorClassIdentifier: 
-  Name: interval
-  Min: 0
-  Max: 1
-  Default: 0.5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-5360762947549643408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/cave size
-  m_EditorClassIdentifier: 
-  Path: event:/cave size
-  guid: 18c306cf09430a4099952e0c8ab00e43
-  Banks:
-  - {fileID: -4969453627979636227}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-5330192146351802702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt
-  m_EditorClassIdentifier: 
-  Name: plateau_tilt
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-5293351979018831780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Balance game plateau
-  m_EditorClassIdentifier: 
-  Path: event:/Balance game plateau
-  guid: 552d7cceacfbe649a832fab7c4a0b0d0
-  Banks:
-  - {fileID: -2158801728632481426}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
   Parameters:
-  - {fileID: 7792341736258024748}
-  - {fileID: -7964906152242232456}
+  - {fileID: 7674180199476351433}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &-4969453627979636227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/de luistermutant/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 637570243191620152
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-4918921761560487865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/de luistermutant/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 637570254299970577
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-4837425665982524630
+  Length: 5081
+--- !u!114 &-7135506408706468421
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -464,27 +263,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/cave size
-  m_EditorClassIdentifier: 
-  Name: cave size
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2500675142
-    data2: 2589041116
-  Exists: 1
---- !u!114 &-4777112476125180044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/volume1
+  m_Name: parameter:/opstaan van het oor/volume1
   m_EditorClassIdentifier: 
   Name: volume1
   Min: 0
@@ -494,204 +273,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-4484092984127621523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/voicelines.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/de luistermutant/Build/Desktop/voicelines.bank
-  Name: voicelines
-  StudioPath: bank:/voicelines
-  lastModified: 637570204519489004
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-4239857031188712461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt_speed
-  m_EditorClassIdentifier: 
-  Name: plateau_tilt_speed
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-4065691241488131247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt
-  m_EditorClassIdentifier: 
-  Name: plateau_tilt
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-3939764602903401652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/volume1
-  m_EditorClassIdentifier: 
-  Name: volume1
-  Min: 0
-  Max: 1
-  Default: 0.8
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-3541047586546803431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/cave size
-  m_EditorClassIdentifier: 
-  Name: cave size
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2500675142
-    data2: 2589041116
-  Exists: 1
---- !u!114 &-3394527622734630450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/footsteps_dirt/volume1
-  m_EditorClassIdentifier: 
-  Name: volume1
-  Min: 0
-  Max: 1
-  Default: 0.8
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-3034203827045314176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt_speed
-  m_EditorClassIdentifier: 
-  Name: plateau_tilt_speed
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-2829901178286073207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Water drips/interval
-  m_EditorClassIdentifier: 
-  Name: interval
-  Min: 0
-  Max: 1
-  Default: 0.5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-2399612380549065305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/de luistermutant/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 637570241805070201
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-2158801728632481426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/de luistermutant/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 637570223682057120
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-2143354883769539039
+--- !u!114 &-7115761109022536085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -710,8 +292,8 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 0
---- !u!114 &-1904387289588990835
+  Exists: 1
+--- !u!114 &-7061596772861723539
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -721,37 +303,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt_speed
+  m_Name: parameter:/neutraal/volume1
   m_EditorClassIdentifier: 
-  Name: plateau_tilt_speed
+  Name: volume1
   Min: 0
   Max: 1
-  Default: 0
+  Default: 0.8
   ID:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-1749347967072690083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt_speed
-  m_EditorClassIdentifier: 
-  Name: plateau_tilt_speed
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-1391698644039365526
+--- !u!114 &-7023955040168354575
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -761,20 +323,187 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/cave size
+  m_Name: event:/player/voice dialog/twijdelend
   m_EditorClassIdentifier: 
-  Path: event:/cave size
-  guid: 18c306cf09430a4099952e0c8ab00e43
+  Path: event:/player/voice dialog/twijdelend
+  guid: a8bc3c7f2ac96944b65a565c279d18b9
   Banks:
-  - {fileID: -2399612380549065305}
+  - {fileID: -3812982955444934748}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -2109537914354015976}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4776
+--- !u!114 &-6896632850120697494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enviroment/water enviroment
+  m_EditorClassIdentifier: 
+  Path: event:/enviroment/water enviroment
+  guid: b69c210428f7de48873264b8365510c7
+  Banks:
+  - {fileID: 6958723077760628706}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 752306516368634801}
+  - {fileID: 7720814722353044460}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 14500
+--- !u!114 &-6762979125137468357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/metal door sliding/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-6389911135101309020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/player/opstaan van het oor
+  m_EditorClassIdentifier: 
+  Path: event:/player/opstaan van het oor
+  guid: ef38a68e426fb94a9f1cd11df5874e62
+  Banks:
+  - {fileID: -3812982955444934748}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -7135506408706468421}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-994301081948127253
+--- !u!114 &-6361830658860143628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/oorwurm/intro
+  m_EditorClassIdentifier: 
+  Path: event:/oorwurm/intro
+  guid: 14e2660243688043bc787f6f36c8b185
+  Banks:
+  - {fileID: 2792479574517602492}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -7718348776059288236}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7050
+--- !u!114 &-6261136159200755709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/slak/voice dialog/kort
+  m_EditorClassIdentifier: 
+  Path: event:/slak/voice dialog/kort
+  guid: ffda30c25eb02a4f90524023ed2a2dc0
+  Banks:
+  - {fileID: -3612973752783302625}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5745158356927447429}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2503
+--- !u!114 &-6177297074344471600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enviroment/narsistische stemmen in de hemel
+  m_EditorClassIdentifier: 
+  Path: event:/enviroment/narsistische stemmen in de hemel
+  guid: bf2fd597baff70478e4aaa356a9a6127
+  Banks:
+  - {fileID: 6958723077760628706}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -4465311137060850050}
+  - {fileID: -7501817484602968973}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &-5767667287729643588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enviroment/bevrijd de luistermutant
+  m_EditorClassIdentifier: 
+  Path: event:/enviroment/bevrijd de luistermutant
+  guid: fa936144e0b3fa408cd0e09cf7122b45
+  Banks:
+  - {fileID: 6958723077760628706}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5352041370015964669}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8784
+--- !u!114 &-5745158356927447429
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -784,57 +513,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt
+  m_Name: parameter:/kort/volume1
   m_EditorClassIdentifier: 
-  Name: plateau_tilt
+  Name: volume1
   Min: 0
   Max: 1
-  Default: 0
+  Default: 0.8
   ID:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-765296867413856284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/cave size
-  m_EditorClassIdentifier: 
-  Name: cave size
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2500675142
-    data2: 2589041116
-  Exists: 1
---- !u!114 &-706768112389593214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt_speed
-  m_EditorClassIdentifier: 
-  Name: plateau_tilt_speed
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-643659937611920331
+--- !u!114 &-5618017978931237878
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -854,33 +543,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-437333151962374860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Balance game plateau
-  m_EditorClassIdentifier: 
-  Path: event:/Balance game plateau
-  guid: 552d7cceacfbe649a832fab7c4a0b0d0
-  Banks:
-  - {fileID: -4918921761560487865}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 3631469001733394249}
-  - {fileID: 2539267731818408094}
-  - {fileID: -1749347967072690083}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-365806348477230632
+--- !u!114 &-5352041370015964669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -890,7 +553,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/footsteps_dirt/volume1
+  m_Name: parameter:/bevrijd de luistermutant/volume1
   m_EditorClassIdentifier: 
   Name: volume1
   Min: 0
@@ -900,32 +563,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-218158219349927485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Balance game plateau
-  m_EditorClassIdentifier: 
-  Path: event:/Balance game plateau
-  guid: 552d7cceacfbe649a832fab7c4a0b0d0
-  Banks:
-  - {fileID: -4969453627979636227}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 3327000048494323889}
-  - {fileID: 7331492437596826537}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-183708420984643746
+--- !u!114 &-5226937761313543421
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -935,7 +573,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/volume1
+  m_Name: parameter:/birds cawing/volume1
   m_EditorClassIdentifier: 
   Name: volume1
   Min: 0
@@ -944,8 +582,262 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 0
---- !u!114 &-37243645938063495
+  Exists: 1
+--- !u!114 &-5010556798684212687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/neutraal/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-4998135250068443097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/valt van de brug/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-4953890765605183103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/blij/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-4721285953497318223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/bang/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-4672863721590205554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/slotmachine draaischijf/speed
+  m_EditorClassIdentifier: 
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-4583961501192898985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/player/footsteps/footsteps_dirt
+  m_EditorClassIdentifier: 
+  Path: event:/player/footsteps/footsteps_dirt
+  guid: 7ffef62e30463647914ffbf2e854dec1
+  Banks:
+  - {fileID: -3812982955444934748}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5618017978931237878}
+  - {fileID: 3938356770331656617}
+  MinDistance: 6.65
+  MaxDistance: 100
+  Length: 470
+--- !u!114 &-4534887448243594898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/oorwurm/voice dialog/stoer
+  m_EditorClassIdentifier: 
+  Path: event:/oorwurm/voice dialog/stoer
+  guid: a247acfd33e55f4cbf8b9b3fcb8ca4e2
+  Banks:
+  - {fileID: 2792479574517602492}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1975407185354279870}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6528
+--- !u!114 &-4513822504102614064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Water drips/interval
+  m_EditorClassIdentifier: 
+  Name: interval
+  Min: 0
+  Max: 1
+  Default: 0.5
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-4505861068189756780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/wooden door opening/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-4465311137060850050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/narsistische stemmen in de hemel/spawn rate
+  m_EditorClassIdentifier: 
+  Name: spawn rate
+  Min: 0
+  Max: 1
+  Default: 0.3
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-4435064217365464368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/flock of birds outside/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-4334198830511302388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enviroment/slotmachine draaischijf
+  m_EditorClassIdentifier: 
+  Path: event:/enviroment/slotmachine draaischijf
+  guid: 5e7c3c1fb78abe4290caec29694b70b1
+  Banks:
+  - {fileID: 6958723077760628706}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -4672863721590205554}
+  - {fileID: 4314420445255984015}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3558
+--- !u!114 &-3812982955444934748
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -955,16 +847,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/player.bank
   m_EditorClassIdentifier: 
-  Path: Assets/FMOD/de luistermutant/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 637570204519179164
+  Path: Assets/FMOD/de luistermutant/Build/Desktop/player.bank
+  Name: player
+  StudioPath: bank:/player
+  lastModified: 637578146218157299
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &-27195398268266769
+--- !u!114 &-3792530264540102096
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -974,9 +866,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt
+  m_Name: parameter:/birds cawing/inside-outside cave
   m_EditorClassIdentifier: 
-  Name: plateau_tilt
+  Name: inside-outside cave
   Min: 0
   Max: 1
   Default: 0
@@ -984,7 +876,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &-15035263573321203
+--- !u!114 &-3612973752783302625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/slak.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/de luistermutant/Build/Desktop/slak.bank
+  Name: slak
+  StudioPath: bank:/slak
+  lastModified: 637578146218227112
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-3525642330722989040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -994,7 +905,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt_speed
+  m_Name: parameter:/balance game plateau/plateau_tilt_speed
   m_EditorClassIdentifier: 
   Name: plateau_tilt_speed
   Min: 0
@@ -1004,6 +915,281 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-3219935212364142523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/balance game plateau/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-3183342823509132506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/rock impact for falling scene/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-2119185524515143427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enviroment/birds cawing
+  m_EditorClassIdentifier: 
+  Path: event:/enviroment/birds cawing
+  guid: e689c693b5661546868a595028df4c1a
+  Banks:
+  - {fileID: 6958723077760628706}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3792530264540102096}
+  - {fileID: -5226937761313543421}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &-2109537914354015976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/twijdelend/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-1628955857889204915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/blij/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-1460601758940452152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/oorwurm/talking (old)
+  m_EditorClassIdentifier: 
+  Path: event:/oorwurm/talking (old)
+  guid: ed85b3d3b502ad4fad4b75485b0b911b
+  Banks:
+  - {fileID: 2792479574517602492}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3666897658472549605}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2070
+--- !u!114 &-1348934433447868669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enviroment/wooden door opening
+  m_EditorClassIdentifier: 
+  Path: event:/enviroment/wooden door opening
+  guid: 261238ec8c18994d9a873c3b1f3729d5
+  Banks:
+  - {fileID: 6958723077760628706}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -4505861068189756780}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1400
+--- !u!114 &-861536630239597123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enviroment/balance game plateau
+  m_EditorClassIdentifier: 
+  Path: event:/enviroment/balance game plateau
+  guid: 552d7cceacfbe649a832fab7c4a0b0d0
+  Banks:
+  - {fileID: 6958723077760628706}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3219935212364142523}
+  - {fileID: -7448917406378180222}
+  - {fileID: -3525642330722989040}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-793504934214901358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enviroment/rock impact for falling scene
+  m_EditorClassIdentifier: 
+  Path: event:/enviroment/rock impact for falling scene
+  guid: 1f29d559acac0043a8be3baca5ff8ff6
+  Banks:
+  - {fileID: 6958723077760628706}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3183342823509132506}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6000
+--- !u!114 &-319103138340714578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/eustachius/voice dialog/bang
+  m_EditorClassIdentifier: 
+  Path: event:/eustachius/voice dialog/bang
+  guid: 1a4f655ba6bf5d4aa869ed81a95f7fc9
+  Banks:
+  - {fileID: 5670679559673088837}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -4721285953497318223}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5845
+--- !u!114 &-268311183137257687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/player/voice dialog/blij
+  m_EditorClassIdentifier: 
+  Path: event:/player/voice dialog/blij
+  guid: db55048ea86b354da8b0bcab5742f957
+  Banks:
+  - {fileID: -3812982955444934748}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -1628955857889204915}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5232
+--- !u!114 &-113978352618431627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/oorwurm/voice dialog/kwetsbaar
+  m_EditorClassIdentifier: 
+  Path: event:/oorwurm/voice dialog/kwetsbaar
+  guid: cc876be6cabbbc4b877346efdcc94559
+  Banks:
+  - {fileID: 2792479574517602492}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 774027251895135939}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12617
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,20 +1205,82 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -9056488551526823564}
   - {fileID: 2891251926814262369}
+  - {fileID: 6958723077760628706}
+  - {fileID: 5670679559673088837}
+  - {fileID: 2792479574517602492}
+  - {fileID: -3812982955444934748}
+  - {fileID: -3612973752783302625}
   EditorEvents:
   - {fileID: 4642332343607778266}
-  - {fileID: 5244868162992689213}
-  - {fileID: 7946784620705867772}
-  - {fileID: 3794972131680404784}
+  - {fileID: -793504934214901358}
+  - {fileID: -1348934433447868669}
+  - {fileID: -8633855369815206368}
+  - {fileID: 2544383249299991043}
+  - {fileID: -861536630239597123}
+  - {fileID: 1196910406397864568}
+  - {fileID: -4334198830511302388}
+  - {fileID: 3488641315551613816}
+  - {fileID: -6896632850120697494}
+  - {fileID: -6177297074344471600}
+  - {fileID: 7583840258245269987}
+  - {fileID: 5753484521179833580}
+  - {fileID: -2119185524515143427}
+  - {fileID: -5767667287729643588}
+  - {fileID: -319103138340714578}
+  - {fileID: 7559825980565803114}
+  - {fileID: 7081359215428723592}
+  - {fileID: 2494126346072571527}
+  - {fileID: -6361830658860143628}
+  - {fileID: 1506773442368619401}
+  - {fileID: -4534887448243594898}
+  - {fileID: -113978352618431627}
+  - {fileID: 3530668059757411207}
+  - {fileID: -1460601758940452152}
+  - {fileID: -7426821929899052715}
+  - {fileID: -7177116118244955227}
+  - {fileID: -4583961501192898985}
+  - {fileID: 1843778519177160621}
+  - {fileID: -7023955040168354575}
+  - {fileID: 5147823788750045970}
+  - {fileID: -268311183137257687}
+  - {fileID: -6389911135101309020}
+  - {fileID: 6838809237142137470}
+  - {fileID: 4944977363865729553}
+  - {fileID: 360426437710060638}
+  - {fileID: -6261136159200755709}
   EditorParameters:
   - {fileID: -7196539780558368417}
   MasterBanks:
   - {fileID: 2891251926814262369}
   StringsBanks:
   - {fileID: -9056488551526823564}
-  stringsBankWriteTime: 637575386309712956
+  stringsBankWriteTime: 637578146217788285
   cacheVersion: 6
---- !u!114 &687381940303461870
+--- !u!114 &360426437710060638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/slak/voice dialog/enthousiast
+  m_EditorClassIdentifier: 
+  Path: event:/slak/voice dialog/enthousiast
+  guid: b8173380a8103042871f88dc0e15a6fe
+  Banks:
+  - {fileID: -3612973752783302625}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8665296244215270144}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5575
+--- !u!114 &665769905659261040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1052,7 +1300,87 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &852861156310651173
+--- !u!114 &667493567032983103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/idle/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &730771415361018767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/metal door sliding/opening progress
+  m_EditorClassIdentifier: 
+  Name: opening progress
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &752306516368634801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/water enviroment/boven en onderwater
+  m_EditorClassIdentifier: 
+  Name: boven en onderwater
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &774027251895135939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/kwetsbaar/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &1196910406397864568
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1062,20 +1390,171 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/cave size
+  m_Name: event:/enviroment/metal door sliding
   m_EditorClassIdentifier: 
-  Path: event:/cave size
-  guid: 18c306cf09430a4099952e0c8ab00e43
+  Path: event:/enviroment/metal door sliding
+  guid: 5a32ef2567cff846beab2e6ecfe44f55
   Banks:
-  - {fileID: 1317597277841241260}
+  - {fileID: 6958723077760628706}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 730771415361018767}
+  - {fileID: -6762979125137468357}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4776
+--- !u!114 &1331564786943298548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/lang/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &1506773442368619401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/oorwurm/idle
+  m_EditorClassIdentifier: 
+  Path: event:/oorwurm/idle
+  guid: 554d3d69250c4442891a08e266cc701c
+  Banks:
+  - {fileID: 2792479574517602492}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 667493567032983103}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 74222
+--- !u!114 &1574363202271604199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Balance game plateau/plateau_tilt
+  m_EditorClassIdentifier: 
+  Name: plateau_tilt
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &1641660489542535329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/buiten enviroment/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &1843778519177160621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/player/single bird flap
+  m_EditorClassIdentifier: 
+  Path: event:/player/single bird flap
+  guid: 85391ada8587984e93e45f2867c35be4
+  Banks:
+  - {fileID: -3812982955444934748}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 7041924671356461171}
+  - {fileID: 6146322797537171526}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &997788768549503843
+  Length: 850
+--- !u!114 &1975407185354279870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/stoer/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &2174033075591833677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/neutraal/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &2494126346072571527
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1085,21 +1564,66 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Water drips
+  m_Name: event:/eustachius/voice dialog/boos
   m_EditorClassIdentifier: 
-  Path: event:/Water drips
-  guid: cc66f7057ff406448bfb242764c9098c
+  Path: event:/eustachius/voice dialog/boos
+  guid: cf9643a6599d0b48bcc0401c5fb3844e
   Banks:
-  - {fileID: -4918921761560487865}
+  - {fileID: 5670679559673088837}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2618818201084628133}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4550
+--- !u!114 &2544383249299991043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enviroment/creaking boat
+  m_EditorClassIdentifier: 
+  Path: event:/enviroment/creaking boat
+  guid: 4c0abce80314c34daf343fdda626b75c
+  Banks:
+  - {fileID: 6958723077760628706}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -7411130232765536802}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 15800
---- !u!114 &1317597277841241260
+  - {fileID: 6794823465013687789}
+  - {fileID: 9052085419872083875}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8000
+--- !u!114 &2618818201084628133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/boos/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &2792479574517602492
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1109,117 +1633,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/oorwurm.bank
   m_EditorClassIdentifier: 
-  Path: Assets/FMOD/de luistermutant/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 637570213893994953
+  Path: Assets/FMOD/de luistermutant/Build/Desktop/oorwurm.bank
+  Name: oorwurm
+  StudioPath: bank:/oorwurm
+  lastModified: 637578146218097451
   LoadResult: 0
   FileSizes: []
-  Exists: 1
---- !u!114 &2161417991202404810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Water drips/interval
-  m_EditorClassIdentifier: 
-  Name: interval
-  Min: 0
-  Max: 1
-  Default: 0.5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &2355627560077936691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt
-  m_EditorClassIdentifier: 
-  Name: plateau_tilt
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &2466997011670645871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/footsteps/footsteps_dirt
-  m_EditorClassIdentifier: 
-  Path: event:/footsteps/footsteps_dirt
-  guid: 7ffef62e30463647914ffbf2e854dec1
-  Banks:
-  - {fileID: -4969453627979636227}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 6.65
-  MaxDistance: 100
-  Length: 415
---- !u!114 &2467815728387781878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Water drips/interval
-  m_EditorClassIdentifier: 
-  Name: interval
-  Min: 0
-  Max: 1
-  Default: 0.5
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &2539267731818408094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt
-  m_EditorClassIdentifier: 
-  Name: plateau_tilt
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
   Exists: 1
 --- !u!114 &2891251926814262369
 MonoBehaviour:
@@ -1236,32 +1657,11 @@ MonoBehaviour:
   Path: Assets/FMOD/de luistermutant/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637575386309712956
+  lastModified: 637578146217778309
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &3262063576580918199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/de luistermutant/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 637570254300110455
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1098
-  Exists: 1
---- !u!114 &3322908340391796168
+--- !u!114 &3488641315551613816
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1271,22 +1671,46 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Balance game plateau
+  m_Name: event:/enviroment/flock of birds outside
   m_EditorClassIdentifier: 
-  Path: event:/Balance game plateau
-  guid: 552d7cceacfbe649a832fab7c4a0b0d0
+  Path: event:/enviroment/flock of birds outside
+  guid: 62b38879fead5d488bc68b811a6e463b
   Banks:
-  - {fileID: 1317597277841241260}
+  - {fileID: 6958723077760628706}
+  - {fileID: -3812982955444934748}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -4435064217365464368}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &3530668059757411207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/oorwurm/voice dialog/neutraal
+  m_EditorClassIdentifier: 
+  Path: event:/oorwurm/voice dialog/neutraal
+  guid: ed02386622332a4c821a9c9c8a05e00a
+  Banks:
+  - {fileID: 2792479574517602492}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -994301081948127253}
-  - {fileID: -3034203827045314176}
+  - {fileID: -7061596772861723539}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &3327000048494323889
+  Length: 7198
+--- !u!114 &3655202909710965387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1296,17 +1720,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt
+  m_Name: parameter:/water drips/spawn rate
   m_EditorClassIdentifier: 
-  Name: plateau_tilt
+  Name: spawn rate
   Min: 0
   Max: 1
-  Default: 0
+  Default: 0.3
   ID:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &3631469001733394249
+--- !u!114 &3666897658472549605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1316,7 +1740,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/volume1
+  m_Name: parameter:/talking (old)/volume1
   m_EditorClassIdentifier: 
   Name: volume1
   Min: 0
@@ -1340,18 +1764,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Water drips
   guid: cc66f7057ff406448bfb242764c9098c
-  Banks:
-  - {fileID: 2891251926814262369}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -6280534781837020646}
-  - {fileID: 5967456590007018846}
+  - {fileID: -4513822504102614064}
+  - {fileID: -7115761109022536085}
   MinDistance: 0
   MaxDistance: 0
   Length: 15800
---- !u!114 &4391775225785017897
+--- !u!114 &3798548719893963341
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1361,12 +1784,72 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt
+  m_Name: parameter:/wind/volume1
   m_EditorClassIdentifier: 
-  Name: plateau_tilt
+  Name: volume1
   Min: 0
   Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &3938356770331656617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/footsteps_dirt/jump-land
+  m_EditorClassIdentifier: 
+  Name: jump-land
+  Min: 0
+  Max: 2
   Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &4086896844502255742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/water drips/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &4314420445255984015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/slotmachine draaischijf/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
   ID:
     data1: 0
     data2: 0
@@ -1394,26 +1877,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &4929680546934142927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/de luistermutant/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 637570204519179164
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &5244868162992689213
+--- !u!114 &4944977363865729553
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1423,63 +1887,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Balance game plateau
+  m_Name: event:/slak/voice dialog/lang
   m_EditorClassIdentifier: 
-  Path: event:/Balance game plateau
-  guid: 552d7cceacfbe649a832fab7c4a0b0d0
+  Path: event:/slak/voice dialog/lang
+  guid: a1dcf9b136b7a946980b68e4308583d3
   Banks:
-  - {fileID: 2891251926814262369}
-  IsStream: 0
+  - {fileID: -3612973752783302625}
+  IsStream: 1
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters:
-  - {fileID: -4777112476125180044}
-  - {fileID: 8846289837214599531}
-  - {fileID: -6806868547962381160}
+  - {fileID: 1331564786943298548}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &5431955351190942667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/cave size
-  m_EditorClassIdentifier: 
-  Name: cave size
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2500675142
-    data2: 2589041116
-  Exists: 1
---- !u!114 &5653601818904769253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt_speed
-  m_EditorClassIdentifier: 
-  Name: plateau_tilt_speed
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &5838866704181237799
+  Length: 28789
+--- !u!114 &5147823788750045970
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1489,221 +1911,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/footsteps/footsteps_dirt
+  m_Name: event:/player/splash in het water
   m_EditorClassIdentifier: 
-  Path: event:/footsteps/footsteps_dirt
-  guid: 7ffef62e30463647914ffbf2e854dec1
+  Path: event:/player/splash in het water
+  guid: b114626993b78a45854627fd94169e9d
   Banks:
-  - {fileID: -4918921761560487865}
+  - {fileID: -3812982955444934748}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 9002390286714686278}
-  MinDistance: 6.65
-  MaxDistance: 100
-  Length: 415
---- !u!114 &5940435990584990256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/de luistermutant/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 637570213894134568
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1006
-  Exists: 1
---- !u!114 &5945108462435003029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/footsteps/footsteps_dirt
-  m_EditorClassIdentifier: 
-  Path: event:/footsteps/footsteps_dirt
-  guid: 7ffef62e30463647914ffbf2e854dec1
-  Banks:
-  - {fileID: -2158801728632481426}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 6.65
-  MaxDistance: 100
-  Length: 415
---- !u!114 &5967456590007018846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Water drips/volume1
-  m_EditorClassIdentifier: 
-  Name: volume1
-  Min: 0
-  Max: 1
-  Default: 0.8
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &6007207425965445819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Balance game plateau
-  m_EditorClassIdentifier: 
-  Path: event:/Balance game plateau
-  guid: 552d7cceacfbe649a832fab7c4a0b0d0
-  Banks:
-  - {fileID: -2399612380549065305}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 4391775225785017897}
-  - {fileID: -1904387289588990835}
+  - {fileID: -7495903743283174367}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &6202957738245792033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/de luistermutant/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 637570241805220115
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1060
-  Exists: 1
---- !u!114 &6403681120021153796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/de luistermutant/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 637570223682196741
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1060
-  Exists: 1
---- !u!114 &6752457102964531782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Water drips
-  m_EditorClassIdentifier: 
-  Path: event:/Water drips
-  guid: cc66f7057ff406448bfb242764c9098c
-  Banks:
-  - {fileID: -2399612380549065305}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 15800
---- !u!114 &6892538176742545334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/footsteps/footsteps_dirt
-  m_EditorClassIdentifier: 
-  Path: event:/footsteps/footsteps_dirt
-  guid: 7ffef62e30463647914ffbf2e854dec1
-  Banks:
-  - {fileID: -2399612380549065305}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 6.65
-  MaxDistance: 100
-  Length: 415
---- !u!114 &7086832168555545204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Water drips
-  m_EditorClassIdentifier: 
-  Path: event:/Water drips
-  guid: cc66f7057ff406448bfb242764c9098c
-  Banks:
-  - {fileID: 1317597277841241260}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0.6
-  MaxDistance: 9.75
-  Length: 20600
---- !u!114 &7100139217106581514
+  Length: 4248
+--- !u!114 &5162822275492265343
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1723,7 +1945,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &7326820982294604175
+--- !u!114 &5244868162992689213
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1732,18 +1954,66 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/volume1
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Balance game plateau
   m_EditorClassIdentifier: 
-  Name: volume1
-  Min: 0
-  Max: 1
-  Default: 0.8
-  ID:
-    data1: 0
-    data2: 0
+  Path: event:/Balance game plateau
+  guid: 552d7cceacfbe649a832fab7c4a0b0d0
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7553348407655938509}
+  - {fileID: 1574363202271604199}
+  - {fileID: 665769905659261040}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5670679559673088837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/eustachius.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/de luistermutant/Build/Desktop/eustachius.bank
+  Name: eustachius
+  StudioPath: bank:/eustachius
+  lastModified: 637578146218017670
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
---- !u!114 &7331492437596826537
+--- !u!114 &5753484521179833580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enviroment/wind
+  m_EditorClassIdentifier: 
+  Path: event:/enviroment/wind
+  guid: d4f0f5403370da4a9e8d10fef010babe
+  Banks:
+  - {fileID: 6958723077760628706}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3798548719893963341}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 13292
+--- !u!114 &6146322797537171526
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1753,9 +2023,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt_speed
+  m_Name: parameter:/single bird flap/inside-outside cave
   m_EditorClassIdentifier: 
-  Name: plateau_tilt_speed
+  Name: inside-outside cave
   Min: 0
   Max: 1
   Default: 0
@@ -1763,7 +2033,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &7369360554978234372
+--- !u!114 &6794823465013687789
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1773,7 +2043,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Water drips/volume1
+  m_Name: parameter:/creaking boat/volume1
   m_EditorClassIdentifier: 
   Name: volume1
   Min: 0
@@ -1783,7 +2053,50 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &7672260760241774728
+--- !u!114 &6838809237142137470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/slak/voice dialog/neutraal
+  m_EditorClassIdentifier: 
+  Path: event:/slak/voice dialog/neutraal
+  guid: 5120d207e2852849b45bb041bc906d5f
+  Banks:
+  - {fileID: -3612973752783302625}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2174033075591833677}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4366
+--- !u!114 &6958723077760628706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/enviroment.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/de luistermutant/Build/Desktop/enviroment.bank
+  Name: enviroment
+  StudioPath: bank:/enviroment
+  lastModified: 637578146217987756
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &7041924671356461171
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1793,7 +2106,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Water drips/volume1
+  m_Name: parameter:/single bird flap/volume1
   m_EditorClassIdentifier: 
   Name: volume1
   Min: 0
@@ -1803,7 +2116,80 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &7792341736258024748
+--- !u!114 &7081359215428723592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/eustachius/voice dialog/blij
+  m_EditorClassIdentifier: 
+  Path: event:/eustachius/voice dialog/blij
+  guid: 3ca5b0aec9809648a3c53fd5d985b4b1
+  Banks:
+  - {fileID: 5670679559673088837}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -4953890765605183103}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4501
+--- !u!114 &7559825980565803114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/eustachius/voice dialog/valt van de brug
+  m_EditorClassIdentifier: 
+  Path: event:/eustachius/voice dialog/valt van de brug
+  guid: 25c1ef8ec62fa74390f73ec2ce945bbc
+  Banks:
+  - {fileID: 5670679559673088837}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -4998135250068443097}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6739
+--- !u!114 &7583840258245269987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enviroment/water drips
+  m_EditorClassIdentifier: 
+  Path: event:/enviroment/water drips
+  guid: cc66f7057ff406448bfb242764c9098c
+  Banks:
+  - {fileID: 6958723077760628706}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3655202909710965387}
+  - {fileID: 4086896844502255742}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 15800
+--- !u!114 &7674180199476351433
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1813,12 +2199,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt
+  m_Name: parameter:/boos/volume1
   m_EditorClassIdentifier: 
-  Name: plateau_tilt
+  Name: volume1
   Min: 0
   Max: 1
-  Default: 0
+  Default: 0.8
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &7720814722353044460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/water enviroment/volume1
+  m_EditorClassIdentifier: 
+  Name: volume1
+  Min: 0
+  Max: 1
+  Default: 0.8
   ID:
     data1: 0
     data2: 0
@@ -1837,40 +2243,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/footsteps/footsteps_dirt
   guid: 7ffef62e30463647914ffbf2e854dec1
-  Banks:
-  - {fileID: 2891251926814262369}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -365806348477230632}
+  - {fileID: 5162822275492265343}
   MinDistance: 6.65
   MaxDistance: 100
   Length: 415
---- !u!114 &8008533217149084773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/cave size
-  m_EditorClassIdentifier: 
-  Path: event:/cave size
-  guid: 18c306cf09430a4099952e0c8ab00e43
-  Banks:
-  - {fileID: -2158801728632481426}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &8236924968691287442
+--- !u!114 &9052085419872083875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1880,116 +2262,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/cave size
+  m_Name: parameter:/creaking boat/spawn rate
   m_EditorClassIdentifier: 
-  Name: cave size
+  Name: spawn rate
   Min: 0
   Max: 1
-  Default: 0
-  ID:
-    data1: 2500675142
-    data2: 2589041116
-  Exists: 1
---- !u!114 &8251196178663837288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Water drips
-  m_EditorClassIdentifier: 
-  Path: event:/Water drips
-  guid: cc66f7057ff406448bfb242764c9098c
-  Banks:
-  - {fileID: -2158801728632481426}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 15800
---- !u!114 &8270512764056515172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/cave size
-  m_EditorClassIdentifier: 
-  Name: cave size
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2500675142
-    data2: 2589041116
-  Exists: 1
---- !u!114 &8295753252328693093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/FMOD/de luistermutant/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 637570243191770496
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1060
-  Exists: 1
---- !u!114 &8846289837214599531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Balance game plateau/plateau_tilt
-  m_EditorClassIdentifier: 
-  Name: plateau_tilt
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &9002390286714686278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/footsteps_dirt/volume1
-  m_EditorClassIdentifier: 
-  Name: volume1
-  Min: 0
-  Max: 1
-  Default: 0.8
+  Default: 0.3
   ID:
     data1: 0
     data2: 0

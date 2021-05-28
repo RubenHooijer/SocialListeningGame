@@ -8,7 +8,7 @@
 			<value>2</value>
 		</property>
 		<relationship name="folder">
-			<destination>{41864b32-6ef1-4554-8b55-94d657af5ee4}</destination>
+			<destination>{c995afb7-bfa4-42b3-bb38-4e10e9acb4c4}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{4a540d96-774b-42d0-96a2-4ad568f3867b}</destination>
@@ -38,7 +38,7 @@
 			<destination>{84c86cb4-e606-4515-9f6e-f692f22f3363}</destination>
 		</relationship>
 		<relationship name="banks">
-			<destination>{00e4a7f7-8f5b-44ab-a568-8e235b7f0f0e}</destination>
+			<destination>{b68bacd3-bb1c-41a8-b319-69a28d5c5a55}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{4a540d96-774b-42d0-96a2-4ad568f3867b}">
@@ -174,8 +174,8 @@
 	<object class="MixerBusEffectChain" id="{93c633ca-74ea-4f08-a509-80a2f9960868}">
 		<relationship name="effects">
 			<destination>{e507fb5b-ee1c-4357-8a8e-a2fc0bfc0532}</destination>
-			<destination>{6d3d3772-5813-4f85-b44c-5aff534bc8dd}</destination>
 			<destination>{d00ebaab-1ac6-473f-8658-32e583e28d94}</destination>
+			<destination>{374637f4-b770-4d76-8ff5-9c3616ea55a9}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{9e55dc2d-a593-4a3d-a683-0c47a2e577bd}" />
@@ -197,18 +197,18 @@
 	</object>
 	<object class="MixerBusPanner" id="{71c674d2-89f5-4b47-ac91-17c3d13c1495}" />
 	<object class="MixerBusFader" id="{e507fb5b-ee1c-4357-8a8e-a2fc0bfc0532}" />
-	<object class="MixerSend" id="{6d3d3772-5813-4f85-b44c-5aff534bc8dd}">
+	<object class="SpatialiserEffect" id="{d00ebaab-1ac6-473f-8658-32e583e28d94}" />
+	<object class="MixerSend" id="{374637f4-b770-4d76-8ff5-9c3616ea55a9}">
 		<property name="level">
-			<value>0</value>
+			<value>-9</value>
 		</property>
 		<property name="inputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="mixerReturn">
 			<destination>{c9f22ec0-204f-4c34-a863-dfab3b76d0f5}</destination>
 		</relationship>
 	</object>
-	<object class="SpatialiserEffect" id="{d00ebaab-1ac6-473f-8658-32e583e28d94}" />
 	<object class="AutomationCurve" id="{e34e03e0-7eff-4b03-88da-13582202005d}">
 		<relationship name="parameter">
 			<destination>{e3444cab-563b-45c5-83ec-370230ef02fe}</destination>
