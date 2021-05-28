@@ -45,9 +45,6 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
         eustachius.canWalk = true;
 
         inputManager = InputManager.Instance;
-        inputManager.EnableInput();
-
-        inputManager.JumpPerformed.AddListener(JumpToPlatform);
 
         currentPlatform = 0;
     }

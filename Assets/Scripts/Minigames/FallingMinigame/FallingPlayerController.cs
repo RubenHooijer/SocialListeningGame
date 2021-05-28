@@ -20,7 +20,8 @@ public class FallingPlayerController : MonoBehaviour
 
     private void Movement()
     {
-        float translationX = inputManager.GetMovement().x;
+        //float translationX = inputManager.GetMovement().x;
+        float translationX = 0;
 
         if (translationX < 0)
         {
