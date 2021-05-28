@@ -1,3 +1,5 @@
+using Cinemachine;
+using DG.Tweening;
 using Dialogue;
 using Oasez.Extensions.Generics.Singleton;
 using System;
@@ -71,6 +73,9 @@ public class GameController : GenericSingleton<GameController, GameController> {
                 break;
             case StringEvent stringEventNode:
                 ProcessInvokeStringEventNode(stringEventNode);
+                break;
+            case Dialogue.Camera cameraNode:
+                ProcessCameraNode(cameraNode);
                 break;
             case StartStop startStopNode:
                 ProcessStartStopNode(startStopNode);
@@ -168,6 +173,31 @@ public class GameController : GenericSingleton<GameController, GameController> {
         Debug.Log("String event");
         stringEventNode.trigger.Raise(stringEventNode.data);
         stringEventNode.Next();
+
+        HandleCurrentNode();
+    }
+
+    private void ProcessCameraNode(Dialogue.Camera cameraNode) {
+        Debug.Log("Camera");
+        CinemachineBrain cinemachineBrain = UnityEngine.Camera.main.GetComponent<CinemachineBrain>(); 
+        ICinemachineCamera cinemachineCamera = cinemachineBrain.ActiveVirtualCamera;
+
+        switch (cameraNode.action) {
+            case Dialogue.Camera.Action.LookAt:
+                cinemachineCamera.LookAt = StaticView.GetView(cameraNode.lookAtGuid).transform;
+                
+                break;
+            case Dialogue.Camera.Action.CameraOffset:
+                CinemachineVirtualCamera virtualCamera = cinemachineCamera.VirtualCameraGameObject.GetComponent<CinemachineVirtualCamera>();
+                CinemachineComposer cinemachineComposer = virtualCamera.GetCinemachineComponent<CinemachineComposer>();
+
+                DOTween.To(() => cinemachineComposer.m_TrackedObjectOffset,
+                    x => cinemachineComposer.m_TrackedObjectOffset = x,
+                    cameraNode.offset,
+                    cameraNode.duration);
+                break;
+        }
+        cameraNode.Next();
 
         HandleCurrentNode();
     }
