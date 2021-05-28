@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using FMODUnity;
+using System.Collections.Generic;
 using UnityEngine.Localization;
-using UnityEngine.Localization.Tables;
 using XNode;
 
 namespace Dialogue {
@@ -27,6 +27,7 @@ namespace Dialogue {
 
         public CharacterType character;
         public LocalizedString text;
+        [EventRef] public string sound;
         [Output(dynamicPortList = true)] public List<Answer> answers = new List<Answer>();
 
         public void AnswerQuestion(int index) {

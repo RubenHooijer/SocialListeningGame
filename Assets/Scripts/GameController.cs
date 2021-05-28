@@ -1,5 +1,9 @@
+using Cinemachine;
+using DG.Tweening;
 using Dialogue;
+using FMODUnity;
 using Oasez.Extensions.Generics.Singleton;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -68,6 +72,12 @@ public class GameController : GenericSingleton<GameController, GameController> {
             case InvokeEvent invokeEventNode:
                 ProcessInvokeEventNode(invokeEventNode);
                 break;
+            case StringEvent stringEventNode:
+                ProcessInvokeStringEventNode(stringEventNode);
+                break;
+            case Dialogue.Camera cameraNode:
+                ProcessCameraNode(cameraNode);
+                break;
             case StartStop startStopNode:
                 ProcessStartStopNode(startStopNode);
                 break;
@@ -83,12 +93,14 @@ public class GameController : GenericSingleton<GameController, GameController> {
     private void ProcessChatNode(Chat chatNode) {
         Debug.Log("Chat");
         chatNode.text.GetLocalizedStringAsync().Completed += x => OnDialogueLoaded(x, chatNode);
-        //DialogueScreen.Instance.ShowSpeech(chatNode);
     }
 
     private void OnDialogueLoaded(UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<string> obj, Chat chat) {
         if (obj.IsDone) {
             DialogueScreen.Instance.ShowSpeech(chat);
+            if (string.IsNullOrEmpty(chat.sound) == false) {
+                RuntimeManager.PlayOneShot(chat.sound, CharacterView.GetView(chat.character).transform.position);
+            }
         } else {
             Debug.Log("String was not done loading");
         }
@@ -155,6 +167,45 @@ public class GameController : GenericSingleton<GameController, GameController> {
         Debug.Log("Invoked event");
         invokeEventNode.trigger.Raise();
         invokeEventNode.Next();
+
+        HandleCurrentNode();
+    }
+
+
+    private void ProcessInvokeStringEventNode(StringEvent stringEventNode) {
+        Debug.Log("String event");
+        stringEventNode.trigger.Raise(stringEventNode.data);
+        stringEventNode.Next();
+
+        HandleCurrentNode();
+    }
+
+    private void ProcessCameraNode(Dialogue.Camera cameraNode) {
+        Debug.Log("Camera");
+        CinemachineBrain cinemachineBrain = UnityEngine.Camera.main.GetComponent<CinemachineBrain>(); 
+        ICinemachineCamera cinemachineCamera = cinemachineBrain.ActiveVirtualCamera;
+        CinemachineVirtualCamera virtualCamera = cinemachineCamera.VirtualCameraGameObject.GetComponent<CinemachineVirtualCamera>();
+
+        switch (cameraNode.action) {
+            case Dialogue.Camera.Action.LookAt:
+                cinemachineCamera.LookAt = StaticView.GetView(cameraNode.lookAtGuid).transform;
+                break;
+            case Dialogue.Camera.Action.TrackingOffset:
+                CinemachineComposer cinemachineComposer = virtualCamera.GetCinemachineComponent<CinemachineComposer>();
+                DOTween.To(() => cinemachineComposer.m_TrackedObjectOffset,
+                    x => cinemachineComposer.m_TrackedObjectOffset = x,
+                    cameraNode.offset,
+                    cameraNode.duration);
+                break;
+            case Dialogue.Camera.Action.PositionOffset:
+                CinemachineTrackedDolly cinemachineTrackDolly = virtualCamera.GetCinemachineComponent<CinemachineTrackedDolly>();
+                DOTween.To(() => cinemachineTrackDolly.m_AutoDolly.m_PositionOffset,
+                    x => cinemachineTrackDolly.m_AutoDolly.m_PositionOffset = x,
+                    cameraNode.positionOffset,
+                    cameraNode.duration);
+                break;
+        }
+        cameraNode.Next();
 
         HandleCurrentNode();
     }

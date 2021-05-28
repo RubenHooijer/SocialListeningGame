@@ -1,7 +1,5 @@
 ﻿using BansheeGz.BGSpline.Components;
 using BansheeGz.BGSpline.Curve;
-using Dialogue;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
