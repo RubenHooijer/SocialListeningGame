@@ -23,6 +23,7 @@ namespace Dialogue {
             }
 
             NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("text"), GUIContent.none);
+            NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("sound"), GUIContent.none);
             if (node.answers.Count <= 0) {
                 if(GUILayout.Button("Add answers")) {
                     node.answers.Add(default);

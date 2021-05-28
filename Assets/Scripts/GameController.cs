@@ -1,6 +1,7 @@
 using Cinemachine;
 using DG.Tweening;
 using Dialogue;
+using FMODUnity;
 using Oasez.Extensions.Generics.Singleton;
 using System;
 using UnityEngine;
@@ -92,12 +93,14 @@ public class GameController : GenericSingleton<GameController, GameController> {
     private void ProcessChatNode(Chat chatNode) {
         Debug.Log("Chat");
         chatNode.text.GetLocalizedStringAsync().Completed += x => OnDialogueLoaded(x, chatNode);
-        //DialogueScreen.Instance.ShowSpeech(chatNode);
     }
 
     private void OnDialogueLoaded(UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<string> obj, Chat chat) {
         if (obj.IsDone) {
             DialogueScreen.Instance.ShowSpeech(chat);
+            if (string.IsNullOrEmpty(chat.sound) == false) {
+                RuntimeManager.PlayOneShot(chat.sound, CharacterView.GetView(chat.character).transform.position);
+            }
         } else {
             Debug.Log("String was not done loading");
         }
