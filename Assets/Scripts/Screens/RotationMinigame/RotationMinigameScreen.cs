@@ -22,7 +22,7 @@ public class RotationMinigameScreen : AbstractScreen<RotationMinigameScreen> {
     private ItemContainer<LinkedButtonsItem, string> linkedButtonsContainer;
 
     public void RotateCylinder(string guid, bool isUp) {
-        StaticView staticView = StaticView.GetView(guid);
+        CylinderView staticView = CylinderView.GetView(guid);
         Vector3 rotation = new Vector3(isUp ? DEFAULT_ROTATE_AMOUNT : -DEFAULT_ROTATE_AMOUNT, 0, 0);
 
         staticView.transform.DOBlendableRotateBy(rotation, rotationDuration, RotateMode.FastBeyond360)
@@ -68,7 +68,7 @@ public class RotationMinigameScreen : AbstractScreen<RotationMinigameScreen> {
 
     private void CheckCombination() {
         for (int i = 0; i < cylinderGuids.Length; i++) {
-            StaticView staticView = StaticView.GetView(cylinderGuids[i]);
+            CylinderView staticView = CylinderView.GetView(cylinderGuids[i]);
             staticView.transform.rotation.ToAngleAxis(out float xAngle, out Vector3 vector3);
 
             float xQuaternionRotation = vector3.x;
@@ -86,7 +86,7 @@ public class RotationMinigameScreen : AbstractScreen<RotationMinigameScreen> {
 
     private void LightUpCombination() {
         for (int i = 0; i < cylinderGuids.Length; i++) {
-            StaticView staticView = StaticView.GetView(cylinderGuids[i]);
+            CylinderView staticView = CylinderView.GetView(cylinderGuids[i]);
             staticView.Renderer.material.DOColor(Color.white * 4, "_EmissionColor", 1.2f).SetEase(Ease.InOutSine);
         }
     }

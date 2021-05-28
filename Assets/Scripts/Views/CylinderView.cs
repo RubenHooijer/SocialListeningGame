@@ -1,15 +1,16 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class StaticView : MonoBehaviour, IGuidable {
+public class CylinderView : MonoBehaviour, IGuidable {
 
-    private readonly static List<StaticView> Views = new List<StaticView>();
+    private readonly static List<CylinderView> Views = new List<CylinderView>();
 
     [SerializeField] [STRGuid] private string guid;
+    public Renderer Renderer;
 
     public string Guid => guid;
 
-    public static StaticView GetView(string guid) {
+    public static CylinderView GetView(string guid) {
         return Views.Find(x => x.Guid == guid);
     }
 
