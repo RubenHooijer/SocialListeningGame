@@ -84,6 +84,9 @@ public class GameController : GenericSingleton<GameController, GameController> {
             case LoadScene loadSceneNode:
                 ProcessLoadSceneNode(loadSceneNode);
                 break;
+            case PlaySound playSound:
+                ProcessPlaySound(playSound);
+                break;
             default:
                 Debug.LogWarning($"<color=orange>{current.GetType()} type was not defined.</color>");
                 break;
@@ -171,7 +174,6 @@ public class GameController : GenericSingleton<GameController, GameController> {
         HandleCurrentNode();
     }
 
-
     private void ProcessInvokeStringEventNode(StringEvent stringEventNode) {
         Debug.Log("String event");
         stringEventNode.trigger.Raise(stringEventNode.data);
@@ -210,6 +212,14 @@ public class GameController : GenericSingleton<GameController, GameController> {
         HandleCurrentNode();
     }
 
+    private void ProcessPlaySound(PlaySound playSoundNode) {
+        Debug.Log("Play Sound");
+        RuntimeManager.PlayOneShot(playSoundNode.sound);
+
+        playSoundNode.Next();
+        HandleCurrentNode();
+    }
+
     private void ProcessStartStopNode(StartStop startStopNode) {
         Debug.Log("Start stop");
         if (startStopNode.function == StartStop.StartStopEnum.Start) {
@@ -229,4 +239,5 @@ public class GameController : GenericSingleton<GameController, GameController> {
         SceneManager.SetActiveScene(scene);
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+
 }
