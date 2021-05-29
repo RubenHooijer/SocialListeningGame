@@ -1,70 +1,30 @@
 using Oasez.Extensions.Generics.Singleton;
 using UnityEngine.InputSystem;
-using UnityEngine.Events;
-using UnityEngine;
 
-public class InputManager : GenericSingleton<InputManager, InputManager>
-{
-    public readonly UnityEvent InteractPerformed = new UnityEvent();
-    public readonly UnityEvent JumpPerformed = new UnityEvent();
+public class InputManager : GenericSingleton<InputManager, InputManager> {
 
     private PlayerInput playerInput;
-
-    public Vector2 GetMovement()
-    {
-        return playerInput.PlayerMain.Move.ReadValue<Vector2>();
-    }
-
-    public Vector2 GetLook()
-    {
-        return playerInput.PlayerMain.Look.ReadValue<Vector2>();
-    }
 
     protected override void Awake() {
         base.Awake();
         playerInput = new PlayerInput();
 
-        playerInput.PlayerMain.Interact.performed += OnInteractPerformed;
-        playerInput.PlayerMain.Jump.performed += OnJumpPerformed;
-
-#if !UNITY_EDITOR
-        InputSystem.EnableDevice(UnityEngine.InputSystem.Gyroscope.current);
-        InputSystem.EnableDevice(UnityEngine.InputSystem.Accelerometer.current);
-#endif
+        //InputSystem.EnableDevice(Gyroscope.current);
+        //InputSystem.EnableDevice(Accelerometer.current);
+        //#if !UNITY_EDITOR
+        //#endif
     }
 
-    private void OnEnable()
-    {
-        EnableInput();
-    }
-
-    private void OnDisable()
-    {
-        DisableInput();
-    }
-
-    public void EnableInput()
-    {
+    private void OnEnable() {
         playerInput.Enable();
     }
 
-    public void DisableInput()
-    {
+    private void OnDisable() {
         playerInput.Disable();
     }
 
-    private void OnInteractPerformed(InputAction.CallbackContext obj) {
-        InteractPerformed.Invoke();
-    }
-
-    private void OnJumpPerformed(InputAction.CallbackContext obj)
-    {
-        JumpPerformed.Invoke();
-    }
-
-    public float GetGyro()
-    {
-        float value = playerInput.PlayerMain.Balance.ReadValue<float>();
+    public float GetGyro() {
+        float value = playerInput.PlayerMain.Gyro.ReadValue<float>();
         return value;
     }
 

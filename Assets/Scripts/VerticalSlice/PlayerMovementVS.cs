@@ -75,9 +75,11 @@ public class PlayerMovementVS : MonoBehaviour
     {
         if (!walkingToEustachius)
         {
-            translationX = inputManager.GetMovement().x;
+            //translationX = inputManager.GetMovement().x;
+            translationX = 0;
         }
-        float translationY = inputManager.GetMovement().y;
+        //float translationY = inputManager.GetMovement().y;
+        float translationY = 0;
 
         if (!canWalkDepth)
         {
@@ -199,7 +201,7 @@ public class PlayerMovementVS : MonoBehaviour
 
     public void EnableInput()
     {
-        inputManager.EnableInput();
+        //inputManager.EnableInput();
     }
 
     public IEnumerator WalkRight()

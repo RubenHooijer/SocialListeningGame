@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Art/Settings/Input/PlayerInput.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/ScriptableObjects/Input/PlayerInput.inputactions'
 
 using System;
 using System.Collections;
@@ -51,10 +51,10 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Balance"",
-                    ""type"": ""Value"",
+                    ""name"": ""Gyro"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""8e83708a-080d-44d2-829d-672ae8535bed"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -221,7 +221,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Balance"",
+                    ""action"": ""Gyro"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -232,7 +232,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Balance"",
+                    ""action"": ""Gyro"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -243,7 +243,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Balance"",
+                    ""action"": ""Gyro"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -254,7 +254,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Balance"",
+                    ""action"": ""Gyro"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 }
@@ -269,7 +269,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_PlayerMain_Look = m_PlayerMain.FindAction("Look", throwIfNotFound: true);
         m_PlayerMain_Interact = m_PlayerMain.FindAction("Interact", throwIfNotFound: true);
         m_PlayerMain_Jump = m_PlayerMain.FindAction("Jump", throwIfNotFound: true);
-        m_PlayerMain_Balance = m_PlayerMain.FindAction("Balance", throwIfNotFound: true);
+        m_PlayerMain_Gyro = m_PlayerMain.FindAction("Gyro", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -323,7 +323,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerMain_Look;
     private readonly InputAction m_PlayerMain_Interact;
     private readonly InputAction m_PlayerMain_Jump;
-    private readonly InputAction m_PlayerMain_Balance;
+    private readonly InputAction m_PlayerMain_Gyro;
     public struct PlayerMainActions
     {
         private @PlayerInput m_Wrapper;
@@ -332,7 +332,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         public InputAction @Look => m_Wrapper.m_PlayerMain_Look;
         public InputAction @Interact => m_Wrapper.m_PlayerMain_Interact;
         public InputAction @Jump => m_Wrapper.m_PlayerMain_Jump;
-        public InputAction @Balance => m_Wrapper.m_PlayerMain_Balance;
+        public InputAction @Gyro => m_Wrapper.m_PlayerMain_Gyro;
         public InputActionMap Get() { return m_Wrapper.m_PlayerMain; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -354,9 +354,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Jump.started -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnJump;
-                @Balance.started -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnBalance;
-                @Balance.performed -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnBalance;
-                @Balance.canceled -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnBalance;
+                @Gyro.started -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnGyro;
+                @Gyro.performed -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnGyro;
+                @Gyro.canceled -= m_Wrapper.m_PlayerMainActionsCallbackInterface.OnGyro;
             }
             m_Wrapper.m_PlayerMainActionsCallbackInterface = instance;
             if (instance != null)
@@ -373,9 +373,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
-                @Balance.started += instance.OnBalance;
-                @Balance.performed += instance.OnBalance;
-                @Balance.canceled += instance.OnBalance;
+                @Gyro.started += instance.OnGyro;
+                @Gyro.performed += instance.OnGyro;
+                @Gyro.canceled += instance.OnGyro;
             }
         }
     }
@@ -386,6 +386,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
-        void OnBalance(InputAction.CallbackContext context);
+        void OnGyro(InputAction.CallbackContext context);
     }
 }
