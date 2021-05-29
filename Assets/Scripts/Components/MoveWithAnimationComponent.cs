@@ -9,12 +9,12 @@ public class MoveWithAnimationComponent : MonoBehaviour {
     [Header("Settings")]
     [SerializeField] private float moveDelay;
     [SerializeField] private PathView pathView;
-    [SerializeField, AnimatorParam("animator", AnimatorControllerParameterType.Trigger)] private int movingAnimation;
-    [SerializeField, AnimatorParam("animator", AnimatorControllerParameterType.Trigger)] private int haltAnimation;
+    [SerializeField, AnimatorParam("GetAnimator", AnimatorControllerParameterType.Trigger)] private int movingAnimation;
+    [SerializeField, AnimatorParam("GetAnimator", AnimatorControllerParameterType.Trigger)] private int haltAnimation;
 
     [Header("References")]
     [SerializeField] private MoverComponent mover;
-    [SerializeField] private Animator animator;
+    [SerializeField] private Animator[] animators;
 
     [Space()]
     [SerializeField] private UnityEvent OnPathEnd;
@@ -25,14 +25,18 @@ public class MoveWithAnimationComponent : MonoBehaviour {
     }
 
     private void FollowPath() {
-        animator.Play(movingAnimation);
+        animators.Foreach(x => x.SetTrigger(movingAnimation));
         mover.SetPath(pathView.Path);
         mover.EnableMovement(true);
     }
 
     private void PathEnd() {
-        animator.Play(haltAnimation);
+        animators.Foreach(x => x.SetTrigger(haltAnimation));
         OnPathEnd?.Invoke();
+    }
+
+    private Animator GetAnimator() {
+        return animators[0];
     }
 
 }

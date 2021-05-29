@@ -65,7 +65,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-9084201465394106070
 MonoBehaviour:
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: Start Stop
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 18456, y: 776}
+  position: {x: 20904, y: 1192}
   ports:
     keys:
     - input
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 17080, y: -616}
+  position: {x: 17064, y: -584}
   ports:
     keys:
     - answers
@@ -156,7 +156,10 @@ MonoBehaviour:
       _node: {fileID: -9051096327639174804}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 4033546732066439878}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -172,7 +175,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-8968786269941128395
 MonoBehaviour:
@@ -243,7 +246,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3848, y: -104}
+  position: {x: 3368, y: -56}
   ports:
     keys:
     - input
@@ -255,7 +258,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -83524679294333252}
+        node: {fileID: -4580653946279348438}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -290,7 +293,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 13624, y: -872}
+  position: {x: 13608, y: -888}
   ports:
     keys:
     - answers
@@ -342,7 +345,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-8525836860278924161
 MonoBehaviour:
@@ -357,7 +360,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4712, y: -88}
+  position: {x: 4552, y: -72}
   ports:
     keys:
     - answers
@@ -405,11 +408,11 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:5ea9c28dff66716429ca71cd023be6d1
     m_TableEntryReference:
-      m_KeyId: 70883044331520
+      m_KeyId: 70882993999872
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-8421803820847007522
 MonoBehaviour:
@@ -512,7 +515,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/enthousiast
   answers:
   - {fileID: -7722684889498604869}
   - {fileID: -6269585030062759206}
@@ -629,7 +632,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/boos
   answers: []
 --- !u!114 &-7890337587484800847
 MonoBehaviour:
@@ -696,7 +699,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &-7754707354052534201
 MonoBehaviour:
@@ -763,7 +766,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/eustachius/voice dialog/boos
   answers: []
 --- !u!114 &-7745574372228166562
 MonoBehaviour:
@@ -830,7 +833,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-7722684889498604869
 MonoBehaviour:
@@ -953,7 +956,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &-7428748374470875981
 MonoBehaviour:
@@ -1020,7 +1023,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/twijdelend
   answers: []
 --- !u!114 &-7350318515778260316
 MonoBehaviour:
@@ -1035,7 +1038,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 13640, y: 280}
+  position: {x: 13624, y: 280}
   ports:
     keys:
     - answers
@@ -1087,8 +1090,57 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
+--- !u!114 &-7173908351656955380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb04462412d7c946a5d072ca6cce8bb, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3272, y: 184}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -7173908351656955380}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 8276596711121014925}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -7173908351656955380}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -3669463821761387837}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  waitFor: 0
+  Time: 2
+  PathGuid: 
+  trigger: {fileID: 0}
 --- !u!114 &-7137644019579312308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1145,56 +1197,6 @@ MonoBehaviour:
   hideIfVisited: 1
   hideIfSpecificNodeIsVisited: 0
   specificNode: {fileID: 0}
---- !u!114 &-6885763681807309695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951bd691349e4da4594ddb09d58c4931, type: 3}
-  m_Name: Camera
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -4367.4224, y: -96.59817}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: -6885763681807309695}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: output
-        node: {fileID: -5053432769599293391}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: -6885763681807309695}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 7733794436279844834}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  action: 1
-  lookAtGuid: 
-  offset: {x: 0, y: 1.4, z: -0.2}
-  positionOffset: 0
-  duration: 4
 --- !u!114 &-6805355070242230415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1260,7 +1262,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &-6530264836475064835
 MonoBehaviour:
@@ -1275,7 +1277,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 20984, y: -440}
+  position: {x: 20984, y: -408}
   ports:
     keys:
     - answers
@@ -1308,7 +1310,10 @@ MonoBehaviour:
       _node: {fileID: -6530264836475064835}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 4033546732066439878}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -1324,7 +1329,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-6269585030062759206
 MonoBehaviour:
@@ -1395,7 +1400,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 17096, y: -776}
+  position: {x: 17064, y: -840}
   ports:
     keys:
     - answers
@@ -1447,7 +1452,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &-6013530079637863003
 MonoBehaviour:
@@ -1514,7 +1519,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-5966259926832793178
 MonoBehaviour:
@@ -1581,7 +1586,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/kort
   answers: []
 --- !u!114 &-5964558437155503511
 MonoBehaviour:
@@ -1648,7 +1653,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &-5918828323064208625
 MonoBehaviour:
@@ -1663,7 +1668,7 @@ MonoBehaviour:
   m_Name: Answer
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 14664, y: 184}
+  position: {x: 14664, y: 280}
   ports:
     keys:
     - input
@@ -1926,7 +1931,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15880, y: 184}
+  position: {x: 15912, y: 280}
   ports:
     keys:
     - answers
@@ -1959,7 +1964,10 @@ MonoBehaviour:
       _node: {fileID: -5169156247031606102}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: -3259839013548458416}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -1975,7 +1983,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/kort
   answers: []
 --- !u!114 &-5133367698224090222
 MonoBehaviour:
@@ -2089,7 +2097,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/kort
   answers: []
 --- !u!114 &-5053432769599293391
 MonoBehaviour:
@@ -2104,7 +2112,7 @@ MonoBehaviour:
   m_Name: Follow Path
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -4920, y: -40}
+  position: {x: -4392, y: -40}
   ports:
     keys:
     - input
@@ -2128,7 +2136,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -6885763681807309695}
+        node: {fileID: -3680090702138677584}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -2205,7 +2213,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/eustachius/voice dialog/boos
   answers: []
 --- !u!114 &-4996145169788338961
 MonoBehaviour:
@@ -2319,7 +2327,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/eustachius/voice dialog/boos
   answers: []
 --- !u!114 &-4792019492622547650
 MonoBehaviour:
@@ -2334,7 +2342,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 24248, y: -664}
+  position: {x: 24248, y: -760}
   ports:
     keys:
     - answers
@@ -2367,7 +2375,10 @@ MonoBehaviour:
       _node: {fileID: -4792019492622547650}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: -1558597836870551924}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -2383,8 +2394,58 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
+--- !u!114 &-4580653946279348438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951bd691349e4da4594ddb09d58c4931, type: 3}
+  m_Name: Camera
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3912, y: 200}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -4580653946279348438}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -3669463821761387837}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -4580653946279348438}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -8867389586895485064}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  action: 1
+  lookAtGuid: 
+  offset: {x: 1.3, y: 2.04, z: 2.17}
+  positionOffset: 0
+  duration: 3
 --- !u!114 &-4508990065784620662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2486,7 +2547,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/enthousiast
   answers:
   - {fileID: -5483572807797991256}
   - {fileID: 9099975582008067090}
@@ -2556,7 +2617,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-4011516205092277118
 MonoBehaviour:
@@ -2604,7 +2665,10 @@ MonoBehaviour:
       _node: {fileID: -4011516205092277118}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: -1558597836870551924}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -2620,7 +2684,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-4002722178062896238
 MonoBehaviour:
@@ -2635,7 +2699,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 17176, y: 616}
+  position: {x: 19624, y: 1032}
   ports:
     keys:
     - answers
@@ -2658,7 +2722,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 9082123347651900415}
+        node: {fileID: 6973770066364891686}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -2687,7 +2751,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-3913297329234054519
 MonoBehaviour:
@@ -2702,7 +2766,7 @@ MonoBehaviour:
   m_Name: Answer
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15848, y: 456}
+  position: {x: 17816, y: 760}
   ports:
     keys:
     - input
@@ -2758,7 +2822,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -3880, y: -40}
+  position: {x: -3960, y: -40}
   ports:
     keys:
     - input
@@ -2770,7 +2834,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 7733794436279844834}
+        node: {fileID: -5053432769599293391}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -2841,6 +2905,56 @@ MonoBehaviour:
   Time: 1
   PathGuid: 
   trigger: {fileID: 0}
+--- !u!114 &-3669463821761387837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951bd691349e4da4594ddb09d58c4931, type: 3}
+  m_Name: Camera
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3576, y: 200}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -3669463821761387837}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -7173908351656955380}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -3669463821761387837}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4580653946279348438}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  action: 2
+  lookAtGuid: 
+  offset: {x: 0, y: 0, z: 0}
+  positionOffset: 1.36
+  duration: 9
 --- !u!114 &-3430027169747056367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2887,7 +3001,10 @@ MonoBehaviour:
       _node: {fileID: -3430027169747056367}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 4033546732066439878}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -2903,7 +3020,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-3259839013548458416
 MonoBehaviour:
@@ -2946,6 +3063,9 @@ MonoBehaviour:
       - fieldName: output
         node: {fileID: -842192263867745303}
         reroutePoints: []
+      - fieldName: output
+        node: {fileID: -5169156247031606102}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -2973,7 +3093,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/enthousiast
   answers: []
 --- !u!114 &-3023026196610022028
 MonoBehaviour:
@@ -2988,7 +3108,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15896, y: -232}
+  position: {x: 15880, y: -248}
   ports:
     keys:
     - answers
@@ -3040,7 +3160,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-2770379245684886730
 MonoBehaviour:
@@ -3107,7 +3227,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &-2558359535389987851
 MonoBehaviour:
@@ -3122,7 +3242,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -5272, y: -56}
+  position: {x: -4744, y: -56}
   ports:
     keys:
     - input
@@ -3244,60 +3364,10 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers:
   - {fileID: 300275950125997271}
   - {fileID: 7130062448101787528}
---- !u!114 &-2171627203247680680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951bd691349e4da4594ddb09d58c4931, type: 3}
-  m_Name: Camera
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 3250.6897, y: -168.94492}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: -2171627203247680680}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: output
-        node: {fileID: 8276596711121014925}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: -2171627203247680680}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: -83524679294333252}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  action: 1
-  lookAtGuid: 
-  offset: {x: 0, y: 2, z: 2}
-  positionOffset: 0
-  duration: 8
 --- !u!114 &-2160525462695261316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3386,7 +3456,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/eustachius/voice dialog/boos
   answers:
   - {fileID: 1886324066646658761}
   - {fileID: -1976596673629233918}
@@ -3511,7 +3581,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/kort
   answers: []
 --- !u!114 &-2016472250275028722
 MonoBehaviour:
@@ -3578,7 +3648,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &-1976596673629233918
 MonoBehaviour:
@@ -3701,7 +3771,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &-1676104199605081581
 MonoBehaviour:
@@ -3824,7 +3894,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &-1558597836870551924
 MonoBehaviour:
@@ -3867,6 +3937,18 @@ MonoBehaviour:
       - fieldName: output
         node: {fileID: -8700290407806430944}
         reroutePoints: []
+      - fieldName: output
+        node: {fileID: 7806350524543550721}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: -4011516205092277118}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 4168695990799453548}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: -4792019492622547650}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -3894,7 +3976,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &-1392346806158184618
 MonoBehaviour:
@@ -3909,7 +3991,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 5032, y: -88}
+  position: {x: 4936, y: -72}
   ports:
     keys:
     - answers
@@ -3961,7 +4043,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/boos
   answers: []
 --- !u!114 &-1372097089032479771
 MonoBehaviour:
@@ -4084,7 +4166,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/eustachius/voice dialog/boos
   answers: []
 --- !u!114 &-953374004191864690
 MonoBehaviour:
@@ -4187,7 +4269,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/lang
   answers:
   - {fileID: -1372097089032479771}
   - {fileID: -5760785759265776552}
@@ -4205,7 +4287,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 552, y: -24}
+  position: {x: 616, y: -24}
   ports:
     keys:
     - answers
@@ -4257,7 +4339,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-842192263867745303
 MonoBehaviour:
@@ -4324,7 +4406,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/kort
   answers: []
 --- !u!114 &-687205570272527119
 MonoBehaviour:
@@ -4339,7 +4421,7 @@ MonoBehaviour:
   m_Name: Answer
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 14680, y: 488}
+  position: {x: 14680, y: 600}
   ports:
     keys:
     - input
@@ -4483,7 +4565,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers:
   - {fileID: 2977389905526236599}
   - {fileID: 4938341590458219970}
@@ -4501,7 +4583,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 17832, y: 664}
+  position: {x: 20280, y: 1080}
   ports:
     keys:
     - input
@@ -4602,7 +4684,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-427820429803593563
 MonoBehaviour:
@@ -4669,7 +4751,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/kort
   answers: []
 --- !u!114 &-346111507253213678
 MonoBehaviour:
@@ -4783,7 +4865,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-134066077611776043
 MonoBehaviour:
@@ -4850,58 +4932,8 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/lang
   answers: []
---- !u!114 &-83524679294333252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951bd691349e4da4594ddb09d58c4931, type: 3}
-  m_Name: Camera
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 3572.272, y: -151.62062}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: -83524679294333252}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: output
-        node: {fileID: -2171627203247680680}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: -83524679294333252}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: -8867389586895485064}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  action: 2
-  lookAtGuid: 
-  offset: {x: 0, y: 0, z: 0}
-  positionOffset: -0.24
-  duration: 8
 --- !u!114 &-50931292136569430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4915,7 +4947,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 24248, y: -344}
+  position: {x: 24248, y: -248}
   ports:
     keys:
     - answers
@@ -4948,7 +4980,10 @@ MonoBehaviour:
       _node: {fileID: -50931292136569430}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 4033546732066439878}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -4964,7 +4999,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &11400000
 MonoBehaviour:
@@ -5122,11 +5157,11 @@ MonoBehaviour:
   - {fileID: 5875449840169270238}
   - {fileID: 4800846050175304479}
   - {fileID: -3674559507786156288}
-  - {fileID: -6885763681807309695}
-  - {fileID: -2171627203247680680}
-  - {fileID: -83524679294333252}
-  - {fileID: 7733794436279844834}
-  current: {fileID: 6400054390362102457}
+  - {fileID: -3669463821761387837}
+  - {fileID: -7173908351656955380}
+  - {fileID: -4580653946279348438}
+  - {fileID: 6973770066364891686}
+  current: {fileID: 4853530443445230508}
 --- !u!114 &167549278740289401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5140,7 +5175,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 18216, y: -232}
+  position: {x: 18280, y: -232}
   ports:
     keys:
     - answers
@@ -5192,7 +5227,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/kort
   answers: []
 --- !u!114 &217808139962183847
 MonoBehaviour:
@@ -5371,7 +5406,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &764099827948264568
 MonoBehaviour:
@@ -5386,7 +5421,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 10552, y: 344}
+  position: {x: 10776, y: 360}
   ports:
     keys:
     - input
@@ -5543,7 +5578,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &1886324066646658761
 MonoBehaviour:
@@ -5666,7 +5701,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/blij
   answers: []
 --- !u!114 &2090653662337786575
 MonoBehaviour:
@@ -5789,7 +5824,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/enthousiast
   answers: []
 --- !u!114 &2776284894860811521
 MonoBehaviour:
@@ -5856,7 +5891,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/boos
   answers: []
 --- !u!114 &2977389905526236599
 MonoBehaviour:
@@ -5979,7 +6014,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &3315802539318083176
 MonoBehaviour:
@@ -6046,7 +6081,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &3334346991141099473
 MonoBehaviour:
@@ -6113,7 +6148,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &3368756313398028550
 MonoBehaviour:
@@ -6128,7 +6163,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15144, y: 184}
+  position: {x: 15160, y: 280}
   ports:
     keys:
     - answers
@@ -6180,7 +6215,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &3531617757897534783
 MonoBehaviour:
@@ -6195,7 +6230,7 @@ MonoBehaviour:
   m_Name: Load Scene
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 18136, y: 680}
+  position: {x: 20584, y: 1096}
   ports:
     keys:
     - input
@@ -6227,7 +6262,7 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  nextScene: Loader
+  nextScene: 6_DoorPuzzle
 --- !u!114 &3827709442821597646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6293,7 +6328,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/lang
   answers: []
 --- !u!114 &4033546732066439878
 MonoBehaviour:
@@ -6308,7 +6343,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15496, y: 488}
+  position: {x: 17400, y: 760}
   ports:
     keys:
     - answers
@@ -6334,6 +6369,21 @@ MonoBehaviour:
       connections:
       - fieldName: output
         node: {fileID: 6934857712221436748}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 6884684323720914661}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: -9051096327639174804}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: -3430027169747056367}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: -6530264836475064835}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: -50931292136569430}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -6383,7 +6433,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/eustachius/voice dialog/boos
   answers:
   - {fileID: -3913297329234054519}
   - {fileID: 8173631610948132700}
@@ -6400,7 +6450,7 @@ MonoBehaviour:
   m_Name: Answer
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 13160, y: 280}
+  position: {x: 13096, y: 280}
   ports:
     keys:
     - input
@@ -6544,7 +6594,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers:
   - {fileID: -1676104199605081581}
   - {fileID: 2090653662337786575}
@@ -6595,7 +6645,10 @@ MonoBehaviour:
       _node: {fileID: 4168695990799453548}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: -1558597836870551924}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -6611,7 +6664,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &4468299293699942145
 MonoBehaviour:
@@ -6734,7 +6787,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/blij
   answers: []
 --- !u!114 &4800846050175304479
 MonoBehaviour:
@@ -6796,7 +6849,7 @@ MonoBehaviour:
   m_Name: Start Stop
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -5880, y: 72}
+  position: {x: -5352, y: 72}
   ports:
     keys:
     - input
@@ -6839,7 +6892,7 @@ MonoBehaviour:
   m_Name: Load Scene
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 10856, y: 360}
+  position: {x: 11176, y: 376}
   ports:
     keys:
     - input
@@ -6941,7 +6994,7 @@ MonoBehaviour:
   m_Name: Follow Path
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -5736, y: -40}
+  position: {x: -5208, y: -40}
   ports:
     keys:
     - input
@@ -7042,7 +7095,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/kort
   answers: []
 --- !u!114 &5376702033344548427
 MonoBehaviour:
@@ -7112,7 +7165,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &5534778600879205371
 MonoBehaviour:
@@ -7179,7 +7232,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/boos
   answers: []
 --- !u!114 &5640973218315597532
 MonoBehaviour:
@@ -7194,7 +7247,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 8616, y: -200}
+  position: {x: 8600, y: -200}
   ports:
     keys:
     - answers
@@ -7246,7 +7299,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &5698645581294421530
 MonoBehaviour:
@@ -7317,7 +7370,7 @@ MonoBehaviour:
   m_Name: Invoke Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 17528, y: 632}
+  position: {x: 19976, y: 1048}
   ports:
     keys:
     - input
@@ -7415,7 +7468,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/blij
   answers: []
 --- !u!114 &5824571409881643929
 MonoBehaviour:
@@ -7484,7 +7537,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/kort
   answers: []
 --- !u!114 &5875449840169270238
 MonoBehaviour:
@@ -7546,7 +7599,7 @@ MonoBehaviour:
   m_Name: Invoke Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 10248, y: 312}
+  position: {x: 10344, y: 344}
   ports:
     keys:
     - input
@@ -7592,7 +7645,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4392, y: -88}
+  position: {x: 4200, y: -72}
   ports:
     keys:
     - answers
@@ -7644,7 +7697,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &6071297597232662814
 MonoBehaviour:
@@ -7734,7 +7787,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/eustachius/voice dialog/boos
   answers:
   - {fileID: -5918828323064208625}
   - {fileID: -687205570272527119}
@@ -7751,7 +7804,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 16392, y: 456}
+  position: {x: 18360, y: 696}
   ports:
     keys:
     - answers
@@ -7784,7 +7837,10 @@ MonoBehaviour:
       _node: {fileID: 6097570921864030514}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 8805720373985559224}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -7800,7 +7856,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &6167203620840947586
 MonoBehaviour:
@@ -7867,7 +7923,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &6297304729807060618
 MonoBehaviour:
@@ -7929,7 +7985,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4120, y: -88}
+  position: {x: 3880, y: -72}
   ports:
     keys:
     - input
@@ -7978,7 +8034,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15496, y: 184}
+  position: {x: 15528, y: 280}
   ports:
     keys:
     - answers
@@ -8030,7 +8086,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &6723184321599301420
 MonoBehaviour:
@@ -8045,7 +8101,7 @@ MonoBehaviour:
   m_Name: Start Stop
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 11176, y: 456}
+  position: {x: 11608, y: 392}
   ports:
     keys:
     - input
@@ -8088,7 +8144,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15896, y: -104}
+  position: {x: 15880, y: 8}
   ports:
     keys:
     - answers
@@ -8121,7 +8177,10 @@ MonoBehaviour:
       _node: {fileID: 6884684323720914661}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 4033546732066439878}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -8137,7 +8196,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &6934857712221436748
 MonoBehaviour:
@@ -8152,7 +8211,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15160, y: 488}
+  position: {x: 15160, y: 600}
   ports:
     keys:
     - answers
@@ -8204,8 +8263,55 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
+--- !u!114 &6973770066364891686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39df1b55c7c080240909be491745362f, type: 3}
+  m_Name: Play Animation Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 19240, y: 1080}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 6973770066364891686}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 9082123347651900415}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 6973770066364891686}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4002722178062896238}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  trigger: {fileID: 11400000, guid: 1958ab5f733d0d6418b67d0a0d58e655, type: 2}
+  animationTrigger: -387067063
 --- !u!114 &7130062448101787528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8327,7 +8433,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/enthousiast
   answers: []
 --- !u!114 &7674257346325385339
 MonoBehaviour:
@@ -8342,7 +8448,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 5688, y: -168}
+  position: {x: 5640, y: -168}
   ports:
     keys:
     - answers
@@ -8394,58 +8500,8 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
---- !u!114 &7733794436279844834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951bd691349e4da4594ddb09d58c4931, type: 3}
-  m_Name: Camera
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -4104, y: -88}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: 7733794436279844834}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: output
-        node: {fileID: -6885763681807309695}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 7733794436279844834}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: -3680090702138677584}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  action: 2
-  lookAtGuid: 
-  offset: {x: 0, y: 0, z: 0}
-  positionOffset: 1
-  duration: 8
 --- !u!114 &7806350524543550721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8459,7 +8515,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 17080, y: -952}
+  position: {x: 17064, y: -1096}
   ports:
     keys:
     - answers
@@ -8492,7 +8548,10 @@ MonoBehaviour:
       _node: {fileID: 7806350524543550721}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: -1558597836870551924}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -8508,7 +8567,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &8173631610948132700
 MonoBehaviour:
@@ -8523,7 +8582,7 @@ MonoBehaviour:
   m_Name: Answer
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15848, y: 616}
+  position: {x: 17880, y: 1080}
   ports:
     keys:
     - input
@@ -8603,7 +8662,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -2171627203247680680}
+        node: {fileID: -7173908351656955380}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -8628,7 +8687,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15896, y: -360}
+  position: {x: 15880, y: -504}
   ports:
     keys:
     - answers
@@ -8680,7 +8739,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &8320006210745963657
 MonoBehaviour:
@@ -8783,7 +8842,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers:
   - {fileID: -2133667086036605023}
   - {fileID: 5698645581294421530}
@@ -8853,7 +8912,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &8494938937029892688
 MonoBehaviour:
@@ -8920,7 +8979,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/lang
   answers: []
 --- !u!114 &8671400951073459046
 MonoBehaviour:
@@ -8987,7 +9046,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/boos
   answers: []
 --- !u!114 &8715279076644865277
 MonoBehaviour:
@@ -9002,7 +9061,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 5368, y: -168}
+  position: {x: 5272, y: -168}
   ports:
     keys:
     - answers
@@ -9053,11 +9112,11 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:5ea9c28dff66716429ca71cd023be6d1
     m_TableEntryReference:
-      m_KeyId: 70883044331522
+      m_KeyId: 70883044331521
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &8805720373985559224
 MonoBehaviour:
@@ -9097,6 +9156,9 @@ MonoBehaviour:
       - fieldName: output
         node: {fileID: -3023026196610022028}
         reroutePoints: []
+      - fieldName: output
+        node: {fileID: 6097570921864030514}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -9124,7 +9186,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &8874525647591526919
 MonoBehaviour:
@@ -9191,7 +9253,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &9082123347651900415
 MonoBehaviour:
@@ -9206,7 +9268,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 16792, y: 616}
+  position: {x: 18856, y: 984}
   ports:
     keys:
     - answers
@@ -9241,7 +9303,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -4002722178062896238}
+        node: {fileID: 6973770066364891686}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -9258,7 +9320,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/kort
   answers: []
 --- !u!114 &9099975582008067090
 MonoBehaviour:
@@ -9381,7 +9443,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/slak/voice dialog/neutraal
   answers: []
 --- !u!114 &9175391414963720672
 MonoBehaviour:
@@ -9396,7 +9458,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 16392, y: 616}
+  position: {x: 18456, y: 1016}
   ports:
     keys:
     - answers
@@ -9448,5 +9510,5 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []

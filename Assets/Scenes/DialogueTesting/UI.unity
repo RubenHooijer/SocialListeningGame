@@ -763,6 +763,8 @@ GameObject:
   - component: {fileID: 2047594571}
   - component: {fileID: 2047594573}
   - component: {fileID: 2047594574}
+  - component: {fileID: 2047594576}
+  - component: {fileID: 2047594575}
   m_Layer: 5
   m_Name: --UI--
   m_TagString: Untagged
@@ -845,8 +847,8 @@ RectTransform:
   - {fileID: 2074010242}
   - {fileID: 1688623806}
   - {fileID: 2745456191800020834}
-  - {fileID: 8795591462205172849}
   - {fileID: 3737510862055878095}
+  - {fileID: 8795591462205172849}
   - {fileID: 1740382455}
   - {fileID: 8088126}
   m_Father: {fileID: 0}
@@ -964,6 +966,64 @@ MonoBehaviour:
       - m_Target: {fileID: 8956824826754380791}
         m_TargetAssemblyTypeName: AbstractScreen`1[[RotationMinigameScreen, Assembly-CSharp
         m_MethodName: Hide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2047594575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047594566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 157dfba0081c35b43b688d5fa2b45048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 11400000, guid: 246746baf6181e749b73bc42ba30c2f4, type: 2}
+  RemoveListenerOnDestroy: 0
+  onEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7140132674496719241}
+        m_TargetAssemblyTypeName: PlayVideoScreen, Assembly-CSharp
+        m_MethodName: PlayDrowningVideo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2047594576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047594566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 157dfba0081c35b43b688d5fa2b45048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 11400000, guid: f7dc400dfa2d1a341aa4aeb13fb8abbd, type: 2}
+  RemoveListenerOnDestroy: 0
+  onEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7140132674496719241}
+        m_TargetAssemblyTypeName: PlayVideoScreen, Assembly-CSharp
+        m_MethodName: PlayDeathRealmVideo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1342,7 +1402,7 @@ PrefabInstance:
     - target: {fileID: 1803391497353807353, guid: 5040652fe75190943ad8dc698777cbc3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1803391497353807353, guid: 5040652fe75190943ad8dc698777cbc3,
         type: 3}
@@ -1441,6 +1501,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5040652fe75190943ad8dc698777cbc3, type: 3}
+--- !u!114 &7140132674496719241 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1803391497353807355, guid: 5040652fe75190943ad8dc698777cbc3,
+    type: 3}
+  m_PrefabInstance: {fileID: 7140132674496719240}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a362ecc9483664b835f6f04d8a9a9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8259393315267780830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1461,7 +1533,7 @@ PrefabInstance:
     - target: {fileID: 4702052845007179025, guid: 0dff5bf9301d7e448bdedfca81711b38,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4702052845007179025, guid: 0dff5bf9301d7e448bdedfca81711b38,
         type: 3}
