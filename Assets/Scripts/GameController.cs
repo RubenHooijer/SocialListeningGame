@@ -75,6 +75,9 @@ public class GameController : GenericSingleton<GameController, GameController> {
             case StringEvent stringEventNode:
                 ProcessInvokeStringEventNode(stringEventNode);
                 break;
+            case CharacterIntStringEvent characterIntStringEventNode:
+                ProcessInvokeCharacterIntStringEventNode(characterIntStringEventNode);
+                break;
             case Dialogue.Camera cameraNode:
                 ProcessCameraNode(cameraNode);
                 break;
@@ -170,6 +173,15 @@ public class GameController : GenericSingleton<GameController, GameController> {
         Debug.Log("Invoked event");
         invokeEventNode.trigger.Raise();
         invokeEventNode.Next();
+
+        HandleCurrentNode();
+    }
+
+
+    private void ProcessInvokeCharacterIntStringEventNode(CharacterIntStringEvent eventNode) {
+        Debug.Log("Invoke CIS event");
+        eventNode.trigger.Raise(eventNode.character, eventNode.number, eventNode.guid);
+        eventNode.Next();
 
         HandleCurrentNode();
     }

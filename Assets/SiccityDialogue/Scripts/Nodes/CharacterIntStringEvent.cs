@@ -2,12 +2,14 @@
 
 namespace Dialogue {
     [NodeTint("#7875ff")]
-    [CreateNodeMenu("String Event", order = 0)]
-    [NodeWidth(250)]
-    public class StringEvent : DialogueBaseNode {
+    [CreateNodeMenu("Character Int String Event", order = 0)]
+    [NodeWidth(350)]
+    public class CharacterIntStringEvent : DialogueBaseNode {
 
-        public StringEventChannelSO trigger;
-        public string data;
+        public CharacterIntEventChannelSO trigger;
+        public CharacterType character;
+        public int number;
+        public string guid;
 
         public override void Trigger() {
             (graph as DialogueGraph).current = this;
