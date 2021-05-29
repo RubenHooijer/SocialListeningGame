@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1803391497353807238}
   - component: {fileID: 1803391497353807355}
   - component: {fileID: 2249484404549169982}
+  - component: {fileID: 5528612038819962372}
   m_Layer: 5
   m_Name: PlayVideoScreen
   m_TagString: Untagged
@@ -59,8 +60,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 2249484404549169982}
-  deathRealmClip: {fileID: 0}
-  drowningClip: {fileID: 0}
+  deathRealmClip: {fileID: 32900000, guid: cd3ded012e520494ebef837331b51de5, type: 3}
+  drowningClip: {fileID: 32900000, guid: 49222079d6d8b0b4bbbda4cc8c0dd84a, type: 3}
   playDeathRealmVideoEvent: {fileID: 11400000, guid: f7dc400dfa2d1a341aa4aeb13fb8abbd,
     type: 2}
   playDrowningVideoEvent: {fileID: 11400000, guid: 246746baf6181e749b73bc42ba30c2f4,
@@ -78,12 +79,12 @@ VideoPlayer:
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: e2a092f964b6eb14ab397b9045459efa, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
   m_RenderMode: 2
-  m_AspectRatio: 2
+  m_AspectRatio: 5
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
@@ -101,3 +102,30 @@ VideoPlayer:
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
+--- !u!114 &5528612038819962372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803391497353807354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 8400000, guid: e2a092f964b6eb14ab397b9045459efa, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1

@@ -34,6 +34,7 @@ public class PlayVideoScreen : AbstractScreen<PlayVideoScreen> {
 
     private void OnVideoClipFinished(VideoPlayer source) {
         onVideoClipEnd.Raise();
+        Hide();
     }
 
 }
