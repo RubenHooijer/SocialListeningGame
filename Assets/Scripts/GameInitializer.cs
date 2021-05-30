@@ -4,8 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GameInitializer : MonoBehaviour {
 
-    [SerializeField, SceneName] private string mainScene;
-    [SerializeField, SceneName] private string[] additiveScenes;
+    [SerializeField, SceneName] private string startScene;
     [SerializeField] private GameController gameController;
 
     private void Awake() {
@@ -15,19 +14,12 @@ public class GameInitializer : MonoBehaviour {
     }
 
     private IEnumerator SceneLoadingRoutine() {
-        for (int i = 0; i < additiveScenes.Length; i++) {
-            yield return SceneManager.LoadSceneAsync(additiveScenes[i], LoadSceneMode.Additive);
-        }
+        yield return SceneManager.LoadSceneAsync(startScene, LoadSceneMode.Additive);
 
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.LoadSceneAsync(mainScene, LoadSceneMode.Additive);
+        MenuScreen.Instance.Show();
+        Instantiate(gameController);
 
         SceneManager.UnloadSceneAsync("Loader");
-        Instantiate(gameController);
     }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode) {
-        SceneManager.SetActiveScene(scene);
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
 }

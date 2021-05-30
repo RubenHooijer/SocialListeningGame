@@ -17,7 +17,7 @@ public class Rock : MonoBehaviour
     {
         //Particle Effect
 
-        FadeScript.Instance.Fade(1,1);
+        //FadeScript.Instance.Fade(1,1);
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

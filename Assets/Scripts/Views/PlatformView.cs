@@ -4,7 +4,6 @@ using NaughtyAttributes;
 using Oasez.Extensions;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class PlatformView : MonoBehaviour, IGuidable {
@@ -34,7 +33,6 @@ public class PlatformView : MonoBehaviour, IGuidable {
 
     [Header("Testing")]
     [SerializeField] private bool isBalancing = true;
-    [SerializeField, Range(-0.7f, 0.7f)] private float fooGyroValue = 0;
     [SerializeField, Disable] private float imbalanceForce;
     [SerializeField, Disable] private float tiltForce;
     [SerializeField, Disable] private float timeInBalance;
@@ -42,9 +40,9 @@ public class PlatformView : MonoBehaviour, IGuidable {
     private List<CharacterView> charactersOnPlatform = new List<CharacterView>();
 
     [Button]
-    void StartBalancing() {
-        Input.gyro.enabled = true;
-        StartCoroutine(BalancingRoutine());
+    private void DebugCompleteBalancing() {
+        isBalancing = false;
+        OnCompletedBalancing();
     }
 
     public static PlatformView GetView(string guid) {
@@ -94,6 +92,11 @@ public class PlatformView : MonoBehaviour, IGuidable {
         onCompletedBalancingEvent.Raise();
         DOTween.To(() => balance, x => balance = x, 0, 1.4f).SetEase(Ease.InOutSine)
             .OnUpdate(ShowBalance);
+    }
+
+    private void StartBalancing() {
+        isBalancing = true;
+        StartCoroutine(BalancingRoutine());
     }
 
     private void ShowBalance() {
