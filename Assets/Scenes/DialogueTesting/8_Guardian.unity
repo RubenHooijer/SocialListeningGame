@@ -573,7 +573,7 @@ Transform:
   - {fileID: 290538109}
   - {fileID: 1291056820}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &254947750
 GameObject:
@@ -757,14 +757,14 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.7291105, g: 1, b: 0.6839622, a: 1}
+  m_Color: {r: 0.99739, g: 1, b: 0.68235296, a: 1}
   m_Intensity: 2.51
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -2326,7 +2326,7 @@ Transform:
   - {fileID: 77723391}
   - {fileID: 1257806048}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &776706324
 MonoBehaviour:
@@ -3964,7 +3964,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.7291105, g: 1, b: 0.6839622, a: 1}
+  m_Color: {r: 0.5162771, g: 0.9056604, b: 0.4485582, a: 1}
   m_Intensity: 2.51
   m_Range: 10
   m_SpotAngle: 30
@@ -6602,9 +6602,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Oorwurm: {fileID: 1061367979}
-  showTeeth: 0
-  speed: 2
   particles: {fileID: 354786043}
+  teethShowDuration: 1
 --- !u!1 &1291056819
 GameObject:
   m_ObjectHideFlags: 0
@@ -6868,7 +6867,7 @@ Transform:
   - {fileID: 1179615698}
   - {fileID: 1852648329}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1393601918 stripped
 Transform:
@@ -12025,23 +12024,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6203657681571805410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6203657681571805422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 729aad4491e915a41bda2b8325cf757a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FocusTracksTarget: 0
-  m_FocusTracking: 0
-  m_FocusTarget: {fileID: 0}
-  m_FocusOffset: 0
-  m_Profile: {fileID: 11400000, guid: 25662611fa074004b996d2e816800ce9, type: 2}
 --- !u!114 &6203657681571805411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12105,7 +12087,7 @@ MonoBehaviour:
   m_FocusTracking: 0
   m_FocusTarget: {fileID: 0}
   m_FocusOffset: 0
-  m_Profile: {fileID: 11400000, guid: 10fc4df2da32a41aaa32d77bc913491c, type: 2}
+  m_Profile: {fileID: 11400000, guid: a5132b29b9845d04aa2163d923652b58, type: 2}
 --- !u!1 &6203657681571805422
 GameObject:
   m_ObjectHideFlags: 0
@@ -12118,7 +12100,6 @@ GameObject:
   - component: {fileID: 6203657681571805423}
   - component: {fileID: 6203657681571805408}
   - component: {fileID: 6203657681571805411}
-  - component: {fileID: 6203657681571805410}
   - component: {fileID: 6203657681571805421}
   - component: {fileID: 6203657681571805409}
   - component: {fileID: 6203657681571805424}

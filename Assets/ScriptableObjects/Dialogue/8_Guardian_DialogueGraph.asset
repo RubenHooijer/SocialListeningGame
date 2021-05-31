@@ -1043,7 +1043,7 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  waitFor: 2
+  waitFor: 0
   Time: 1
   PathGuid: 
   trigger: {fileID: 11400000, guid: d62fa36da8f78784e899a9178fe0f21d, type: 2}
@@ -1093,7 +1093,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: d4afacb988adacb4e925df57f7eb2ff3, type: 2}
-  animationTrigger: 2081823275
+  animationTrigger: 1408992674
 --- !u!114 &-6438398420725119937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1737,7 +1737,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 11704, y: 200}
+  position: {x: 11688, y: 184}
   ports:
     keys:
     - answers
@@ -1772,7 +1772,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -4653046699741432641}
+        node: {fileID: -3751575880551425990}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1827,10 +1827,10 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -4677628701040852322}
+        node: {fileID: -4548349075949640089}
         reroutePoints: []
       - fieldName: output
-        node: {fileID: -4548349075949640089}
+        node: {fileID: -3751575880551425990}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -2079,6 +2079,53 @@ MonoBehaviour:
   pathGuid: 52e696cd-3f97-49f7-893a-37845e503e6c
   useCharacterSpeed: 0
   speed: 2
+--- !u!114 &-3751575880551425990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39df1b55c7c080240909be491745362f, type: 3}
+  m_Name: Play Animation Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 11976, y: -8}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -3751575880551425990}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -4677628701040852322}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -3751575880551425990}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -4653046699741432641}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  trigger: {fileID: 11400000, guid: d4afacb988adacb4e925df57f7eb2ff3, type: 2}
+  animationTrigger: -1178738628
 --- !u!114 &-3736537762019398613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4221,7 +4268,9 @@ MonoBehaviour:
   - {fileID: 8774567279983216060}
   - {fileID: -2425779434073906021}
   - {fileID: -2552031402578036909}
-  current: {fileID: -6742522297201682100}
+  - {fileID: -3751575880551425990}
+  - {fileID: 2971366110441535108}
+  current: {fileID: 8952741715560933548}
 --- !u!114 &323245675244641619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4408,7 +4457,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 8952741715560933548}
+        node: {fileID: 2971366110441535108}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -5240,6 +5289,53 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 2304a6b642ab1584c8b30b6b633b441b, type: 2}
+--- !u!114 &2971366110441535108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39df1b55c7c080240909be491745362f, type: 3}
+  m_Name: Play Animation Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 12632, y: -24}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 2971366110441535108}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 494064390695934386}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 2971366110441535108}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 8952741715560933548}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  trigger: {fileID: 11400000, guid: d4afacb988adacb4e925df57f7eb2ff3, type: 2}
+  animationTrigger: -328545705
 --- !u!114 &2982876623756139701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7943,7 +8039,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 494064390695934386}
+        node: {fileID: 2971366110441535108}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
