@@ -1,4 +1,5 @@
 using DG.Tweening;
+using FMODUnity;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,7 @@ public class DoorMinigameScreen : AbstractScreen<DoorMinigameScreen> {
     }
 
     [Header("Settings")]
+    [SerializeField, EventRef] private string slidingSound;
     [SerializeField] private float baseClickValue = 0.05f;
     [SerializeField] private PushThreshold[] pushThresholds;
 
@@ -23,10 +25,14 @@ public class DoorMinigameScreen : AbstractScreen<DoorMinigameScreen> {
     [SerializeField] private AnimatedWidget[] animatedWidgets;
     [SerializeField] private VoidEventChannelSO pushMinigameCompleted;
 
+    private FMOD.Studio.EventInstance slidingSoundInstance;
     private float sliderValue;
 
     protected override void OnShow() {
         pushSlider.value = 0;
+        slidingSoundInstance = RuntimeManager.CreateInstance(slidingSound);
+        slidingSoundInstance.set3DAttributes(RuntimeManager.Listeners[0].transform.To3DAttributes());
+        slidingSoundInstance.start();
         gameObject.SetActive(true);
         pushButton.OnClickDirect += OnButtonClicked;
     }
@@ -63,7 +69,8 @@ public class DoorMinigameScreen : AbstractScreen<DoorMinigameScreen> {
             .SetEase(Ease.Linear)
             .OnStart(OnStartPush)
             .OnUpdate(() => {
-                if (pushSlider.value >= (pushSlider.maxValue * 0.98f)) { OnEndPush(); }
+                slidingSoundInstance.setParameterByName("opening progress", pushSlider.value);
+                if (pushSlider.value >= (pushSlider.maxValue)) { OnEndPush(); }
             })
             .OnComplete(OnEndPush);
     }
@@ -74,7 +81,7 @@ public class DoorMinigameScreen : AbstractScreen<DoorMinigameScreen> {
 
     private void OnEndPush() {
         handleAnimator.SetBool(isWalkingAnimationParameter, false);
-        if (sliderValue >= (pushSlider.maxValue * 0.98f)) {
+        if (sliderValue >= pushSlider.maxValue) {
             EndGame();
             return; 
         }
@@ -90,6 +97,8 @@ public class DoorMinigameScreen : AbstractScreen<DoorMinigameScreen> {
         pushButton.OnClickDirect -= OnButtonClicked;
         Hide();
         pushMinigameCompleted.Raise();
+        CoroutineHelper.Delay(1f, () => slidingSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT));
+        
     }
 
 }
