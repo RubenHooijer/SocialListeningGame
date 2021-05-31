@@ -603,6 +603,7 @@ MonoBehaviour:
   animatedWidgets:
   - {fileID: 6566423453978247072}
   - {fileID: 317462203818071426}
+  - {fileID: 9109003925751461657}
   pushMinigameCompleted: {fileID: 11400000, guid: 0662abb49f020994d8d30fd73f3f2bf1,
     type: 2}
 --- !u!1 &7208507946511379947
@@ -711,6 +712,7 @@ GameObject:
   - component: {fileID: 4767854740992313957}
   - component: {fileID: 2689669326124189378}
   - component: {fileID: 6924322679762378993}
+  - component: {fileID: 9109003925751461657}
   m_Layer: 0
   m_Name: icon_touch
   m_TagString: Untagged
@@ -788,9 +790,40 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 2ed4012137ab6e94992d075bcb62e667, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &9109003925751461657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9062389857313669204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28bb792fca754914893bcae5766b1d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowOnEnable: 1
+  PreventShowAnimationOnFastReenable: 0
+  DisableInteractions: 1
+  showSound: 
+  hideSound: 
+  TargetOverride: {fileID: 0}
+  ShowDuration: 0.2
+  ShowDelay: 0
+  ShowEase: 27
+  HideDuration: 0.3
+  HideDelay: 0
+  HideEase: 2
+  HideScale: 0
+  HideOpacity: 1
+  HideFill: 1
+  HideOffset: {x: 0, y: 0, z: 0}
+  HideAnchoredOffset: {x: 0, y: 0}
+  HideAnchorSizeX: 0
+  HideAnchorSizeY: 0
