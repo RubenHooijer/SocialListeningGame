@@ -11,8 +11,8 @@ public class FadeScreen : AbstractScreen<FadeScreen> {
 
     public void InstantToBlack() => FadeToColor(Color.black, 0, null);
     public void FadeToBlack() => FadeToColor(Color.black, 4, null);
-    public void FadeFromBlack() => FadeFromColor(Color.white, 3, null);
-    public void FadeToWhite() => FadeToColor(Color.white, 4, null);
+    public void FadeFromBlack() => FadeFromColor(Color.black, 3, null);
+    public void FadeToWhite() => FadeToColor(Color.white, 2, null);
     public void FadeFromWhite() => FadeFromColor(Color.white, 3, null);
 
     public void FadeToColor(Color toColor, float time = 1, Action onDone = null) {
