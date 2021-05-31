@@ -1860,7 +1860,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -5193825220045572832}
+        node: {fileID: -210998669400132786}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1894,7 +1894,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -5231363903094089195}
+        node: {fileID: -210998669400132786}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -4800,6 +4800,56 @@ MonoBehaviour:
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
   animationTrigger: 726352308
+--- !u!114 &-210998669400132786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951bd691349e4da4594ddb09d58c4931, type: 3}
+  m_Name: Camera
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -3458.6926, y: 218.8893}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -210998669400132786}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -5231363903094089195}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -210998669400132786}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -5193825220045572832}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  action: 2
+  lookAtGuid: 
+  offset: {x: 0, y: 0, z: 0}
+  positionOffset: 0.9
+  duration: 4
 --- !u!114 &-136320833281739139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5161,7 +5211,8 @@ MonoBehaviour:
   - {fileID: -7173908351656955380}
   - {fileID: -4580653946279348438}
   - {fileID: 6973770066364891686}
-  current: {fileID: 4853530443445230508}
+  - {fileID: -210998669400132786}
+  current: {fileID: 5534778600879205371}
 --- !u!114 &167549278740289401
 MonoBehaviour:
   m_ObjectHideFlags: 0
