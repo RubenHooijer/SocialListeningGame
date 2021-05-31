@@ -1,4 +1,3 @@
-using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -33,7 +32,7 @@ public class MenuScreen : AbstractScreen<MenuScreen> {
 
     private void OnStartButtonClicked() {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        FadeScreen.Instance.FadeToBlack(1, () => {
+        FadeScreen.Instance.FadeToColor(Color.black, 1, () => {
             SceneManager.LoadSceneAsync(sceneToStart, LoadSceneMode.Additive);
             Hide();
         });
