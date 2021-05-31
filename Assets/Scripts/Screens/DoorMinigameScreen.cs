@@ -26,6 +26,7 @@ public class DoorMinigameScreen : AbstractScreen<DoorMinigameScreen> {
     private float sliderValue;
 
     protected override void OnShow() {
+        pushSlider.value = 0;
         gameObject.SetActive(true);
         pushButton.OnClickDirect += OnButtonClicked;
     }

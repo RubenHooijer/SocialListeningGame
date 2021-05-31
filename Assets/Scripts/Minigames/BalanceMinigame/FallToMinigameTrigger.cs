@@ -9,7 +9,7 @@ public class FallToMinigameTrigger : MonoBehaviour
     {
         if(other.tag == "Player" || other.tag == "Eustachius")
         {
-            BalanceMinigame.Instance.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //BalanceMinigame.Instance.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

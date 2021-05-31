@@ -75,6 +75,9 @@ public class GameController : GenericSingleton<GameController, GameController> {
             case StringEvent stringEventNode:
                 ProcessInvokeStringEventNode(stringEventNode);
                 break;
+            case CharacterIntStringEvent characterIntStringEventNode:
+                ProcessInvokeCharacterIntStringEventNode(characterIntStringEventNode);
+                break;
             case Dialogue.Camera cameraNode:
                 ProcessCameraNode(cameraNode);
                 break;
@@ -102,7 +105,11 @@ public class GameController : GenericSingleton<GameController, GameController> {
         if (obj.IsDone) {
             DialogueScreen.Instance.ShowSpeech(chat);
             if (string.IsNullOrEmpty(chat.sound) == false) {
-                RuntimeManager.PlayOneShot(chat.sound, CharacterView.GetView(chat.character).transform.position);
+                Transform characterTransform = CharacterView.GetView(chat.character).transform;
+                FMOD.Studio.EventInstance soundInstance = RuntimeManager.CreateInstance(chat.sound);
+                soundInstance.setProperty(FMOD.Studio.EVENT_PROPERTY.MAXIMUM_DISTANCE, 1000);
+                soundInstance.set3DAttributes(characterTransform.To3DAttributes());
+                soundInstance.start();
             }
         } else {
             Debug.Log("String was not done loading");
@@ -174,6 +181,15 @@ public class GameController : GenericSingleton<GameController, GameController> {
         HandleCurrentNode();
     }
 
+
+    private void ProcessInvokeCharacterIntStringEventNode(CharacterIntStringEvent eventNode) {
+        Debug.Log("Invoke CIS event");
+        eventNode.trigger.Raise(eventNode.character, eventNode.number, eventNode.guid);
+        eventNode.Next();
+
+        HandleCurrentNode();
+    }
+
     private void ProcessInvokeStringEventNode(StringEvent stringEventNode) {
         Debug.Log("String event");
         stringEventNode.trigger.Raise(stringEventNode.data);
@@ -214,7 +230,7 @@ public class GameController : GenericSingleton<GameController, GameController> {
 
     private void ProcessPlaySound(PlaySound playSoundNode) {
         Debug.Log("Play Sound");
-        RuntimeManager.PlayOneShot(playSoundNode.sound);
+        RuntimeManager.PlayOneShot(playSoundNode.sound, RuntimeManager.Listeners[0].transform.position);
 
         playSoundNode.Next();
         HandleCurrentNode();
