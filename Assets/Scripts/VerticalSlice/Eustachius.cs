@@ -18,10 +18,10 @@ public class Eustachius : PlayerMovementVS
         base.Start();
 
         canWalk = true;
-        if (DoorMinigame.Instance != null)
-        {
-            canWalk = false;
-        }
+        //if (DoorMinigame.Instance != null)
+        //{
+        //    canWalk = false;
+        //}
     }
 
     public void StandUp()

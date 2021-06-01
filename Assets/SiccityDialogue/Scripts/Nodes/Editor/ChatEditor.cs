@@ -23,7 +23,7 @@ namespace Dialogue {
             }
 
             NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("text"), GUIContent.none);
-            NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("audio"), GUIContent.none);
+            NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("sound"), GUIContent.none);
             if (node.answers.Count <= 0) {
                 if(GUILayout.Button("Add answers")) {
                     node.answers.Add(default);
@@ -43,7 +43,7 @@ namespace Dialogue {
             Chat node = target as Chat;
             if (node.character == null) return base.GetTint();
             else {
-                Color col = node.character.color;
+                Color col = node.character.NodeColor;
                 col.a = 1;
                 return col;
             }

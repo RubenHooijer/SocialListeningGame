@@ -4,16 +4,21 @@ using UnityEngine.SceneManagement;
 
 public class GameInitializer : MonoBehaviour {
 
-    [SerializeField, SceneName] private string[] startingScenes;
+    [SerializeField, SceneName] private string startScene;
+    [SerializeField] private GameController gameController;
 
     private void Awake() {
+        Application.targetFrameRate = 60;
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
+
         StartCoroutine(SceneLoadingRoutine());
     }
 
     private IEnumerator SceneLoadingRoutine() {
-        for (int i = 0; i < startingScenes.Length; i++) {
-            yield return SceneManager.LoadSceneAsync(startingScenes[i], LoadSceneMode.Additive);
-        }
+        yield return SceneManager.LoadSceneAsync(startScene, LoadSceneMode.Additive);
+
+        PasswordScreen.Instance.Show();
+        Instantiate(gameController);
 
         SceneManager.UnloadSceneAsync("Loader");
     }

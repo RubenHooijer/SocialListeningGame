@@ -36,7 +36,6 @@ public class BalancePlatform : MonoBehaviour
 
     public void Fall(int player)
     {
-        inputManager.DisableInput();
         balanceMinigame.PlayerBalanceMoveSpeed = 0;
         if(player == 0)
         {
