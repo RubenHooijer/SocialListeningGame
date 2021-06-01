@@ -535,7 +535,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -200, y: -152}
+  position: {x: -232, y: -184}
   ports:
     keys:
     - answers
@@ -1794,7 +1794,7 @@ MonoBehaviour:
   - {fileID: 5363878919528142069}
   - {fileID: -6225097408085381987}
   - {fileID: 3558948870801545638}
-  current: {fileID: 5950367318219895205}
+  current: {fileID: -3456333649664268257}
 --- !u!114 &74291547113641043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2477,7 +2477,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 424, y: -248}
+  position: {x: 424, y: -184}
   ports:
     keys:
     - answers
@@ -2632,9 +2632,6 @@ MonoBehaviour:
       - fieldName: output
         node: {fileID: -1658740007704363728}
         reroutePoints: []
-      - fieldName: output
-        node: {fileID: 7469131698385724963}
-        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -2736,7 +2733,10 @@ MonoBehaviour:
       _node: {fileID: 4661379717817720139}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: output
+        node: {fileID: 7469131698385724963}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -3649,7 +3649,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 4153036553169808194}
+        node: {fileID: 4661379717817720139}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
