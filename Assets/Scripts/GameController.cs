@@ -222,6 +222,13 @@ public class GameController : GenericSingleton<GameController, GameController> {
                     cameraNode.positionOffset,
                     cameraNode.duration);
                 break;
+            case Dialogue.Camera.Action.FollowOffset:
+                CinemachineTransposer cinemachineTransposer = virtualCamera.GetCinemachineComponent<CinemachineTransposer>();
+                DOTween.To(() => cinemachineTransposer.m_FollowOffset,
+                    x => cinemachineTransposer.m_FollowOffset = x,
+                    cameraNode.offset,
+                    cameraNode.duration);
+                break;
         }
         cameraNode.Next();
 

@@ -9,23 +9,25 @@ public class FadeScreen : AbstractScreen<FadeScreen> {
     [SerializeField] private VoidEventChannelSO FadeFromCompleted;
     [SerializeField] private Image fadeImage;
 
-    public void InstantToBlack() => FadeToBlack(0, null);
-    public void FadeToBlack() => FadeToBlack(4, null);
-    public void FadeFromBlack() => FadeFromBlack(3, null);
+    public void InstantToBlack() => FadeToColor(Color.black, 0, null);
+    public void FadeToBlack() => FadeToColor(Color.black, 4, null);
+    public void FadeFromBlack() => FadeFromColor(Color.black, 3, null);
+    public void FadeToWhite() => FadeToColor(Color.white, 2, null);
+    public void FadeFromWhite() => FadeFromColor(Color.white, 3, null);
 
-    public void FadeToBlack(float time = 1, Action onDone = null) {
+    public void FadeToColor(Color toColor, float time = 1, Action onDone = null) {
         onDone += FadeToCompleted.Raise;
 
-        fadeImage.color = Color.black;
+        fadeImage.color = toColor;
         fadeImage.DOKill();
         fadeImage.DOFade(1, time).From(0)
             .OnComplete(() => onDone?.Invoke());
     }
 
-    public void FadeFromBlack(float time = 1, Action onDone = null) {
+    public void FadeFromColor(Color fromColor, float time = 1, Action onDone = null) {
         onDone += FadeFromCompleted.Raise;
 
-        fadeImage.color = Color.black;
+        fadeImage.color = fromColor;
         fadeImage.DOKill();
         fadeImage.DOFade(0, time).From(1)
             .OnComplete(() => onDone?.Invoke());
