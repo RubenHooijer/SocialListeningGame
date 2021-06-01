@@ -240,7 +240,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 8534710077351491265}
+        node: {fileID: -230896906494801110}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3668,6 +3668,56 @@ MonoBehaviour:
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
   animationTrigger: 1423206613
+--- !u!114 &-230896906494801110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39df1b55c7c080240909be491745362f, type: 3}
+  m_Name: Play Animation Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1304, y: 328}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -230896906494801110}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -8641428733954071009}
+        reroutePoints: []
+      - fieldName: output
+        node: {fileID: 8922616754143763379}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -230896906494801110}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 8534710077351491265}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  trigger: {fileID: 11400000, guid: f1e850f753cf12645a92b09087acc16a, type: 2}
+  animationTrigger: 1653370069
 --- !u!114 &-143940243207058772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3898,6 +3948,8 @@ MonoBehaviour:
   - {fileID: -5791654720656126118}
   - {fileID: 5253330369499568679}
   - {fileID: -3951991392856166896}
+  - {fileID: -230896906494801110}
+  - {fileID: 7710818270576003244}
   current: {fileID: -7489443199931454907}
 --- !u!114 &112714869004686086
 MonoBehaviour:
@@ -5951,7 +6003,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1720, y: 280}
+  position: {x: 1928, y: 264}
   ports:
     keys:
     - input
@@ -5975,7 +6027,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 7672625588697660538}
+        node: {fileID: 7710818270576003244}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -7598,7 +7650,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2408, y: 248}
+  position: {x: 2616, y: 232}
   ports:
     keys:
     - answers
@@ -8004,7 +8056,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2024, y: 248}
+  position: {x: 2232, y: 232}
   ports:
     keys:
     - answers
@@ -8027,7 +8079,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 4253316592235439704}
+        node: {fileID: 7710818270576003244}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -8058,6 +8110,53 @@ MonoBehaviour:
     m_WaitForCompletion: 1
   sound: event:/eustachius/voice dialog/blij
   answers: []
+--- !u!114 &7710818270576003244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39df1b55c7c080240909be491745362f, type: 3}
+  m_Name: Play Animation Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2104, y: 440}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 7710818270576003244}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 4253316592235439704}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 7710818270576003244}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 7672625588697660538}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  trigger: {fileID: 11400000, guid: f1e850f753cf12645a92b09087acc16a, type: 2}
+  animationTrigger: 1423206613
 --- !u!114 &7927541014056656413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8509,7 +8608,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1352, y: 248}
+  position: {x: 1560, y: 232}
   ports:
     keys:
     - answers
@@ -8532,10 +8631,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -8641428733954071009}
-        reroutePoints: []
-      - fieldName: output
-        node: {fileID: 8922616754143763379}
+        node: {fileID: -230896906494801110}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -8663,7 +8759,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 8534710077351491265}
+        node: {fileID: -230896906494801110}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
