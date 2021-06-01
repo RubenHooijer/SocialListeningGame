@@ -298,7 +298,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/eustachius/voice dialog/bang
   answers: []
 --- !u!114 &-7860746970482900921
 MonoBehaviour:
@@ -499,7 +499,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/eustachius/voice dialog/bang
   answers:
   - {fileID: -6159902935874700336}
   - {fileID: -5307015509460335563}
@@ -575,7 +575,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/eustachius/voice dialog/bang
   answers: []
 --- !u!114 &-7325934691777771673
 MonoBehaviour:
@@ -1245,7 +1245,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/blij
   answers: []
 --- !u!114 &-5307015509460335563
 MonoBehaviour:
@@ -1512,7 +1512,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/eustachius/voice dialog/bang
   answers: []
 --- !u!114 &-3341264399590808168
 MonoBehaviour:
@@ -1715,7 +1715,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15720, y: 440}
+  position: {x: 15768, y: 440}
   ports:
     keys:
     - input
@@ -1862,7 +1862,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-1758171257536833766
 MonoBehaviour:
@@ -2023,7 +2023,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-1295437107967964774
 MonoBehaviour:
@@ -2278,7 +2278,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-451098520197887345
 MonoBehaviour:
@@ -2342,7 +2342,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 16376, y: 440}
+  position: {x: 16424, y: 440}
   ports:
     keys:
     - input
@@ -2443,7 +2443,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &-251987824645753873
 MonoBehaviour:
@@ -2631,6 +2631,7 @@ MonoBehaviour:
   - {fileID: -1723831367624914932}
   - {fileID: 5723011300910250920}
   - {fileID: -7325934691777771673}
+  - {fileID: 7809973855936952978}
   current: {fileID: -7571615652048154777}
 --- !u!114 &326264160816092306
 MonoBehaviour:
@@ -3179,7 +3180,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &4108902547631845949
 MonoBehaviour:
@@ -3417,7 +3418,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 9042848535355777672}
+        node: {fileID: 7809973855936952978}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3591,7 +3592,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &5152417294449598623
 MonoBehaviour:
@@ -3803,7 +3804,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &6172343062823243531
 MonoBehaviour:
@@ -3917,7 +3918,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/player/voice dialog/neutraal
   answers: []
 --- !u!114 &6426056194150880050
 MonoBehaviour:
@@ -4113,6 +4114,52 @@ MonoBehaviour:
   Time: 1
   PathGuid: fbb2ff7b-e407-43c5-b57e-2057857f93bb
   trigger: {fileID: 0}
+--- !u!114 &7809973855936952978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d42391debb518468600591d4898dc0, type: 3}
+  m_Name: Play Sound
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 14888, y: 200}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 7809973855936952978}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 4846562651092791805}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 7809973855936952978}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 9042848535355777672}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  sound: event:/eustachius/voice dialog/valt van de brug
 --- !u!114 &8064948700166524600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4276,7 +4323,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/eustachius/voice dialog/bang
   answers: []
 --- !u!114 &8648930561729352805
 MonoBehaviour:
@@ -4291,7 +4338,7 @@ MonoBehaviour:
   m_Name: Invoke Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 16056, y: 440}
+  position: {x: 16104, y: 440}
   ports:
     keys:
     - input
@@ -4398,7 +4445,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 4846562651092791805}
+        node: {fileID: 7809973855936952978}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
