@@ -8,8 +8,10 @@ public class CharacterView : MonoBehaviour {
 
     [SerializeField] private CharacterType character;
     [SerializeField] private MoverComponent mover;
+    [SerializeField] private Animator animator;
 
     public CharacterType Character => character;
+    public Animator Animator => animator;
 
     public static CharacterView GetView(CharacterType character) {
         return CharacterViews.Find(x => x.Character == character);

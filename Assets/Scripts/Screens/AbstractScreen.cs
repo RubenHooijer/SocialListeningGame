@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public abstract class AbstractScreen<T> : MonoBehaviour where T : Component {
 
@@ -25,11 +24,6 @@ public abstract class AbstractScreen<T> : MonoBehaviour where T : Component {
         } else {
             Destroy(gameObject);
         }
-    }
-
-    public void LoadScene(int scene)
-    {
-        SceneManager.LoadScene(scene);
     }
 
     public void Show() {

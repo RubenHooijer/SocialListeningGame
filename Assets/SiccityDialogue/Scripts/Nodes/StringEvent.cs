@@ -1,7 +1,7 @@
 ﻿using XNode;
 
 namespace Dialogue {
-    [NodeTint("#34dbeb")]
+    [NodeTint("#7875ff")]
     [CreateNodeMenu("String Event", order = 0)]
     [NodeWidth(250)]
     public class StringEvent : DialogueBaseNode {

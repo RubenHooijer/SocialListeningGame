@@ -6,7 +6,7 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
 {
     private InputManager inputManager;
 
-    private FadeScript fadeScript;
+    //private FadeScript fadeScript;
 
     public PlayerMovementVS playerMovement;
     private Eustachius eustachius;
@@ -37,7 +37,7 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
 
     public void InitializeMinigame()
     {
-        fadeScript = FadeScript.Instance;
+        //fadeScript = FadeScript.Instance;
 
         playerMovement = PlayerMovementVS.Instance;
         eustachius = Eustachius.Instance;
@@ -45,9 +45,6 @@ public class BalanceMinigame : AbstractScreen<BalanceMinigame>
         eustachius.canWalk = true;
 
         inputManager = InputManager.Instance;
-        inputManager.EnableInput();
-
-        inputManager.JumpPerformed.AddListener(JumpToPlatform);
 
         currentPlatform = 0;
     }
