@@ -25,7 +25,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 923890304889471695}
+        node: {fileID: 5329485030998936219}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: Start Stop
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1144, y: 120}
+  position: {x: -1272, y: 120}
   ports:
     keys:
     - input
@@ -372,7 +372,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   waitFor: 0
-  Time: 2
+  Time: 4
   PathGuid: 
   trigger: {fileID: 0}
 --- !u!114 &-3130783505653776004
@@ -699,7 +699,8 @@ MonoBehaviour:
   - {fileID: 923890304889471695}
   - {fileID: 6115728762496878426}
   - {fileID: 6263696508722070105}
-  current: {fileID: -8844821240094817783}
+  - {fileID: 5329485030998936219}
+  current: {fileID: 923890304889471695}
 --- !u!114 &385394450017413946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,7 +806,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 6840, y: 104}
+  position: {x: 6792, y: 216}
   ports:
     keys:
     - input
@@ -815,10 +816,7 @@ MonoBehaviour:
       _node: {fileID: 923890304889471695}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: output
-        node: {fileID: 4608139389998645691}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -827,10 +825,7 @@ MonoBehaviour:
       _node: {fileID: 923890304889471695}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: -8844821240094817783}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -999,7 +994,7 @@ MonoBehaviour:
   m_Name: Invoke Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 6424, y: 120}
+  position: {x: 6360, y: 104}
   ports:
     keys:
     - input
@@ -1023,7 +1018,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 923890304889471695}
+        node: {fileID: 5329485030998936219}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1031,7 +1026,7 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  trigger: {fileID: 11400000, guid: 2304a6b642ab1584c8b30b6b633b441b, type: 2}
+  trigger: {fileID: 11400000, guid: 4e256c827c46fe84ebb7de441b4d9e06, type: 2}
 --- !u!114 &4895041500452093537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1080,6 +1075,55 @@ MonoBehaviour:
   waitFor: 1
   Time: 1
   PathGuid: 6ff86b50-d3e5-4388-9110-ad7254d4cb81
+  trigger: {fileID: 0}
+--- !u!114 &5329485030998936219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb04462412d7c946a5d072ca6cce8bb, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 6824, y: -40}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 5329485030998936219}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 4608139389998645691}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 5329485030998936219}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -8844821240094817783}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  waitFor: 0
+  Time: 5
+  PathGuid: 
   trigger: {fileID: 0}
 --- !u!114 &5528621181773338164
 MonoBehaviour:
@@ -1273,7 +1317,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   waitFor: 0
-  Time: 6
+  Time: 4
   PathGuid: 
   trigger: {fileID: 0}
 --- !u!114 &7286610004804163342
