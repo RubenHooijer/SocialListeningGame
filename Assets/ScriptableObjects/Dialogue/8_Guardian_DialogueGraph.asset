@@ -591,6 +591,52 @@ MonoBehaviour:
     m_WaitForCompletion: 1
   sound: event:/player/voice dialog/neutraal
   answers: []
+--- !u!114 &-7788922802871117749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b21e1e04181b5c4e8e397ac1ca53138, type: 3}
+  m_Name: Invoke Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -40, y: -136}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -7788922802871117749}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -1000161200979151867}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -7788922802871117749}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4854677807413097845}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  trigger: {fileID: 11400000, guid: 7e5ba09ec99c2394c952bc17ecd92a79, type: 2}
 --- !u!114 &-7511398571232908269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -991,7 +1037,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:b435209c9e82e994881e43c4d2dacbc6
     m_TableEntryReference:
-      m_KeyId: 349926843060225
+      m_KeyId: 362740131401738
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -1512,7 +1558,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:b435209c9e82e994881e43c4d2dacbc6
     m_TableEntryReference:
-      m_KeyId: 288722096129
+      m_KeyId: 362740131401737
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -3671,7 +3717,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 4854677807413097845}
+        node: {fileID: -7788922802871117749}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -4270,7 +4316,8 @@ MonoBehaviour:
   - {fileID: -2552031402578036909}
   - {fileID: -3751575880551425990}
   - {fileID: 2971366110441535108}
-  current: {fileID: 8952741715560933548}
+  - {fileID: -7788922802871117749}
+  current: {fileID: 5421390701882343587}
 --- !u!114 &323245675244641619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6553,7 +6600,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -1000161200979151867}
+        node: {fileID: -7788922802871117749}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
