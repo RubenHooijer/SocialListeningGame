@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="MixerGroup" id="{d319cf92-6c1c-4125-9da1-0f6ab36f6bee}">
 		<property name="name">
-			<value>sounds</value>
+			<value>sounds inside cave</value>
 		</property>
 		<relationship name="automators">
 			<destination>{c7bc32de-d315-4b7e-bf8f-ec54fdb451d7}</destination>
@@ -27,6 +27,7 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{0ddc902f-e2d8-4d00-b180-29cfc1250014}">
 		<relationship name="effects">
+			<destination>{12b59996-36ff-4b6a-b5f5-9199feb72fc7}</destination>
 			<destination>{3192d15f-9337-4825-b99a-a339bdc542d0}</destination>
 		</relationship>
 	</object>
@@ -38,6 +39,17 @@
 		<relationship name="automationPoints">
 			<destination>{ac983a59-8d72-4b7b-b68b-026f24d324ae}</destination>
 			<destination>{e811b15c-63c1-47a5-9f3a-d839a4eb4137}</destination>
+		</relationship>
+	</object>
+	<object class="MixerSend" id="{12b59996-36ff-4b6a-b5f5-9199feb72fc7}">
+		<property name="level">
+			<value>-9</value>
+		</property>
+		<property name="inputFormat">
+			<value>2</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{c9f22ec0-204f-4c34-a863-dfab3b76d0f5}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{3192d15f-9337-4825-b99a-a339bdc542d0}" />
