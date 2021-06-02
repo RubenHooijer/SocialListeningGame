@@ -17,6 +17,14 @@ public class TimerScreen : AbstractScreen<TimerScreen> {
 
     private bool isFinished = false;
 
+    public void ShowShortTime() {
+        if (animatedWidget.IsShowing) { return; }
+        Show();
+        CoroutineHelper.Delay(10, () => {
+            Hide();
+        });
+    }
+
     protected override void Awake() {
         base.Awake();
         gameObject.SetActive(true);
