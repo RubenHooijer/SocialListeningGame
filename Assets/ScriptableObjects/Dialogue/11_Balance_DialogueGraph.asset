@@ -339,7 +339,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -6191113899333286767}
+        node: {fileID: -621742628647182710}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -471,9 +471,9 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: bd5d826dd37a3604d9072bd438718d6b, type: 2}
   text:
     m_TableReference:
-      m_TableCollectionName: GUID:88e009e224c9add489ad38423aaf9d8e
+      m_TableCollectionName: GUID:16d214cbc57b00d40a7409c079b2e15d
     m_TableEntryReference:
-      m_KeyId: 70883044331520
+      m_KeyId: 288722096134
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -822,7 +822,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -7571615652048154777}
+        node: {fileID: -621742628647182710}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1361,7 +1361,7 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: bd5d826dd37a3604d9072bd438718d6b, type: 2}
   text:
     m_TableReference:
-      m_TableCollectionName: GUID:88e009e224c9add489ad38423aaf9d8e
+      m_TableCollectionName: GUID:16d214cbc57b00d40a7409c079b2e15d
     m_TableEntryReference:
       m_KeyId: 70883044331520
       m_Key: 
@@ -2024,6 +2024,52 @@ MonoBehaviour:
     m_WaitForCompletion: 1
   sound: event:/player/voice dialog/neutraal
   answers: []
+--- !u!114 &-621742628647182710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b21e1e04181b5c4e8e397ac1ca53138, type: 3}
+  m_Name: Invoke Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 7576, y: 88}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -621742628647182710}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -6191113899333286767}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -621742628647182710}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -7571615652048154777}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  trigger: {fileID: 11400000, guid: d69404a9b6374b64080ece239fd94f71, type: 2}
 --- !u!114 &-451098520197887345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2370,6 +2416,8 @@ MonoBehaviour:
   - {fileID: 5969869798723756853}
   - {fileID: 3237626302076779002}
   - {fileID: 1559905176272734091}
+  - {fileID: 6825315198709971761}
+  - {fileID: -621742628647182710}
   current: {fileID: 0}
 --- !u!114 &326264160816092306
 MonoBehaviour:
@@ -3639,7 +3687,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 6316202397138384558}
+        node: {fileID: 6825315198709971761}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -3759,7 +3807,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 5969869798723756853}
+        node: {fileID: 6825315198709971761}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3772,12 +3820,58 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:88e009e224c9add489ad38423aaf9d8e
     m_TableEntryReference:
-      m_KeyId: 70883044331520
+      m_KeyId: 70883044331521
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
   sound: event:/player/voice dialog/neutraal
   answers: []
+--- !u!114 &6825315198709971761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b21e1e04181b5c4e8e397ac1ca53138, type: 3}
+  m_Name: Invoke Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 10952, y: 88}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 6825315198709971761}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 6316202397138384558}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 6825315198709971761}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 5969869798723756853}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  trigger: {fileID: 11400000, guid: 5b0a765f258ba26479f4c6d3d432ab86, type: 2}
 --- !u!114 &7141460105549992797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4080,9 +4174,9 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: bd5d826dd37a3604d9072bd438718d6b, type: 2}
   text:
     m_TableReference:
-      m_TableCollectionName: GUID:88e009e224c9add489ad38423aaf9d8e
+      m_TableCollectionName: GUID:16d214cbc57b00d40a7409c079b2e15d
     m_TableEntryReference:
-      m_KeyId: 70883044331520
+      m_KeyId: 70882993999872
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1

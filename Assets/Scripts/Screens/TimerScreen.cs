@@ -8,18 +8,34 @@ public class TimerScreen : AbstractScreen<TimerScreen> {
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private AnimatedWidget animatedWidget;
 
-    protected override void OnShow() {
+    protected override void Awake() {
+        base.Awake();
         gameObject.SetActive(true);
+        Hide();
+    }
+
+    protected override void OnShow() {
+        animatedWidget.Show();
     }
 
     protected override void OnHide() {
         animatedWidget.Hide();
-
-        CoroutineHelper.Delay(animatedWidget.HideDuration + 0.2f, () => gameObject.SetActive(false));
     }
 
     private void Update() {
-        TimeSpan timespan = TimeSpan.FromSeconds(maxPlayTimeInSeconds - Time.time);
+        float timeLeft = maxPlayTimeInSeconds - Time.time;
+
+        if (timeLeft <= 10) {
+            animatedWidget.Show();
+        }
+
+        if (animatedWidget.IsShowing) { 
+            UpdateText(timeLeft);
+        }
+    }
+
+    private void UpdateText(float timeLeft) {
+        TimeSpan timespan = TimeSpan.FromSeconds(timeLeft);
         string minuteString = timespan.Minutes.ToString();
         string secondString = timespan.Seconds.ToString();
         minuteString = minuteString.PadLeft(2, '0');
