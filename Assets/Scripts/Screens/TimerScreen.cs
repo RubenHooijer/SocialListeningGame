@@ -6,13 +6,16 @@ public class TimerScreen : AbstractScreen<TimerScreen> {
 
     [SerializeField] private float maxPlayTimeInSeconds = 1500;
     [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private AnimatedWidget animatedWidget;
 
     protected override void OnShow() {
         gameObject.SetActive(true);
     }
 
     protected override void OnHide() {
-        gameObject.SetActive(false);
+        animatedWidget.Hide();
+
+        CoroutineHelper.Delay(animatedWidget.HideDuration + 0.2f, () => gameObject.SetActive(false));
     }
 
     private void Update() {
