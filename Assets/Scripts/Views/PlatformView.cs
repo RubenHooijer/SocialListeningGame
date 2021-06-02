@@ -1,5 +1,7 @@
 ﻿using DG.Tweening;
 using Dialogue;
+using FMOD.Studio;
+using FMODUnity;
 using NaughtyAttributes;
 using Oasez.Extensions;
 using System.Collections;
@@ -12,6 +14,9 @@ public class PlatformView : MonoBehaviour, IGuidable {
     private readonly static List<PlatformView> Views = new List<PlatformView>();
 
     [SerializeField] [STRGuid] private string guid;
+
+    [Header("Audio")]
+    [SerializeField, EventRef] private string tiltAudio;
 
     [Header("Settings")]
     [SerializeField] private float imbalanceMultiplier = 0.003f;
@@ -38,6 +43,7 @@ public class PlatformView : MonoBehaviour, IGuidable {
     [SerializeField, Disable] private float timeInBalance;
 
     private List<CharacterView> charactersOnPlatform = new List<CharacterView>();
+    private EventInstance tiltAudioInstance;
 
     [Button]
     private void DebugCompleteBalancing() {
@@ -92,15 +98,26 @@ public class PlatformView : MonoBehaviour, IGuidable {
         onCompletedBalancingEvent.Raise();
         DOTween.To(() => balance, x => balance = x, 0, 1.4f).SetEase(Ease.InOutSine)
             .OnUpdate(ShowBalance);
+        tiltAudioInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     private void StartBalancing() {
         isBalancing = true;
+        tiltAudioInstance = RuntimeManager.CreateInstance(tiltAudio);
+        tiltAudioInstance.set3DAttributes(RuntimeManager.Listeners[0].transform.To3DAttributes());
+        tiltAudioInstance.start();
         StartCoroutine(BalancingRoutine());
     }
 
     private void ShowBalance() {
         platform.localEulerAngles = new Vector3(-balance * maxRotationAngle, 0, 0);
+    }
+
+    private void UpdateSound(float tiltSpeed) {
+        float positiveBalance = Mathf.Abs(balance);
+        tiltAudioInstance.setParameterByName("plateau_tilt", positiveBalance);
+        float roundedTiltSpeed = positiveBalance == 1 ? 1 : Mathf.Abs(tiltSpeed * 100);
+        tiltAudioInstance.setParameterByName("plateau_tilt_speed", roundedTiltSpeed);
     }
 
     private void UpdateCharacterBalancing() {
@@ -126,6 +143,7 @@ public class PlatformView : MonoBehaviour, IGuidable {
 
             balance += imbalanceForce;
             balance = Mathf.Clamp(balance, -1, 1);
+            UpdateSound(imbalanceForce);
             ShowBalance();
             UpdateCharacterBalancing();
 
