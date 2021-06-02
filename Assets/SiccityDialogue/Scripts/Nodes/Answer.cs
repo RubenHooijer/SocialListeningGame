@@ -7,7 +7,7 @@ namespace Dialogue {
     public class Answer : DialogueBaseNode, IAnswer {
 
         public string Text => choice.GetLocalizedString();
-        public bool IsHidden => (HideIfVisited && IsVisited) || (HideIfSpecificNodeIsVisited && IsSpecificNodeVisited);
+        public bool IsHidden => false;
         public bool IsVisited { get => isVisited; set => isVisited = value; }
         public bool HideIfVisited => hideIfVisited;
         public bool HideIfSpecificNodeIsVisited => hideIfSpecificNodeIsVisited;
