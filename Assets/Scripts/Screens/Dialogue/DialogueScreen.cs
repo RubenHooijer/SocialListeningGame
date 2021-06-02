@@ -33,7 +33,7 @@ public class DialogueScreen : AbstractScreen<DialogueScreen> {
     [SerializeField] private Image characterIcon;
     [SerializeField] private TextMeshProUGUI characterNameTextField;
     [SerializeField] private AnswerItem[] answerItems;
-    [SerializeField] private Button skipSpeechButton;
+    [SerializeField] private AnimatedButton skipSpeechButton;
 
     public void ShowSpeech(IChat chat) {
         Show();
@@ -69,12 +69,12 @@ public class DialogueScreen : AbstractScreen<DialogueScreen> {
 
     protected override void OnShow() {
         gameObject.SetActive(true);
-        skipSpeechButton.onClick.AddListener(OnSkipButtonClicked.Invoke);
+        skipSpeechButton.OnClick += OnSkipButtonClicked.Invoke;
     }
 
     protected override void OnHide() {
         gameObject.SetActive(false);
-        skipSpeechButton.onClick.RemoveListener(OnSkipButtonClicked.Invoke);
+        skipSpeechButton.OnClick -= OnSkipButtonClicked.Invoke;
     }
 
     private void OnAnswerClicked(int answerIndex) {
