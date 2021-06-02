@@ -3264,7 +3264,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 3357988165592361533}
+        node: {fileID: 4294649369440508543}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -4580,6 +4580,7 @@ MonoBehaviour:
   - {fileID: 7809658738732863358}
   - {fileID: 4804218746517193284}
   - {fileID: -904387552962179246}
+  - {fileID: 4294649369440508543}
   current: {fileID: -3419213824968945345}
 --- !u!114 &323245675244641619
 MonoBehaviour:
@@ -6063,7 +6064,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -2010801874072500004}
+        node: {fileID: 4294649369440508543}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -6808,6 +6809,54 @@ MonoBehaviour:
   hideIfVisited: 1
   hideIfSpecificNodeIsVisited: 0
   specificNode: {fileID: 0}
+--- !u!114 &4294649369440508543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9073e53d55b1624fb2e56485e6ee834, type: 3}
+  m_Name: Progression Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 15080, y: 568}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 4294649369440508543}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -2010801874072500004}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 4294649369440508543}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 3357988165592361533}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  Key:
+    guid: cd269996-9a0e-4b0b-a423-586940997c9d
+  action: 0
 --- !u!114 &4480554101332219444
 MonoBehaviour:
   m_ObjectHideFlags: 0

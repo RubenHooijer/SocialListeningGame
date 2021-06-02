@@ -275,6 +275,8 @@ GameObject:
   - component: {fileID: 8593901396496759905}
   - component: {fileID: 8593901396496759838}
   - component: {fileID: 8204728722578560230}
+  - component: {fileID: 810197796464585905}
+  - component: {fileID: 3174396296984496350}
   m_Layer: 5
   m_Name: TimerScreen
   m_TagString: Untagged
@@ -322,6 +324,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e982d5e300f2741bb19938f330ebbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  failScene: 14_BecomeEustachius
   maxPlayTimeInSeconds: 1500
+  showTimerThreshold: 60
+  gameFinishedKey:
+    guid: cd269996-9a0e-4b0b-a423-586940997c9d
   timerText: {fileID: 3861415308662716048}
   animatedWidget: {fileID: 1902640496867331126}
+--- !u!114 &810197796464585905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8593901396496759906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 157dfba0081c35b43b688d5fa2b45048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 11400000, guid: d69404a9b6374b64080ece239fd94f71, type: 2}
+  RemoveListenerOnDestroy: 0
+  onEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8204728722578560230}
+        m_TargetAssemblyTypeName: AbstractScreen`1[[TimerScreen, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3174396296984496350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8593901396496759906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 157dfba0081c35b43b688d5fa2b45048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 11400000, guid: 5b0a765f258ba26479f4c6d3d432ab86, type: 2}
+  RemoveListenerOnDestroy: 0
+  onEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8204728722578560230}
+        m_TargetAssemblyTypeName: AbstractScreen`1[[TimerScreen, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

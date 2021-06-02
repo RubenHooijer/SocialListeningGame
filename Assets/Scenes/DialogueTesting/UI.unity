@@ -240,8 +240,6 @@ GameObject:
   - component: {fileID: 2047594575}
   - component: {fileID: 2047594579}
   - component: {fileID: 2047594578}
-  - component: {fileID: 2047594580}
-  - component: {fileID: 2047594577}
   m_Layer: 5
   m_Name: --UI--
   m_TagString: Untagged
@@ -513,35 +511,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2047594577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047594566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 157dfba0081c35b43b688d5fa2b45048, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventChannel: {fileID: 11400000, guid: 5b0a765f258ba26479f4c6d3d432ab86, type: 2}
-  RemoveListenerOnDestroy: 0
-  onEventRaised:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6176805329900771891}
-        m_TargetAssemblyTypeName: AbstractScreen`1[[TimerScreen, Assembly-CSharp
-        m_MethodName: Hide
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &2047594578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -604,35 +573,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: AnimatedWidget, Assembly-CSharp
         m_MethodName: Show
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2047594580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047594566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 157dfba0081c35b43b688d5fa2b45048, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventChannel: {fileID: 11400000, guid: d69404a9b6374b64080ece239fd94f71, type: 2}
-  RemoveListenerOnDestroy: 0
-  onEventRaised:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6176805329900771891}
-        m_TargetAssemblyTypeName: AbstractScreen`1[[TimerScreen, Assembly-CSharp
-        m_MethodName: Show
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1400,11 +1340,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2047594570}
     m_Modifications:
-    - target: {fileID: 8204728722578560230, guid: 60872aa6ec7bd7f4da681ed7cf441eb1,
-        type: 3}
-      propertyPath: maxPlayTime
-      value: 1500
-      objectReference: {fileID: 0}
     - target: {fileID: 8593901396496759905, guid: 60872aa6ec7bd7f4da681ed7cf441eb1,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1517,18 +1452,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60872aa6ec7bd7f4da681ed7cf441eb1, type: 3}
---- !u!114 &6176805329900771891 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8204728722578560230, guid: 60872aa6ec7bd7f4da681ed7cf441eb1,
-    type: 3}
-  m_PrefabInstance: {fileID: 6176805329900771890}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e982d5e300f2741bb19938f330ebbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7140132674496719240
 PrefabInstance:
   m_ObjectHideFlags: 0
