@@ -53,6 +53,7 @@ public class MenuScreen : AbstractScreen<MenuScreen> {
             SceneManager.LoadSceneAsync(sceneToStart, LoadSceneMode.Additive);
             Hide();
         });
+        TimerScreen.gameStartTime = Time.time;
     }
 
     private void OnSoundToggled(bool isEnabled) {
