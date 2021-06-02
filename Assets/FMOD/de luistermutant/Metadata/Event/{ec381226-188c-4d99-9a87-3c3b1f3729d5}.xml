@@ -32,7 +32,6 @@
 			<destination>{03c62f6c-cd73-4211-9e34-eef47cce2357}</destination>
 		</relationship>
 		<relationship name="parameters">
-			<destination>{2c07f5c6-fca2-46ef-ae84-ed947a500c9a}</destination>
 			<destination>{148b93aa-89f0-4c33-aaa9-27a93b5da27f}</destination>
 		</relationship>
 		<relationship name="banks">
@@ -60,7 +59,7 @@
 			<destination>{3a183cce-dafc-4505-a7c8-7dd9ad61d3e6}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{86d4b218-a982-4d27-8ec9-d4f249c32617}</destination>
+			<destination>{ca99659c-ee92-4190-b4cf-7c3aca108c46}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{605304ad-2572-4c92-b194-25b0e2c4a73e}" />
@@ -76,11 +75,6 @@
 	<object class="Timeline" id="{03c62f6c-cd73-4211-9e34-eef47cce2357}">
 		<relationship name="modules">
 			<destination>{6a4d6e6a-cd08-4c51-8ab3-31af3132c99f}</destination>
-		</relationship>
-	</object>
-	<object class="ParameterProxy" id="{2c07f5c6-fca2-46ef-ae84-ed947a500c9a}">
-		<relationship name="preset">
-			<destination>{1b3860a3-93e2-48ff-a977-cb2913b2942e}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{148b93aa-89f0-4c33-aaa9-27a93b5da27f}">
@@ -116,6 +110,9 @@
 	<object class="SingleSound" id="{6a4d6e6a-cd08-4c51-8ab3-31af3132c99f}">
 		<property name="length">
 			<value>1.4000000000000001</value>
+		</property>
+		<property name="volume">
+			<value>4</value>
 		</property>
 		<property name="pitch">
 			<value>-4.5</value>
@@ -156,7 +153,6 @@
 		<relationship name="effects">
 			<destination>{086c0834-db3d-4467-bbdb-886767eb48ad}</destination>
 			<destination>{221568fb-5373-431d-93cb-fdd3f9b6698e}</destination>
-			<destination>{ea85592a-6fea-4af7-8285-73fa5b539ff0}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b691a79d-e945-4c58-b79e-e7fece357821}" />
@@ -186,17 +182,6 @@
 	</object>
 	<object class="MixerBusFader" id="{086c0834-db3d-4467-bbdb-886767eb48ad}" />
 	<object class="SpatialiserEffect" id="{221568fb-5373-431d-93cb-fdd3f9b6698e}" />
-	<object class="MixerSend" id="{ea85592a-6fea-4af7-8285-73fa5b539ff0}">
-		<property name="level">
-			<value>-9</value>
-		</property>
-		<property name="inputFormat">
-			<value>2</value>
-		</property>
-		<relationship name="mixerReturn">
-			<destination>{c9f22ec0-204f-4c34-a863-dfab3b76d0f5}</destination>
-		</relationship>
-	</object>
 	<object class="AutomationPoint" id="{8f103bce-1a48-43be-b7d1-924c7d39aad8}">
 		<property name="position">
 			<value>0.65000000000000013</value>

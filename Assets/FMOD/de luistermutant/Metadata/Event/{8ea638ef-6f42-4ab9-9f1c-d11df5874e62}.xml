@@ -33,7 +33,6 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{05e7bb2c-d218-4a4e-8cd1-a60a84223f14}</destination>
-			<destination>{b27ca9b5-af2b-4e5d-9b61-0f68481ebdee}</destination>
 			<destination>{369c5611-0e72-4d87-900e-36e657d9f4dd}</destination>
 		</relationship>
 		<relationship name="banks">
@@ -64,7 +63,7 @@
 			<destination>{917e84e3-d5db-4d23-a15e-961d46431216}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{86d4b218-a982-4d27-8ec9-d4f249c32617}</destination>
+			<destination>{ca99659c-ee92-4190-b4cf-7c3aca108c46}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{31264f45-3d35-4bf5-9d73-b355f5d4beb2}" />
@@ -82,11 +81,6 @@
 	<object class="ActionSheet" id="{05e7bb2c-d218-4a4e-8cd1-a60a84223f14}">
 		<relationship name="modules">
 			<destination>{bfbd3642-65ad-4131-b8e8-2683a96447b0}</destination>
-		</relationship>
-	</object>
-	<object class="ParameterProxy" id="{b27ca9b5-af2b-4e5d-9b61-0f68481ebdee}">
-		<relationship name="preset">
-			<destination>{1b3860a3-93e2-48ff-a977-cb2913b2942e}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{369c5611-0e72-4d87-900e-36e657d9f4dd}">
@@ -150,7 +144,6 @@
 		<relationship name="effects">
 			<destination>{4755d8ba-627c-45d1-b4c0-c58a56043c5c}</destination>
 			<destination>{fc8f0016-feee-4e7d-b5c1-e64d1e5cbcd7}</destination>
-			<destination>{4c5fcbad-fa6d-40f2-a194-ecfaeaf4c9cd}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{50aad8a2-1ccf-436b-8cdb-be7d720f5d22}" />
@@ -180,17 +173,6 @@
 	</object>
 	<object class="MixerBusFader" id="{4755d8ba-627c-45d1-b4c0-c58a56043c5c}" />
 	<object class="SpatialiserEffect" id="{fc8f0016-feee-4e7d-b5c1-e64d1e5cbcd7}" />
-	<object class="MixerSend" id="{4c5fcbad-fa6d-40f2-a194-ecfaeaf4c9cd}">
-		<property name="level">
-			<value>-9</value>
-		</property>
-		<property name="inputFormat">
-			<value>2</value>
-		</property>
-		<relationship name="mixerReturn">
-			<destination>{c9f22ec0-204f-4c34-a863-dfab3b76d0f5}</destination>
-		</relationship>
-	</object>
 	<object class="MixerBusFader" id="{2af5f621-ba24-43cc-be39-87a72e7de472}" />
 	<object class="AutomationPoint" id="{1072004f-0704-4241-aebe-4f886ef11a92}">
 		<property name="position">
