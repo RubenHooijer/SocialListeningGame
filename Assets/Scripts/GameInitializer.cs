@@ -9,6 +9,7 @@ public class GameInitializer : MonoBehaviour {
 
     private void Awake() {
         Application.targetFrameRate = 60;
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
 
         StartCoroutine(SceneLoadingRoutine());
     }
@@ -16,7 +17,7 @@ public class GameInitializer : MonoBehaviour {
     private IEnumerator SceneLoadingRoutine() {
         yield return SceneManager.LoadSceneAsync(startScene, LoadSceneMode.Additive);
 
-        MenuScreen.Instance.Show();
+        PasswordScreen.Instance.Show();
         Instantiate(gameController);
 
         SceneManager.UnloadSceneAsync("Loader");
