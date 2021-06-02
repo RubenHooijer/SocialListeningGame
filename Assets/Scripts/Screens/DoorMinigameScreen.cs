@@ -30,6 +30,7 @@ public class DoorMinigameScreen : AbstractScreen<DoorMinigameScreen> {
 
     protected override void OnShow() {
         pushSlider.value = 0;
+        sliderValue = 0;
         slidingSoundInstance = RuntimeManager.CreateInstance(slidingSound);
         slidingSoundInstance.set3DAttributes(RuntimeManager.Listeners[0].transform.To3DAttributes());
         slidingSoundInstance.start();

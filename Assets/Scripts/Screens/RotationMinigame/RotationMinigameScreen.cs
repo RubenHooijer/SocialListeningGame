@@ -1,10 +1,15 @@
 ﻿using DG.Tweening;
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 
 public class RotationMinigameScreen : AbstractScreen<RotationMinigameScreen> {
 
     private const float DEFAULT_ROTATE_AMOUNT = 60;
     private const float HALF_ROTATION_AMOUNT = 180;
+
+    [Header("Audio")]
+    [SerializeField, EventRef] private string rotationSound;
 
     [Header("Settings")]
     [SerializeField] private float rotationDuration = 0.5f;
@@ -20,6 +25,7 @@ public class RotationMinigameScreen : AbstractScreen<RotationMinigameScreen> {
     [SerializeField] private VoidEventChannelSO onLockButtonClicked;
 
     private ItemContainer<LinkedButtonsItem, string> linkedButtonsContainer;
+    private EventInstance rotationAudioInstance;
 
     public void RotateCylinder(string guid, bool isUp) {
         CylinderView staticView = CylinderView.GetView(guid);
@@ -27,6 +33,19 @@ public class RotationMinigameScreen : AbstractScreen<RotationMinigameScreen> {
 
         staticView.transform.DOBlendableRotateBy(rotation, rotationDuration, RotateMode.FastBeyond360)
             .SetEase(Ease.OutBack, 1f);
+        rotationAudioInstance.set3DAttributes(RuntimeManager.Listeners[0].transform.To3DAttributes());
+        DOTween.To(
+            () => { rotationAudioInstance.getParameterByName("speed", out float value); return value; },
+            x => rotationAudioInstance.setParameterByName("speed", x),
+            0.7f,
+            0.4f)
+            .OnComplete(() =>
+                DOTween.To(
+                () => { rotationAudioInstance.getParameterByName("speed", out float value); return value; },
+                x => rotationAudioInstance.setParameterByName("speed", x),
+                0f,
+                0.3f)
+            );
     }
 
     public void ShowButtons(string guid) {
@@ -43,6 +62,8 @@ public class RotationMinigameScreen : AbstractScreen<RotationMinigameScreen> {
         base.Awake();
         linkedButtonsContainer = new ItemContainer<LinkedButtonsItem, string>(linkedButtonsTemplate);
         linkedButtonsContainer.UpdateContainer(cylinderGuids);
+
+        rotationAudioInstance = RuntimeManager.CreateInstance(rotationSound);
     }
 
     protected override void OnShow() {
@@ -50,6 +71,7 @@ public class RotationMinigameScreen : AbstractScreen<RotationMinigameScreen> {
 
         gameObject.SetActive(true);
         linkedButtonsContainer.Items.ForEach(x => x.SetInteractable(false));
+        rotationAudioInstance.start();
     }
 
     protected override void OnHide() {
@@ -57,6 +79,7 @@ public class RotationMinigameScreen : AbstractScreen<RotationMinigameScreen> {
 
         animatedWidgets.Foreach(x => x.Hide());
         CoroutineHelper.Delay(.2f, () => gameObject.SetActive(false));
+        rotationAudioInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     private void OnLockButtonClicked() {
