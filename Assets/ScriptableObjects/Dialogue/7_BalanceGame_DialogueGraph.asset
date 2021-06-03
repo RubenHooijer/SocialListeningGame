@@ -900,7 +900,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 4162359380523961391}
+        node: {fileID: 8756189248490565284}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1773,7 +1773,7 @@ MonoBehaviour:
   m_Name: Play Sound
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 13736, y: -1688}
+  position: {x: 13544, y: -1720}
   ports:
     keys:
     - input
@@ -4040,6 +4040,7 @@ MonoBehaviour:
   - {fileID: -2525222751872673870}
   - {fileID: -8506958968805859061}
   - {fileID: -6317078683219773172}
+  - {fileID: 8756189248490565284}
   current: {fileID: -7489443199931454907}
 --- !u!114 &112714869004686086
 MonoBehaviour:
@@ -6049,7 +6050,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -7489443199931454907}
+        node: {fileID: 8756189248490565284}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -8803,6 +8804,54 @@ MonoBehaviour:
   Time: 1
   PathGuid: 
   trigger: {fileID: 11400000, guid: 148746da1e15ed740aacbf50e7ab5c07, type: 2}
+--- !u!114 &8756189248490565284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9073e53d55b1624fb2e56485e6ee834, type: 3}
+  m_Name: Progression Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 19528, y: 3688}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 8756189248490565284}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 4162359380523961391}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 8756189248490565284}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -7489443199931454907}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  Key:
+    guid: d7be8d74-77c1-4f7a-bf5a-8ba797e1a886
+  action: 0
 --- !u!114 &8922616754143763379
 MonoBehaviour:
   m_ObjectHideFlags: 0

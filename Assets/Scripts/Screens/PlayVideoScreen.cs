@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using UnityEngine.Video;
 
 public class PlayVideoScreen : AbstractScreen<PlayVideoScreen> {
@@ -35,6 +36,8 @@ public class PlayVideoScreen : AbstractScreen<PlayVideoScreen> {
     private void OnVideoClipFinished(VideoPlayer source) {
         onVideoClipEnd.Raise();
         Hide();
+        videoPlayer.Stop();
+        videoPlayer.clip = null;
     }
 
 }
