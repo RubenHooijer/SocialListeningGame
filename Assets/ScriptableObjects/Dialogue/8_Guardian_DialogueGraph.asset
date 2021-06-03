@@ -3367,8 +3367,8 @@ MonoBehaviour:
   output: {fileID: 0}
   character: {fileID: 11400000, guid: bd5d826dd37a3604d9072bd438718d6b, type: 2}
   pathGuid: b4965265-800a-4ba3-8312-59fbfebc4fe2
-  useCharacterSpeed: 1
-  speed: 1
+  useCharacterSpeed: 0
+  speed: 5
 --- !u!114 &-1514242790082419129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4529,7 +4529,6 @@ MonoBehaviour:
   - {fileID: -9107579477803774323}
   - {fileID: 7764529502414953935}
   - {fileID: 2726604118493757586}
-  - {fileID: 3288564372601358844}
   - {fileID: 3793141427398403031}
   - {fileID: 711106576434857996}
   - {fileID: -3577100999827707045}
@@ -5094,7 +5093,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 067d573572362454a8b8603248465f42, type: 2}
-  animationTrigger: 409112111
+  animationTrigger: 1528336451
 --- !u!114 &1793223235278631643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5677,7 +5676,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 3288564372601358844}
+        node: {fileID: 8774567279983216060}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -6066,73 +6065,6 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 1
   sound: event:/main character/voice dialog/MC_Vraag
-  answers: []
---- !u!114 &3288564372601358844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
-  m_Name: Chat
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 17240, y: 248}
-  ports:
-    keys:
-    - answers
-    - input
-    - output
-    values:
-    - _fieldName: answers
-      _node: {fileID: 3288564372601358844}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Dialogue.Answer, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: input
-      _node: {fileID: 3288564372601358844}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: output
-        node: {fileID: 2726604118493757586}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 3288564372601358844}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 8774567279983216060}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  character: {fileID: 11400000, guid: bd5d826dd37a3604d9072bd438718d6b, type: 2}
-  text:
-    m_TableReference:
-      m_TableCollectionName: GUID:b435209c9e82e994881e43c4d2dacbc6
-    m_TableEntryReference:
-      m_KeyId: 58400280602
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/EU_HL_Onzeker
   answers: []
 --- !u!114 &3290392355842995852
 MonoBehaviour:
@@ -7369,7 +7301,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: f1e850f753cf12645a92b09087acc16a, type: 2}
-  animationTrigger: 409112111
+  animationTrigger: 1528336451
 --- !u!114 &5284964273766939999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8075,8 +8007,8 @@ MonoBehaviour:
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 7e26449f9494b9044bb86170a3774fd1, type: 2}
   pathGuid: 33465184-fe75-4b35-984e-e216fdc82fb4
-  useCharacterSpeed: 1
-  speed: 1
+  useCharacterSpeed: 0
+  speed: 5
 --- !u!114 &6545655887568264182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8808,7 +8740,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 3288564372601358844}
+        node: {fileID: 2726604118493757586}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
