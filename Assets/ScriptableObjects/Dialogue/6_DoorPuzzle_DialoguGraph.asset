@@ -949,6 +949,52 @@ MonoBehaviour:
   answers:
   - {fileID: -5950246699690183347}
   - {fileID: 6368575527013188691}
+--- !u!114 &-6847677842378668804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b21e1e04181b5c4e8e397ac1ca53138, type: 3}
+  m_Name: Invoke Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 10232, y: 296}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -6847677842378668804}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -4744994052299277539}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -6847677842378668804}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 450863053223192648}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  trigger: {fileID: 11400000, guid: d69404a9b6374b64080ece239fd94f71, type: 2}
 --- !u!114 &-6844644787323920268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1356,7 +1402,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 450863053223192648}
+        node: {fileID: -6847677842378668804}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3993,6 +4039,7 @@ MonoBehaviour:
   - {fileID: 4591898876323431647}
   - {fileID: 7821633757374860567}
   - {fileID: 2244599618400431066}
+  - {fileID: -6847677842378668804}
   current: {fileID: -31014249236441809}
 --- !u!114 &72100815202598939
 MonoBehaviour:
@@ -4180,7 +4227,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -4744994052299277539}
+        node: {fileID: -6847677842378668804}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
