@@ -1302,6 +1302,56 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   nextScene: 3_Sharon
+--- !u!114 &-4253110830635735128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951bd691349e4da4594ddb09d58c4931, type: 3}
+  m_Name: Camera
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 18376, y: 1752}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -4253110830635735128}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 326264160816092306}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -4253110830635735128}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4846562651092791805}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  action: 1
+  lookAtGuid: 
+  offset: {x: -4.19, y: 3, z: 0}
+  positionOffset: 0
+  duration: 1
 --- !u!114 &-4082642090981294268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2352,7 +2402,8 @@ MonoBehaviour:
   - {fileID: -621742628647182710}
   - {fileID: 3935510905823015429}
   - {fileID: 8225522700469991606}
-  current: {fileID: 0}
+  - {fileID: -4253110830635735128}
+  current: {fileID: -4563807122117842764}
 --- !u!114 &326264160816092306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2366,7 +2417,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 18232, y: 2008}
+  position: {x: 18200, y: 2008}
   ports:
     keys:
     - input
@@ -2390,7 +2441,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 4846562651092791805}
+        node: {fileID: -4253110830635735128}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3242,7 +3293,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 326264160816092306}
+        node: {fileID: -4253110830635735128}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -3689,7 +3740,7 @@ MonoBehaviour:
   output: {fileID: 0}
   action: 1
   lookAtGuid: 
-  offset: {x: -4.36, y: 0.4, z: 0}
+  offset: {x: -4.36, y: 3, z: 0}
   positionOffset: 0
   duration: 5
 --- !u!114 &6172343062823243531
