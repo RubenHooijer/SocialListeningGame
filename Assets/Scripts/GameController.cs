@@ -3,6 +3,7 @@ using DG.Tweening;
 using Dialogue;
 using FMOD.Studio;
 using FMODUnity;
+using Oasez.Extensions;
 using Oasez.Extensions.Generics.Singleton;
 using System;
 using UnityEngine;
@@ -14,6 +15,17 @@ public class GameController : GenericSingleton<GameController, GameController> {
     private DialogueGraph currentGraph;
 
     private EventInstance musicEvent;
+    private StudioListener myListener;
+
+    private void Start() {
+        if (!gameObject.HasComponent<StudioListener>()) {
+            myListener = gameObject.AddComponent<StudioListener>();
+            myListener.attenuationObject = gameObject;
+        } else {
+            myListener = gameObject.GetComponent<StudioListener>();
+        }
+        Debug.Log(myListener);
+    }
 
     public void SetNewGraph(SceneInformation sceneInformation) {
         currentSceneInformation = sceneInformation;
@@ -243,8 +255,11 @@ public class GameController : GenericSingleton<GameController, GameController> {
 
     private void ProcessPlaySound(PlaySound playSoundNode) {
         Debug.Log("Play Sound");
-        if (RuntimeManager.Listeners[0].transform != null) {
-            RuntimeManager.PlayOneShot(playSoundNode.sound, RuntimeManager.Listeners[0].transform.position);
+        StudioListener activeListener = GetActiveListener();
+        if (activeListener != null) {
+            RuntimeManager.PlayOneShot(playSoundNode.sound, activeListener.transform.position);
+        } else {
+            Debug.Log("No Listener found");
         }
 
         playSoundNode.Next();
@@ -307,6 +322,10 @@ public class GameController : GenericSingleton<GameController, GameController> {
             x => musicEvent.setVolume(x),
             0,
             9f).SetEase(Ease.InOutSine);
+    }
+
+    private StudioListener GetActiveListener() {
+        return myListener;
     }
 
 }
