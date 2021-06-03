@@ -1,8 +1,10 @@
 using Cinemachine;
 using DG.Tweening;
 using Dialogue;
+using FMOD.Studio;
 using FMODUnity;
 using Oasez.Extensions.Generics.Singleton;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +12,8 @@ public class GameController : GenericSingleton<GameController, GameController> {
 
     private SceneInformation currentSceneInformation;
     private DialogueGraph currentGraph;
+
+    private EventInstance musicEvent;
 
     public void SetNewGraph(SceneInformation sceneInformation) {
         currentSceneInformation = sceneInformation;
@@ -88,6 +92,9 @@ public class GameController : GenericSingleton<GameController, GameController> {
                 break;
             case PlaySound playSound:
                 ProcessPlaySound(playSound);
+                break;
+            case PlayMusic playMusic:
+                ProcessPlayMusic(playMusic);
                 break;
             default:
                 Debug.LogWarning($"<color=orange>{current.GetType()} type was not defined.</color>");
@@ -242,6 +249,19 @@ public class GameController : GenericSingleton<GameController, GameController> {
         HandleCurrentNode();
     }
 
+    private void ProcessPlayMusic(PlayMusic playMusicNode) {
+        Debug.Log("Play Music");
+        //if (musicEvent.isValid()) {
+        //    musicEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        //}
+        //musicEvent = RuntimeManager.CreateInstance(playMusicNode.music);
+        //musicEvent.start();
+        FadeMusic(playMusicNode.music);
+
+        playMusicNode.Next();
+        HandleCurrentNode();
+    }
+
     private void ProcessStartStopNode(StartStop startStopNode) {
         Debug.Log("Start stop");
         if (startStopNode.function == StartStop.StartStopEnum.Start) {
@@ -260,6 +280,31 @@ public class GameController : GenericSingleton<GameController, GameController> {
     private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode) {
         SceneManager.SetActiveScene(scene);
         SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void FadeMusic(string newMusicPath) {
+        EventInstance newMusicEvent = RuntimeManager.CreateInstance(newMusicPath);
+        newMusicEvent.start();
+
+        DOTween.To(
+            () => {
+                newMusicEvent.getVolume(out float volume);
+                return volume;
+            },
+            x => newMusicEvent.setVolume(x),
+            1,
+            10).SetEase(Ease.InOutSine)
+            .ChangeStartValue(0)
+            .OnComplete(() => musicEvent = newMusicEvent);
+
+        DOTween.To(
+            () => {
+                musicEvent.getVolume(out float volume);
+                return volume;
+            },
+            x => musicEvent.setVolume(x),
+            0,
+            9f).SetEase(Ease.InOutSine);
     }
 
 }
