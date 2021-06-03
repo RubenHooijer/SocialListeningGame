@@ -349,7 +349,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/eustachius/voice dialog/EU_Neutraal_Praten
   answers:
   - {fileID: -592919858278177659}
   - {fileID: 3183189902253983330}
@@ -515,7 +515,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_HL_Hallo!
   answers: []
 --- !u!114 &-7943809521957827961
 MonoBehaviour:
@@ -588,7 +588,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/eustachius/voice dialog/EU_Neutraal_Praten
   answers: []
 --- !u!114 &-7370774481955540774
 MonoBehaviour:
@@ -728,7 +728,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/twijdelend
+  sound: event:/main character/voice dialog/MC_Vraag
   answers:
   - {fileID: -3910492328024198212}
   - {fileID: 7003688302062479219}
@@ -745,7 +745,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 20680, y: 824}
+  position: {x: 20840, y: 808}
   ports:
     keys:
     - input
@@ -851,7 +851,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -3910492328024198212}
+        node: {fileID: -1734925212468982266}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -938,7 +938,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_Vraag
   answers: []
 --- !u!114 &-5734194726467249230
 MonoBehaviour:
@@ -1000,7 +1000,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 20408, y: 824}
+  position: {x: 20568, y: 808}
   ports:
     keys:
     - input
@@ -1141,7 +1141,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/eustachius/voice dialog/EU_Neutraal_Praten
   answers:
   - {fileID: 343208816981867303}
   - {fileID: 535897729917252230}
@@ -1355,7 +1355,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: 
+  sound: event:/main character/voice dialog/MC_Vraag
   answers: []
 --- !u!114 &-4879128907164269241
 MonoBehaviour:
@@ -1521,7 +1521,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_HL_Hallo_
   answers: []
 --- !u!114 &-4341728306128531504
 MonoBehaviour:
@@ -1591,7 +1591,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_Vraag
   answers: []
 --- !u!114 &-4297563735384546148
 MonoBehaviour:
@@ -1677,7 +1677,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -6409601012930891605}
+        node: {fileID: -1734925212468982266}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1797,7 +1797,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/eustachius/voice dialog/EU_Uitroep_Blij
   answers:
   - {fileID: 1433001067981590424}
   - {fileID: 1559080373161840682}
@@ -2064,7 +2064,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_Vraag
   answers: []
 --- !u!114 &-2236940015870972887
 MonoBehaviour:
@@ -2128,7 +2128,7 @@ MonoBehaviour:
   m_Name: Follow Path
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 16680, y: 520}
+  position: {x: 16696, y: 632}
   ports:
     keys:
     - input
@@ -2211,6 +2211,52 @@ MonoBehaviour:
   output: {fileID: 0}
   character: {fileID: 11400000, guid: 7e26449f9494b9044bb86170a3774fd1, type: 2}
   pause: 1
+--- !u!114 &-1734925212468982266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d42391debb518468600591d4898dc0, type: 3}
+  m_Name: Play Sound
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -4072, y: -248}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -1734925212468982266}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -3910492328024198212}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -1734925212468982266}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -6409601012930891605}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  sound: event:/main character/opstaan van het oor
 --- !u!114 &-1623055789614073184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2315,7 +2361,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/eustachius/voice dialog/EU_Uitroep_Blij
   answers:
   - {fileID: 1933440030755843813}
   - {fileID: -1509090434624095962}
@@ -2620,7 +2666,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/eustachius/voice dialog/EU_Uitroep_Boos
   answers:
   - {fileID: 7290394632587176266}
   - {fileID: 5491918657069340131}
@@ -2796,7 +2842,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_Vraag
   answers: []
 --- !u!114 &-33754892658201290
 MonoBehaviour:
@@ -2985,7 +3031,9 @@ MonoBehaviour:
   - {fileID: -2672175240706008952}
   - {fileID: -6435092665091348510}
   - {fileID: 8861421018220186973}
-  current: {fileID: -8442725948526241085}
+  - {fileID: 2511136427383077260}
+  - {fileID: -1734925212468982266}
+  current: {fileID: 72392310833289225}
 --- !u!114 &33942789384675195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3270,7 +3318,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_Vraag
   answers: []
 --- !u!114 &403314597258778789
 MonoBehaviour:
@@ -3489,7 +3537,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_Vraag
   answers: []
 --- !u!114 &1178662707485047465
 MonoBehaviour:
@@ -3525,7 +3573,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 4369212421899025239}
+        node: {fileID: 2511136427383077260}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3547,7 +3595,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 14104, y: 1400}
+  position: {x: 14088, y: 1400}
   ports:
     keys:
     - answers
@@ -3599,7 +3647,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_Vraag
   answers: []
 --- !u!114 &1433001067981590424
 MonoBehaviour:
@@ -3973,7 +4021,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/eustachius/voice dialog/EU_Uitroep_Boos
   answers: []
 --- !u!114 &2215798871678666128
 MonoBehaviour:
@@ -4076,7 +4124,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/eustachius/voice dialog/EU_Neutraal_Praten
   answers:
   - {fileID: 33942789384675195}
   - {fileID: 3183189902253983330}
@@ -4127,6 +4175,52 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 5b0a765f258ba26479f4c6d3d432ab86, type: 2}
+--- !u!114 &2511136427383077260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a270c059d25c84241a0af1d4b02712b7, type: 3}
+  m_Name: Play Music
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -7967.455, y: 94.94016}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 2511136427383077260}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 1178662707485047465}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 2511136427383077260}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4369212421899025239}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  music: event:/music/track1
 --- !u!114 &2600876889642834279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4228,7 +4322,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/eustachius/voice dialog/EU_Neutraal_Praten
   answers:
   - {fileID: 33942789384675195}
   - {fileID: 7288318232741154848}
@@ -4568,7 +4662,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/eustachius/voice dialog/EU_Neutraal_Praten
   answers:
   - {fileID: 33942789384675195}
   - {fileID: 4149225309482641164}
@@ -4742,7 +4836,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/eustachius/voice dialog/EU_HL_Hallo!
   answers: []
 --- !u!114 &4349406787306448462
 MonoBehaviour:
@@ -4816,7 +4910,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 1178662707485047465}
+        node: {fileID: 2511136427383077260}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -4951,7 +5045,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_uitroep_blij
   answers: []
 --- !u!114 &4488901904657033558
 MonoBehaviour:
@@ -5105,7 +5199,7 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  character: {fileID: 11400000, guid: bd5d826dd37a3604d9072bd438718d6b, type: 2}
+  character: {fileID: 11400000, guid: 7e26449f9494b9044bb86170a3774fd1, type: 2}
   text:
     m_TableReference:
       m_TableCollectionName: GUID:ac2fb83fce11b6a4ca8c5945300108d6
@@ -5114,7 +5208,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_HL_123
   answers: []
 --- !u!114 &4901265134015507971
 MonoBehaviour:
@@ -5164,7 +5258,7 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 7e26449f9494b9044bb86170a3774fd1, type: 2}
   pathGuid: 3b048643-4525-456f-9f33-88c45be83294
   useCharacterSpeed: 1
-  speed: 1
+  speed: 2
 --- !u!114 &4949963711888178299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5178,7 +5272,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 12328, y: 888}
+  position: {x: 12312, y: 840}
   ports:
     keys:
     - answers
@@ -5230,7 +5324,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_Vraag
   answers: []
 --- !u!114 &5089691283385829274
 MonoBehaviour:
@@ -5442,7 +5536,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/twijdelend
+  sound: event:/main character/voice dialog/MC_Vraag
   answers: []
 --- !u!114 &5295428401310014428
 MonoBehaviour:
@@ -5504,7 +5598,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 14088, y: 1592}
+  position: {x: 14088, y: 1768}
   ports:
     keys:
     - answers
@@ -5556,7 +5650,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_uitroep_blij
   answers: []
 --- !u!114 &5491918657069340131
 MonoBehaviour:
@@ -6088,7 +6182,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_Vraag
   answers: []
 --- !u!114 &7288318232741154848
 MonoBehaviour:
@@ -6267,7 +6361,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/eustachius/voice dialog/EU_Neutraal_Praten
   answers: []
 --- !u!114 &7862159103359961957
 MonoBehaviour:
@@ -6334,7 +6428,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_Vraag
   answers: []
 --- !u!114 &8011126388582017313
 MonoBehaviour:
@@ -6450,7 +6544,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_Vraag
   answers: []
 --- !u!114 &8256822918383802950
 MonoBehaviour:
@@ -6620,7 +6714,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/eustachius/voice dialog/EU_Vraag
   answers: []
 --- !u!114 &8491823553493898437
 MonoBehaviour:
@@ -6687,7 +6781,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_Vraag
   answers: []
 --- !u!114 &8858390362881707446
 MonoBehaviour:
@@ -6947,5 +7041,5 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/bang
+  sound: event:/eustachius/voice dialog/EU_HL_Hallo_
   answers: []
