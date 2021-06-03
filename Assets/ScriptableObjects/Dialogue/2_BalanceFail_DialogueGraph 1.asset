@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 14056, y: 424}
+  position: {x: 13896, y: 264}
   ports:
     keys:
     - input
@@ -2758,7 +2758,8 @@ MonoBehaviour:
   - {fileID: -7595932099586114002}
   - {fileID: -9034648618776898960}
   - {fileID: 8714191856555353099}
-  current: {fileID: -7571615652048154777}
+  - {fileID: 6801740220752190902}
+  current: {fileID: -419556536366250456}
 --- !u!114 &326264160816092306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2772,7 +2773,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 14392, y: 424}
+  position: {x: 14184, y: 248}
   ports:
     keys:
     - input
@@ -2796,7 +2797,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 4846562651092791805}
+        node: {fileID: 6801740220752190902}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3193,7 +3194,7 @@ MonoBehaviour:
   action: 2
   lookAtGuid: 
   offset: {x: 0, y: 0, z: 0}
-  positionOffset: -1.1
+  positionOffset: 2.2
   duration: 5
 --- !u!114 &3649406732146410835
 MonoBehaviour:
@@ -3535,7 +3536,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 326264160816092306}
+        node: {fileID: 6801740220752190902}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -3982,7 +3983,7 @@ MonoBehaviour:
   output: {fileID: 0}
   action: 1
   lookAtGuid: 
-  offset: {x: -3.7, y: 2.3, z: 0}
+  offset: {x: -3.7, y: 3, z: 0}
   positionOffset: 0
   duration: 5
 --- !u!114 &6172343062823243531
@@ -4097,7 +4098,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/EU_Uitroep_Boos
+  sound: event:/main character/voice dialog/MC_uitroep_boos
   answers: []
 --- !u!114 &6426056194150880050
 MonoBehaviour:
@@ -4148,6 +4149,56 @@ MonoBehaviour:
   Time: 1
   PathGuid: b6e7b985-9e15-44a1-ad8d-77974f50c1b1
   trigger: {fileID: 0}
+--- !u!114 &6801740220752190902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951bd691349e4da4594ddb09d58c4931, type: 3}
+  m_Name: Camera
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 14344, y: 584}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 6801740220752190902}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 326264160816092306}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 6801740220752190902}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4846562651092791805}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  action: 1
+  lookAtGuid: 
+  offset: {x: -4.19, y: 3, z: 0}
+  positionOffset: 0
+  duration: 1
 --- !u!114 &7141460105549992797
 MonoBehaviour:
   m_ObjectHideFlags: 0
