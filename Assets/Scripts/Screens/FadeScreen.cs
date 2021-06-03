@@ -14,12 +14,17 @@ public class FadeScreen : AbstractScreen<FadeScreen> {
     [SerializeField] private VoidEventChannelSO FadeFromCompleted;
     [SerializeField] private Image fadeImage;
     [SerializeField] private TextMeshProUGUI startOverText; 
+    [SerializeField] private TextMeshProUGUI endText;
 
     public void InstantToBlack() => FadeToColor(Color.black, 0, null);
-    public void FadeToBlack() => FadeToColor(Color.black, 4, null);
+    public void FadeToBlack() => FadeToColor(Color.black, 3, null);
     public void FadeFromBlack() => FadeFromColor(Color.black, 3, null);
     public void FadeToWhite() => FadeToColor(Color.white, 2, null);
     public void FadeFromWhite() => FadeFromColor(Color.white, 3, null);
+
+    public void ShowEndText() {
+        endText.gameObject.SetActive(true);
+    }
 
     public void FadeWithText() {
         startOverText.text = string.Empty;
