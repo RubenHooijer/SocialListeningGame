@@ -661,7 +661,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -116554168099911070}
+        node: {fileID: -2153089491890911372}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -673,7 +673,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 2358996868975134666}
+        node: {fileID: -2233693152064457093}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -692,8 +692,8 @@ MonoBehaviour:
     m_WaitForCompletion: 1
   sound: event:/eustachius/voice dialog/EU_HL_Onzeker
   answers:
-  - {fileID: -116554168099911070}
-  - {fileID: 2358996868975134666}
+  - {fileID: -2153089491890911372}
+  - {fileID: -2233693152064457093}
 --- !u!114 &-7524158998246269190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2461,6 +2461,9 @@ MonoBehaviour:
       - fieldName: answers 1
         node: {fileID: 5661526785893498293}
         reroutePoints: []
+      - fieldName: answers 1
+        node: {fileID: -7548360558258745168}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -2516,6 +2519,9 @@ MonoBehaviour:
       connections:
       - fieldName: answers 0
         node: {fileID: 5661526785893498293}
+        reroutePoints: []
+      - fieldName: answers 0
+        node: {fileID: -7548360558258745168}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -2973,12 +2979,6 @@ MonoBehaviour:
         reroutePoints: []
       - fieldName: output
         node: {fileID: 8895880994115945130}
-        reroutePoints: []
-      - fieldName: output
-        node: {fileID: -116554168099911070}
-        reroutePoints: []
-      - fieldName: output
-        node: {fileID: 2358996868975134666}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -3786,62 +3786,6 @@ MonoBehaviour:
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 4b10e87df0b072b4583af9934ed3d8d8, type: 2}
   data: 346125ac-55e9-483f-a93c-c494204b621c
---- !u!114 &-116554168099911070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7056d61579232648abdfda0445ae4da, type: 3}
-  m_Name: Answer
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 7544, y: 584}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: -116554168099911070}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: answers 0
-        node: {fileID: -7548360558258745168}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: -116554168099911070}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: -1741691911955036160}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  choice:
-    m_TableReference:
-      m_TableCollectionName: GUID:469f423c5b60d344a8a5de7970ca3593
-    m_TableEntryReference:
-      m_KeyId: 70883044331522
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 1
-  hideIfVisited: 1
-  hideIfSpecificNodeIsVisited: 0
-  specificNode: {fileID: 0}
 --- !u!114 &-31014249236441809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3990,8 +3934,6 @@ MonoBehaviour:
   - {fileID: -7494708740364284633}
   - {fileID: -6077203044700392386}
   - {fileID: -7548360558258745168}
-  - {fileID: -116554168099911070}
-  - {fileID: 2358996868975134666}
   - {fileID: -8398808166135440923}
   - {fileID: 1145670583277181124}
   - {fileID: -512673500768261946}
@@ -5121,62 +5063,6 @@ MonoBehaviour:
       m_TableCollectionName: GUID:469f423c5b60d344a8a5de7970ca3593
     m_TableEntryReference:
       m_KeyId: 84207833093
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 1
-  hideIfVisited: 1
-  hideIfSpecificNodeIsVisited: 0
-  specificNode: {fileID: 0}
---- !u!114 &2358996868975134666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7056d61579232648abdfda0445ae4da, type: 3}
-  m_Name: Answer
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 7544, y: 824}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: 2358996868975134666}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: answers 1
-        node: {fileID: -7548360558258745168}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 2358996868975134666}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: -1741691911955036160}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  choice:
-    m_TableReference:
-      m_TableCollectionName: GUID:469f423c5b60d344a8a5de7970ca3593
-    m_TableEntryReference:
-      m_KeyId: 70883044331524
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
