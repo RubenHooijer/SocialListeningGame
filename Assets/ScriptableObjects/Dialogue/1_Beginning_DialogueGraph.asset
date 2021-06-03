@@ -769,7 +769,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -1417298043808873247}
+        node: {fileID: -3412521737060642614}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1696,6 +1696,52 @@ MonoBehaviour:
   hideIfVisited: 1
   hideIfSpecificNodeIsVisited: 0
   specificNode: {fileID: 0}
+--- !u!114 &-3412521737060642614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d42391debb518468600591d4898dc0, type: 3}
+  m_Name: Play Sound
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 21144, y: 888}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -3412521737060642614}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -6482657755061921015}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -3412521737060642614}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -1417298043808873247}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  sound: event:/eustachius/voice dialog/EU_HL_Krachtinspanning
 --- !u!114 &-3085332578535980979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2447,7 +2493,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -6482657755061921015}
+        node: {fileID: -3412521737060642614}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -3033,6 +3079,7 @@ MonoBehaviour:
   - {fileID: 8861421018220186973}
   - {fileID: 2511136427383077260}
   - {fileID: -1734925212468982266}
+  - {fileID: -3412521737060642614}
   current: {fileID: 72392310833289225}
 --- !u!114 &33942789384675195
 MonoBehaviour:
