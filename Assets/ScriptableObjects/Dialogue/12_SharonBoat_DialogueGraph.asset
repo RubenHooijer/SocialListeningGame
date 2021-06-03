@@ -237,6 +237,52 @@ MonoBehaviour:
     m_WaitForCompletion: 1
   sound: event:/main character/voice dialog/MC_Vraag
   answers: []
+--- !u!114 &-8225717357040697994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a270c059d25c84241a0af1d4b02712b7, type: 3}
+  m_Name: Play Music
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 9288, y: 616}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -8225717357040697994}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 7776981641312678679}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -8225717357040697994}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 1360503705208514247}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  music: event:/music/track undead
 --- !u!114 &-8143490563427443844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2608,7 +2654,8 @@ MonoBehaviour:
   - {fileID: -73720155375732906}
   - {fileID: -3685322395717410950}
   - {fileID: 392018908821828839}
-  current: {fileID: 2244296519857571450}
+  - {fileID: -8225717357040697994}
+  current: {fileID: -82768977994498877}
 --- !u!114 &237336664680928944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3028,7 +3075,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 7776981641312678679}
+        node: {fileID: -8225717357040697994}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -4415,7 +4462,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 1360503705208514247}
+        node: {fileID: -8225717357040697994}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
