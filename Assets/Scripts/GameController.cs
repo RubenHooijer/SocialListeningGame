@@ -123,10 +123,9 @@ public class GameController : GenericSingleton<GameController, GameController> {
         if (obj.IsDone) {
             DialogueScreen.Instance.ShowSpeech(chat);
             if (string.IsNullOrEmpty(chat.sound) == false) {
-                Transform characterTransform = CharacterView.GetView(chat.character).transform;
-                FMOD.Studio.EventInstance soundInstance = RuntimeManager.CreateInstance(chat.sound);
-                soundInstance.setProperty(FMOD.Studio.EVENT_PROPERTY.MAXIMUM_DISTANCE, 1000);
-                soundInstance.set3DAttributes(characterTransform.To3DAttributes());
+                EventInstance soundInstance = RuntimeManager.CreateInstance(chat.sound);
+                soundInstance.setProperty(EVENT_PROPERTY.MAXIMUM_DISTANCE, 1000);
+                soundInstance.set3DAttributes(transform.To3DAttributes());
                 soundInstance.start();
             }
         } else {

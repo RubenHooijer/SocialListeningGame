@@ -40,11 +40,13 @@ public class TimerScreen : AbstractScreen<TimerScreen> {
     }
 
     private void Update() {
-        if (gameStartTime == 0) { return; }
+        if (gameStartTime == 0 && World.Instance.Progression.HasKey(gameFinishedKey)) { return; }
 
         float timeLeft = (maxPlayTimeInSeconds + gameStartTime) - Time.time;
 
-        if (!isFinished && timeLeft <= showTimerThreshold && !animatedWidget.IsShowing) {
+        if (!isFinished && 
+            timeLeft <= showTimerThreshold && 
+            !animatedWidget.IsShowing) {
             animatedWidget.Show();
         }
 
