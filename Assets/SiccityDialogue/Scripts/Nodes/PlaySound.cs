@@ -4,7 +4,7 @@ using XNode;
 namespace Dialogue {
     [NodeTint("#34dbeb")]
     [CreateNodeMenu("Play Sound", order = 0)]
-    [NodeWidth(250)]
+    [NodeWidth(350)]
     public class PlaySound : DialogueBaseNode {
 
         [EventRef] public string sound;

@@ -243,7 +243,9 @@ public class GameController : GenericSingleton<GameController, GameController> {
 
     private void ProcessPlaySound(PlaySound playSoundNode) {
         Debug.Log("Play Sound");
-        RuntimeManager.PlayOneShot(playSoundNode.sound, RuntimeManager.Listeners[0].transform.position);
+        if (RuntimeManager.Listeners[0].transform != null) {
+            RuntimeManager.PlayOneShot(playSoundNode.sound, RuntimeManager.Listeners[0].transform.position);
+        }
 
         playSoundNode.Next();
         HandleCurrentNode();

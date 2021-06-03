@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: Start Stop
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1272, y: 120}
+  position: {x: -1560, y: -56}
   ports:
     keys:
     - input
@@ -317,7 +317,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 6115728762496878426}
+        node: {fileID: -3343150633111999829}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -375,6 +375,52 @@ MonoBehaviour:
   Time: 4
   PathGuid: 
   trigger: {fileID: 0}
+--- !u!114 &-3343150633111999829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a270c059d25c84241a0af1d4b02712b7, type: 3}
+  m_Name: Play Music
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1368, y: 136}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -3343150633111999829}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -3777456854777225867}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -3343150633111999829}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 6115728762496878426}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  music: event:/music/track5
 --- !u!114 &-3130783505653776004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -700,6 +746,7 @@ MonoBehaviour:
   - {fileID: 6115728762496878426}
   - {fileID: 6263696508722070105}
   - {fileID: 5329485030998936219}
+  - {fileID: -3343150633111999829}
   current: {fileID: 923890304889471695}
 --- !u!114 &385394450017413946
 MonoBehaviour:
@@ -1246,7 +1293,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -3777456854777225867}
+        node: {fileID: -3343150633111999829}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
