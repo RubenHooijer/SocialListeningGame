@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{399674f7-1b5a-4117-af42-e588884d1346}">
+		<property name="name">
+			<value>sounds outside cave</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{9a47599b-6ba4-4b89-a6ab-228afa0f8a8c}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{ef9e1a03-f01d-44d5-b711-920641498715}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{86d4b218-a982-4d27-8ec9-d4f249c32617}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{9a47599b-6ba4-4b89-a6ab-228afa0f8a8c}">
+		<relationship name="effects">
+			<destination>{10101368-4e6f-4ae2-8067-c5fe1f51b002}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{ef9e1a03-f01d-44d5-b711-920641498715}" />
+	<object class="MixerBusFader" id="{10101368-4e6f-4ae2-8067-c5fe1f51b002}" />
+</objects>

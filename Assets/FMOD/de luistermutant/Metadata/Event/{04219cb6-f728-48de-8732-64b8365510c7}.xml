@@ -32,7 +32,6 @@
 			<destination>{fafde976-8b76-4295-a777-1965a77d0188}</destination>
 		</relationship>
 		<relationship name="parameters">
-			<destination>{86ab1fb6-3c4f-416c-8603-745c2f11f5d9}</destination>
 			<destination>{45f64242-7291-4a42-8655-15de73b99cbc}</destination>
 			<destination>{221b1431-151e-4184-a7d1-98017f6e2d16}</destination>
 		</relationship>
@@ -61,7 +60,7 @@
 			<destination>{caa8c14b-e881-45c9-8852-ca11e0f72dd8}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{86d4b218-a982-4d27-8ec9-d4f249c32617}</destination>
+			<destination>{ca99659c-ee92-4190-b4cf-7c3aca108c46}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{6787b2f0-0fb9-416c-91b1-275cdf9f665c}" />
@@ -86,11 +85,6 @@
 		</relationship>
 		<relationship name="markers">
 			<destination>{f8c25bf8-08e9-46a7-a2bc-7e97f0c1b591}</destination>
-		</relationship>
-	</object>
-	<object class="ParameterProxy" id="{86ab1fb6-3c4f-416c-8603-745c2f11f5d9}">
-		<relationship name="preset">
-			<destination>{1b3860a3-93e2-48ff-a977-cb2913b2942e}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{45f64242-7291-4a42-8655-15de73b99cbc}">
@@ -155,6 +149,9 @@
 		<property name="length">
 			<value>14.5</value>
 		</property>
+		<property name="volume">
+			<value>4</value>
+		</property>
 		<property name="looping">
 			<value>true</value>
 		</property>
@@ -204,7 +201,6 @@
 	<object class="MixerBusEffectChain" id="{74f722a2-079c-467a-83f4-4e50b7aaebba}">
 		<relationship name="effects">
 			<destination>{6cd84d18-e573-433e-8b92-41839dcf31c7}</destination>
-			<destination>{ddcda8ff-1c21-47d7-b56d-08e82e17e043}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{1ac30e76-e989-4dd1-9b79-76e48cb927cd}" />
@@ -235,17 +231,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{6cd84d18-e573-433e-8b92-41839dcf31c7}" />
-	<object class="MixerSend" id="{ddcda8ff-1c21-47d7-b56d-08e82e17e043}">
-		<property name="level">
-			<value>-9</value>
-		</property>
-		<property name="inputFormat">
-			<value>1</value>
-		</property>
-		<relationship name="mixerReturn">
-			<destination>{c9f22ec0-204f-4c34-a863-dfab3b76d0f5}</destination>
-		</relationship>
-	</object>
 	<object class="AutomationCurve" id="{b0edd3bb-d211-4974-9416-2d105afd89bc}">
 		<relationship name="parameter">
 			<destination>{2cee7aad-cfa5-47ad-a1ab-29f567c2bca3}</destination>

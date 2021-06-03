@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1384, y: -184}
+  position: {x: -1624, y: 24}
   ports:
     keys:
     - input
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: Progression Branch
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3016, y: 616}
+  position: {x: 2760, y: 712}
   ports:
     keys:
     - pass
@@ -188,7 +188,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/neutraal
+  sound: event:/main character/voice dialog/MC_neutraal_praten
   answers: []
 --- !u!114 &-8460954472136497876
 MonoBehaviour:
@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -776, y: -104}
+  position: {x: -776, y: 24}
   ports:
     keys:
     - input
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Name: Invoke Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1048, y: -120}
+  position: {x: -1064, y: 24}
   ports:
     keys:
     - input
@@ -642,12 +642,58 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:209ba2ee88b143543b99a6ed9c0c2d73
     m_TableEntryReference:
-      m_KeyId: 158618980353
+      m_KeyId: 4820694001881088
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/neutraal
+  sound: event:/main character/voice dialog/MC_neutraal_praten
   answers: []
+--- !u!114 &-5213829635940447431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d42391debb518468600591d4898dc0, type: 3}
+  m_Name: Play Sound
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3144, y: 40}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -5213829635940447431}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 7582370130321563845}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -5213829635940447431}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 5485455114035043442}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  sound: event:/bootvrouw/BV_HL_Neurie
 --- !u!114 &-4623833801610969671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,7 +750,7 @@ MonoBehaviour:
   m_Name: Start Stop
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1768, y: 40}
+  position: {x: -2184, y: 8}
   ports:
     keys:
     - input
@@ -992,7 +1038,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -88, y: -72}
+  position: {x: -168, y: 24}
   ports:
     keys:
     - input
@@ -1214,7 +1260,7 @@ MonoBehaviour:
   m_Name: Invoke Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 280, y: -72}
+  position: {x: 136, y: 24}
   ports:
     keys:
     - input
@@ -1312,7 +1358,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/boos
+  sound: event:/main character/voice dialog/MC_uitroep_boos
   answers: []
 --- !u!114 &11400000
 MonoBehaviour:
@@ -1377,6 +1423,7 @@ MonoBehaviour:
   - {fileID: -3485223422047389044}
   - {fileID: -2460730068027616863}
   - {fileID: -1228226871459743181}
+  - {fileID: -5213829635940447431}
   current: {fileID: 1502311591832070055}
 --- !u!114 &21942202528303688
 MonoBehaviour:
@@ -1443,7 +1490,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/eustachius/voice dialog/EU_Neutraal_Praten
   answers: []
 --- !u!114 &189786321337092814
 MonoBehaviour:
@@ -1510,7 +1557,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/boos
+  sound: event:/main character/voice dialog/MC_uitroep_boos
   answers: []
 --- !u!114 &342553696475778136
 MonoBehaviour:
@@ -1583,7 +1630,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/boos
+  sound: event:/eustachius/voice dialog/EU_HL_Krachtinspanning
   answers: []
 --- !u!114 &530716157815158618
 MonoBehaviour:
@@ -1598,7 +1645,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3368, y: 696}
+  position: {x: 3336, y: 776}
   ports:
     keys:
     - answers
@@ -1650,7 +1697,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/neutraal
+  sound: event:/main character/voice dialog/MC_uitroep_blij
   answers: []
 --- !u!114 &624805272857871288
 MonoBehaviour:
@@ -1714,7 +1761,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 632, y: -120}
+  position: {x: 440, y: 24}
   ports:
     keys:
     - answers
@@ -1802,7 +1849,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/bang
+  sound: event:/eustachius/voice dialog/EU_Uitroep_Boos
   answers:
   - {fileID: -2545642987731665484}
   - {fileID: -6746281339493520214}
@@ -1872,7 +1919,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/neutraal
+  sound: event:/main character/voice dialog/MC_neutraal_praten
   answers: []
 --- !u!114 &3013837464393089095
 MonoBehaviour:
@@ -1887,7 +1934,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3752, y: 936}
+  position: {x: 3736, y: 1112}
   ports:
     keys:
     - answers
@@ -1939,7 +1986,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/boos
+  sound: event:/eustachius/voice dialog/EU_HL_Onzeker
   answers: []
 --- !u!114 &3343830669394173956
 MonoBehaviour:
@@ -1954,7 +2001,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1512, y: -24}
+  position: {x: -1928, y: 24}
   ports:
     keys:
     - input
@@ -2047,7 +2094,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -504, y: -104}
+  position: {x: -472, y: 24}
   ports:
     keys:
     - input
@@ -2152,7 +2199,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 7582370130321563845}
+        node: {fileID: -5213829635940447431}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -2189,7 +2236,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1256, y: 8}
+  position: {x: -1336, y: 24}
   ports:
     keys:
     - input
@@ -2288,7 +2335,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/boos
+  sound: event:/eustachius/voice dialog/EU_Uitroep_Boos
   answers: []
 --- !u!114 &6565017942290106204
 MonoBehaviour:
@@ -2303,7 +2350,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3064, y: 408}
+  position: {x: 3160, y: 392}
   ports:
     keys:
     - answers
@@ -2355,7 +2402,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/boos
+  sound: event:/main character/voice dialog/MC_neutraal_praten
   answers: []
 --- !u!114 &6656332402196694081
 MonoBehaviour:
@@ -2422,7 +2469,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/boos
+  sound: event:/eustachius/voice dialog/EU_Uitroep_Boos
   answers: []
 --- !u!114 &6757527862972458188
 MonoBehaviour:
@@ -2584,7 +2631,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/neutraal
+  sound: event:/main character/voice dialog/MC_Vraag
   answers: []
 --- !u!114 &7582370130321563845
 MonoBehaviour:
@@ -2626,7 +2673,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 5485455114035043442}
+        node: {fileID: -5213829635940447431}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -2651,7 +2698,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3496, y: 408}
+  position: {x: 3752, y: 424}
   ports:
     keys:
     - answers
@@ -2703,7 +2750,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/boos
+  sound: event:/eustachius/voice dialog/EU_Uitroep_Boos
   answers: []
 --- !u!114 &8704059688150803625
 MonoBehaviour:
@@ -2718,7 +2765,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3736, y: 696}
+  position: {x: 3736, y: 744}
   ports:
     keys:
     - answers
@@ -2770,7 +2817,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/boos
+  sound: event:/eustachius/voice dialog/EU_Uitroep_Boos
   answers: []
 --- !u!114 &8837711531851972525
 MonoBehaviour:
@@ -2831,7 +2878,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3352, y: 1016}
+  position: {x: 3320, y: 1112}
   ports:
     keys:
     - answers
@@ -2883,5 +2930,5 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/boos
+  sound: event:/main character/voice dialog/MC_uitroep_boos
   answers: []

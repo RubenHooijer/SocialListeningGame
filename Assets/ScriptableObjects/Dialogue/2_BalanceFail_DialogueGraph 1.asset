@@ -90,6 +90,52 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   function: 0
+--- !u!114 &-9034648618776898960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d42391debb518468600591d4898dc0, type: 3}
+  m_Name: Play Sound
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 15304, y: 264}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -9034648618776898960}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 8714191856555353099}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -9034648618776898960}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 9042848535355777672}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  sound: event:/main character/voice dialog/MC_HL_Valschreeuw
 --- !u!114 &-9021935407690661177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +344,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/bang
+  sound: event:/eustachius/voice dialog/EU_Uitroep_Boos
   answers: []
 --- !u!114 &-7860746970482900921
 MonoBehaviour:
@@ -313,7 +359,7 @@ MonoBehaviour:
   m_Name: Follow Path
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4440, y: -152}
+  position: {x: 4888, y: 232}
   ports:
     keys:
     - input
@@ -362,7 +408,7 @@ MonoBehaviour:
   m_Name: Follow Path
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2632, y: -120}
+  position: {x: 2232, y: -88}
   ports:
     keys:
     - input
@@ -374,7 +420,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 5094806138102074182}
+        node: {fileID: -1183096816750724496}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -411,7 +457,7 @@ MonoBehaviour:
   m_Name: Invoke Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 9819.989, y: 101.49552}
+  position: {x: 9656, y: -40}
   ports:
     keys:
     - input
@@ -545,7 +591,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/bang
+  sound: event:/eustachius/voice dialog/EU_HL_Onzeker
   answers:
   - {fileID: -6159902935874700336}
   - {fileID: -5307015509460335563}
@@ -563,7 +609,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 9544, y: -152}
+  position: {x: 9320, y: -168}
   ports:
     keys:
     - answers
@@ -621,7 +667,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/bang
+  sound: event:/eustachius/voice dialog/EU_HL_Onzeker
   answers: []
 --- !u!114 &-7325934691777771673
 MonoBehaviour:
@@ -779,7 +825,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 5560, y: -168}
+  position: {x: 6008, y: 216}
   ports:
     keys:
     - input
@@ -925,7 +971,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/eustachius/voice dialog/EU_Uitroep_Blij
   answers: []
 --- !u!114 &-6311344496019145178
 MonoBehaviour:
@@ -1291,7 +1337,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/blij
+  sound: event:/main character/voice dialog/MC_uitroep_blij
   answers: []
 --- !u!114 &-5307015509460335563
 MonoBehaviour:
@@ -1558,7 +1604,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/eustachius/voice dialog/EU_Uitroep_Blij
   answers: []
 --- !u!114 &-3341264399590808168
 MonoBehaviour:
@@ -1958,7 +2004,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/neutraal
+  sound: event:/main character/voice dialog/MC_uitroep_boos
   answers: []
 --- !u!114 &-1758171257536833766
 MonoBehaviour:
@@ -1973,7 +2019,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3096, y: -120}
+  position: {x: 2696, y: -88}
   ports:
     keys:
     - input
@@ -2067,7 +2113,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4088, y: -136}
+  position: {x: 4344, y: -104}
   ports:
     keys:
     - answers
@@ -2090,7 +2136,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 7180698001451137794}
+        node: {fileID: 5094806138102074182}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -2119,7 +2165,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/neutraal
+  sound: event:/main character/voice dialog/MC_uitroep_blij
   answers: []
 --- !u!114 &-1375231400224757277
 MonoBehaviour:
@@ -2134,7 +2180,7 @@ MonoBehaviour:
   m_Name: Invoke Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 5690.945, y: 41.246403}
+  position: {x: 6136, y: 424}
   ports:
     keys:
     - input
@@ -2227,7 +2273,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4904, y: -152}
+  position: {x: 5352, y: 232}
   ports:
     keys:
     - input
@@ -2298,7 +2344,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 5094806138102074182}
+        node: {fileID: -7847287620897651460}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -2518,7 +2564,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/neutraal
+  sound: event:/main character/voice dialog/MC_uitroep_boos
   answers: []
 --- !u!114 &-251987824645753873
 MonoBehaviour:
@@ -2710,7 +2756,9 @@ MonoBehaviour:
   - {fileID: 3237626302076779002}
   - {fileID: -1375231400224757277}
   - {fileID: -7595932099586114002}
-  current: {fileID: -4563807122117842764}
+  - {fileID: -9034648618776898960}
+  - {fileID: 8714191856555353099}
+  current: {fileID: -7571615652048154777}
 --- !u!114 &326264160816092306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3261,7 +3309,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/neutraal
+  sound: event:/main character/voice dialog/MC_uitroep_blij
   answers: []
 --- !u!114 &4108902547631845949
 MonoBehaviour:
@@ -3621,7 +3669,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2248, y: -104}
+  position: {x: 3688, y: -104}
   ports:
     keys:
     - answers
@@ -3644,7 +3692,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -1183096816750724496}
+        node: {fileID: 7180698001451137794}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -3656,7 +3704,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -7847287620897651460}
+        node: {fileID: -1375930262218703511}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3673,7 +3721,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/neutraal
+  sound: event:/main character/voice dialog/MC_neutraal_praten
   answers: []
 --- !u!114 &5152417294449598623
 MonoBehaviour:
@@ -3885,7 +3933,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/neutraal
+  sound: event:/main character/voice dialog/MC_neutraal_praten
   answers: []
 --- !u!114 &5969869798723756853
 MonoBehaviour:
@@ -4049,7 +4097,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/player/voice dialog/neutraal
+  sound: event:/eustachius/voice dialog/EU_Uitroep_Boos
   answers: []
 --- !u!114 &6426056194150880050
 MonoBehaviour:
@@ -4064,7 +4112,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 5224, y: -168}
+  position: {x: 5672, y: 216}
   ports:
     keys:
     - input
@@ -4162,7 +4210,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3768, y: -136}
+  position: {x: 3368, y: -104}
   ports:
     keys:
     - input
@@ -4186,7 +4234,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -1375930262218703511}
+        node: {fileID: 5094806138102074182}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -4332,7 +4380,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 9042848535355777672}
+        node: {fileID: 8714191856555353099}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -4340,7 +4388,7 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  sound: event:/eustachius/voice dialog/valt van de brug
+  sound: event:/eustachius/voice dialog/EU_HL_Valschreeuw
 --- !u!114 &8064948700166524600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4403,7 +4451,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3416, y: -136}
+  position: {x: 3016, y: -104}
   ports:
     keys:
     - input
@@ -4504,7 +4552,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/eustachius/voice dialog/blij
+  sound: event:/eustachius/voice dialog/EU_Uitroep_Blij
   answers: []
 --- !u!114 &8648930561729352805
 MonoBehaviour:
@@ -4552,6 +4600,55 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 530b768f8ea3eb44fb8429d9ef3c58e4, type: 2}
+--- !u!114 &8714191856555353099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb04462412d7c946a5d072ca6cce8bb, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 15128, y: 136}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 8714191856555353099}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 7809973855936952978}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 8714191856555353099}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -9034648618776898960}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  waitFor: 0
+  Time: 0.1
+  PathGuid: 
+  trigger: {fileID: 0}
 --- !u!114 &9042848535355777672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4565,7 +4662,7 @@ MonoBehaviour:
   m_Name: Play Animation Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 15032, y: 424}
+  position: {x: 15080, y: 472}
   ports:
     keys:
     - input
@@ -4577,7 +4674,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 7809973855936952978}
+        node: {fileID: -9034648618776898960}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
