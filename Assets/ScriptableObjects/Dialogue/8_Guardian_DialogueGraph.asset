@@ -1641,7 +1641,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -5260267919259087931}
+        node: {fileID: 2786411573960633031}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1649,10 +1649,10 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  waitFor: 0
+  waitFor: 2
   Time: 4
   PathGuid: 
-  trigger: {fileID: 0}
+  trigger: {fileID: 11400000, guid: d62fa36da8f78784e899a9178fe0f21d, type: 2}
 --- !u!114 &-5260267919259087931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1678,7 +1678,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -5295490888088904943}
+        node: {fileID: 2786411573960633031}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -2072,7 +2072,7 @@ MonoBehaviour:
   m_Name: Answer
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 8776, y: 616}
+  position: {x: 8760, y: 488}
   ports:
     keys:
     - input
@@ -4629,6 +4629,7 @@ MonoBehaviour:
   - {fileID: 4294649369440508543}
   - {fileID: -6686507792874149982}
   - {fileID: 2653622150298806752}
+  - {fileID: 2786411573960633031}
   current: {fileID: -3419213824968945345}
 --- !u!114 &323245675244641619
 MonoBehaviour:
@@ -5741,6 +5742,55 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 2304a6b642ab1584c8b30b6b633b441b, type: 2}
+--- !u!114 &2786411573960633031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb04462412d7c946a5d072ca6cce8bb, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2808, y: -184}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 2786411573960633031}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -5295490888088904943}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 2786411573960633031}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -5260267919259087931}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  waitFor: 0
+  Time: 7
+  PathGuid: 
+  trigger: {fileID: 0}
 --- !u!114 &2971366110441535108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6779,7 +6829,7 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  trigger: {fileID: 11400000, guid: 530b768f8ea3eb44fb8429d9ef3c58e4, type: 2}
+  trigger: {fileID: 11400000, guid: 908178c252884554883d37457aa70be2, type: 2}
 --- !u!114 &4053549433778722157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7049,7 +7099,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:b435209c9e82e994881e43c4d2dacbc6
     m_TableEntryReference:
-      m_KeyId: 349945432215554
+      m_KeyId: 58400280583
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
