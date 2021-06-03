@@ -274,7 +274,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 4544073901352589449}
+        node: {fileID: 103532807748673357}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -2872,7 +2872,54 @@ MonoBehaviour:
   - {fileID: 2690036311246441470}
   - {fileID: -6060605351337784759}
   - {fileID: 2229581138798897024}
+  - {fileID: 103532807748673357}
   current: {fileID: -82768977994498877}
+--- !u!114 &103532807748673357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d42391debb518468600591d4898dc0, type: 3}
+  m_Name: Play Sound
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 9944, y: 616}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 103532807748673357}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -8225717357040697994}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 103532807748673357}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4544073901352589449}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  sound: event:/enviroment/narsistische stemmen in de hemel
 --- !u!114 &237336664680928944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4285,7 +4332,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -8225717357040697994}
+        node: {fileID: 103532807748673357}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
