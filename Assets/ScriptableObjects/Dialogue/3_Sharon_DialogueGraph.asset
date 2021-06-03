@@ -710,7 +710,7 @@ MonoBehaviour:
   m_Name: Play Sound
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3144, y: 40}
+  position: {x: 3112, y: -328}
   ports:
     keys:
     - input
@@ -969,6 +969,55 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   sound: event:/main character/voice dialog/MC_HL_Blublub
+--- !u!114 &-3140042110468155573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb04462412d7c946a5d072ca6cce8bb, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3825.3206, y: 265.49084}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -3140042110468155573}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -1431651285639269316}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -3140042110468155573}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 6696811021861814106}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  waitFor: 0
+  Time: 7
+  PathGuid: 
+  trigger: {fileID: 0}
 --- !u!114 &-3119125135657343435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -994,7 +1043,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -1431651285639269316}
+        node: {fileID: 6696811021861814106}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1015,7 +1064,7 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   waitFor: 0
-  Time: 13
+  Time: 6
   PathGuid: 
   trigger: {fileID: 0}
 --- !u!114 &-2977215723850084544
@@ -1255,7 +1304,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -3119125135657343435}
+        node: {fileID: -3140042110468155573}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1597,6 +1646,8 @@ MonoBehaviour:
   - {fileID: -7547352521708620934}
   - {fileID: 842184239378117992}
   - {fileID: -3423895122408613461}
+  - {fileID: 6696811021861814106}
+  - {fileID: -3140042110468155573}
   current: {fileID: 3511560272177663455}
 --- !u!114 &21942202528303688
 MonoBehaviour:
@@ -2788,6 +2839,52 @@ MonoBehaviour:
     m_WaitForCompletion: 1
   sound: event:/eustachius/voice dialog/EU_Uitroep_Boos
   answers: []
+--- !u!114 &6696811021861814106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d42391debb518468600591d4898dc0, type: 3}
+  m_Name: Play Sound
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3752, y: 72}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 6696811021861814106}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -3140042110468155573}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 6696811021861814106}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -3119125135657343435}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  sound: event:/enviroment/creaking boat
 --- !u!114 &6757527862972458188
 MonoBehaviour:
   m_ObjectHideFlags: 0
