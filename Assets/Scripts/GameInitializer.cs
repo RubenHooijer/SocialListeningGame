@@ -8,7 +8,6 @@ public class GameInitializer : MonoBehaviour {
     [SerializeField] private GameController gameController;
 
     private void Awake() {
-        Application.targetFrameRate = 60;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
 
         StartCoroutine(SceneLoadingRoutine());
