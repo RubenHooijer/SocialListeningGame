@@ -2252,6 +2252,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 14325112570899787, guid: a4b0fcd41f1c6a64b91424f5c0c952ba,
+        type: 3}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14325112570899787, guid: a4b0fcd41f1c6a64b91424f5c0c952ba,
+        type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 14325112570899787, guid: a4b0fcd41f1c6a64b91424f5c0c952ba,
+        type: 3}
+      propertyPath: OverrideMinDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 14325113535253924, guid: a4b0fcd41f1c6a64b91424f5c0c952ba,
         type: 3}
       propertyPath: m_RootOrder
@@ -7194,6 +7209,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7030802129608400765, guid: ab72916824be97a4c80138b646a18aae,
+        type: 3}
+      propertyPath: OverrideAttenuation
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab72916824be97a4c80138b646a18aae, type: 3}
 --- !u!4 &2095848282 stripped
@@ -9641,7 +9661,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4305416999695734122}
-  m_LocalRotation: {x: 0.01589424, y: -0.10412093, z: 0.0016641817, w: 0.99443626}
+  m_LocalRotation: {x: 0.015894229, y: -0.10412093, z: 0.0016641831, w: 0.99443626}
   m_LocalPosition: {x: 3.9933558, y: 2.3431072, z: -8.221718}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9680,7 +9700,6 @@ GameObject:
   - component: {fileID: 4305416999695734119}
   - component: {fileID: 4305416999695734121}
   - component: {fileID: 4305416999695734117}
-  - component: {fileID: 4305416999695734124}
   m_Layer: 0
   m_Name: CM vcam1 (1)
   m_TagString: MainCamera
@@ -9723,20 +9742,6 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 4305416999943583975}
---- !u!114 &4305416999695734124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4305416999695734122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 4305416999695734122}
-  ListenerNumber: 0
 --- !u!114 &4305416999943583970
 MonoBehaviour:
   m_ObjectHideFlags: 3

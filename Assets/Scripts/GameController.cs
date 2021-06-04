@@ -108,6 +108,9 @@ public class GameController : GenericSingleton<GameController, GameController> {
             case PlayMusic playMusic:
                 ProcessPlayMusic(playMusic);
                 break;
+            case PlayScreams playScreams:
+                ProcessPlayScreams(playScreams);
+                break;
             default:
                 Debug.LogWarning($"<color=orange>{current.GetType()} type was not defined.</color>");
                 break;
@@ -272,9 +275,40 @@ public class GameController : GenericSingleton<GameController, GameController> {
         //}
         //musicEvent = RuntimeManager.CreateInstance(playMusicNode.music);
         //musicEvent.start();
-        FadeMusic(playMusicNode.music);
+        FadeMusic(playMusicNode);
 
         playMusicNode.Next();
+        HandleCurrentNode();
+    }
+
+
+    private void ProcessPlayScreams(PlayScreams playScreams) {
+        Debug.Log("Play screams");
+
+        EventInstance soundInstance = RuntimeManager.CreateInstance(playScreams.sound);
+        soundInstance.set3DAttributes(transform.To3DAttributes());
+        soundInstance.start();
+
+        DOTween.To(
+            () => {
+                soundInstance.getVolume(out float volume);
+                return volume;
+            },
+            x => soundInstance.setVolume(x),
+            playScreams.endVolume,
+            playScreams.volumeDuration).SetEase(Ease.InOutSine);
+
+        DOTween.To(
+            () => {
+                soundInstance.getParameterByName(playScreams.spawnRateName, out float volume);
+                return volume;
+            },
+            x => soundInstance.setParameterByName(playScreams.spawnRateName, x),
+            playScreams.endSpawnRate,
+            playScreams.spawnRateChangeDuration).SetEase(Ease.InOutSine);
+
+        CoroutineHelper.Delay(70, () => soundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT));
+        playScreams.Next();
         HandleCurrentNode();
     }
 
@@ -298,8 +332,36 @@ public class GameController : GenericSingleton<GameController, GameController> {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    private void FadeMusic(string newMusicPath) {
-        EventInstance newMusicEvent = RuntimeManager.CreateInstance(newMusicPath);
+    public void FadeMusic(string musicNode) {
+        EventInstance newMusicEvent = RuntimeManager.CreateInstance(musicNode);
+        newMusicEvent.start();
+
+        DOTween.To(
+            () => {
+                newMusicEvent.getVolume(out float volume);
+                return volume;
+            },
+            x => newMusicEvent.setVolume(x),
+            1,
+            10).SetEase(Ease.InOutSine)
+            .ChangeStartValue(0)
+            .OnComplete(() => musicEvent = newMusicEvent);
+
+        DOTween.To(
+            () => {
+                musicEvent.getVolume(out float volume);
+                return volume;
+            },
+            x => musicEvent.setVolume(x),
+            0,
+            9f).SetEase(Ease.InOutSine);
+    }
+
+    public void FadeMusic(PlayMusic musicNode) {
+        EventInstance newMusicEvent = RuntimeManager.CreateInstance(musicNode.music);
+        if (musicNode.parameterName != null || musicNode.parameterName != string.Empty) {
+            newMusicEvent.setParameterByName(musicNode.parameterName, musicNode.parameterTo);
+        }
         newMusicEvent.start();
 
         DOTween.To(

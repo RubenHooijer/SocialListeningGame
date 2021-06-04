@@ -353,6 +353,7 @@ GameObject:
   - component: {fileID: 8148775722701917401}
   - component: {fileID: 8148775722701917402}
   - component: {fileID: 8148775722701917403}
+  - component: {fileID: 147046255349916911}
   m_Layer: 0
   m_Name: Carving (1)
   m_TagString: Untagged
@@ -500,6 +501,31 @@ MonoBehaviour:
           m_StringArgument: HideCarving
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &147046255349916911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8148775722701917413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/enviroment/Bevrijd de luistermutant
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: volume1
+    Value: 0.6
+  OverrideAttenuation: 1
+  OverrideMinDistance: 100
+  OverrideMaxDistance: 100
 --- !u!1 &9067766443187296111
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8546984532003425749}
   m_Layer: 0
-  m_Name: TransitionCave
+  m_Name: Bilboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

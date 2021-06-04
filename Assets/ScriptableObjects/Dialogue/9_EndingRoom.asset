@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3128, y: 88}
+  position: {x: 3224, y: 8}
   ports:
     keys:
     - input
@@ -446,7 +446,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -18321681944179755}
+        node: {fileID: 8693976247378225664}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -695,7 +695,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -3130783505653776004}
+        node: {fileID: 8693976247378225664}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -747,7 +747,8 @@ MonoBehaviour:
   - {fileID: 6263696508722070105}
   - {fileID: 5329485030998936219}
   - {fileID: -3343150633111999829}
-  current: {fileID: 923890304889471695}
+  - {fileID: 8693976247378225664}
+  current: {fileID: -7678384837338532916}
 --- !u!114 &385394450017413946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1413,3 +1414,49 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: 3f76e5ab030be714687ffe9703140a37, type: 2}
+--- !u!114 &8693976247378225664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d42391debb518468600591d4898dc0, type: 3}
+  m_Name: Play Sound
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3096, y: 296}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 8693976247378225664}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -18321681944179755}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 8693976247378225664}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -3130783505653776004}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  sound: event:/end sequence

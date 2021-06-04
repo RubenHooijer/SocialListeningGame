@@ -1,4 +1,5 @@
 ﻿using FMODUnity;
+using UnityEngine;
 using XNode;
 
 namespace Dialogue {
@@ -8,6 +9,8 @@ namespace Dialogue {
     public class PlayMusic : DialogueBaseNode {
 
         [EventRef] public string music;
+        public string parameterName = string.Empty;
+        public float parameterTo;
 
         public override void Trigger() {
             (graph as DialogueGraph).current = this;

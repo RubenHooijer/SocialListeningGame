@@ -37,7 +37,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -8803132006576949898}
+        node: {fileID: 3562685020444834612}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -8889344430934408587}
+        node: {fileID: 3562685020444834612}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1606,6 +1606,7 @@ MonoBehaviour:
   - {fileID: -1509774683457163135}
   - {fileID: -8453072726847863249}
   - {fileID: 2164373144364118376}
+  - {fileID: 3562685020444834612}
   current: {fileID: -5883457128613495120}
 --- !u!114 &74291547113641043
 MonoBehaviour:
@@ -2345,6 +2346,52 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   trigger: {fileID: 11400000, guid: d69404a9b6374b64080ece239fd94f71, type: 2}
+--- !u!114 &3562685020444834612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d42391debb518468600591d4898dc0, type: 3}
+  m_Name: Play Sound
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -9848, y: -408}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 3562685020444834612}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -8889344430934408587}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 3562685020444834612}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -8803132006576949898}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  sound: event:/main character/opstaan van het oor
 --- !u!114 &4153036553169808194
 MonoBehaviour:
   m_ObjectHideFlags: 0

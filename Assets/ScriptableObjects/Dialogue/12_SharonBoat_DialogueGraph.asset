@@ -235,7 +235,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  sound: event:/main character/voice dialog/MC_Vraag
+  sound: event:/bootvrouw/BV_HL_Streng
   answers: []
 --- !u!114 &-8225717357040697994
 MonoBehaviour:
@@ -274,7 +274,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 103532807748673357}
+        node: {fileID: 2101657882389847416}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -283,6 +283,8 @@ MonoBehaviour:
   input: {fileID: 0}
   output: {fileID: 0}
   music: event:/music/track undead
+  parameterName: 
+  parameterTo: 0
 --- !u!114 &-8143490563427443844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1240,7 +1242,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:209ba2ee88b143543b99a6ed9c0c2d73
     m_TableEntryReference:
-      m_KeyId: 99311521799
+      m_KeyId: 287339497492480
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -1272,7 +1274,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 2690036311246441470}
+        node: {fileID: 2229581138798897024}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -2869,57 +2871,10 @@ MonoBehaviour:
   - {fileID: -5478516834103965841}
   - {fileID: 2382734100942426270}
   - {fileID: 6352675986408712141}
-  - {fileID: 2690036311246441470}
   - {fileID: -6060605351337784759}
   - {fileID: 2229581138798897024}
-  - {fileID: 103532807748673357}
-  current: {fileID: -82768977994498877}
---- !u!114 &103532807748673357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45d42391debb518468600591d4898dc0, type: 3}
-  m_Name: Play Sound
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 9944, y: 616}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: 103532807748673357}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: output
-        node: {fileID: -8225717357040697994}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 103532807748673357}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 4544073901352589449}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  sound: event:/enviroment/narsistische stemmen in de hemel
+  - {fileID: 2101657882389847416}
+  current: {fileID: -8143490563427443844}
 --- !u!114 &237336664680928944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3613,6 +3568,57 @@ MonoBehaviour:
   Time: 4
   PathGuid: 
   trigger: {fileID: 0}
+--- !u!114 &2101657882389847416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7647c37b0eeb1d3479e0fb5d14572e94, type: 3}
+  m_Name: Play Screams
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 9944, y: 632}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 2101657882389847416}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -8225717357040697994}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 2101657882389847416}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4544073901352589449}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  sound: event:/enviroment/narsistische stemmen in de hemel
+  spawnRateChangeDuration: 70
+  volumeDuration: 50
+  spawnRateName: spawn rate
+  endSpawnRate: 1
+  endVolume: 0.7
 --- !u!114 &2228187194570562581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3693,7 +3699,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: 2690036311246441470}
+        node: {fileID: -6060605351337784759}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3846,52 +3852,6 @@ MonoBehaviour:
   Time: 1
   PathGuid: 
   trigger: {fileID: 11400000, guid: d62fa36da8f78784e899a9178fe0f21d, type: 2}
---- !u!114 &2690036311246441470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45d42391debb518468600591d4898dc0, type: 3}
-  m_Name: Play Sound
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 11352, y: -24}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: 2690036311246441470}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: output
-        node: {fileID: 2229581138798897024}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 2690036311246441470}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: -6060605351337784759}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: {fileID: 0}
-  output: {fileID: 0}
-  sound: event:/enviroment/creaking boat
 --- !u!114 &3358961933722991121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4332,7 +4292,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 103532807748673357}
+        node: {fileID: 2101657882389847416}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -4492,7 +4452,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:209ba2ee88b143543b99a6ed9c0c2d73
     m_TableEntryReference:
-      m_KeyId: 99311521799
+      m_KeyId: 287339497492480
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -4862,7 +4822,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:209ba2ee88b143543b99a6ed9c0c2d73
     m_TableEntryReference:
-      m_KeyId: 99311521800
+      m_KeyId: 287339543629824
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -5298,7 +5258,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:209ba2ee88b143543b99a6ed9c0c2d73
     m_TableEntryReference:
-      m_KeyId: 99311521805
+      m_KeyId: 287339543629825
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1

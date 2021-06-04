@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Name: Wait
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3307.3264, y: 335.34915}
+  position: {x: 3208, y: 360}
   ports:
     keys:
     - input
@@ -649,7 +649,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -864106390309280441}
+        node: {fileID: 32012183325267581}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -849,7 +849,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: -2461097129978816133}
+        node: {fileID: 32012183325267581}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -914,7 +914,54 @@ MonoBehaviour:
   - {fileID: -6719738400109317482}
   - {fileID: -5662817033640491153}
   - {fileID: -7285543650887747175}
+  - {fileID: 32012183325267581}
   current: {fileID: -7078738276281064812}
+--- !u!114 &32012183325267581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d42391debb518468600591d4898dc0, type: 3}
+  m_Name: Play Sound
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2760, y: 392}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 32012183325267581}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: -2461097129978816133}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 32012183325267581}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -864106390309280441}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  sound: event:/oorwurm/oorwurm valt aan
 --- !u!114 &2542816974829714733
 MonoBehaviour:
   m_ObjectHideFlags: 0
