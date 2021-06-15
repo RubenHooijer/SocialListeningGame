@@ -134,6 +134,12 @@ public class PlatformView : MonoBehaviour, IGuidable {
         imbalanceForce = isLeaningLeft ? -imbalanceMultiplier : imbalanceMultiplier * Time.deltaTime;
         tiltForce = 0;
 
+        DOTween.To(
+            () => inBalance,
+            x => inBalance = x,
+            new Vector2(-1.5f, 1.5f),
+            23f);
+
         while (isBalancing) {
             tiltForce = Input.acceleration.x * tiltMultiplier;
 

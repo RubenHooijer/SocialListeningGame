@@ -1423,7 +1423,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: output
-        node: {fileID: 2566141553492463056}
+        node: {fileID: 2808977902225466527}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -2874,6 +2874,7 @@ MonoBehaviour:
   - {fileID: -6060605351337784759}
   - {fileID: 2229581138798897024}
   - {fileID: 2101657882389847416}
+  - {fileID: 2808977902225466527}
   current: {fileID: -8143490563427443844}
 --- !u!114 &237336664680928944
 MonoBehaviour:
@@ -3840,7 +3841,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: input
-        node: {fileID: -5478516834103965841}
+        node: {fileID: 2808977902225466527}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3852,6 +3853,52 @@ MonoBehaviour:
   Time: 1
   PathGuid: 
   trigger: {fileID: 11400000, guid: d62fa36da8f78784e899a9178fe0f21d, type: 2}
+--- !u!114 &2808977902225466527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b21e1e04181b5c4e8e397ac1ca53138, type: 3}
+  m_Name: Invoke Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 10986.046, y: 680.24274}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 2808977902225466527}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 2566141553492463056}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 2808977902225466527}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: -5478516834103965841}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  trigger: {fileID: 11400000, guid: fae58c5ec5ebe73408d2c703ea28b429, type: 2}
 --- !u!114 &3358961933722991121
 MonoBehaviour:
   m_ObjectHideFlags: 0

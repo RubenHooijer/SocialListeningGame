@@ -10,6 +10,7 @@ namespace Dialogue {
 		public string Name;
 		public Color NodeColor;
 		public Color DialogueColor;
+		public Color TextColor = Color.white;
 		public Sprite Icon;
 
 	}

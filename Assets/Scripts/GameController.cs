@@ -24,7 +24,6 @@ public class GameController : GenericSingleton<GameController, GameController> {
         } else {
             myListener = gameObject.GetComponent<StudioListener>();
         }
-        Debug.Log(myListener);
     }
 
     public void SetNewGraph(SceneInformation sceneInformation) {

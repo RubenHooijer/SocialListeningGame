@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class AbstractScreen<T> : MonoBehaviour where T : Component {
+public abstract class AbstractScreen<T> : BaseScreen where T : Component {
 
     public static T Instance {
         get {
@@ -25,16 +25,5 @@ public abstract class AbstractScreen<T> : MonoBehaviour where T : Component {
             Destroy(gameObject);
         }
     }
-
-    public void Show() {
-        OnShow();
-    }
-
-    public void Hide() {
-        OnHide();
-    }
-
-    protected virtual void OnShow() { }
-    protected virtual void OnHide() { }
 
 }

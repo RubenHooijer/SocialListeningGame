@@ -2619,9 +2619,9 @@ MonoBehaviour:
       _dynamic: 0
   input: {fileID: 0}
   output: {fileID: 0}
-  waitFor: 0
+  waitFor: 1
   Time: 4
-  PathGuid: 
+  PathGuid: 716b102a-232a-4511-af5f-d1869aa0bc01
   trigger: {fileID: 0}
 --- !u!114 &-5169156247031606102
 MonoBehaviour:
@@ -3148,9 +3148,9 @@ MonoBehaviour:
   output: {fileID: 0}
   action: 1
   lookAtGuid: 
-  offset: {x: 1.8, y: 2.04, z: 2.17}
+  offset: {x: -0.73, y: 2.04, z: 0.51}
   positionOffset: 0
-  duration: 3
+  duration: 7
 --- !u!114 &-4508990065784620662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6478,7 +6478,8 @@ MonoBehaviour:
   - {fileID: 6277222699947455112}
   - {fileID: -3110536950821901245}
   - {fileID: 3694708980517129906}
-  current: {fileID: -3259839013548458416}
+  - {fileID: 3415626569208577815}
+  current: {fileID: 5950375030321822437}
 --- !u!114 &167549278740289401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8003,6 +8004,67 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 1
   sound: event:/main character/voice dialog/MC_neutraal_praten
+  answers: []
+--- !u!114 &3415626569208577815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
+  m_Name: Chat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 16417.36, y: -457.268}
+  ports:
+    keys:
+    - answers
+    - input
+    - output
+    values:
+    - _fieldName: answers
+      _node: {fileID: 3415626569208577815}
+      _typeQualifiedName: System.Collections.Generic.List`1[[Dialogue.Answer, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
+        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 3415626569208577815}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 3415626569208577815}
+      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  output: {fileID: 0}
+  character: {fileID: 0}
+  text:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  sound: 
   answers: []
 --- !u!114 &3531617757897534783
 MonoBehaviour:

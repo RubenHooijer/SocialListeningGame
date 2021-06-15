@@ -40,7 +40,7 @@ public class TimerScreen : AbstractScreen<TimerScreen> {
     }
 
     private void Update() {
-        if (gameStartTime == 0 && World.Instance.Progression.HasKey(gameFinishedKey)) { return; }
+        if (gameStartTime == 0 || World.Instance.Progression.HasKey(gameFinishedKey)) { return; }
 
         float timeLeft = (maxPlayTimeInSeconds + gameStartTime) - Time.time;
 
@@ -65,6 +65,7 @@ public class TimerScreen : AbstractScreen<TimerScreen> {
         if (World.Instance.Progression.HasKey(gameFinishedKey)) { return; }
 
         FadeScreen.Instance.FadeToColor(Color.black, 2, () => {
+            FindObjectsOfType<BaseScreen>().Foreach(x => x.Hide());
             SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
             SceneManager.sceneLoaded += OnSceneLoaded;
             SceneManager.LoadSceneAsync(failScene, LoadSceneMode.Additive);

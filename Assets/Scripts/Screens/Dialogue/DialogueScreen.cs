@@ -42,6 +42,8 @@ public class DialogueScreen : AbstractScreen<DialogueScreen> {
         
         speechGameObject.SetActive(true);
         speechTextField.text = string.Empty;
+        speechTextField.color = chat.Character.TextColor;
+
         StartCoroutine(
             TypeWriterEffectRoutine(chat.Text,
                 () => {
@@ -54,7 +56,9 @@ public class DialogueScreen : AbstractScreen<DialogueScreen> {
         speechBackground.color = chat.Character.DialogueColor;
 
         characterIcon.sprite = chat.Character.Icon;
+        characterIcon.color = chat.Character.TextColor;
         characterNameTextField.text = chat.Character.Name;
+        characterNameTextField.color = chat.Character.TextColor;
     }
 
     protected override void Awake() {

@@ -28,6 +28,7 @@ public class FadeScreen : AbstractScreen<FadeScreen> {
 
     public void FadeWithText() {
         startOverText.text = string.Empty;
+        startOverText.DOFade(1, 0);
         FadeToColor(Color.black, 1, () => {
             CoroutineHelper.Delay(1.5f, () => startOverText.text = START_OVER_TEXT0);
             CoroutineHelper.Delay(3f, () => startOverText.text = START_OVER_TEXT1);
