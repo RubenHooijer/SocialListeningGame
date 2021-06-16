@@ -263,7 +263,7 @@ namespace FMODUnity
             if (StaticPlugins.Count > 0)
             {
 #if !UNITY_EDITOR && ENABLE_IL2CPP
-                StaticPluginManager.Register(coreSystem, reportResult);
+                //StaticPluginManager.Register(coreSystem, reportResult);
 #else
                 Debug.LogWarningFormat(
                     "FMOD: {0} static plugins specified, but static plugins are only supported on the IL2CPP scripting backend",

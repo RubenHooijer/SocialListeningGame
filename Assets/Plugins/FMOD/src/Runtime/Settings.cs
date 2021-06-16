@@ -1116,7 +1116,7 @@ namespace FMODUnity
         private static void CleanTemporaryChanges()
         {
             Legacy.CleanIl2CppArgs();
-            CleanTemporaryFiles();
+            //CleanTemporaryFiles();
         }
 
         private static void CleanTemporaryFiles()
